@@ -402,3 +402,12 @@ main{counter-reset:xnovah-section}main section{counter-increment:xnovah-section}
  .magic-refined .magic-copy{width:100%;max-width:515px;justify-self:center}
  .magic-refined .magic-image{width:100%;max-width:515px;justify-self:center}
 }
+
+
+/* Section 07 desktop centering: the legacy .magic-section two-column grid
+   was placing the entire .shell in its first column. */
+.magic-section.magic-refined{display:block;width:100%;max-width:none;margin:0;padding-inline:0}
+.magic-section.magic-refined>.magic-refined-layout{margin-left:auto;margin-right:auto}
+@media(min-width:851px){
+ .magic-section.magic-refined>.magic-refined-layout{width:min(calc(100% - 48px),1120px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;justify-content:center}
+}
