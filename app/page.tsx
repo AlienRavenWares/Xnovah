@@ -96,10 +96,10 @@ export default function Home(){const [mobile,setMobile]=useState(false),[activeF
 <div className="ticker"><div className="ticker-track">{Array.from({length:2}).map((_,i)=><div className="ticker-set" key={i}><span>ONE SPACE. ENDLESS POSSIBILITIES.</span><i>✳</i><span>WRITE</span><i>✳</i><span>IMAGINE</span><i>✳</i><span>CREATE</span><i>✳</i><span>EXPLORE</span><i>✳</i></div>)}</div></div>
 <CreativeUniverseSection/><FeatureUniverse/><section id="features" className="section toolkit-orbit-section"><div className="shell">
 <motion.div {...floatIn} className="toolkit-orbit-heading"><SectionEyebrow>THE CREATIVE TOOLKIT</SectionEyebrow><h2>Everything you need to create<br/><span className="gradient-text">without limits.</span></h2><p>A universe of creative tools, connected by one vision. Explore writing, visuals, video, sound, code and more — all in one place.</p></motion.div>
-<div className="toolkit-universe">
+<div className="toolkit-universe-scroll" role="region" aria-label="Explore the connected Xnovah AI toolkit" tabIndex={0}><div className="toolkit-universe">
 <div className="toolkit-universe-center" aria-hidden="true"><div className="toolkit-universe-halo"/><div className="toolkit-universe-core"><span>✳</span><strong>XNOVAH AI</strong><small>ONE PLATFORM<br/>INFINITE POSSIBILITIES</small></div></div>
 {features.map((f,i)=>{const Icon=f.icon;return <motion.a {...floatIn} transition={{duration:.55,delay:i*.065}} href="#studio" className={'toolkit-satellite toolkit-satellite-'+(i+1)} key={f.name}><div className="toolkit-satellite-art" aria-hidden="true"><div className="toolkit-satellite-glow"/><div className="toolkit-satellite-window"><span className="toolkit-satellite-window-dots">● ● ●</span><Icon size={51} strokeWidth={1.15}/><div className="toolkit-satellite-lines"><i/><i/><i/></div></div><span className="toolkit-satellite-float">✦</span></div><div className="toolkit-satellite-copy"><div className="toolkit-satellite-index">0{i+1} <span/></div><h3>{f.name}</h3><p>{f.desc}</p><span className="toolkit-satellite-action">Explore <ArrowUpRight size={14}/></span></div></motion.a>})}
-</div>
+</div></div>
 <div className="toolkit-orbit-footer"><div><span>✳ XNOVAH AI / CREATIVE POSSIBILITIES</span><strong>Your next big idea starts here.</strong><p>Be among the first to explore what's coming.</p></div><a href="#waitlist">Join the Waitlist <ArrowRight size={19}/></a></div>
 <p className="feature-disclaimer">Conceptual previews. Tool availability and functionality will depend on the final launch configuration.</p>
 </div></section>
