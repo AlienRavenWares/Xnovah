@@ -411,3 +411,32 @@ main{counter-reset:xnovah-section}main section{counter-increment:xnovah-section}
 @media(min-width:851px){
  .magic-section.magic-refined>.magic-refined-layout{width:min(calc(100% - 48px),1120px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;justify-content:center}
 }
+
+
+/* Section 08 — premium audience editorial gallery */
+.audience-premium{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse 52% 55% at 50% -15%,rgba(96,85,207,.19),transparent 80%),linear-gradient(180deg,#080d1e 0%,#0d1024 55%,#080b1a 100%);border-top:1px solid rgba(147,150,255,.12)}
+.audience-premium:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.24;background-image:radial-gradient(#acb5ff 0.7px,transparent .7px);background-size:38px 38px;mask-image:linear-gradient(180deg,transparent,#000 30%,transparent 100%)}
+.audience-premium .section-intro{max-width:800px;margin:0 auto 55px}
+.audience-premium .section-intro h2{font-size:clamp(43px,5.3vw,76px);line-height:1.08;letter-spacing:-3.5px;margin:16px 0 22px}
+.audience-premium .section-intro .muted-heading{background:linear-gradient(100deg,#c8c7ff 8%,#aa91f7 55%,#f0b6e6 95%);color:transparent;background-clip:text;-webkit-background-clip:text}
+.audience-premium .section-intro p{max-width:550px;margin-inline:auto;color:#adb4d1;font-size:14px;line-height:1.85}
+.audience-premium .audience-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;max-width:none;margin:0}
+.audience-premium .audience-card{position:relative;min-width:0;border:1px solid rgba(162,157,255,.21);border-radius:22px;background:linear-gradient(145deg,rgba(35,39,74,.85),rgba(15,18,39,.97));box-shadow:0 22px 60px rgba(0,0,0,.2);transition:transform .3s,border-color .3s,box-shadow .3s}
+.audience-premium .audience-card:hover{transform:translateY(-8px);border-color:rgba(176,155,255,.56);box-shadow:0 28px 75px rgba(37,23,100,.25)}
+.audience-premium .audience-card-art{height:clamp(205px,22vw,280px);margin:10px 10px 0;border-radius:15px;isolation:isolate}
+.audience-premium .audience-card-art:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.07),transparent 40%,rgba(11,13,34,.27));border-radius:inherit}
+.audience-premium .audience-creators .audience-card-art{background:radial-gradient(circle at 50% 30%,#d7a6f6 0%,#8551ba 39%,#34255f 75%,#19152e)}
+.audience-premium .audience-business .audience-card-art{background:radial-gradient(circle at 65% 20%,#a4b9ef,#5259a1 46%,#222850 80%,#14192d)}
+.audience-premium .audience-teams .audience-card-art{background:radial-gradient(circle at 50% 35%,#aa91ef,#5555aa 44%,#25244c 80%,#16162d)}
+.audience-premium .creator-disc{top:11%;width:min(65%,215px);height:auto;aspect-ratio:1;box-shadow:0 0 85px #f3b3ff8c}
+.audience-premium .creator-badge{top:23%;font-size:clamp(22px,2.5vw,32px)}
+.audience-premium .business-card-small{top:17%;height:60%;min-height:130px;max-height:175px}
+.audience-premium .audience-body{padding:25px 25px 27px;min-height:270px;display:flex;flex-direction:column}
+.audience-premium .audience-body>span{font-size:10px;font-weight:800;letter-spacing:1.5px;color:#b8a9fa}
+.audience-premium .audience-body h3{font-size:clamp(23px,2.5vw,32px);line-height:1.14;letter-spacing:-1px;color:#f5f3ff;margin:17px 0 12px}
+.audience-premium .audience-body>p{font-size:12px;line-height:1.85;color:#abb1ce;margin:0 0 22px}
+.audience-premium .audience-tags{margin-top:auto;display:flex;flex-wrap:wrap;gap:7px}
+.audience-premium .audience-tags span{border:1px solid rgba(157,155,238,.25);background:rgba(127,115,203,.12);color:#d4d0f5;border-radius:999px;padding:7px 11px;font-size:10px}
+@media(max-width:900px){.audience-premium .audience-grid{gap:10px}.audience-premium .audience-body{padding:18px;min-height:260px}.audience-premium .audience-body h3{font-size:clamp(19px,2.8vw,27px)}.audience-premium .audience-card-art{margin:7px 7px 0;height:210px}}
+@media(max-width:700px){.audience-premium .section-intro{margin-bottom:35px}.audience-premium .section-intro h2{font-size:clamp(39px,9vw,55px);letter-spacing:-2px}.audience-premium .audience-grid{grid-template-columns:1fr;max-width:500px;gap:18px;margin-inline:auto}.audience-premium .audience-card-art{height:245px;margin:10px 10px 0}.audience-premium .audience-body{min-height:0;padding:24px}.audience-premium .audience-body h3{font-size:28px}.audience-premium .creator-badge{font-size:30px}.audience-premium .business-card-small{top:35px;height:155px}}
+@media(prefers-reduced-motion:reduce){.audience-premium .audience-card{transition:none}.audience-premium .audience-card:hover{transform:none}}
