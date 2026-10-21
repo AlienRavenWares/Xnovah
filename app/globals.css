@@ -394,3 +394,11 @@ main{counter-reset:xnovah-section}main section{counter-increment:xnovah-section}
 .magic-refined .text-link:hover{background:rgba(113,98,205,.28);transform:translateY(-2px)}
 @media(max-width:850px){.magic-refined .magic-refined-layout{grid-template-columns:1fr;gap:30px}.magic-refined .magic-copy{grid-column:1;grid-row:1}.magic-refined .magic-image{grid-column:1;grid-row:2;height:clamp(350px,80vw,480px);width:100%;max-width:600px;justify-self:center}.magic-refined .magic-image-sphere{width:clamp(165px,42vw,230px);height:clamp(165px,42vw,230px)}.magic-refined .magic-copy h2{font-size:clamp(38px,8vw,55px)}}
 @media(max-width:420px){.magic-refined .magic-image{height:350px;border-radius:18px}.magic-refined .magic-image-caption{padding:19px}.magic-refined .magic-image-caption b{font-size:21px}.magic-refined .magic-image:before{font-size:8px;left:19px;top:19px}.magic-refined .magic-image-ring{width:95%}}
+
+
+/* Center Section 07's desktop composition without changing its mobile layout */
+@media(min-width:851px){
+ .magic-refined .magic-refined-layout{width:min(100% - 48px,1120px);margin-inline:auto;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(38px,5vw,72px);justify-content:center;align-items:center}
+ .magic-refined .magic-copy{width:100%;max-width:515px;justify-self:center}
+ .magic-refined .magic-image{width:100%;max-width:515px;justify-self:center}
+}
