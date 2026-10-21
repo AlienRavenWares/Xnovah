@@ -217,3 +217,32 @@ main{counter-reset:xnovah-section}main section{counter-increment:xnovah-section}
 @media(max-width:850px){.toolkit-universe{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto;gap:18px;min-height:0;padding-top:25px}.toolkit-universe:before{display:none}.toolkit-universe-center{grid-column:1/-1;grid-row:1;width:210px;height:210px;margin:15px auto 22px}.toolkit-satellite,.toolkit-satellite:nth-of-type(odd){grid-column:auto;grid-row:auto;flex-direction:column;align-items:flex-start;padding:18px;border:1px solid rgba(140,151,234,.23);border-radius:16px;background:rgba(17,22,48,.65)}.toolkit-satellite-art{width:100%;height:125px;flex-basis:auto}.toolkit-satellite-copy h3{font-size:18px}.toolkit-satellite-copy p{font-size:12px}.toolkit-satellite-window{width:125px;height:100px}}
 @media(max-width:550px){.toolkit-orbit-heading h2{letter-spacing:-1.8px}.toolkit-universe{grid-template-columns:1fr}.toolkit-universe-center{grid-column:1}.toolkit-satellite,.toolkit-satellite:nth-of-type(odd){flex-direction:row;align-items:center}.toolkit-satellite-art{width:120px;flex:0 0 120px}.toolkit-satellite-window{width:102px;height:92px}.toolkit-satellite-copy h3{font-size:16px}.toolkit-orbit-footer{flex-direction:column;align-items:flex-start;padding:23px}.toolkit-orbit-footer>a{white-space:normal}}
 @media(prefers-reduced-motion:reduce){.toolkit-satellite,.toolkit-satellite-window{transition:none}}
+
+
+/* Preserve the desktop constellation on phones instead of stacking feature cards.
+   The full-size illustration stays legible and can be explored by swiping sideways. */
+.toolkit-universe-scroll{width:100%;min-width:0}
+@media(max-width:850px){
+ .toolkit-universe-scroll{overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scroll-snap-type:x proximity;padding-bottom:16px;scrollbar-width:thin;scrollbar-color:#7c7bf0 #10152d}
+ .toolkit-universe-scroll:focus-visible{outline:2px solid #a5a4ff;outline-offset:4px}
+ .toolkit-universe-scroll .toolkit-universe{display:grid;grid-template-columns:325px 215px 325px;grid-template-rows:repeat(4,minmax(185px,auto));gap:10px 14px;width:921px;min-width:921px;min-height:830px;padding:18px 0 28px}
+ .toolkit-universe-scroll .toolkit-universe:before{display:block}
+ .toolkit-universe-scroll .toolkit-universe-center{grid-column:2;grid-row:1/5;width:215px;height:215px;margin:0;align-self:center;justify-self:center}
+ .toolkit-universe-scroll .toolkit-satellite,.toolkit-universe-scroll .toolkit-satellite:nth-of-type(odd){display:flex;flex-direction:row;align-items:center;gap:8px;padding:0;border:0;border-radius:0;background:none}
+ .toolkit-universe-scroll .toolkit-satellite:nth-of-type(odd){flex-direction:row-reverse}
+ .toolkit-universe-scroll .toolkit-satellite-1{grid-column:1;grid-row:1}
+ .toolkit-universe-scroll .toolkit-satellite-2{grid-column:3;grid-row:1}
+ .toolkit-universe-scroll .toolkit-satellite-3{grid-column:1;grid-row:2}
+ .toolkit-universe-scroll .toolkit-satellite-4{grid-column:3;grid-row:2}
+ .toolkit-universe-scroll .toolkit-satellite-5{grid-column:1;grid-row:3}
+ .toolkit-universe-scroll .toolkit-satellite-6{grid-column:3;grid-row:3}
+ .toolkit-universe-scroll .toolkit-satellite-7{grid-column:1;grid-row:4}
+ .toolkit-universe-scroll .toolkit-satellite-8{grid-column:3;grid-row:4}
+ .toolkit-universe-scroll .toolkit-satellite-art{width:auto;height:145px;flex:0 0 43%}
+ .toolkit-universe-scroll .toolkit-satellite-window{width:115px;height:100px}
+ .toolkit-universe-scroll .toolkit-satellite-copy{flex:1}
+ .toolkit-universe-scroll .toolkit-satellite-copy h3{font-size:17px}
+ .toolkit-universe-scroll .toolkit-satellite-copy p{font-size:11px}
+ .toolkit-orbit-heading{margin-bottom:15px}
+ .toolkit-orbit-heading:after{content:"SWIPE TO EXPLORE ALL 8 STUDIOS  →";display:block;margin-top:22px;font-size:10px;letter-spacing:1.7px;font-weight:800;color:#a9b7ff}
+}
