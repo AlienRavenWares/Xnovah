@@ -329,3 +329,43 @@ main{counter-reset:xnovah-section}main section{counter-increment:xnovah-section}
  .cu-journey-note{font-size:10px}
 }
 @media(prefers-reduced-motion:reduce){.cu-journey-stage{transition:none}}
+
+
+/* Section 04 — one consistent desktop/mobile Command Center.
+   Retain left studio rail and two workspace panels on narrow screens. */
+@media(max-width:720px){
+ .command-v1 .command-frame{width:100%;min-width:0;overflow:hidden;border-radius:13px}
+ .command-v1 .command-layout{display:grid;grid-template-columns:clamp(75px,23%,120px) minmax(0,1fr)}
+ .command-v1 .command-sidebar{display:flex;flex-direction:column;align-items:stretch;gap:3px;overflow:visible;min-width:0;padding:12px 5px;border-right:1px solid rgba(135,151,255,.2);border-bottom:0}
+ .command-v1 .command-logo{font-size:clamp(10px,2.4vw,15px);white-space:normal;margin:0 3px 15px}
+ .command-v1 .command-sidebar-label{display:block;font-size:clamp(6px,1.4vw,9px);letter-spacing:.5px;margin:0 3px 8px}
+ .command-v1 .command-nav{width:100%;min-width:0;white-space:normal;overflow-wrap:anywhere;display:flex;align-items:center;gap:4px;text-align:left;padding:8px 3px;font-size:clamp(7px,1.8vw,11px);line-height:1.3}
+ .command-v1 .command-nav span{font-size:clamp(11px,2.5vw,16px);width:14px;flex:0 0 14px}
+ .command-v1 .command-main{min-width:0;padding:clamp(7px,2vw,15px)}
+ .command-v1 .command-toolbar h3{font-size:clamp(14px,3.5vw,23px);line-height:1.2}
+ .command-v1 .command-toolbar small{font-size:clamp(7px,1.5vw,10px);letter-spacing:.5px}
+ .command-v1 .command-v1-desc{font-size:clamp(8px,1.7vw,11px);line-height:1.5}
+ .command-v1 .command-v1-columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(4px,1.1vw,10px)}
+ .command-v1 .command-v1-panel{min-width:0;border-radius:8px}
+ .command-v1 .command-v1-panel-head{padding:clamp(5px,1.3vw,10px);font-size:clamp(7px,1.5vw,10px);letter-spacing:0}
+ .command-v1 .command-v1-panel-body{padding:clamp(5px,1.3vw,12px);min-width:0}
+ .command-v1 .command-v1-panel label{font-size:clamp(7px,1.4vw,10px)}
+ .command-v1 .command-v1-panel textarea,.command-v1 .command-v1-panel select{min-width:0;width:100%;font-size:clamp(8px,1.7vw,11px);padding:clamp(5px,1.3vw,9px)}
+ .command-v1 .command-v1-panel textarea{min-height:100px}
+ .command-v1 .command-v1-options{grid-template-columns:minmax(0,1fr);gap:6px;margin:8px 0}
+ .command-v1 .command-v1-primary,.command-v1 .command-v1-button{font-size:clamp(8px,1.6vw,11px);padding:9px 4px}
+ .command-v1 .command-top{height:40px;padding:0 9px}
+ .command-v1 .command-address{display:block;font-size:clamp(8px,1.7vw,11px)}
+ .command-v1 .command-status{font-size:clamp(7px,1.4vw,10px);letter-spacing:0}
+ .command-v1 .command-heading h2{font-size:clamp(30px,7vw,48px)}
+ .command-v1 .command-v1-result{min-width:0;max-width:100%;overflow:hidden}
+ .command-v1 .command-v1-paper,.command-v1 .command-v1-code{overflow-wrap:anywhere;word-break:break-word}
+}
+@media(max-width:390px){
+ .command-v1 .command-layout{grid-template-columns:72px minmax(0,1fr)}
+ .command-v1 .command-nav{font-size:7px}
+ .command-v1 .command-nav span{width:12px;flex-basis:12px}
+ .command-v1 .command-main{padding:6px}
+ .command-v1 .command-v1-columns{gap:4px}
+ .command-v1 .command-v1-panel-body{padding:5px}
+}
