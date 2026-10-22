@@ -61,27 +61,26 @@ function CreativeUniverseSection(){
 function FeatureUniverse(){
  const [current,setCurrent]=useState(14),[filter,setFilter]=useState('All'),[search,setSearch]=useState('');
  const categories=['All','Agents','Visual','Video','Audio','Writing','Business','Workspace','Chat','Code','Research'];
- const matches=allToolNames.map((_,i)=>i).filter(i=>(filter==='All'||toolTypes[i]===filter)&&allToolNames[i].toLowerCase().includes(search.trim().toLowerCase()));
- const active=matches.includes(current)?current:matches[0]??current;
- const constellation=matches.slice(0,18);
- const selectCategory=(cat:string)=>{setFilter(cat);setSearch('');const i=allToolNames.findIndex((_,i)=>cat==='All'||toolTypes[i]===cat);if(i>=0)setCurrent(i)};
+ const indexes=allToolNames.map((_,i)=>i).filter(i=>(filter==='All'||toolTypes[i]===filter)&&allToolNames[i].toLowerCase().includes(search.trim().toLowerCase()));
+ const active=indexes.includes(current)?current:indexes[0]??current;
+ const selectCategory=(cat:string)=>{setFilter(cat);const next=allToolNames.findIndex((name,i)=>(cat==='All'||toolTypes[i]===cat)&&name.toLowerCase().includes(search.trim().toLowerCase()));if(next>=0)setCurrent(next)};
  return <section className="section feature-universe xgal-section" id="feature-universe"><div className="shell">
- <div className="feature-heading"><SectionEyebrow>DESIGN 03 / THE AI GALAXY</SectionEyebrow><h2>Enter a universe of <span className="gradient-text">possibility.</span></h2><p>39 creative AI experiences. One connected galaxy. Choose a star to discover what Xnovah could unlock.</p></div>
- <div className="xgal-frame">
- <div className="xgal-top"><div className="xgal-logo"><span>✳</span><strong>XNOVAH</strong><small>GALAXY / 03</small></div><div className="xgal-live"><span/> INTERACTIVE CONCEPT <b>·</b> 39 EXPERIENCES</div></div>
- <div className="xgal-intro"><span className="xgal-kicker">✦ THE CREATIVE MULTIVERSE</span><h3>Explore the <em>AI galaxy.</em></h3><p>Every orbit is an idea. Every star is a new creative possibility.</p></div>
- <div className="xgal-layout">
- <div className="xgal-canvas" aria-label="Interactive AI tool constellation">
- <div className="xgal-nebula xgal-nebula-one"/><div className="xgal-nebula xgal-nebula-two"/><div className="xgal-ring xgal-ring-one"/><div className="xgal-ring xgal-ring-two"/><div className="xgal-ring xgal-ring-three"/>
- <div className="xgal-core"><span className="xgal-core-symbol">✳</span><strong>XNOVAH</strong><small>AI UNIVERSE</small></div>
- {constellation.map((i,pos)=>{const angle=(pos/Math.max(constellation.length,1))*Math.PI*2-Math.PI/2;const ring=pos%3;const radius=[24,34,44][ring];const x=50+Math.cos(angle)*radius;const y=50+Math.sin(angle)*radius;return <button key={i} type="button" className={'xgal-star'+(active===i?' selected':'')} style={{left:x+'%',top:y+'%'}} onClick={()=>setCurrent(i)} title={allToolNames[i]} aria-label={'Explore '+allToolNames[i]} aria-pressed={active===i}><span>{toolGlyphs[i]}</span><small>{allToolNames[i]}</small></button>})}
- <span className="xgal-coordinate xgal-coordinate-a">X: 030 · Y: 039</span><span className="xgal-coordinate xgal-coordinate-b">✧ DISCOVER YOUR ORBIT</span>
- </div>
- <aside className="xgal-detail"><div className="xgal-detail-top"><span>✦ SELECTED STAR</span><span>{String(active+1).padStart(2,'0')} / 39</span></div><div className="xgal-preview"><div className="xgal-preview-ring"/><span>{toolGlyphs[active]}</span></div><span className="xgal-type">{toolTypes[active]} / PLANNED EXPERIENCE</span><h4>{allToolNames[active]}</h4><p>{toolDescriptions[active]}</p><a href="#waitlist">Get early access <ArrowUpRight size={16}/></a><div className="xgal-next"><span>DISCOVER NEXT</span><button type="button" onClick={()=>setCurrent(matches.length?matches[(Math.max(0,matches.indexOf(active))+1)%matches.length]:((active+1)%39))}>Next star <ChevronRight size={15}/></button></div></aside>
- </div>
- <div className="xgal-explorer"><div className="xgal-explorer-head"><div><span>✧ STAR DIRECTORY</span><h4>Navigate all 39 experiences</h4></div><label className="xgal-search"><Search size={16}/><input type="search" value={search} onChange={e=>setSearch(e.target.value)} placeholder="Find your next star..." aria-label="Search AI experiences"/></label></div><div className="xgal-filters" aria-label="Filter AI tools by category">{categories.map(cat=><button key={cat} type="button" className={filter===cat?'active':''} onClick={()=>selectCategory(cat)} aria-pressed={filter===cat}>{cat}</button>)}</div><div className="xgal-directory">{matches.map(i=><button type="button" key={i} className={active===i?'active':''} onClick={()=>setCurrent(i)} aria-pressed={active===i}><span className="xgal-directory-icon">{toolGlyphs[i]}</span><span><strong>{allToolNames[i]}</strong><small>{toolTypes[i]}</small></span><ArrowUpRight size={14}/></button>)}{matches.length===0&&<p className="xgal-empty">No stars found. Try another search or category.</p>}</div></div>
- <div className="xgal-foot"><span>✳ XNOVAH / IMAGINE MORE. CREATE BEYOND.</span><span>DESIGN 03 · AI GALAXY</span></div></div>
- <p className="feature-disclaimer">Interactive design concept only. All 39 AI tools are planned experiences, not live AI services.</p>
+  <div className="feature-heading"><SectionEyebrow>DESIGN 03 / THE AI GALAXY</SectionEyebrow><h2>Explore a universe of <span className="gradient-text">possibility.</span></h2><p>39 creative AI experiences. One connected universe. Discover your next tool by exploring the Xnovah galaxy.</p></div>
+  <div className="xgal-frame">
+   <div className="xgal-top"><div className="xgal-identity"><span className="xgal-symbol">✳</span><span>XNOVAH <strong>/ AI GALAXY</strong></span></div><div className="xgal-top-right"><span className="xgal-live"/> INTERACTIVE CONCEPT <span className="xgal-top-count">39 CONSTELLATIONS</span></div></div>
+   <div className="xgal-controls"><div className="xgal-control-heading"><span>✦ GALAXY NAVIGATOR</span><strong>Find your orbit</strong></div><label className="xgal-search"><Search size={16}/><input type="search" value={search} onChange={e=>setSearch(e.target.value)} placeholder="Search 39 AI tools..." aria-label="Search galaxy tools"/>{search&&<button type="button" onClick={()=>setSearch('')} aria-label="Clear search">×</button>}</label><div className="xgal-categories" aria-label="Filter tool categories">{categories.map(cat=><button type="button" key={cat} className={filter===cat?'active':''} onClick={()=>selectCategory(cat)} aria-pressed={filter===cat}>{cat}</button>)}</div></div>
+   <div className="xgal-universe">
+    <div className="xgal-canvas" aria-label="Interactive constellation of AI tools">
+     <div className="xgal-starfield"/><div className="xgal-orbit xgal-orbit-one"/><div className="xgal-orbit xgal-orbit-two"/><div className="xgal-orbit xgal-orbit-three"/><div className="xgal-orbit xgal-orbit-four"/>
+     <div className="xgal-core"><span className="xgal-core-halo"/><span className="xgal-core-mark">✳</span><strong>XNOVAH</strong><small>AI UNIVERSE</small></div>
+     {indexes.map((i,position)=>{const angle=(position*137.508+20)*Math.PI/180;const radius=23+(position%4)*8;const x=50+Math.cos(angle)*radius;const y=50+Math.sin(angle)*radius;return <button type="button" key={allToolNames[i]} className={'xgal-node'+(active===i?' active':'')} style={{left:x+'%',top:y+'%',animationDelay:(position%8)*-.6+'s'}} onClick={()=>setCurrent(i)} title={allToolNames[i]} aria-label={'Explore '+allToolNames[i]} aria-pressed={active===i}><span>{toolGlyphs[i]}</span><small>{allToolNames[i]}</small></button>})}
+     {indexes.length===0&&<div className="xgal-empty">No tools found. Try another search or category.</div>}
+     <div className="xgal-coordinate xgal-coordinate-left">SECTOR 03 / DISCOVERY MODE</div><div className="xgal-coordinate xgal-coordinate-right">{indexes.length} SIGNALS DETECTED</div>
+    </div>
+    <aside className="xgal-detail"><div className="xgal-detail-top"><span><span className="xgal-live"/> SELECTED SIGNAL</span><span>{String(active+1).padStart(2,'0')} / 39</span></div><div className="xgal-detail-visual"><div className="xgal-detail-ring"/><span>{toolGlyphs[active]}</span></div><div className="xgal-detail-copy"><span className="xgal-detail-type">{toolTypes[active]} / AI EXPERIENCE</span><h3>{allToolNames[active]}</h3><p>{toolDescriptions[active]}</p><a href="#waitlist">Get early access <ArrowUpRight size={16}/></a></div><div className="xgal-detail-foot">✧ SELECT ANY STAR TO EXPLORE</div></aside>
+   </div>
+   <div className="xgal-bottom"><span>✳ YOUR NEXT IDEA IS OUT THERE</span><span>DESIGN 03 / GALAXY EXPLORER</span></div>
+  </div><p className="feature-disclaimer">Interactive product-design concept only. The 39 AI experiences are planned capabilities, not functioning AI services.</p>
  </div></section>
 }
 
