@@ -1084,3 +1084,94 @@ main{counter-reset:xnovah-section}main section{counter-increment:xnovah-section}
  .xcmd-workspace-detail h4{font-size:16px}
  .xcmd-suggestions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
 }
+
+
+/* Design 2 — true three-column mobile miniaturization, no sideways scrolling */
+@media(max-width:750px){
+ .xcmd-section .shell{width:calc(100% - 16px);max-width:100%;margin-inline:auto}
+ .xcmd-shell{width:100%;max-width:100%;overflow:hidden;border-radius:11px}
+ .xcmd-shell>.xcmd-topbar,.xcmd-shell>.xcmd-body,.xcmd-shell>.xcmd-bottom{width:100%;min-width:0}
+ .xcmd-topbar{display:flex;padding:8px 7px;gap:3px}
+ .xcmd-brand{font-size:9px;gap:4px;letter-spacing:.3px}
+ .xcmd-brandmark{width:20px;height:20px;border-radius:5px;font-size:15px}
+ .xcmd-brand small{display:none}
+ .xcmd-topstatus{font-size:6px;gap:4px;letter-spacing:0}
+ .xcmd-top-separator{display:none}
+ .xcmd-statusdot{width:5px;height:5px}
+ .xcmd-body{display:grid;grid-template-columns:minmax(0,20%) minmax(0,55%) minmax(0,25%);min-height:0}
+ .xcmd-sidebar{display:flex;flex-direction:column;gap:2px;min-width:0;overflow:hidden;padding:8px 3px;border-right:1px solid #ffffff18;border-bottom:0}
+ .xcmd-side-label{display:block;padding:4px 2px;font-size:5px;letter-spacing:0;overflow-wrap:anywhere}
+ .xcmd-side-gap{padding-top:9px}
+ .xcmd-side-footer{display:block;margin-top:auto;padding:10px 2px 3px;font-size:5px;letter-spacing:0;overflow-wrap:anywhere}
+ .xcmd-sidebar>button{display:flex;justify-content:flex-start;gap:3px;width:100%;min-height:23px;padding:4px 2px;border:1px solid transparent;border-radius:4px;background:transparent;font-size:7px;line-height:1.1;text-align:left;white-space:normal;overflow-wrap:anywhere}
+ .xcmd-sidebar>button.active{background:#6b4aca3b;border-color:#a080ff40}
+ .xcmd-sidebar>button>svg{width:9px;height:9px;flex-shrink:0}
+ .xcmd-side-icon{width:9px;flex-shrink:0;font-size:9px}
+ .xcmd-sidebar>button span:last-child{display:none}
+ .xcmd-main{min-width:0;padding:9px 5px}
+ .xcmd-mainhead{display:block}
+ .xcmd-mainhead>div>span{font-size:6px;letter-spacing:0}
+ .xcmd-mainhead h3{font-size:13px;line-height:1.2;margin:4px 0 9px}
+ .xcmd-mainbadge{display:none}
+ .xcmd-search{min-height:26px;gap:4px;padding:5px;border-radius:5px}
+ .xcmd-search>svg{width:10px;height:10px;flex-shrink:0}
+ .xcmd-search input{font-size:9px;min-width:0}
+ .xcmd-content{display:grid;grid-template-columns:minmax(0,43%) minmax(0,57%);gap:4px;min-height:0;margin-top:7px}
+ .xcmd-tool-list,.xcmd-workspace{order:initial;min-width:0;border-radius:6px}
+ .xcmd-listhead,.xcmd-workspace-head{padding:5px 3px;font-size:5px;letter-spacing:0;gap:2px}
+ .xcmd-workspace-head>span:first-child{gap:2px}
+ .xcmd-scroll-list{display:block;max-height:320px;padding:2px;overflow-y:auto}
+ .xcmd-scroll-list>button{display:flex;min-height:29px;width:100%;padding:3px 1px;gap:3px;border:1px solid transparent;background:transparent;border-radius:4px}
+ .xcmd-scroll-list>button>svg{display:none}
+ .xcmd-tool-icon{width:16px;height:16px;flex-shrink:0;border-radius:4px;font-size:10px}
+ .xcmd-tool-label strong{font-size:6.5px;line-height:1.2;overflow-wrap:anywhere}
+ .xcmd-tool-label small{font-size:6px;margin-top:1px}
+ .xcmd-stage{height:112px}
+ .xcmd-stage-orbit{width:69px;height:69px}
+ .xcmd-stage-orbit:before{inset:9px}
+ .xcmd-stage-orbit:after{inset:-9px}
+ .xcmd-stage-core{font-size:36px}
+ .xcmd-stage-float{display:none}
+ .xcmd-workspace-detail{padding:6px 4px}
+ .xcmd-detail-tag{font-size:6px;letter-spacing:0}
+ .xcmd-workspace-detail h4{font-size:12px;line-height:1.2;margin:4px 0;overflow-wrap:anywhere}
+ .xcmd-workspace-detail p{font-size:8px;line-height:1.4;margin:0 0 8px}
+ .xcmd-workspace-detail a{min-height:24px;padding:5px 6px;font-size:7px;gap:3px}
+ .xcmd-workspace-detail a svg{width:9px;height:9px}
+ .xcmd-insights{display:flex;flex-direction:column;grid-column:auto;min-width:0;border-left:1px solid #ffffff18;border-top:0}
+ .xcmd-insights-heading{display:flex;gap:3px;padding:10px 4px 3px;font-size:6px;letter-spacing:0;overflow-wrap:anywhere}
+ .xcmd-insights-heading>svg{width:10px;height:10px;flex-shrink:0}
+ .xcmd-concept{display:none}
+ .xcmd-insights-body{display:block;padding:6px 4px}
+ .xcmd-ai-orb{display:grid;width:35px;height:35px;margin:4px 0 11px;border-radius:9px;font-size:23px}
+ .xcmd-insights-body h4{font-size:11px;line-height:1.2;margin:0 0 7px}
+ .xcmd-insights-body>p{font-size:8px;line-height:1.4;margin:0}
+ .xcmd-prompt{display:flex;flex-direction:column;gap:4px;margin:12px 0;padding:6px 4px;border-radius:6px}
+ .xcmd-prompt span,.xcmd-suggestions>span{font-size:6px;letter-spacing:0}
+ .xcmd-prompt strong{font-size:8px;overflow-wrap:anywhere}
+ .xcmd-prompt small{font-size:7px}
+ .xcmd-suggestions{display:flex;flex-direction:column;gap:4px;margin:0}
+ .xcmd-suggestions>span{grid-column:auto}
+ .xcmd-suggestions>button{display:flex;gap:3px;min-width:0;min-height:24px;padding:4px 3px;border-radius:4px;font-size:7px;line-height:1.2;overflow-wrap:anywhere}
+ .xcmd-suggestions>button svg{width:9px;height:9px;flex-shrink:0}
+ .xcmd-insights-foot{padding:7px 4px;font-size:6px;line-height:1.3;text-align:left}
+ .xcmd-bottom{display:flex;justify-content:space-between;gap:3px;flex-wrap:nowrap;padding:8px 6px}
+ .xcmd-bottom span{font-size:6px;letter-spacing:0}
+}
+@media(max-width:390px){
+ .xcmd-section .shell{width:calc(100% - 12px)}
+ .xcmd-body{display:grid;grid-template-columns:minmax(0,20%) minmax(0,55%) minmax(0,25%)}
+ .xcmd-sidebar{display:flex;flex-direction:column;padding:6px 2px}
+ .xcmd-sidebar>button{font-size:6px;min-height:22px;padding:3px 1px}
+ .xcmd-main{padding:7px 3px}
+ .xcmd-content{display:grid;grid-template-columns:minmax(0,43%) minmax(0,57%);gap:3px}
+ .xcmd-scroll-list{display:block;max-height:300px}
+ .xcmd-stage{height:96px}
+ .xcmd-stage-orbit{width:58px;height:58px}
+ .xcmd-stage-core{font-size:30px}
+ .xcmd-workspace-detail{padding:5px 3px}
+ .xcmd-workspace-detail h4{font-size:11px}
+ .xcmd-insights-body{display:block;padding:5px 3px}
+ .xcmd-suggestions{display:flex;flex-direction:column}
+ .xcmd-topstatus{font-size:5px}
+}
