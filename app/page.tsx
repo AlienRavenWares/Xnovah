@@ -59,14 +59,15 @@ function CreativeUniverseSection(){
 
 
 function FeatureUniverse(){
- const [current,setCurrent]=useState(14),[filter,setFilter]=useState('All'),[search,setSearch]=useState('');
+ const [current,setCurrent]=useState(14),[filter,setFilter]=useState('All'),[search,setSearch]=useState(''),[zoomed,setZoomed]=useState(false);
  const categories=['All','Agents','Visual','Video','Audio','Writing','Business','Workspace','Chat','Code','Research'];
  const indexes=allToolNames.map((_,i)=>i).filter(i=>(filter==='All'||toolTypes[i]===filter)&&allToolNames[i].toLowerCase().includes(search.trim().toLowerCase()));
  const active=indexes.includes(current)?current:indexes[0]??current;
  const chooseCategory=(cat:string)=>{setFilter(cat);const next=allToolNames.findIndex((name,i)=>(cat==='All'||toolTypes[i]===cat)&&name.toLowerCase().includes(search.trim().toLowerCase()));if(next>=0)setCurrent(next)};
  return <section className="section feature-universe xcmd-section" id="feature-universe"><div className="shell">
  <div className="feature-heading"><SectionEyebrow>DESIGN 02 / THE AI COMMAND CENTER</SectionEyebrow><h2>Your universe. <span className="gradient-text">Your command.</span></h2><p>Step inside the Xnovah workspace. Explore 39 planned AI experiences through an interactive command-center preview.</p></div>
- <div className="xcmd-shell">
+ <div className="xcmd-zoom-controls"><span>COMMAND CENTER VIEW</span><button type="button" aria-pressed={zoomed} onClick={()=>setZoomed(v=>!v)}>{zoomed?<><span aria-hidden="true">−</span> Fit to screen</>:<><span aria-hidden="true">＋</span> Zoom in</>}</button></div>
+ <div className={zoomed?"xcmd-shell xcmd-zoomed":"xcmd-shell"}>
  <div className="xcmd-topbar"><div className="xcmd-brand"><span className="xcmd-brandmark">✳</span><strong>XNOVAH</strong><small>AI OS / CONCEPT</small></div><div className="xcmd-topstatus"><span className="xcmd-statusdot"/> INTERACTIVE PREVIEW <span className="xcmd-top-separator">/</span> 39 TOOLS</div></div>
  <div className="xcmd-body">
  <aside className="xcmd-sidebar" aria-label="Tool categories"><div className="xcmd-side-label">WORKSPACE</div><button type="button" className={filter==='All'?'active':''} onClick={()=>chooseCategory('All')}><Layers3 size={16}/> All tools <span>39</span></button><div className="xcmd-side-label xcmd-side-gap">EXPLORE BY CATEGORY</div>{categories.slice(1).map(cat=><button type="button" key={cat} className={filter===cat?'active':''} onClick={()=>chooseCategory(cat)}><span className="xcmd-side-icon">{cat==='Agents'?'✳':cat==='Visual'?'◈':cat==='Video'?'▶':cat==='Audio'?'♫':cat==='Writing'?'✍':cat==='Business'?'▤':cat==='Workspace'?'◇':cat==='Chat'?'☷':cat==='Code'?'⌘':'⌕'}</span>{cat}<span>{toolTypes.filter(t=>t===cat).length}</span></button>)}<div className="xcmd-side-footer">✦ MADE FOR WHAT'S NEXT</div></aside>
