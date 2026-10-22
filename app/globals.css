@@ -641,3 +641,37 @@ main{counter-reset:xnovah-section}main section{counter-increment:xnovah-section}
 .steps-cinematic .steps-reference-artwork img{display:block;width:100%;height:auto;object-fit:contain}
 .steps-cinematic .steps-story-intro,.steps-cinematic .steps-cinematic-flow,.steps-cinematic .steps-story-note{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip-path:inset(50%)!important;white-space:nowrap!important}
 @media(max-width:760px){.steps-cinematic .steps-reference-artwork img{width:100%;height:auto}}
+
+/* Desktop framing for the 800px-wide Section 09 artwork: preserve legibility
+   instead of stretching the low-resolution image across ultrawide displays. */
+@media(min-width:900px){
+  .steps-cinematic{
+    padding:clamp(42px,5vw,86px) clamp(20px,4vw,72px)!important;
+    background:
+      radial-gradient(ellipse 58% 75% at 50% 48%,#302068 0%,#15113b 54%,transparent 100%),
+      radial-gradient(ellipse 35% 80% at 0% 50%,#132f8066,transparent 100%),
+      radial-gradient(ellipse 35% 80% at 100% 50%,#53117b55,transparent 100%),
+      #030716!important;
+  }
+  .steps-cinematic>.shell{max-width:1240px!important;margin:0 auto!important}
+  .steps-cinematic .steps-reference-artwork{
+    max-width:1180px!important;
+    border-radius:clamp(12px,1.5vw,22px);
+    overflow:hidden;
+    box-shadow:0 0 0 1px #8971f033,0 18px 90px #020315cc,0 0 85px #6b31f433;
+    isolation:isolate;
+  }
+  .steps-cinematic .steps-reference-artwork img{
+    width:100%!important;
+    height:auto!important;
+    display:block;
+  }
+}
+@media(min-width:1600px){
+  .steps-cinematic>.shell{max-width:1120px!important}
+  .steps-cinematic .steps-reference-artwork{max-width:1120px!important}
+}
+@media(min-width:600px) and (max-width:899px){
+  .steps-cinematic{padding:26px 20px!important;background:#030716!important}
+  .steps-cinematic .steps-reference-artwork{max-width:800px!important;border-radius:12px;overflow:hidden}
+}
