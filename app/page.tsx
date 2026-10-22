@@ -59,29 +59,27 @@ function CreativeUniverseSection(){
 
 
 function FeatureUniverse(){
- const [current,setCurrent]=useState(14),[filter,setFilter]=useState('All'),[search,setSearch]=useState('');
+ const [category,setCategory]=useState('All'),[search,setSearch]=useState(''),[selected,setSelected]=useState<number|null>(null);
  const categories=['All','Agents','Visual','Video','Audio','Writing','Business','Workspace','Chat','Code','Research'];
- const indexes=allToolNames.map((_,i)=>i).filter(i=>(filter==='All'||toolTypes[i]===filter)&&allToolNames[i].toLowerCase().includes(search.trim().toLowerCase()));
- const active=indexes.includes(current)?current:indexes[0]??current;
- const selectCategory=(cat:string)=>{setFilter(cat);const next=allToolNames.findIndex((name,i)=>(cat==='All'||toolTypes[i]===cat)&&name.toLowerCase().includes(search.trim().toLowerCase()));if(next>=0)setCurrent(next)};
- return <section className="section feature-universe xgal-section" id="feature-universe"><div className="shell">
-  <div className="feature-heading"><SectionEyebrow>DESIGN 03 / THE AI GALAXY</SectionEyebrow><h2>Explore a universe of <span className="gradient-text">possibility.</span></h2><p>39 creative AI experiences. One connected universe. Discover your next tool by exploring the Xnovah galaxy.</p></div>
-  <div className="xgal-frame">
-   <div className="xgal-top"><div className="xgal-identity"><span className="xgal-symbol">✳</span><span>XNOVAH <strong>/ AI GALAXY</strong></span></div><div className="xgal-top-right"><span className="xgal-live"/> INTERACTIVE CONCEPT <span className="xgal-top-count">39 CONSTELLATIONS</span></div></div>
-   <div className="xgal-controls"><div className="xgal-control-heading"><span>✦ GALAXY NAVIGATOR</span><strong>Find your orbit</strong></div><label className="xgal-search"><Search size={16}/><input type="search" value={search} onChange={e=>setSearch(e.target.value)} placeholder="Search 39 AI tools..." aria-label="Search galaxy tools"/>{search&&<button type="button" onClick={()=>setSearch('')} aria-label="Clear search">×</button>}</label><div className="xgal-categories" aria-label="Filter tool categories">{categories.map(cat=><button type="button" key={cat} className={filter===cat?'active':''} onClick={()=>selectCategory(cat)} aria-pressed={filter===cat}>{cat}</button>)}</div></div>
-   <div className="xgal-universe">
-    <div className="xgal-canvas" aria-label="Interactive constellation of AI tools">
-     <div className="xgal-starfield"/><div className="xgal-orbit xgal-orbit-one"/><div className="xgal-orbit xgal-orbit-two"/><div className="xgal-orbit xgal-orbit-three"/><div className="xgal-orbit xgal-orbit-four"/>
-     <div className="xgal-core"><span className="xgal-core-halo"/><span className="xgal-core-mark">✳</span><strong>XNOVAH</strong><small>AI UNIVERSE</small></div>
-     {indexes.map((i,position)=>{const angle=(position*137.508+20)*Math.PI/180;const radius=23+(position%4)*8;const x=50+Math.cos(angle)*radius;const y=50+Math.sin(angle)*radius;return <button type="button" key={allToolNames[i]} className={'xgal-node'+(active===i?' active':'')} style={{left:x+'%',top:y+'%',animationDelay:(position%8)*-.6+'s'}} onClick={()=>setCurrent(i)} title={allToolNames[i]} aria-label={'Explore '+allToolNames[i]} aria-pressed={active===i}><span>{toolGlyphs[i]}</span><small>{allToolNames[i]}</small></button>})}
-     {indexes.length===0&&<div className="xgal-empty">No tools found. Try another search or category.</div>}
-     <div className="xgal-coordinate xgal-coordinate-left">SECTOR 03 / DISCOVERY MODE</div><div className="xgal-coordinate xgal-coordinate-right">{indexes.length} SIGNALS DETECTED</div>
-    </div>
-    <aside className="xgal-detail"><div className="xgal-detail-top"><span><span className="xgal-live"/> SELECTED SIGNAL</span><span>{String(active+1).padStart(2,'0')} / 39</span></div><div className="xgal-detail-visual"><div className="xgal-detail-ring"/><span>{toolGlyphs[active]}</span></div><div className="xgal-detail-copy"><span className="xgal-detail-type">{toolTypes[active]} / AI EXPERIENCE</span><h3>{allToolNames[active]}</h3><p>{toolDescriptions[active]}</p><a href="#waitlist">Get early access <ArrowUpRight size={16}/></a></div><div className="xgal-detail-foot">✧ SELECT ANY STAR TO EXPLORE</div></aside>
-   </div>
-   <div className="xgal-bottom"><span>✳ YOUR NEXT IDEA IS OUT THERE</span><span>DESIGN 03 / GALAXY EXPLORER</span></div>
-  </div><p className="feature-disclaimer">Interactive product-design concept only. The 39 AI experiences are planned capabilities, not functioning AI services.</p>
- </div></section>
+ const filtered=allToolNames.map((_,i)=>i).filter(i=>(category==='All'||toolTypes[i]===category)&&allToolNames[i].toLowerCase().includes(search.trim().toLowerCase()));
+ const featured=[14,0,18,25,7,31];
+ const ordered=[...featured.filter(i=>filtered.includes(i)),...filtered.filter(i=>!featured.includes(i))];
+ return <section className="section feature-universe xgallery-section" id="feature-universe"><div className="shell">
+  <div className="feature-heading"><SectionEyebrow>DESIGN 04 / THE CREATIVE GALLERY</SectionEyebrow><h2>Creativity, <span className="gradient-text">on display.</span></h2><p>A curated gallery of 39 AI-powered possibilities. Browse the collection, discover your next favorite, and imagine what you could create.</p></div>
+  <div className="xgallery-frame">
+   <div className="xgallery-masthead"><div className="xgallery-brand"><span>✳</span><strong>XNOVAH</strong><small>THE CREATIVE COLLECTION</small></div><div className="xgallery-mast-right"><span className="xgallery-live"/> INTERACTIVE CONCEPT <span>VOL. 04 / 39 EXPERIENCES</span></div></div>
+   <div className="xgallery-intro"><div><span className="xgallery-eyebrow">✦ EXPLORE THE COLLECTION</span><h3>Every idea deserves <em>a canvas.</em></h3><p>From your first spark to your next breakthrough, find a creative experience worth exploring.</p></div><div className="xgallery-count"><strong>39</strong><span>TOOLS IN THE<br/>COLLECTION</span></div></div>
+   <div className="xgallery-toolbar"><label className="xgallery-search"><Search size={17}/><input type="search" value={search} onChange={e=>setSearch(e.target.value)} placeholder="Find your next creative tool..." aria-label="Search all AI tools"/>{search&&<button type="button" aria-label="Clear search" onClick={()=>setSearch('')}>×</button>}</label><div className="xgallery-filters" aria-label="Filter tools">{categories.map(cat=><button type="button" key={cat} className={category===cat?'active':''} aria-pressed={category===cat} onClick={()=>setCategory(cat)}>{cat}</button>)}</div></div>
+   <div className="xgallery-sectionhead"><span>THE EXHIBITION <span className="xgallery-divider">/</span> {category==='All'?'ALL CATEGORIES':category.toUpperCase()}</span><span>{ordered.length} WORKS</span></div>
+   <div className="xgallery-grid">{ordered.map((i,pos)=><button type="button" key={allToolNames[i]} className={'xgallery-card xgallery-card-'+(i%6)+(category==='All'&&!search&&pos<2?' xgallery-card-featured':'')} onClick={()=>setSelected(i)} aria-label={'Preview '+allToolNames[i]}>
+    <div className="xgallery-art"><div className="xgallery-art-grid"/><div className="xgallery-art-halo"/><div className="xgallery-art-symbol">{toolGlyphs[i]}</div><span className="xgallery-art-index">{String(i+1).padStart(2,'0')} / 39</span><span className="xgallery-art-arrow"><ArrowUpRight size={17}/></span></div>
+    <div className="xgallery-card-copy"><div><span className="xgallery-card-category">{toolTypes[i]} / CREATIVE AI</span><h4>{allToolNames[i]}</h4><p>{toolDescriptions[i]}</p></div><span className="xgallery-card-explore">EXPLORE EXPERIENCE <ArrowUpRight size={14}/></span></div>
+   </button>)}{ordered.length===0&&<div className="xgallery-empty">No tools match your search. Try a different name or category.</div>}</div>
+   <div className="xgallery-footer"><span>✳ IMAGINE WHAT'S NEXT</span><span>DESIGN 04 / CREATIVE GALLERY</span></div>
+  </div>
+  {selected!==null&&<div className="xgallery-modal-backdrop" role="presentation" onClick={()=>setSelected(null)}><div className="xgallery-modal" role="dialog" aria-modal="true" aria-label={allToolNames[selected]+' preview'} onClick={e=>e.stopPropagation()}><button type="button" className="xgallery-modal-close" onClick={()=>setSelected(null)} aria-label="Close preview"><X size={19}/></button><div className={'xgallery-modal-art xgallery-card-'+(selected%6)}><div className="xgallery-art-grid"/><div className="xgallery-art-halo"/><span>{toolGlyphs[selected]}</span></div><div className="xgallery-modal-copy"><span className="xgallery-eyebrow">{toolTypes[selected]} / XNOVAH EXPERIENCE {String(selected+1).padStart(2,'0')}</span><h3>{allToolNames[selected]}</h3><p>{toolDescriptions[selected]}</p><a href="#waitlist" onClick={()=>setSelected(null)}>Join the waitlist <ArrowUpRight size={16}/></a><small>Concept preview — this AI tool is not yet available.</small></div></div></div>}
+  <p className="feature-disclaimer">Interactive product-design concept only. The 39 AI tools are planned capabilities, not functioning AI services.</p>
+ </div></section>;
 }
 
 const audiences=['Content creators','Entrepreneurs','Marketing teams','Social media managers','Designers','Writers & bloggers','Developers','E-commerce sellers','Agencies','Educators','Students','Researchers','Podcasters','Video creators','Small businesses'];
