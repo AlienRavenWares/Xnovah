@@ -940,3 +940,72 @@ main{counter-reset:xnovah-section}main section{counter-increment:xnovah-section}
  .xcmd-stage-float{font-size:6px}
  .xcmd-suggestions{grid-template-columns:1fr}
 }
+
+
+/* Design 2: retain the desktop command-center composition on mobile.
+   Keep all three dashboard panels, and allow natural horizontal exploration
+   instead of rearranging the interface into unrelated mobile cards. */
+@media(max-width:750px){
+ .xcmd-section .shell{width:calc(100% - 24px);max-width:100%;margin-inline:auto}
+ .xcmd-shell{display:block;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:#9273d7 #11152b;border-radius:18px}
+ .xcmd-shell>.xcmd-topbar,.xcmd-shell>.xcmd-body,.xcmd-shell>.xcmd-bottom{width:1030px;min-width:1030px;box-sizing:border-box}
+ .xcmd-topbar{padding:16px 24px}
+ .xcmd-brand{gap:11px;font-size:13px;letter-spacing:2px}
+ .xcmd-brand small{display:inline;color:#a7a6cc;font-size:9px}
+ .xcmd-topstatus{font-size:10px;letter-spacing:1.3px;gap:10px}
+ .xcmd-top-separator{display:inline}
+ .xcmd-body{display:grid;grid-template-columns:175px minmax(0,1fr) 220px;min-height:670px}
+ .xcmd-sidebar{display:flex;flex-direction:column;overflow:visible;gap:4px;padding:22px 11px;border-right:1px solid #ffffff15;border-bottom:0;scroll-snap-type:none}
+ .xcmd-side-label,.xcmd-side-footer{display:block}
+ .xcmd-sidebar>button{width:100%;min-height:0;flex-shrink:1;white-space:normal;scroll-snap-align:none;padding:11px 12px;border:1px solid transparent;border-radius:10px;background:transparent;font-size:12px}
+ .xcmd-sidebar>button.active{background:#6b4aca3b;border-color:#a080ff40}
+ .xcmd-main{padding:26px 20px}
+ .xcmd-mainhead{align-items:center}
+ .xcmd-mainhead h3{font-size:26px;line-height:1.2;margin:8px 0 20px}
+ .xcmd-mainhead>div>span{font-size:9px}
+ .xcmd-mainbadge{display:inline-block;padding:8px 10px;font-size:9px}
+ .xcmd-search{min-height:0;padding:11px 14px}
+ .xcmd-search input{font-size:12px}
+ .xcmd-content{display:grid;grid-template-columns:minmax(165px,.75fr) minmax(0,1.25fr);gap:14px;margin-top:17px;min-height:480px}
+ .xcmd-workspace,.xcmd-tool-list{order:initial}
+ .xcmd-listhead,.xcmd-workspace-head{padding:14px 12px;font-size:9px}
+ .xcmd-scroll-list{display:block;max-height:468px;padding:7px}
+ .xcmd-scroll-list>button{display:flex;width:100%;min-height:0;padding:10px 8px;gap:9px;border:1px solid transparent;background:none}
+ .xcmd-scroll-list>button>svg{display:block}
+ .xcmd-tool-icon{width:32px;height:32px;font-size:20px}
+ .xcmd-tool-label strong{font-size:11px;overflow-wrap:normal}
+ .xcmd-tool-label small{font-size:9px}
+ .xcmd-stage{height:255px}
+ .xcmd-stage-orbit{width:190px;height:190px}
+ .xcmd-stage-core{font-size:85px}
+ .xcmd-stage-float{font-size:8px;padding:8px 10px;letter-spacing:1px}
+ .xcmd-workspace-detail{padding:19px}
+ .xcmd-workspace-detail h4{font-size:24px}
+ .xcmd-workspace-detail p{font-size:12px}
+ .xcmd-workspace-detail a{min-height:0;font-size:11px}
+ .xcmd-insights{display:flex;flex-direction:column;grid-column:auto;border-left:1px solid #ffffff15;border-top:0}
+ .xcmd-insights-heading{padding:24px 13px 0}
+ .xcmd-insights-body{display:block;padding:15px}
+ .xcmd-ai-orb{width:70px;height:70px;border-radius:22px;font-size:42px;margin-bottom:24px}
+ .xcmd-insights-body h4{font-size:19px}
+ .xcmd-insights-body>p{font-size:12px}
+ .xcmd-prompt{margin:26px 0}
+ .xcmd-suggestions{display:flex;flex-direction:column;gap:8px}
+ .xcmd-suggestions>span{grid-column:auto}
+ .xcmd-suggestions>button{min-height:0;font-size:10px}
+ .xcmd-insights-foot{padding:17px 12px}
+ .xcmd-bottom{padding:16px 24px;gap:14px;font-size:9px;flex-wrap:nowrap}
+ .xcmd-bottom span{font-size:9px}
+}
+@media(max-width:390px){
+ .xcmd-section .shell{width:calc(100% - 20px)}
+ .xcmd-topstatus{font-size:10px;gap:10px}
+ .xcmd-topstatus .xcmd-statusdot{margin-right:0}
+ .xcmd-mainbadge{display:inline-block}
+ .xcmd-main{padding:26px 20px}
+ .xcmd-scroll-list{display:block;max-height:468px}
+ .xcmd-scroll-list>button{min-height:0}
+ .xcmd-stage{height:255px}
+ .xcmd-stage-float{font-size:8px}
+ .xcmd-suggestions{display:flex}
+}
