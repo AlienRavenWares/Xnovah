@@ -1397,3 +1397,29 @@ main{counter-reset:xnovah-section}main section{counter-increment:xnovah-section}
 @media(max-width:650px){.xgal-frame{border-radius:15px}.xgal-top{padding:13px 12px}.xgal-identity{font-size:10px;letter-spacing:.5px}.xgal-symbol{width:27px;height:27px;font-size:19px}.xgal-top-right{font-size:8px;letter-spacing:0}.xgal-top-count{display:none}.xgal-controls{padding:14px 11px;gap:11px}.xgal-control-heading{min-width:0;width:100%}.xgal-control-heading strong{font-size:15px}.xgal-search{max-width:none;flex:1 1 100%}.xgal-categories{flex:1 1 100%;gap:5px}.xgal-categories button{font-size:9px;padding:7px 9px}.xgal-universe{display:flex;flex-direction:column;min-height:0}.xgal-canvas{min-height:440px}.xgal-orbit-one{width:29%}.xgal-orbit-two{width:50%}.xgal-orbit-three{width:73%}.xgal-orbit-four{width:94%}.xgal-core{width:79px;height:79px}.xgal-core-mark{font-size:30px}.xgal-core strong{font-size:9px}.xgal-core small{font-size:5px}.xgal-node{width:30px;height:30px;padding:2px}.xgal-node span{font-size:13px}.xgal-node.active{width:38px;height:38px}.xgal-node.active span{font-size:17px}.xgal-coordinate{font-size:7px;bottom:10px}.xgal-coordinate-left{left:10px}.xgal-coordinate-right{right:10px}.xgal-detail{border-left:0;border-top:1px solid #ffffff20}.xgal-detail-top{padding:12px 15px}.xgal-detail-visual{height:125px}.xgal-detail-visual>span{font-size:60px}.xgal-detail-ring{width:95px;height:95px}.xgal-detail-copy{padding:15px}.xgal-detail-copy h3{font-size:23px;margin:9px 0}.xgal-detail-copy p{font-size:12px}.xgal-detail-copy a{margin-top:14px}.xgal-detail-foot{padding:12px 15px}.xgal-bottom{padding:12px;font-size:7px;letter-spacing:.3px}}
 @media(max-width:390px){.xgal-canvas{min-height:370px}.xgal-node{width:27px;height:27px}.xgal-node span{font-size:12px}.xgal-node.active{width:34px;height:34px}.xgal-core{width:69px;height:69px}.xgal-core-mark{font-size:26px}.xgal-coordinate{font-size:6px}}
 @media(prefers-reduced-motion:reduce){.xgal-node,.xgal-core-halo{animation:none}}
+
+/* Section 15 — premium galaxy visual polish (keeps the saved Design 3 structure) */
+#integrations.xgal-section{padding-top:115px;padding-bottom:110px;background:radial-gradient(ellipse at 50% 35%,#30205a55,transparent 65%)}
+#integrations .feature-heading{max-width:790px;margin:0 auto 38px;text-align:center}
+#integrations .feature-heading h2{font-size:clamp(36px,5.2vw,66px);letter-spacing:-2px}
+#integrations .feature-heading p{max-width:570px;margin:15px auto 0;line-height:1.7;color:#bfb4d7}
+#integrations .xgal-frame{border-color:#c7a3ff66;box-shadow:0 35px 110px #060314a8,0 0 100px #9254f12b; background:linear-gradient(145deg,#15102d,#0b1027 60%,#251137)}
+#integrations .xgal-top{background:linear-gradient(90deg,#22163c,#14152f)}
+#integrations .xgal-canvas{background:radial-gradient(ellipse at 50% 50%,#4b257455 0%,#0d1229 65%,#080b19 100%);isolation:isolate;overflow:hidden}
+#integrations .xgal-nebula{position:absolute;pointer-events:none;border-radius:50%;filter:blur(45px);opacity:.6;z-index:0}
+#integrations .xgal-nebula-a{width:270px;height:280px;left:7%;top:14%;background:#8b42cc44}
+#integrations .xgal-nebula-b{width:280px;height:220px;right:2%;bottom:5%;background:#267be04b}
+#integrations .xgal-shooting-star{position:absolute;z-index:1;top:16%;left:12%;width:105px;height:2px;transform:rotate(-25deg);background:linear-gradient(90deg,transparent,#e8c9ff,transparent);box-shadow:0 0 15px #b891ff;opacity:.7;animation:xgal-shoot 7s ease-in-out infinite}
+@keyframes xgal-shoot{0%,60%,100%{opacity:0;translate:-60px 30px}70%{opacity:.8;translate:80px -40px}85%{opacity:0;translate:150px -80px}}
+#integrations .xgal-orbit{border-color:#aa85ed40}
+#integrations .xgal-core{box-shadow:0 0 35px #b66bff55,0 0 110px #994fff3d;background:radial-gradient(circle at 40% 25%,#50307c,#17132c 72%);border-color:#c4a1ff99}
+#integrations .xgal-node{border-color:#b69ad566;background:linear-gradient(145deg,#24203e,#111426);box-shadow:0 7px 25px #000a,0 0 16px #8455d21a;transition:box-shadow .2s,border-color .2s,transform .2s}
+#integrations .xgal-node:hover,#integrations .xgal-node.active{border-color:#dfc5ff;box-shadow:0 0 28px #a46df36e,0 8px 28px #000a}
+#integrations .xgal-node .xgal-app-letter{width:26px;height:26px;display:grid;place-items:center;border-radius:9px;color:#fff;font-size:15px;font-weight:800;text-shadow:0 1px 3px #0008;box-shadow:0 3px 12px #0005}
+#integrations .xgal-node small{color:#e6dbf5;font-weight:600}
+#integrations .xgal-detail{background:linear-gradient(180deg,#1b1837,#121327)}
+#integrations .xgal-detail-visual{background:radial-gradient(circle,#6841ac44,transparent 67%)}
+#integrations .xgal-detail-app{display:grid;place-items:center;width:95px;height:95px;border-radius:24px;color:white;font-size:57px;font-weight:800;box-shadow:0 15px 50px #0007,0 0 55px #a771ec66}
+#integrations .xgal-detail-copy a{box-shadow:0 10px 25px #8f52d03d}
+@media(max-width:650px){#integrations.xgal-section{padding-top:75px;padding-bottom:75px}#integrations .feature-heading h2{letter-spacing:-1px}#integrations .xgal-node .xgal-app-letter{width:17px;height:17px;font-size:10px;border-radius:5px}#integrations .xgal-detail-app{width:68px;height:68px;font-size:39px;border-radius:18px}}
+@media(prefers-reduced-motion:reduce){#integrations .xgal-shooting-star{animation:none;opacity:0}}
