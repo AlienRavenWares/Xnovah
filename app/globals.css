@@ -1312,3 +1312,11 @@ main{counter-reset:xnovah-section}main section{counter-increment:xnovah-section}
 @media screen and (min-width: 751px) {
   .xcmd-section .xcmd-zoom-controls { display: none !important; visibility: hidden !important; }
 }
+
+/* Section 10: extended MagicAI model ecosystem */
+.ecosystem-more-models{grid-column:1/-1;margin-top:4px;padding:22px 24px;border:1px solid #5c4b6b66;border-radius:14px;background:linear-gradient(120deg,#241a32aa,#15101f88)}
+.ecosystem-more-models>span{display:block;font-size:10px;font-weight:800;letter-spacing:1.8px;color:#c5a4ef;margin-bottom:17px}
+.ecosystem-model-tags{display:flex;flex-wrap:wrap;gap:9px}
+.ecosystem-model-tags>span{font-size:12px;font-weight:650;color:#eee4f9;border:1px solid #71558a88;border-radius:999px;padding:9px 13px;background:#30223eaa}
+.ecosystem-more-models small{display:block;margin-top:17px;font-size:10px;line-height:1.7;color:#a99ab8}
+@media(max-width:750px){.ecosystem-more-models{padding:17px 14px}.ecosystem-model-tags{gap:7px}.ecosystem-model-tags>span{font-size:10px;padding:7px 10px}}
