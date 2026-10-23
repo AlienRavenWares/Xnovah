@@ -1423,3 +1423,13 @@ main{counter-reset:xnovah-section}main section{counter-increment:xnovah-section}
 #integrations .xgal-detail-copy a{box-shadow:0 10px 25px #8f52d03d}
 @media(max-width:650px){#integrations.xgal-section{padding-top:75px;padding-bottom:75px}#integrations .feature-heading h2{letter-spacing:-1px}#integrations .xgal-node .xgal-app-letter{width:17px;height:17px;font-size:10px;border-radius:5px}#integrations .xgal-detail-app{width:68px;height:68px;font-size:39px;border-radius:18px}}
 @media(prefers-reduced-motion:reduce){#integrations .xgal-shooting-star{animation:none;opacity:0}}
+
+/* Authentic app logos for Section 15 */
+#integrations .xgal-app-logo{background:#181526!important;border:1px solid #ffffff20;overflow:hidden}
+#integrations .xgal-app-logo img{width:76%;height:76%;object-fit:contain;display:block;filter:drop-shadow(0 1px 2px #0008)}
+#integrations .xgal-app-logo b{display:none}
+#integrations .xgal-app-logo.logo-fallback b{display:block}
+#integrations .xgal-detail-logo{background:linear-gradient(145deg,#2e2145,#181327)!important;border:1px solid #a788c56e;overflow:hidden}
+#integrations .xgal-detail-logo img{width:65%;height:65%;object-fit:contain;filter:drop-shadow(0 4px 12px #0008)}
+#integrations .xgal-detail-logo b{display:none}
+#integrations .xgal-detail-logo.logo-fallback b{display:block}
