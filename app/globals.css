@@ -1433,3 +1433,30 @@ main{counter-reset:xnovah-section}main section{counter-increment:xnovah-section}
 #integrations .xgal-detail-logo img{width:65%;height:65%;object-fit:contain;filter:drop-shadow(0 4px 12px #0008)}
 #integrations .xgal-detail-logo b{display:none}
 #integrations .xgal-detail-logo.logo-fallback b{display:block}
+
+/* SECTION 15 / DESIGN 03 — HOLOGRAPHIC ORBITAL RING */
+#integrations.xgal-holo-section{background:radial-gradient(ellipse at 50% 50%,#24204b55,transparent 70%),#0b0d1b}
+#integrations .xgal-holo-frame{border:1px solid #7476df88;border-radius:26px;background:linear-gradient(155deg,#10152f,#090d1f 55%,#1c1035);box-shadow:0 30px 100px #02030fc0,0 0 80px #8e5dff25;overflow:hidden}
+#integrations .xgal-holo-canvas{background:radial-gradient(ellipse at 50% 56%,#4a2e9770,transparent 51%),radial-gradient(ellipse at 55% 83%,#165da23b,transparent 53%),#080d20;min-height:690px;perspective:900px;overflow:hidden}
+#integrations .xgal-holo-canvas::before{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(transparent 96%,#6597ed0c 97%),linear-gradient(90deg,transparent 96%,#6597ed0c 97%);background-size:42px 42px;mask-image:linear-gradient(transparent 30%,#000 100%);transform:perspective(300px) rotateX(60deg) scale(1.6);transform-origin:bottom;opacity:.7}
+#integrations .xgal-holo-floor{position:absolute;left:50%;top:57%;width:78%;height:46%;transform:translate(-50%,-50%) rotateX(66deg);border-radius:50%;border:3px solid #9575ff8c;box-shadow:0 0 20px #b38aff99,inset 0 0 65px #4d6fff45,0 0 90px #5b55ff55;background:radial-gradient(ellipse,#2c2b6b30,transparent 72%);pointer-events:none}
+#integrations .xgal-holo-ring{position:absolute;left:50%;top:50%;border-radius:50%;pointer-events:none;transform:translate(-50%,-50%) rotateX(62deg);box-shadow:0 0 19px #8584ff55,inset 0 0 25px #6b52f333}
+#integrations .xgal-holo-ring-outer{width:88%;height:88%;border:2px solid #739fff9c;animation:xgal-holo-spin 28s linear infinite}
+#integrations .xgal-holo-ring-inner{width:65%;height:65%;border:2px dashed #e78dff99;animation:xgal-holo-spin 19s linear infinite reverse}
+@keyframes xgal-holo-spin{from{transform:translate(-50%,-50%) rotateX(62deg) rotate(0deg)}to{transform:translate(-50%,-50%) rotateX(62deg) rotate(360deg)}}
+#integrations .xgal-holo-beam{position:absolute;left:50%;top:17%;width:2px;height:58%;transform:translateX(-50%);background:linear-gradient(transparent,#eabaffc2 48%,#85a6ffbb,transparent);filter:blur(4px);box-shadow:0 0 35px 9px #b77bff66;pointer-events:none}
+#integrations .xgal-holo-canvas .xgal-orbit{border-color:#9386d93a;transform:translate(-50%,-50%) rotateX(62deg);box-shadow:0 0 20px #9c8eff18}
+#integrations .xgal-holo-core{width:166px;height:166px;border:2px solid #d6b9ff;background:radial-gradient(circle at 34% 20%,#4d60c8,#3b1d82 50%,#0a1130 84%);box-shadow:0 0 0 9px #8662ff24,0 0 45px #bd79ffb8,0 0 105px #6b69ff8f,inset 0 0 45px #7a6dff88;z-index:4}
+#integrations .xgal-holo-core::after{content:'';position:absolute;inset:-20px;border:1px solid #a9adff8c;border-radius:50%;transform:rotateX(68deg);box-shadow:0 0 24px #bc8dff9c;pointer-events:none}
+#integrations .xgal-holo-node{width:64px;height:64px;border-radius:17px;background:linear-gradient(145deg,#282c56f5,#11142bf7);border:1px solid #9f9cfaa8;box-shadow:0 8px 24px #000b,0 0 17px #7a88ff60;backdrop-filter:blur(14px);z-index:5}
+#integrations .xgal-holo-node:hover,#integrations .xgal-holo-node.active{border-color:#fff;box-shadow:0 0 0 3px #ad8fff55,0 0 30px #bd84ffdd,0 8px 28px #000a;transform:translate(-50%,-50%) scale(1.14)}
+#integrations .xgal-holo-node .xgal-app-logo{width:33px;height:33px;border-radius:11px;background:#12172c!important;box-shadow:0 0 15px #8d7bff4d}
+#integrations .xgal-holo-node small{font-size:9px;letter-spacing:.1px;color:#f4edff;text-shadow:0 2px 6px #000}
+#integrations .xgal-holo-frame .xgal-detail{background:linear-gradient(160deg,#191b3c,#0d1127 85%);border-left:1px solid #8486db55}
+#integrations .xgal-holo-frame .xgal-detail-visual{background:radial-gradient(circle,#5748a666,transparent 68%)}
+#integrations .xgal-holo-frame .xgal-detail-logo{border-radius:50%;box-shadow:0 0 0 9px #8071ff22,0 0 45px #9383ff8c;background:radial-gradient(circle,#353c79,#12152d)!important}
+#integrations .xgal-holo-frame .xgal-categories button.active{box-shadow:0 0 16px #895eff6b}
+@media(max-width:900px){#integrations .xgal-holo-canvas{min-height:590px}#integrations .xgal-holo-node{width:48px;height:48px;border-radius:12px}#integrations .xgal-holo-node .xgal-app-logo{width:24px;height:24px}#integrations .xgal-holo-core{width:120px;height:120px}}
+@media(max-width:650px){#integrations .xgal-holo-canvas{min-height:440px}#integrations .xgal-holo-node{width:34px;height:34px;border-radius:9px}#integrations .xgal-holo-node .xgal-app-logo{width:19px;height:19px;border-radius:6px}#integrations .xgal-holo-node small{font-size:0}#integrations .xgal-holo-node.active small{font-size:7px;position:absolute;top:100%;margin-top:5px;background:#19152dcc;padding:3px 5px;border-radius:5px}#integrations .xgal-holo-core{width:88px;height:88px}#integrations .xgal-holo-floor{width:92%}}
+@media(max-width:390px){#integrations .xgal-holo-canvas{min-height:380px}#integrations .xgal-holo-node{width:29px;height:29px}#integrations .xgal-holo-node .xgal-app-logo{width:16px;height:16px}#integrations .xgal-holo-core{width:73px;height:73px}}
+@media(prefers-reduced-motion:reduce){#integrations .xgal-holo-ring{animation:none}}
