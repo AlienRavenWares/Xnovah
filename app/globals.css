@@ -1320,3 +1320,14 @@ main{counter-reset:xnovah-section}main section{counter-increment:xnovah-section}
 .ecosystem-model-tags>span{font-size:12px;font-weight:650;color:#eee4f9;border:1px solid #71558a88;border-radius:999px;padding:9px 13px;background:#30223eaa}
 .ecosystem-more-models small{display:block;margin-top:17px;font-size:10px;line-height:1.7;color:#a99ab8}
 @media(max-width:750px){.ecosystem-more-models{padding:17px 14px}.ecosystem-model-tags{gap:7px}.ecosystem-model-tags>span{font-size:10px;padding:7px 10px}}
+
+/* Section 10: orbit every AI model around the Xnovah core */
+.ecosystem-layout{grid-template-columns:1fr;gap:16px}
+.ecosystem-copy{text-align:center;max-width:720px;margin:auto}
+.ecosystem-copy>p{max-width:640px;margin-left:auto;margin-right:auto}
+.ecosystem-art{height:760px;width:min(100%,1020px);margin:0 auto;isolation:isolate}
+.ecosystem-art .model-pill{right:auto;bottom:auto;transform:translate(-50%,-50%);white-space:nowrap;padding:9px 12px;font-size:11px;box-shadow:0 5px 19px #0008}
+.ecosystem-art .ecosystem-circle.ec1{width:85%;height:85%;max-width:780px;max-height:650px}
+.ecosystem-art .ecosystem-circle.ec2{width:50%;height:50%;max-width:500px;max-height:380px}
+@media(max-width:750px){.ecosystem-art{height:520px}.ecosystem-art .model-pill{padding:5px 6px;font-size:7px;gap:3px;border-radius:6px}.ecosystem-art .model-pill span{font-size:7px}.ecosystem-art .ecosystem-core{width:105px;height:105px}.ecosystem-art .ecosystem-core span{font-size:39px}.ecosystem-art .ecosystem-circle.ec1{height:85%}.ecosystem-art .ecosystem-circle.ec2{height:50%}}
+@media(max-width:440px){.ecosystem-art{height:390px}.ecosystem-art .model-pill{padding:3px 4px;font-size:5.5px;gap:2px}.ecosystem-art .model-pill span{font-size:5px}.ecosystem-art .ecosystem-core{width:77px;height:77px}.ecosystem-art .ecosystem-core span{font-size:29px}.ecosystem-art .ecosystem-core b{font-size:8px}}
