@@ -1344,3 +1344,25 @@ main{counter-reset:xnovah-section}main section{counter-increment:xnovah-section}
 .cu-example-card small{font-size:9px;letter-spacing:1.3px;color:#9f91b2}
 .cu-example-card strong{font-size:14px;line-height:1.5;color:#f3eafa}
 @media(max-width:650px){.cu-journey-examples{padding:17px}.cu-examples-grid{grid-template-columns:1fr}.cu-example-card{min-height:auto;padding:14px;gap:6px}}
+
+/* Section 15 — Connected Apps Galaxy, based on the original 21-app HTML */
+.xgalaxy-section{overflow:hidden;background:radial-gradient(ellipse at 50% 48%,#301b5277,transparent 65%),#100d1a}
+.xgalaxy-section .shell>h2,.xgalaxy-section .extra-lead{text-align:center;margin-left:auto;margin-right:auto}
+.xgalaxy-section .eyebrow{justify-content:center}
+.xgalaxy-filters{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:30px auto 10px}
+.xgalaxy-filters button{padding:9px 14px;border:1px solid #765a9b77;background:#23182f;color:#d5c5e7;border-radius:999px;font-size:11px;cursor:pointer}
+.xgalaxy-filters button.active,.xgalaxy-filters button:hover{background:#654299;color:white;border-color:#b18bec}
+.xgalaxy-scene{width:min(100%,960px);height:720px;position:relative;margin:0 auto;isolation:isolate;background:radial-gradient(ellipse at center,#39205877 0%,transparent 55%)}
+.xgalaxy-stars{position:absolute;inset:0;opacity:.5;background-image:radial-gradient(#d3aaff 1px,transparent 1px),radial-gradient(#ffffff 1px,transparent 1px);background-size:59px 61px,101px 103px;background-position:13px 17px,32px 40px;mask-image:radial-gradient(ellipse,#000 30%,transparent 78%)}
+.xgalaxy-orbit{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border:1px solid #9970cd44;border-radius:50%;pointer-events:none}
+.xgalaxy-orbit.orbit-a{width:88%;height:88%}.xgalaxy-orbit.orbit-b{width:64%;height:64%;border-style:dashed}.xgalaxy-orbit.orbit-c{width:42%;height:42%}
+.xgalaxy-core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:156px;height:156px;display:flex;align-items:center;justify-content:center;flex-direction:column;border-radius:50%;z-index:2;background:radial-gradient(circle at 30% 20%,#aa80e4,#5b3193 55%,#241339);border:1px solid #e2bfff88;box-shadow:0 0 60px #9959d888,0 0 130px #7c40bd33}
+.xgalaxy-core>span{font-size:55px;line-height:1}.xgalaxy-core strong{font-size:17px;letter-spacing:2px}.xgalaxy-core small{font-size:8px;letter-spacing:1px;color:#e5d5ff;margin-top:5px}
+.xgalaxy-app{position:absolute;z-index:3;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:5px;border:1px solid #815fb4a8;border-radius:13px;padding:8px 10px;background:#20142ff2;color:#f6edff;cursor:pointer;min-width:72px;box-shadow:0 8px 24px #0009;transition:transform .2s,border-color .2s,background .2s}
+.xgalaxy-app:hover,.xgalaxy-app.selected{transform:translate(-50%,-50%) scale(1.12);background:#49306c;border-color:#e2bdff;z-index:5}
+.xgalaxy-app-symbol{width:24px;height:24px;display:grid;place-items:center;border-radius:8px;background:linear-gradient(145deg,#9c6cdb,#4c267f);font-weight:800;font-size:13px}
+.xgalaxy-app-name{font-size:10px;font-weight:650;white-space:nowrap}
+.xgalaxy-panel{max-width:820px;margin:0 auto 24px;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px;border:1px solid #67488999;background:#1e152d;border-radius:16px}
+.xgalaxy-panel>div>span{font-size:10px;letter-spacing:1.2px;color:#c6a5f4}.xgalaxy-panel h3{font-size:22px;margin:8px 0}.xgalaxy-panel p{font-size:12px;color:#b7a7ca;line-height:1.6}.xgalaxy-panel>a{flex-shrink:0;color:#d9b7ff;font-size:12px;display:flex;align-items:center;gap:7px}
+@media(max-width:700px){.xgalaxy-scene{height:520px}.xgalaxy-app{min-width:48px;padding:5px 6px;gap:3px;border-radius:8px}.xgalaxy-app-symbol{width:17px;height:17px;font-size:10px}.xgalaxy-app-name{font-size:7px}.xgalaxy-core{width:100px;height:100px}.xgalaxy-core>span{font-size:35px}.xgalaxy-core strong{font-size:12px}.xgalaxy-core small{font-size:6px}.xgalaxy-panel{padding:17px;align-items:flex-start;flex-direction:column}}
+@media(max-width:420px){.xgalaxy-scene{height:390px}.xgalaxy-app{min-width:36px;padding:3px 4px}.xgalaxy-app-symbol{width:13px;height:13px;font-size:8px}.xgalaxy-app-name{font-size:5.5px}.xgalaxy-core{width:76px;height:76px}.xgalaxy-core>span{font-size:26px}.xgalaxy-core strong{font-size:9px}.xgalaxy-core small{font-size:4.5px}}
