@@ -1545,3 +1545,13 @@ main{counter-reset:xnovah-section}main section{counter-increment:xnovah-section}
 #integrations .xorbit-benefits>div{background:linear-gradient(145deg,#0e1a3a,#080f29);border-color:#1f69c8a3;box-shadow:inset 0 0 18px #1b3d9d25}
 @media(max-width:1050px){#integrations .xorbit-hub-x{font-size:67px;letter-spacing:-7px}}
 @media(max-width:480px){#integrations .xorbit-hub-x{font-size:43px;letter-spacing:-5px}#integrations .xorbit-app-label{font-size:6px;padding:2px 3px}}
+
+/* Logo fidelity correction: official artwork must retain its original colors and proportions. */
+#integrations .xorbit-app-disc{background:radial-gradient(circle at 45% 25%,#25325c,#090e23 75%)!important;border-color:color-mix(in srgb,var(--app-glow),white 20%);overflow:visible}
+#integrations .xorbit-app-disc img{width:78%;height:78%;max-width:78%;max-height:78%;object-fit:contain;filter:drop-shadow(0 1px 2px #0009) drop-shadow(0 0 5px color-mix(in srgb,var(--app-glow),transparent 55%));display:block}
+#integrations .xorbit-app-disc:has(img[src*="instagram"]) {background:radial-gradient(circle at 50% 40%,#4b194c,#100d28 80%)!important}
+#integrations .xorbit-app-disc:has(img[src*="wordpress"]) {background:radial-gradient(circle at 35% 20%,#239cd6,#075282 75%)!important}
+#integrations .xorbit-detail-icon{background:radial-gradient(circle at 45% 30%,#263564,#0b102c 78%)!important}
+#integrations .xorbit-detail-icon img{width:74%;height:74%;object-fit:contain;filter:drop-shadow(0 3px 5px #0008) drop-shadow(0 0 9px color-mix(in srgb,var(--app-glow),transparent 50%))}
+#integrations .xorbit-detail-icon:has(img[src*="instagram"]){background:radial-gradient(circle at 40% 30%,#7c256a,#1d1037 78%)!important}
+#integrations .xorbit-detail-icon:has(img[src*="wordpress"]){background:radial-gradient(circle at 35% 25%,#229bd6,#075181 78%)!important}
