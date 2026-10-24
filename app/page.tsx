@@ -113,8 +113,8 @@ const logoBadgeColors:Record<string,string>={
 const logoDarkMarks=new Set(['Google Drive','Google Calendar','Slack','Notion']);
 function makeBadgeLogo(name:string,svgUri:string){
  if(name==='Instagram')return svgUri;
- const raw=decodeURIComponent(svgUri.replace(/^data:image\\/svg\\+xml,/,''));
- const match=raw.match(/viewBox="([\\d.]+) ([\\d.]+) ([\\d.]+) ([\\d.]+)"/);
+ const raw=decodeURIComponent(svgUri.replace(/^data:image\/svg\+xml,/,''));
+ const match=raw.match(/viewBox="([\d.]+) ([\d.]+) ([\d.]+) ([\d.]+)"/);
  if(!match)return svgUri;
  const [,xs,ys,ws,hs]=match;const x=+xs,y=+ys,w=+ws,h=+hs;
  const fill=logoBadgeColors[name]||'#273a6b';
