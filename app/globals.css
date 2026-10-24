@@ -1555,3 +1555,10 @@ main{counter-reset:xnovah-section}main section{counter-increment:xnovah-section}
 #integrations .xorbit-detail-icon img{width:74%;height:74%;object-fit:contain;filter:drop-shadow(0 3px 5px #0008) drop-shadow(0 0 9px color-mix(in srgb,var(--app-glow),transparent 50%))}
 #integrations .xorbit-detail-icon:has(img[src*="instagram"]){background:radial-gradient(circle at 40% 30%,#7c256a,#1d1037 78%)!important}
 #integrations .xorbit-detail-icon:has(img[src*="wordpress"]){background:radial-gradient(circle at 35% 25%,#229bd6,#075181 78%)!important}
+
+/* Brand-specific artwork presentation: never paint over official multicolor SVGs. */
+#integrations .xorbit-app-disc[data-brand="Slack"],#integrations .xorbit-app-disc[data-brand="Google Drive"],#integrations .xorbit-app-disc[data-brand="Google Calendar"]{background:radial-gradient(circle at 35% 25%,#ffffff,#edf4ff 78%)!important}
+#integrations .xorbit-app-disc[data-brand="TikTok"],#integrations .xorbit-app-disc[data-brand="X (Twitter)"]{background:radial-gradient(circle at 35% 20%,#292b37,#030509 78%)!important}
+#integrations .xorbit-detail-icon[data-brand="Slack"],#integrations .xorbit-detail-icon[data-brand="Google Drive"],#integrations .xorbit-detail-icon[data-brand="Google Calendar"]{background:radial-gradient(circle at 35% 25%,#ffffff,#e5efff 78%)!important}
+#integrations .xorbit-detail-icon[data-brand="TikTok"],#integrations .xorbit-detail-icon[data-brand="X (Twitter)"]{background:radial-gradient(circle at 35% 20%,#292b37,#030509 78%)!important}
+#integrations .xorbit-app-disc[data-brand="Slack"] img,#integrations .xorbit-app-disc[data-brand="Google Drive"] img,#integrations .xorbit-app-disc[data-brand="Google Calendar"] img,#integrations .xorbit-app-disc[data-brand="TikTok"] img,#integrations .xorbit-app-disc[data-brand="X (Twitter)"] img{width:82%;height:82%;max-width:82%;max-height:82%;object-fit:contain}
