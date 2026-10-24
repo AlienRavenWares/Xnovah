@@ -3,6 +3,7 @@ import { brandIconsA } from "./brand-icons-a";
 import { brandIconsB } from "./brand-icons-b";
 import { brandIconsC } from "./brand-icons-c";
 import { correctedBrandIcons } from "./brand-icons-corrected";
+import { correctedBrandIcons2 } from "./brand-icons-corrected-2";
 import {useState} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {ArrowUpRight, ArrowRight, Lightbulb, Rocket, Play, Menu, X, Sparkles, WandSparkles, Image as ImageIcon, Video, Mic2, MessageCircle, Code2, FileText, Globe2, Check, ChevronDown, ChevronRight, Zap, ShieldCheck, Layers3, PenLine, Headphones, Search, Workflow, MoveUpRight, Star, LockKeyhole, MousePointer2, Bot, Aperture, AudioLines, BookOpen, Clapperboard, Palette, Command, Users, ArrowDownToLine, Share2, Instagram, Linkedin, Twitter} from 'lucide-react';
@@ -96,7 +97,7 @@ const appNames=galaxyApps.map(a=>a[0]);
 const appTypes=galaxyApps.map(a=>a[1]);
 const appGlyphs=galaxyApps.map(a=>a[0].slice(0,1));
 const appColors=galaxyApps.map(a=>a[3]);
-const embeddedBrandIcons:Record<string,string>={...brandIconsA,...brandIconsB,...brandIconsC,...correctedBrandIcons};
+const embeddedBrandIcons:Record<string,string>={...brandIconsA,...brandIconsB,...brandIconsC,...correctedBrandIcons,...correctedBrandIcons2};
 const extraBrandSvg:Record<string,string>={
  "WooCommerce":'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><rect x="4" y="22" width="120" height="70" rx="17" fill="#96588a"/><path d="M34 91L42 107 62 91" fill="#96588a"/><text x="64" y="71" font-size="33" font-family="Arial,sans-serif" font-weight="900" text-anchor="middle" fill="white">woo</text></svg>',
  "Notion":'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><rect x="9" y="8" width="110" height="112" rx="8" fill="white"/><path d="M30 32l61-5 8 8v64l-58 4-11-9z" fill="white" stroke="#141414" stroke-width="6"/><path d="M45 90V42l10-1 27 37V40l9-1v50l-10 2-27-37v35z" fill="#141414"/></svg>'
@@ -113,7 +114,7 @@ const logoBadgeColors:Record<string,string>={
 };
 const logoDarkMarks=new Set(['Google Drive','Google Calendar','Slack','Notion']);
 function makeBadgeLogo(name:string,svgUri:string){
- if(name==='Instagram'||name in correctedBrandIcons)return svgUri;
+ if(name==='Instagram'||name in correctedBrandIcons||name in correctedBrandIcons2)return svgUri;
  const raw=decodeURIComponent(svgUri.replace(/^data:image\/svg\+xml,/,''));
  const match=raw.match(/viewBox="([\d.]+) ([\d.]+) ([\d.]+) ([\d.]+)"/);
  if(!match)return svgUri;
