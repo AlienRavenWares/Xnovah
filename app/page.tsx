@@ -100,7 +100,35 @@ const extraBrandSvg:Record<string,string>={
  "WooCommerce":'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><rect x="4" y="22" width="120" height="70" rx="17" fill="#96588a"/><path d="M34 91L42 107 62 91" fill="#96588a"/><text x="64" y="71" font-size="33" font-family="Arial,sans-serif" font-weight="900" text-anchor="middle" fill="white">woo</text></svg>',
  "Notion":'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><rect x="9" y="8" width="110" height="112" rx="8" fill="white"/><path d="M30 32l61-5 8 8v64l-58 4-11-9z" fill="white" stroke="#141414" stroke-width="6"/><path d="M45 90V42l10-1 27 37V40l9-1v50l-10 2-27-37v35z" fill="#141414"/></svg>'
 };
-const appLogos=galaxyApps.map(a=>embeddedBrandIcons[a[0]]||('data:image/svg+xml,'+encodeURIComponent(extraBrandSvg[a[0]]||'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><circle cx="64" cy="64" r="60" fill="#334155"/></svg>')));
+// Keep each logo as a self-contained SVG. A brand-color circular badge sits BEHIND
+// the genuine vector mark, matching the bright, recognizable pods in the reference.
+const logoBadgeColors:Record<string,string>={
+ 'YouTube':'#ff0033','TikTok':'#101014','Facebook':'#0866ff','X (Twitter)':'#101014',
+ 'LinkedIn':'#087dbb','Google Drive':'#ffffff','Google Calendar':'#ffffff',
+ 'Slack':'#ffffff','Webflow':'#1769ff','Blogger':'#ff671d','Medium':'#121212',
+ 'WordPress':'#1676ae','HubSpot':'#ff6b3d','WooCommerce':'#96588a',
+ 'Shopify':'#74b944','Discord':'#5865f2','Messenger':'#007fff',
+ 'Telegram':'#2aabee','WhatsApp':'#0dcf57','Notion':'#ffffff'
+};
+const logoDarkMarks=new Set(['Google Drive','Google Calendar','Slack','Notion']);
+function makeBadgeLogo(name:string,svgUri:string){
+ if(name==='Instagram')return svgUri;
+ const raw=decodeURIComponent(svgUri.replace(/^data:image\\/svg\\+xml,/,''));
+ const match=raw.match(/viewBox="([\\d.]+) ([\\d.]+) ([\\d.]+) ([\\d.]+)"/);
+ if(!match)return svgUri;
+ const [,xs,ys,ws,hs]=match;const x=+xs,y=+ys,w=+ws,h=+hs;
+ const fill=logoBadgeColors[name]||'#273a6b';
+ const cx=x+w/2,cy=y+h/2,r=Math.min(w,h)*.49;
+ const bg='<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="'+fill+'"/>';
+ const scale=.65,tx=cx*(1-scale),ty=cy*(1-scale);
+ let artwork=raw.replace(/<svg([^>]*)>/,'<svg$1>'+bg+'<g transform="translate('+tx+' '+ty+') scale('+scale+')">').replace('</svg>','</g></svg>');
+ if(logoDarkMarks.has(name))artwork=artwork.replace(/<path /g,'<path fill="#172033" ');
+ return 'data:image/svg+xml,'+encodeURIComponent(artwork);
+}
+const appLogos=galaxyApps.map(a=>{
+ const source=embeddedBrandIcons[a[0]]||('data:image/svg+xml,'+encodeURIComponent(extraBrandSvg[a[0]]||'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><circle cx="64" cy="64" r="60" fill="#334155"/></svg>'));
+ return embeddedBrandIcons[a[0]]?makeBadgeLogo(a[0],source):source;
+});
 const appFallbackLogos=appLogos;
 const appDescriptions=galaxyApps.map(a=>a[0]+' is part of the '+a[1].toLowerCase()+' ecosystem envisioned for Xnovah.');
 const galaxyPositions=[[26,20],[40,15],[54,12],[68,16],[82,22],[92,34],[96,47],[92,60],[85,73],[76,82],[65,87],[54,88],[43,87],[32,84],[22,77],[14,69],[9,59],[9,47],[13,35],[19,26],[85,43]];
