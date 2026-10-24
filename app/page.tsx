@@ -1,7 +1,7 @@
+'use client';
 import { brandIconsA } from "./brand-icons-a";
 import { brandIconsB } from "./brand-icons-b";
 import { brandIconsC } from "./brand-icons-c";
-'use client';
 import {useState} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {ArrowUpRight, ArrowRight, Lightbulb, Rocket, Play, Menu, X, Sparkles, WandSparkles, Image as ImageIcon, Video, Mic2, MessageCircle, Code2, FileText, Globe2, Check, ChevronDown, ChevronRight, Zap, ShieldCheck, Layers3, PenLine, Headphones, Search, Workflow, MoveUpRight, Star, LockKeyhole, MousePointer2, Bot, Aperture, AudioLines, BookOpen, Clapperboard, Palette, Command, Users, ArrowDownToLine, Share2, Instagram, Linkedin, Twitter} from 'lucide-react';
