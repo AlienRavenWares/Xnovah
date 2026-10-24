@@ -1562,3 +1562,12 @@ main{counter-reset:xnovah-section}main section{counter-increment:xnovah-section}
 #integrations .xorbit-detail-icon[data-brand="Slack"],#integrations .xorbit-detail-icon[data-brand="Google Drive"],#integrations .xorbit-detail-icon[data-brand="Google Calendar"]{background:radial-gradient(circle at 35% 25%,#ffffff,#e5efff 78%)!important}
 #integrations .xorbit-detail-icon[data-brand="TikTok"],#integrations .xorbit-detail-icon[data-brand="X (Twitter)"]{background:radial-gradient(circle at 35% 20%,#292b37,#030509 78%)!important}
 #integrations .xorbit-app-disc[data-brand="Slack"] img,#integrations .xorbit-app-disc[data-brand="Google Drive"] img,#integrations .xorbit-app-disc[data-brand="Google Calendar"] img,#integrations .xorbit-app-disc[data-brand="TikTok"] img,#integrations .xorbit-app-disc[data-brand="X (Twitter)"] img{width:82%;height:82%;max-width:82%;max-height:82%;object-fit:contain}
+
+/* Corrected, unmodified full-color official vector marks. */
+#integrations .xorbit-app-disc[data-brand="Medium"],#integrations .xorbit-detail-icon[data-brand="Medium"]{background:radial-gradient(circle at 35% 25%,#fff,#e8ecf3 82%)!important}
+#integrations .xorbit-app-disc[data-brand="YouTube"],#integrations .xorbit-detail-icon[data-brand="YouTube"]{background:radial-gradient(circle at 35% 25%,#fff,#f0f2f8 82%)!important}
+#integrations .xorbit-app-disc[data-brand="Telegram"],#integrations .xorbit-detail-icon[data-brand="Telegram"]{background:radial-gradient(circle at 35% 25%,#1d6a98,#081c35 82%)!important}
+#integrations .xorbit-app-disc[data-brand="Messenger"],#integrations .xorbit-detail-icon[data-brand="Messenger"]{background:radial-gradient(circle at 35% 25%,#32276b,#10102c 82%)!important}
+#integrations .xorbit-app-disc[data-brand="Discord"],#integrations .xorbit-detail-icon[data-brand="Discord"]{background:radial-gradient(circle at 35% 25%,#f9fbff,#e6e9ff 82%)!important}
+#integrations .xorbit-app-disc[data-brand="Shopify"],#integrations .xorbit-detail-icon[data-brand="Shopify"]{background:radial-gradient(circle at 35% 25%,#fff,#ecf6e9 82%)!important}
+#integrations .xorbit-app-disc[data-brand="Medium"] img,#integrations .xorbit-app-disc[data-brand="YouTube"] img,#integrations .xorbit-app-disc[data-brand="Telegram"] img,#integrations .xorbit-app-disc[data-brand="Messenger"] img,#integrations .xorbit-app-disc[data-brand="Discord"] img,#integrations .xorbit-app-disc[data-brand="Shopify"] img{width:83%;height:83%;max-width:83%;max-height:83%;object-fit:contain}
