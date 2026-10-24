@@ -1640,3 +1640,41 @@ main{counter-reset:xnovah-section}main section{counter-increment:xnovah-section}
  #integrations .xorbit-hub-x{font-size:32px}
  #integrations .xorbit-hub strong{font-size:7px}
 }
+
+/* Why Xnovah — interactive before / after comparison */
+.why-compare{position:relative;overflow:hidden;padding:105px 0;background:radial-gradient(ellipse at 78% 50%,#38227b2e,transparent 57%),#080b1d;color:#f5f4ff}
+.why-compare:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.22;background-image:radial-gradient(#a6b6ff 1px,transparent 1px);background-size:43px 43px}
+.why-compare>.shell{position:relative;z-index:1}
+.why-compare-intro{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:36px}
+.why-compare-intro h2{font-size:clamp(38px,5vw,68px);line-height:1.06;letter-spacing:-2px;margin:12px 0 0}
+.why-compare-intro>p{max-width:390px;color:#abb7d6;font-size:16px;line-height:1.75}
+.why-compare-frame{border:1px solid #6459ac80;border-radius:28px;padding:22px;background:linear-gradient(145deg,#151632e8,#0c142de8);box-shadow:0 25px 90px #0007,0 0 45px #6742e31a}
+.why-compare-tabs{display:flex;gap:10px;margin-bottom:22px}
+.why-compare-tabs button{flex:1;min-width:0;display:flex;justify-content:center;align-items:center;gap:10px;padding:15px 12px;border:1px solid #53628b88;border-radius:14px;background:#10162b;color:#b8c4e2;font:inherit;font-weight:650;cursor:pointer;transition:background .2s,border-color .2s,transform .2s}
+.why-compare-tabs button span{color:#9c9aff;font-size:21px}.why-compare-tabs button:hover{transform:translateY(-2px);border-color:#8d85ef}
+.why-compare-tabs button.selected{color:white;border-color:#8d79ff;background:linear-gradient(110deg,#332e7c,#1c3269);box-shadow:0 0 24px #6961ff38}
+.why-compare-panels{display:grid;grid-template-columns:minmax(0,1fr) 54px minmax(0,1fr);align-items:center;gap:0;animation:why-compare-enter .3s ease both}
+@keyframes why-compare-enter{from{opacity:.45;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+.why-compare-card{min-width:0;min-height:365px;display:flex;flex-direction:column;border-radius:22px;padding:29px;border:1px solid #57617e80;background:linear-gradient(155deg,#1b2037,#111528)}
+.why-compare-after{border-color:#8b6effaa;background:radial-gradient(circle at 60% 65%,#513ab55c,transparent 60%),linear-gradient(150deg,#211b49,#101b39);box-shadow:inset 0 0 38px #7257fa18,0 0 28px #8255ef20}
+.why-compare-card-top{display:flex;align-items:center;gap:10px;font-size:11px;font-weight:750;letter-spacing:2px;color:#a9b5d2}
+.why-compare-after .why-compare-card-top{color:#c6aaff}.why-compare-symbol{font-size:22px}
+.why-compare-card h3{font-size:clamp(23px,2.7vw,33px);letter-spacing:-.7px;margin:17px 0 10px;color:white}
+.why-compare-card p{font-size:15px;line-height:1.65;color:#b9c4e1;max-width:390px;min-height:50px}
+.why-compare-card small{font-size:12px;color:#98a9d0;margin-top:auto}
+.why-compare-divider{display:flex;justify-content:center;position:relative;z-index:2}
+.why-compare-divider span{display:grid;place-items:center;width:45px;height:45px;border-radius:50%;border:1px solid #977eff;background:#191c40;color:#d8c8ff;font-weight:800;box-shadow:0 0 24px #885aff77}
+.why-compare-visual{height:125px;position:relative;margin:15px 0 20px}
+.why-compare-scattered span{position:absolute;border:1px solid #5d6788;border-radius:10px;padding:9px 15px;background:#283049;color:#bbc4dd;font-size:12px;box-shadow:0 9px 22px #0004}
+.why-compare-scattered span:nth-child(1){left:5%;top:8%;transform:rotate(-9deg)}.why-compare-scattered span:nth-child(2){right:8%;top:0;transform:rotate(8deg)}.why-compare-scattered span:nth-child(3){left:25%;bottom:5%;transform:rotate(7deg)}.why-compare-scattered span:nth-child(4){right:6%;bottom:10%;transform:rotate(-8deg)}
+.why-compare-unified{display:flex;align-items:center;justify-content:center}
+.why-compare-unified:before{content:"";position:absolute;width:180px;height:85px;border:1px solid #9b83ffb0;border-radius:50%;transform:rotate(-15deg);box-shadow:0 0 20px #815eff66}
+.why-compare-core{width:92px;height:92px;display:grid;place-items:center;border-radius:50%;background:radial-gradient(circle at 32% 25%,#799aff,#5136bf 55%,#192b65);border:2px solid #c8a8ff;font-size:49px;font-weight:800;color:white;box-shadow:0 0 35px #8465ffb0,inset 0 0 22px #a19bff66}
+.why-compare-satellite{position:absolute;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#182b64;border:1px solid #8caeff;color:#d5dcff;box-shadow:0 0 15px #6c87ff77}
+.why-compare-satellite.one{left:17%;top:10%}.why-compare-satellite.two{right:16%;top:22%}.why-compare-satellite.three{right:23%;bottom:3%}
+.why-compare-footer{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:22px}
+.why-compare-footer p{font-size:12px;color:#95a4c5;line-height:1.6;max-width:600px}
+.why-compare-footer a{display:inline-flex;align-items:center;gap:14px;white-space:nowrap;padding:13px 19px;border-radius:999px;color:white;background:linear-gradient(110deg,#6656df,#3163c8);font-size:13px;font-weight:700;text-decoration:none}
+@media(max-width:800px){.why-compare{padding:72px 0}.why-compare-intro{display:block}.why-compare-intro>p{margin-top:20px}.why-compare-frame{padding:14px}.why-compare-tabs button{font-size:12px;padding:12px 7px;gap:5px}.why-compare-tabs button span{font-size:17px}.why-compare-card{padding:20px;min-height:340px}.why-compare-panels{grid-template-columns:minmax(0,1fr) 38px minmax(0,1fr)}.why-compare-divider span{width:37px;height:37px;font-size:12px}}
+@media(max-width:600px){.why-compare-intro h2{letter-spacing:-1.4px}.why-compare-tabs{gap:6px}.why-compare-tabs button{flex-direction:column;text-align:center;line-height:1.25;font-size:11px;min-height:70px}.why-compare-panels{grid-template-columns:minmax(0,1fr);gap:0}.why-compare-card{min-height:310px;padding:22px}.why-compare-divider{height:43px;align-items:center}.why-compare-card p{min-height:0}.why-compare-visual{height:100px}.why-compare-footer{flex-direction:column;align-items:flex-start}.why-compare-footer a{width:100%;justify-content:center}.why-compare-core{height:76px;width:76px;font-size:40px}.why-compare-unified:before{width:160px;height:70px}}
+@media(prefers-reduced-motion:reduce){.why-compare-panels{animation:none}.why-compare-tabs button{transition:none}}
