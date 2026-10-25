@@ -1785,3 +1785,66 @@ main{counter-reset:xnovah-section}main section{counter-increment:xnovah-section}
 @media(max-width:980px){.cp-preview-label{display:none}.cp-bento{grid-template-columns:1fr}.cp-side{grid-template-columns:1fr 1fr;grid-template-rows:auto}.cp-side-card{min-height:275px}.cp-main{min-height:550px}}
 @media(max-width:640px){.cp-toolbar{flex-wrap:wrap;padding:14px}.cp-toolbar-brand{width:100%}.cp-tabs{width:100%;justify-content:space-between}.cp-tabs button{flex:1;padding:10px 5px;font-size:10px;gap:5px}.cp-bento{padding:10px;gap:10px}.cp-main{min-height:490px;padding:15px}.cp-main-head{font-size:9px}.cp-editor{margin-top:20px;min-height:395px;padding:22px 18px}.cp-editor h3{font-size:31px}.cp-editor>p{font-size:13px}.cp-editor-meta{margin-top:25px}.cp-editor-bottom{flex-wrap:wrap}.cp-side{grid-template-columns:1fr}.cp-side-card{min-height:240px}.cp-art{min-height:390px}.cp-art-sun{width:175px;height:175px}.cp-art-ring{width:290px;height:290px;border-width:40px}.cp-art-ring-b{width:210px;height:210px;border-width:26px}.cp-idea-question{margin-left:0}.cp-idea-question p{font-size:16px}.cp-idea-answer{padding:16px}.cp-idea-answer p{font-size:14px}.cp-footer{flex-direction:column;align-items:flex-start}}
 @media(prefers-reduced-motion:reduce){.cp-art-sun{animation:none}.cp-editor h3{animation:none}}
+
+/* Mobile fidelity: retain desktop-style horizontal pipeline and bento composition */
+@media(max-width:700px){
+ #why-xnovah .why-pipeline{width:100%;min-width:0;padding:12px 9px;gap:14px;min-height:0}
+ #why-xnovah .why-pipeline-track{display:flex;flex-direction:row;align-items:stretch;gap:3px;width:100%;min-width:0}
+ #why-xnovah .why-pipeline-stage-wrap,#why-xnovah .why-pipeline-stage-wrap:last-child{display:flex;flex-direction:row;align-items:center;flex:1 1 0;min-width:0;width:auto}
+ #why-xnovah .why-pipeline-stage{width:100%;min-width:0;min-height:102px;flex-direction:column;justify-content:center;gap:5px;padding:8px 2px;border-radius:9px}
+ #why-xnovah .why-pipeline-stage:hover,#why-xnovah .why-pipeline-stage.active{transform:translateY(-2px)}
+ #why-xnovah .why-pipeline-index{font-size:8px}
+ #why-xnovah .why-pipeline-stage-icon{width:28px;height:28px;border-radius:8px}
+ #why-xnovah .why-pipeline-stage-icon svg{width:16px;height:16px}
+ #why-xnovah .why-pipeline-stage strong{font-size:clamp(9px,2.7vw,12px);line-height:1.15}
+ #why-xnovah .why-pipeline-stage small{font-size:clamp(6px,1.7vw,8px);letter-spacing:0;margin:0}
+ #why-xnovah .why-pipeline-connector{display:flex;transform:none;min-width:7px;width:9px;height:auto;flex:0 0 9px}
+ #why-xnovah .why-pipeline-connector:before{display:block}
+ #why-xnovah .why-pipeline-connector svg{width:10px;height:10px}
+ #why-xnovah .why-pipeline-assets{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}
+ #why-xnovah .why-pipeline-asset{min-width:0;flex-direction:column;justify-content:center;text-align:center;padding:8px 3px;gap:5px;font-size:clamp(8px,2vw,10px);overflow-wrap:anywhere}
+ #why-xnovah .why-pipeline-asset>svg:last-child{margin:0}
+ .creative-playground .cp-wrap{width:100%;max-width:100%;border-radius:16px}
+ .creative-playground .cp-toolbar{padding:10px;gap:9px}
+ .creative-playground .cp-tabs{min-width:0;gap:2px;padding:3px}
+ .creative-playground .cp-tabs button{min-width:0;gap:4px;padding:8px 3px;font-size:clamp(8px,2.3vw,11px)}
+ .creative-playground .cp-tabs button svg{width:12px;height:12px;flex-shrink:0}
+ .creative-playground .cp-bento{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:7px;padding:8px;align-items:stretch}
+ .creative-playground .cp-main{min-width:0;min-height:360px;padding:9px;border-radius:11px}
+ .creative-playground .cp-main-head{font-size:7px;letter-spacing:0;flex-wrap:wrap}
+ .creative-playground .cp-status{font-size:7px}
+ .creative-playground .cp-editor{min-width:0;min-height:295px;margin-top:12px;padding:12px 9px;transform:none;border-radius:10px}
+ .creative-playground .cp-editor-top{font-size:7px;letter-spacing:0;flex-wrap:wrap}
+ .creative-playground .cp-editor-meta{margin-top:15px;font-size:8px;letter-spacing:0}
+ .creative-playground .cp-editor h3{font-size:clamp(16px,4.3vw,25px);margin:8px 0}
+ .creative-playground .cp-editor>p{font-size:clamp(10px,2.5vw,12px);line-height:1.5}
+ .creative-playground .cp-editor-lines{gap:5px;margin:10px 0}
+ .creative-playground .cp-editor-lines i{height:4px}
+ .creative-playground .cp-editor-bottom{gap:7px;font-size:7px;letter-spacing:0}
+ .creative-playground .cp-editor-bottom button{padding:7px;font-size:9px}
+ .creative-playground .cp-side{min-width:0;grid-template-columns:1fr;grid-template-rows:1fr 1fr;gap:7px}
+ .creative-playground .cp-side-card{min-width:0;min-height:0;padding:10px;border-radius:11px}
+ .creative-playground .cp-side-card>span{font-size:7px;letter-spacing:0}
+ .creative-playground .cp-side-card>strong{font-size:clamp(12px,3.4vw,18px);margin-top:8px}
+ .creative-playground .cp-side-card>small{font-size:8px;letter-spacing:0}
+ .creative-playground .cp-mini-art{width:130px;height:120px;right:-35px;bottom:-45px}
+ .creative-playground .cp-mini-chat{margin-top:12px;gap:6px}
+ .creative-playground .cp-mini-chat span{padding:7px;font-size:9px}
+ .creative-playground .cp-art{min-height:300px;margin-top:12px}
+ .creative-playground .cp-art-sun{width:110px;height:110px}
+ .creative-playground .cp-art-ring{width:180px;height:180px;border-width:27px}
+ .creative-playground .cp-art-ring-b{width:135px;height:135px;border-width:18px}
+ .creative-playground .cp-art-switch{left:6px;right:6px;bottom:9px;gap:4px}
+ .creative-playground .cp-art-switch button{padding:6px;font-size:8px}
+ .creative-playground .cp-idea{margin-top:12px;gap:10px}
+ .creative-playground .cp-idea-question{padding:10px}
+ .creative-playground .cp-idea-question p{font-size:12px}
+ .creative-playground .cp-idea-answer{padding:9px;gap:7px;flex-wrap:wrap}
+ .creative-playground .cp-idea-avatar{width:25px;height:25px;font-size:15px}
+ .creative-playground .cp-idea-answer p{font-size:11px;margin:7px 0}
+ .creative-playground .cp-idea-tags{gap:3px}
+ .creative-playground .cp-idea-tags span{font-size:8px;padding:5px}
+ .creative-playground .cp-idea>button{padding:8px;font-size:10px}
+ .creative-playground .cp-footer{padding:12px;gap:8px}
+}
+@media(max-width:360px){.creative-playground .cp-tabs button span{font-size:8px}.creative-playground .cp-main{padding:6px}.creative-playground .cp-side-card{padding:7px}.creative-playground .cp-editor{padding:9px 6px}}
