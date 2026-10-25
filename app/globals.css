@@ -1848,3 +1848,55 @@ main{counter-reset:xnovah-section}main section{counter-increment:xnovah-section}
  .creative-playground .cp-footer{padding:12px;gap:8px}
 }
 @media(max-width:360px){.creative-playground .cp-tabs button span{font-size:8px}.creative-playground .cp-main{padding:6px}.creative-playground .cp-side-card{padding:7px}.creative-playground .cp-editor{padding:9px 6px}}
+
+/* Why Xnovah: keep the desktop two-panel experience on phones */
+@media(max-width:850px){
+ #why-xnovah .why-journey-shell{width:100%;min-width:0;border-radius:16px}
+ #why-xnovah .why-journey-body{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);min-height:0}
+ #why-xnovah .why-journey-copy{min-width:0;padding:20px 14px;justify-content:center}
+ #why-xnovah .why-journey-canvas{min-width:0;min-height:315px;border-top:0;border-left:1px solid #7770b333}
+ #why-xnovah .why-journey-progress{grid-template-columns:repeat(4,minmax(0,1fr))}
+ #why-xnovah .why-journey-step{min-width:0;justify-content:center;padding:13px 5px;gap:5px}
+ #why-xnovah .why-journey-step-dot{display:none}
+ #why-xnovah .why-journey-copy h3{font-size:clamp(15px,3.4vw,27px);line-height:1.22;letter-spacing:-.035em;margin:10px 0}
+ #why-xnovah .why-journey-copy>p{font-size:clamp(10px,2.25vw,13px);line-height:1.55;overflow-wrap:anywhere}
+ #why-xnovah .why-journey-kicker{font-size:clamp(8px,1.7vw,10px);letter-spacing:0;gap:4px}
+ #why-xnovah .why-journey-kicker svg{width:12px;height:12px;flex-shrink:0}
+ #why-xnovah .why-journey-icon{width:34px;height:34px;border-radius:10px;margin:12px 0 5px}
+ #why-xnovah .why-journey-icon svg{width:18px;height:18px}
+ #why-xnovah .why-journey-controls{margin-top:16px;gap:8px;font-size:11px}
+ #why-xnovah .why-journey-controls button{width:28px;height:28px;border-radius:8px}
+ #why-xnovah .why-pipeline{padding:12px 8px;gap:12px;min-height:0}
+ #why-xnovah .why-pipeline-top{flex-wrap:wrap;gap:4px;font-size:clamp(7px,1.4vw,9px);letter-spacing:0}
+ #why-xnovah .why-pipeline-preview{padding:8px 5px;border-radius:9px}
+ #why-xnovah .why-pipeline-preview-head{font-size:8px;letter-spacing:0;gap:3px;margin-bottom:7px}
+ #why-xnovah .why-pipeline-preview-head>span:last-child{display:none}
+}
+@media(max-width:540px){
+ #why-xnovah .why-journey{padding:65px 0}
+ #why-xnovah .why-journey-head{margin-bottom:20px}
+ #why-xnovah .why-journey-head h2{font-size:clamp(29px,8vw,42px);letter-spacing:-1.5px}
+ #why-xnovah .why-journey-head>p{font-size:13px;line-height:1.6}
+ #why-xnovah .why-journey-step{flex-direction:row;gap:3px;padding:10px 2px;font-size:clamp(9px,2.6vw,11px)}
+ #why-xnovah .why-journey-step-num{font-size:9px}
+ #why-xnovah .why-journey-copy{padding:12px 9px}
+ #why-xnovah .why-journey-copy h3{font-size:clamp(14px,3.7vw,19px)}
+ #why-xnovah .why-journey-copy>p{font-size:clamp(9px,2.4vw,11px);line-height:1.5}
+ #why-xnovah .why-journey-kicker{font-size:8px}
+ #why-xnovah .why-journey-icon{margin:10px 0 4px}
+ #why-xnovah .why-journey-controls{margin-top:12px;gap:5px}
+ #why-xnovah .why-journey-controls button{width:25px;height:25px}
+ #why-xnovah .why-journey-canvas{min-height:290px}
+ #why-xnovah .why-pipeline{padding:9px 5px;gap:9px}
+ #why-xnovah .why-pipeline-stage{min-height:85px;gap:3px;padding:6px 1px}
+ #why-xnovah .why-pipeline-stage-icon{width:23px;height:23px}
+ #why-xnovah .why-pipeline-stage-icon svg{width:14px;height:14px}
+ #why-xnovah .why-pipeline-stage strong{font-size:clamp(8px,2.1vw,10px)}
+ #why-xnovah .why-pipeline-stage small{font-size:clamp(5px,1.45vw,7px)}
+ #why-xnovah .why-pipeline-connector{min-width:5px;width:6px;flex-basis:6px}
+ #why-xnovah .why-pipeline-connector svg{width:8px;height:8px}
+ #why-xnovah .why-pipeline-preview-head{font-size:7px}
+ #why-xnovah .why-pipeline-asset{padding:5px 2px;font-size:clamp(7px,1.8vw,9px)}
+ #why-xnovah .why-pipeline-asset-icon svg{width:13px;height:13px}
+ #why-xnovah .why-pipeline-asset>svg:last-child{width:11px;height:11px}
+}
