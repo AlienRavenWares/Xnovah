@@ -19,6 +19,13 @@ export default function VideoPreview(){
    const t=((now-origin)/1000)%24;setTime(Math.floor(t));
    ctx.fillStyle='#010103';ctx.fillRect(0,0,w,h);
    const cx=w/2,cy=h/2,u=Math.min(w,h); const ease=(x:number)=>{const v=Math.max(0,Math.min(1,x));return v*v*(3-2*v)}; const pulse=ease((t-5.6)/1.2)*(1-ease((t-7.2)/1.6));
+   // Virtual cinema camera: deliberate dolly-in, orbital drift, parallax pan and pull-back.
+   // The world moves independently of the typography and playback controls.
+   const dolly=1+.23*ease((t-1)/7)-.17*ease((t-13)/8);
+   const panX=u*(.075*Math.sin(t*.28)+.028*Math.sin(t*.73));
+   const panY=u*(.035*Math.cos(t*.24)-.024*Math.sin(t*.53));
+   const roll=.026*Math.sin(t*.19);
+   ctx.save();ctx.translate(cx+panX,cy+panY);ctx.rotate(roll);ctx.scale(dolly,dolly);ctx.translate(-cx,-cy);
    const glow=ctx.createRadialGradient(cx,cy,0,cx,cy,u*.64);
    glow.addColorStop(0,'rgba(62,22,100,0.30)');glow.addColorStop(.45,'rgba(20,7,38,0.09)');glow.addColorStop(1,'rgba(0,0,0,0)');
    ctx.fillStyle=glow;ctx.fillRect(0,0,w,h);
@@ -52,6 +59,7 @@ export default function VideoPreview(){
    if(t>5.4&&t<9.1){const k=ease((t-5.4)/2.8),rad=u*(.08+1.1*k);ctx.save();ctx.globalAlpha=(1-k)*.68;ctx.strokeStyle='#bb8aff';ctx.shadowBlur=32;ctx.shadowColor='#a462ff';ctx.lineWidth=3*(1-k)+.5;ctx.beginPath();ctx.arc(cx,cy,rad,0,Math.PI*2);ctx.stroke();ctx.restore();}
    const flare=pulse*.8+.1*Math.max(0,Math.sin(t*1.1));
    if(flare>.1){const beam=ctx.createLinearGradient(0,cy,w,cy);beam.addColorStop(0,'rgba(80,20,140,0)');beam.addColorStop(.5,'rgba(192,133,255,'+(flare*.42)+')');beam.addColorStop(1,'rgba(80,20,140,0)');ctx.fillStyle=beam;ctx.fillRect(0,cy-1.3,w,2.6);}
+   ctx.restore(); // Lock titles and frame to the screen after the camera moves through the galaxy.
    // Thin cinematic framing lines and kinetic typography.
    ctx.save();ctx.strokeStyle='rgba(171,123,234,.25)';ctx.lineWidth=1;
    const margin=w*.07;ctx.beginPath();ctx.moveTo(margin,h*.12);ctx.lineTo(margin+Math.min(85,w*.12),h*.12);ctx.moveTo(w-margin-Math.min(85,w*.12),h*.88);ctx.lineTo(w-margin,h*.88);ctx.stroke();ctx.restore();
@@ -77,6 +85,6 @@ export default function VideoPreview(){
  <div style={{position:'absolute',left:20,right:20,bottom:17,display:'flex',alignItems:'center',justifyContent:'space-between',gap:12}}>
  <button onClick={()=>setPlaying(!playing)} style={{border:'1px solid #a16bfb',background:'rgba(10,5,18,.85)',color:'#fff',borderRadius:30,padding:'10px 20px',fontWeight:700,cursor:'pointer'}}>{playing?'Ⅱ Pause':'▶ Play'}</button>
  <span style={{fontSize:12,letterSpacing:1,color:'#c7b4df'}}>MOTION GRAPHICS · {String(time).padStart(2,'0')} / 24s</span></div></div>
- <p style={{color:'#a99bb8',lineHeight:1.7,fontSize:14,maxWidth:750,marginTop:24}}>A cinematic Xnovah identity film: dimensional star travel, luminous shockwaves, orbital geometry, anamorphic light sweeps, kinetic typography and a dramatic logo reveal. This is a live browser animation rather than a downloadable rendered video.</p>
+ <p style={{color:'#a99bb8',lineHeight:1.7,fontSize:14,maxWidth:750,marginTop:24}}>A cinematic Xnovah identity film with a moving virtual camera: dolly-in, orbital drift, parallax panning and pull-back, plus dimensional star travel, luminous shockwaves, orbital geometry, anamorphic light sweeps, kinetic typography and a dramatic logo reveal. This is a live browser animation rather than a downloadable rendered video.</p>
  </div></main>;
 }
