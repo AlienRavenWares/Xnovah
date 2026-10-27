@@ -5,6 +5,9 @@ export default function VideoPreview(){
  const canvas=useRef<HTMLCanvasElement>(null);
  const [playing,setPlaying]=useState(true);
  const [time,setTime]=useState(0);
+ const [exporting,setExporting]=useState(false);
+ const [downloadReady,setDownloadReady]=useState(false);
+ const recorderRef=useRef<MediaRecorder|null>(null);
  useEffect(()=>{
   const c=canvas.current!;const ctx=c.getContext('2d')!;
   let raf=0,origin=performance.now(),w=0,h=0,dpr=1;
@@ -73,6 +76,27 @@ export default function VideoPreview(){
   if(playing)raf=requestAnimationFrame(frame);
   return()=>{cancelAnimationFrame(raf);window.removeEventListener('resize',resize);};
  },[playing]);
+ async function downloadAnimation(){
+  const el=canvas.current;
+  if(!el||exporting||typeof MediaRecorder==='undefined'||!el.captureStream){alert('Video recording is not supported in this browser. Try Chrome or Edge.');return;}
+  const mime=['video/mp4;codecs=avc1.42E01E','video/mp4','video/webm;codecs=vp9','video/webm'].find(m=>MediaRecorder.isTypeSupported(m));
+  if(!mime){alert('This browser does not support recording this animation.');return;}
+  const stream=el.captureStream(30);
+  const parts:BlobPart[]=[];
+  const recorder=new MediaRecorder(stream,{mimeType:mime,videoBitsPerSecond:5000000});
+  recorderRef.current=recorder;
+  recorder.ondataavailable=(e:BlobEvent)=>{if(e.data.size)parts.push(e.data)};
+  recorder.onstop=()=>{
+   const blob=new Blob(parts,{type:mime}),url=URL.createObjectURL(blob),a=document.createElement('a');
+   a.href=url;a.download='Xnovah_Cinematic_V4.'+(mime.includes('mp4')?'mp4':'webm');document.body.appendChild(a);a.click();a.remove();
+   setTimeout(()=>URL.revokeObjectURL(url),15000);stream.getTracks().forEach(track=>track.stop());setExporting(false);setDownloadReady(true);
+  };
+  setPlaying(false);
+  await new Promise(resolve=>setTimeout(resolve,100));
+  setPlaying(true);setExporting(true);setDownloadReady(false);
+  recorder.start();
+  setTimeout(()=>{if(recorder.state==='recording')recorder.stop()},24000);
+ }
  return <main style={{minHeight:'100vh',background:'#000',color:'#fff',fontFamily:'Arial,Helvetica,sans-serif',padding:'clamp(18px,4vw,48px)'}}>
  <div style={{maxWidth:1200,margin:'auto'}}>
  <header style={{display:'flex',justifyContent:'space-between',alignItems:'center',gap:12,marginBottom:40}}>
@@ -84,7 +108,7 @@ export default function VideoPreview(){
  <canvas ref={canvas} style={{width:'100%',height:'100%',display:'block'}}/>
  <div style={{position:'absolute',left:20,right:20,bottom:17,display:'flex',alignItems:'center',justifyContent:'space-between',gap:12}}>
  <button onClick={()=>setPlaying(!playing)} style={{border:'1px solid #a16bfb',background:'rgba(10,5,18,.85)',color:'#fff',borderRadius:30,padding:'10px 20px',fontWeight:700,cursor:'pointer'}}>{playing?'Ⅱ Pause':'▶ Play'}</button>
- <span style={{fontSize:12,letterSpacing:1,color:'#c7b4df'}}>MOTION GRAPHICS · {String(time).padStart(2,'0')} / 24s</span></div></div>
- <p style={{color:'#a99bb8',lineHeight:1.7,fontSize:14,maxWidth:750,marginTop:24}}>A cinematic Xnovah identity film with a moving virtual camera: dolly-in, orbital drift, parallax panning and pull-back, plus dimensional star travel, luminous shockwaves, orbital geometry, anamorphic light sweeps, kinetic typography and a dramatic logo reveal. This is a live browser animation rather than a downloadable rendered video.</p>
+ <button disabled={exporting} onClick={downloadAnimation} style={{border:'1px solid #a16bfb',background:'#6c36ad',color:'#fff',borderRadius:30,padding:'10px 16px',fontWeight:700,cursor:exporting?'wait':'pointer'}}>{exporting?'Recording 24s…':'↓ Download video'}</button><span style={{fontSize:12,letterSpacing:1,color:'#c7b4df'}}>MOTION GRAPHICS · {String(time).padStart(2,'0')} / 24s</span></div></div>
+ <p style={{color:'#a99bb8',lineHeight:1.7,fontSize:14,maxWidth:750,marginTop:24}}>A cinematic Xnovah identity film with a moving virtual camera: dolly-in, orbital drift, parallax panning and pull-back, plus dimensional star travel, luminous shockwaves, orbital geometry, anamorphic light sweeps, kinetic typography and a dramatic logo reveal. Use Download video to record the 24-second animation in your browser. The format is MP4 when supported, otherwise WebM. The download starts when recording finishes.</p>
  </div></main>;
 }
