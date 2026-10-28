@@ -93,31 +93,24 @@ function AudienceUniverse(){const [active,setActive]=useState(0);return <section
 const templates=[['Marketing','Campaign brief','Ad headlines','Product descriptions','Email sequence','Brand voice'],['Social','Instagram captions','LinkedIn post','Video hooks','Content calendar','Hashtags'],['Writing','Blog outline','Article draft','Story starter','Rewrite & refine','Newsletter'],['Business','Business plan','Sales pitch','Customer reply','Meeting recap','Proposal'],['Creative','Video script','Image prompts','Character concepts','Creative brief','Podcast outline'],['Learning','Study guide','Lesson plan','Research summary','Quiz questions','Explainer']];
 function TemplateLibrary(){const [cat,setCat]=useState('All');const [search,setSearch]=useState('');const rows=templates.flatMap(([group,...items])=>items.map(name=>({group,name}))).filter(t=>(cat==='All'||t.group===cat)&&t.name.toLowerCase().includes(search.toLowerCase()));return <section className="section extra-section template-universe" id="templates"><div className="shell"><SectionEyebrow>YOUR NEXT STARTING POINT</SectionEyebrow><h2>A template for <span className="gradient-text">almost anything.</span></h2><p className="extra-lead">Explore creative starting points across marketing, social, business, writing and more.</p><div className="template-controls"><input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Search creative templates..." aria-label="Search templates"/><div>{['All',...templates.map(t=>t[0])].map(c=><button className={cat===c?'active':''} onClick={()=>setCat(c)} key={c}>{c}</button>)}</div></div><div className="template-grid">{rows.map(t=><div className="template-card" key={t.group+t.name}><span>✳ &nbsp; {t.group.toUpperCase()}</span><h3>{t.name}</h3><p>A thoughtful first step for your next creative workflow.</p><small>WORKFLOW CONCEPT ↗</small></div>)}</div>{rows.length===0&&<p>No templates match that search.</p>}</div></section>}
 function PlatformWalkthrough(){
- const [playing,setPlaying]=useState(false);
- const [scene,setScene]=useState(0);
- const scenes=[
-  {eyebrow:'01 / THE SPARK',headline:'Every big thing begins with an idea.',sub:'A single spark can change everything.',kind:'spark'},
-  {eyebrow:'02 / THE POSSIBILITIES',headline:'Imagine what you could create.',sub:'Words. Visuals. Ideas. New creative horizons.',kind:'possibilities'},
-  {eyebrow:'03 / THE CONNECTION',headline:'Bring your creative world together.',sub:'A vision of connected tools and experiences.',kind:'connect'},
-  {eyebrow:'04 / THE REVEAL',headline:'One vision. Endless possibilities.',sub:'Meet the future we are building. Xnovah AI.',kind:'reveal'}
- ];
- useEffect(()=>{if(!playing)return;const timer=window.setInterval(()=>setScene(v=>{if(v===3){setPlaying(false);return v}return v+1}),7000);return()=>window.clearInterval(timer)},[playing]);
- const play=()=>{setScene(0);setPlaying(true)};
  return <section className="section extra-section walkthrough xt-section" id="walkthrough"><div className="shell">
-  <div className="xt-heading"><SectionEyebrow>SEE XNOVAH IN ACTION</SectionEyebrow><h2>Ideas deserve a <span className="gradient-text">bigger universe.</span></h2><p className="extra-lead">Step inside a cinematic glimpse of the future we're imagining for Xnovah.</p></div>
-  <div className="xt-theater"><div className="xt-topbar"><span><span className="xt-live-dot"/> XNOVAH ORIGINAL / THE VISION</span><span>INTERACTIVE MOTION TRAILER · CONCEPT</span></div>
-  <div className={'xt-stage xt-'+scenes[scene].kind} key={scene}>
-   <div className="xt-ambient xt-ambient-one"/><div className="xt-ambient xt-ambient-two"/>
-   {scene===0&&<div className="xt-spark"><span/><span/><span/></div>}
-   {scene===1&&<div className="xt-floating-cards"><div><PenLine size={24}/><span>WORDS</span></div><div><ImageIcon size={25}/><span>VISUALS</span></div><div><Video size={25}/><span>MOTION</span></div><div><Lightbulb size={25}/><span>IDEAS</span></div></div>}
-   {scene===2&&<div className="xt-network"><div className="xt-network-core">X</div><span className="xt-network-node xt-node-1"><PenLine size={19}/></span><span className="xt-network-node xt-node-2"><ImageIcon size={19}/></span><span className="xt-network-node xt-node-3"><Globe2 size={19}/></span><span className="xt-network-node xt-node-4"><Layers3 size={19}/></span><div className="xt-network-ring"/></div>}
-   {scene===3&&<div className="xt-reveal-mark"><span>X</span><i/></div>}
-   <div className="xt-scene-copy"><span className="xt-scene-eyebrow">{scenes[scene].eyebrow}</span><h3>{scenes[scene].headline}</h3><p>{scenes[scene].sub}</p></div>
-  </div>
-  <div className="xt-controls"><button type="button" className="xt-play" onClick={()=>{if(playing)setPlaying(false);else if(scene===3)play();else setPlaying(true)}} aria-label={playing?'Pause trailer':scene===3?'Replay trailer':'Play trailer'}>{playing?<span className="xt-pause-icon">Ⅱ</span>:<Play size={17} fill="currentColor"/>}<span>{playing?'Pause':scene===3?'Replay':'Play film'}</span></button><div className="xt-timeline" role="group" aria-label="Trailer scenes">{scenes.map((s,i)=><button type="button" key={s.eyebrow} onClick={()=>{setScene(i);setPlaying(false)}} className={i===scene?'active':''} aria-label={'View scene '+(i+1)} aria-current={i===scene?'step':undefined}><span/></button>)}</div><span className="xt-counter">0{scene+1} / 04</span></div></div>
-  <div className="xt-after"><div><span>THE NEXT CHAPTER STARTS HERE</span><h3>Be part of what comes next.</h3><p>This motion trailer is an illustrative concept of Xnovah's vision, not footage of a finished product.</p></div><a href="#waitlist">Join the waitlist <ArrowUpRight size={17}/></a></div>
+  <div className="xt-heading"><SectionEyebrow>SEE XNOVAH IN ACTION</SectionEyebrow><h2>Beyond the imaginable. <span className="gradient-text">Meet Xnovah.</span></h2><p className="extra-lead">A cinematic journey through the Xnovah universe—where a single spark becomes a world of creative possibilities.</p></div>
+  <div className="xt-theater"><div className="xt-topbar"><span><span className="xt-live-dot"/> XNOVAH ORIGINAL / CINEMATIC BRAND FILM</span><span>24 SECONDS · THE XNOVAH VISION</span></div>
+  <div style={{position:'relative',width:'100%',aspectRatio:'16 / 9',background:'#030106',overflow:'hidden'}}>
+   <video controls playsInline preload="metadata" aria-label="Xnovah cinematic brand film" style={{width:'100%',height:'100%',display:'block',objectFit:'contain',background:'#000'}} onError={e=>{const el=e.currentTarget;el.style.display='none';const fallback=el.nextElementSibling as HTMLElement|null;if(fallback)fallback.style.display='flex'}}>
+    <source src="/videos/xnovah-cinematic.mp4" type="video/mp4"/>
+    Your browser does not support HTML5 video.
+   </video>
+   <div style={{display:'none',position:'absolute',inset:0,alignItems:'center',justifyContent:'center',flexDirection:'column',gap:12,padding:24,textAlign:'center',background:'radial-gradient(circle at center,#24113d 0%,#030106 70%)',color:'#fff'}}>
+    <strong style={{fontSize:'clamp(20px,3vw,34px)',letterSpacing:2}}>XNOVAH / THE VISION</strong>
+    <p style={{color:'#c9b9de',maxWidth:470,lineHeight:1.7}}>The cinematic film is being prepared for playback. Experience the original animated preview in the meantime.</p>
+    <a href="/video-preview" style={{color:'#d9b7ff',textDecoration:'underline'}}>Watch the cinematic preview</a>
+   </div>
+  </div></div>
+  <div className="xt-after"><div><span>A NEW CREATIVE UNIVERSE</span><h3>From the first spark to the final reveal.</h3><p>Travel through light, motion, and imagination in our 24-second brand film. This is a cinematic expression of the future we're building—not a demonstration of finished product features.</p></div><a href="#waitlist">Be part of what's next <ArrowUpRight size={17}/></a></div>
  </div></section>
 }
+
 const galaxyApps=[["YouTube","Social","youtube-icon","#ff0033"],["Instagram","Social","instagram-icon","#ff3cb7"],["TikTok","Social","tiktok-icon","#f4f4ff"],["Facebook","Social","facebook","#1877f2"],["X (Twitter)","Social","x","#cbd5e1"],["LinkedIn","Social","linkedin-icon","#0a66c2"],["Google Drive","Productivity","google-drive","#49adff"],["Google Calendar","Productivity","google-calendar","#438cff"],["Slack","Messaging","slack-icon","#36c5f0"],["Webflow","Publishing","webflow-icon","#2962ff"],["Blogger","Publishing","blogger","#ff6b25"],["Medium","Publishing","medium-icon","#ffffff"],["WordPress","Publishing","wordpress-icon","#36b3ff"],["HubSpot","Commerce","hubspot","#ff7a59"],["WooCommerce","Commerce","woocommerce","#ae56ff"],["Shopify","Commerce","shopify","#7ac943"],["Discord","Messaging","discord-icon","#777bff"],["Messenger","Messaging","messenger","#9b61ff"],["Telegram","Messaging","telegram","#2aabee"],["WhatsApp","Messaging","whatsapp-icon","#25d366"],["Notion","Productivity","notion-icon","#f7f7ff"]] as const;
 const appNames=galaxyApps.map(a=>a[0]);
 const appTypes=galaxyApps.map(a=>a[1]);
