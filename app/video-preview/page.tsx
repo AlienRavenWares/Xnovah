@@ -1,7 +1,9 @@
 'use client';
 import {useEffect,useRef,useState} from 'react';
 
+
 export default function VideoPreview(){
+ const embedded=typeof window!=='undefined'&&new URLSearchParams(window.location.search).get('embed')==='1';
  const canvas=useRef<HTMLCanvasElement>(null);
  const [playing,setPlaying]=useState(true);
  const [time,setTime]=useState(0);
@@ -97,18 +99,18 @@ export default function VideoPreview(){
   recorder.start();
   setTimeout(()=>{if(recorder.state==='recording')recorder.stop()},24000);
  }
- return <main style={{minHeight:'100vh',background:'#000',color:'#fff',fontFamily:'Arial,Helvetica,sans-serif',padding:'clamp(18px,4vw,48px)'}}>
+ return <main style={{minHeight:embedded?'auto':'100vh',background:'#000',color:'#fff',fontFamily:'Arial,Helvetica,sans-serif',padding:embedded?0:'clamp(18px,4vw,48px)'}}>
  <div style={{maxWidth:1200,margin:'auto'}}>
- <header style={{display:'flex',justifyContent:'space-between',alignItems:'center',gap:12,marginBottom:40}}>
+ {!embedded&&<header style={{display:'flex',justifyContent:'space-between',alignItems:'center',gap:12,marginBottom:40}}>
  <a href="/" style={{color:'#fff',fontWeight:800,fontSize:22,letterSpacing:5,textDecoration:'none'}}>XNOVAH</a>
- <a href="/" style={{color:'#bba6d6',textDecoration:'none',fontSize:13}}>← Back to website</a></header>
- <div style={{fontSize:11,letterSpacing:4,color:'#a16bfb',fontWeight:700}}>BRAND MOTION STUDY / 001</div>
- <h1 style={{fontSize:'clamp(30px,5vw,58px)',letterSpacing:-2,margin:'12px 0 26px',fontWeight:700}}>Beyond the imaginable.</h1>
- <div style={{position:'relative',aspectRatio:'16 / 9',background:'#000',overflow:'hidden',borderRadius:14,border:'1px solid #27202f',boxShadow:'0 30px 100px rgba(55,20,91,.18)'}}>
+ <a href="/" style={{color:'#bba6d6',textDecoration:'none',fontSize:13}}>← Back to website</a></header>}
+ {!embedded&&<div style={{fontSize:11,letterSpacing:4,color:'#a16bfb',fontWeight:700}}>BRAND MOTION STUDY / 001</div>}
+ {!embedded&&<h1 style={{fontSize:'clamp(30px,5vw,58px)',letterSpacing:-2,margin:'12px 0 26px',fontWeight:700}}>Beyond the imaginable.</h1>}
+ <div style={{position:'relative',aspectRatio:'16 / 9',background:'#000',overflow:'hidden',borderRadius:embedded?0:14,border:embedded?'none':'1px solid #27202f',boxShadow:'0 30px 100px rgba(55,20,91,.18)'}}>
  <canvas ref={canvas} style={{width:'100%',height:'100%',display:'block'}}/>
  <div style={{position:'absolute',left:20,right:20,bottom:17,display:'flex',alignItems:'center',justifyContent:'space-between',gap:12}}>
  <button onClick={()=>setPlaying(!playing)} style={{border:'1px solid #a16bfb',background:'rgba(10,5,18,.85)',color:'#fff',borderRadius:30,padding:'10px 20px',fontWeight:700,cursor:'pointer'}}>{playing?'Ⅱ Pause':'▶ Play'}</button>
  <button disabled={exporting} onClick={downloadAnimation} style={{border:'1px solid #a16bfb',background:'#6c36ad',color:'#fff',borderRadius:30,padding:'10px 16px',fontWeight:700,cursor:exporting?'wait':'pointer'}}>{exporting?'Recording 24s…':'↓ Download video'}</button><span style={{fontSize:12,letterSpacing:1,color:'#c7b4df'}}>MOTION GRAPHICS · {String(time).padStart(2,'0')} / 24s</span></div></div>
- <p style={{color:'#a99bb8',lineHeight:1.7,fontSize:14,maxWidth:750,marginTop:24}}>A cinematic Xnovah identity film with a moving virtual camera: dolly-in, orbital drift, parallax panning and pull-back, plus dimensional star travel, luminous shockwaves, orbital geometry, anamorphic light sweeps, kinetic typography and a dramatic logo reveal. Use Download video to record the 24-second animation in your browser. The format is MP4 when supported, otherwise WebM. The download starts when recording finishes.</p>
+ {!embedded&&<p style={{color:'#a99bb8',lineHeight:1.7,fontSize:14,maxWidth:750,marginTop:24}}>A cinematic Xnovah identity film with a moving virtual camera: dolly-in, orbital drift, parallax panning and pull-back, plus dimensional star travel, luminous shockwaves, orbital geometry, anamorphic light sweeps, kinetic typography and a dramatic logo reveal. Use Download video to record the 24-second animation in your browser. The format is MP4 when supported, otherwise WebM. The download starts when recording finishes.</p>
  </div></main>;
 }
