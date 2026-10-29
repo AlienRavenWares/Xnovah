@@ -91,7 +91,66 @@ function FeatureUniverse(){
 const audiences=['Content creators','Entrepreneurs','Marketing teams','Social media managers','Designers','Writers & bloggers','Developers','E-commerce sellers','Agencies','Educators','Students','Researchers','Podcasters','Video creators','Small businesses'];
 function AudienceUniverse(){const [active,setActive]=useState(0);return <section className="section extra-section audience-universe" id="audiences"><div className="shell"><SectionEyebrow>MADE FOR THE WAY YOU WORK</SectionEyebrow><h2>Fifteen ways to start.<br/><span className="gradient-text">Infinite ways to grow.</span></h2><p className="extra-lead">From independent creators to ambitious teams, there's room for every kind of imagination.</p><div className="audience-explorer"><div className="audience-options">{audiences.map((a,i)=><button key={a} onClick={()=>setActive(i)} className={i===active?'active':''}>{String(i+1).padStart(2,'0')} &nbsp; {a}</button>)}</div><div className="audience-feature"><span>YOUR CREATIVE WORLD / {String(active+1).padStart(2,'0')}</span><div className="audience-feature-art">✳</div><h3>Built for {audiences[active].toLowerCase()}.</h3><p>Explore creative workflows, fresh ideas and ways to move from inspiration to execution in one connected space.</p><a href="#waitlist">Join the early-access list ↗</a></div></div></div></section>}
 const templates=[['Marketing','Campaign brief','Ad headlines','Product descriptions','Email sequence','Brand voice'],['Social','Instagram captions','LinkedIn post','Video hooks','Content calendar','Hashtags'],['Writing','Blog outline','Article draft','Story starter','Rewrite & refine','Newsletter'],['Business','Business plan','Sales pitch','Customer reply','Meeting recap','Proposal'],['Creative','Video script','Image prompts','Character concepts','Creative brief','Podcast outline'],['Learning','Study guide','Lesson plan','Research summary','Quiz questions','Explainer']];
-function TemplateLibrary(){const [cat,setCat]=useState('All');const [search,setSearch]=useState('');const rows=templates.flatMap(([group,...items])=>items.map(name=>({group,name}))).filter(t=>(cat==='All'||t.group===cat)&&t.name.toLowerCase().includes(search.toLowerCase()));return <section className="section extra-section template-universe" id="templates"><div className="shell"><SectionEyebrow>YOUR NEXT STARTING POINT</SectionEyebrow><h2>A template for <span className="gradient-text">almost anything.</span></h2><p className="extra-lead">Explore creative starting points across marketing, social, business, writing and more.</p><div className="template-controls"><input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Search creative templates..." aria-label="Search templates"/><div>{['All',...templates.map(t=>t[0])].map(c=><button className={cat===c?'active':''} onClick={()=>setCat(c)} key={c}>{c}</button>)}</div></div><div className="template-grid">{rows.map(t=><div className="template-card" key={t.group+t.name}><span>✳ &nbsp; {t.group.toUpperCase()}</span><h3>{t.name}</h3><p>A thoughtful first step for your next creative workflow.</p><small>WORKFLOW CONCEPT ↗</small></div>)}</div>{rows.length===0&&<p>No templates match that search.</p>}</div></section>}
+const fullTemplateCatalog=[["Ecommerce","Product Description","Testimonial Review","Product Features","Product Name Ideas","Why Choose This Product","Reviews","Review Responder","Amazon Listing"],["Blog","Article Generator","Blog Conclusion","Paragraph Generator","Grammar Correction","TL;DR Summarization","AI Speech to Text","AI Article Wizard","AI Vision","File Analyzer","Chat Image","AI ReWriter","AI Plagiarism Checker","AI Content Detector","AI Web Chat","Blog Section","Blog Ideas","Blog Intro","Blog Outline","Blog Article","Realtime Voice Chat","AI Chat"],["Social Media","Youtube Video Description","Instagram Captions","Instagram Hashtags","Social Media Post - Tweet","Social Media Post - Business","Facebook Headlines","IG Reel Script","IG Captions","TikTok Script","TikTok Video Caption","TikTok Video Script","Facebook Post","Facebook Video Script","X Tweet","X Thread","Youtube Video Title","Youtube Video Tag","Youtube Video to Blog Post","Video Idea","Video Description","Viral Tweet Idea","Clickbait Titles","App & SMS Notifications","AMA Post","Trending Post"],["Advertising","Google Ads Headlines","Google Ads Description","Facebook Ad","TV Ad Script","Youtube Ads","Advertising Ideas","Ad Script","Video Ad Script","Retargeting Ad Copy"],["Development","Pros & Cons","FAQ Generator","AI Image Generator","AI Code Generator","Bug Fix","Explain Code","Teach Code","Changelog Creator","Unit Test Generator","API Documentation"],["Email","Email Generator","Email Answer Generator","Newsletter Generator","Welcome Email","Invitation Email","Follow-Up Email","Reply Email","Press Release","Cold Email","Re-engagement Email"],["Academic","Cover Letter","Math Question","Bullet Point Answer","Thesis Statement","Proofreading","Rephrase","Improve","Essay Outline","Study Guide"],["Business","Job Description","Resume Builder","LinkedIn Bio","Startup Ideas","PAS Framework","Strategy","Personal Bio","Cost Benefit Analysis","Brainstorming","LinkedIn Post","Sales Pitch","Application Letter","AIDA Framework","Career Advice","Marketing Plan","Business Proposal","Meeting Agenda"],["Customer Service","Social Media Reply","Ticket Reply","Apology Email","Support Documentation","Refund Response"],["Entertainment","Song Lyrics","Jokes","Event Planner","Travel Planner","Gift Ideas","Trivia Questions"],["Website","Sitemap","Tagline","UX Ideas","Design Ideas","Services Page","Features Page","Keyword Generator","Keyword Extractor","SEO Optimizer","Testimonials","Landing Page Copy","Website Copywriting","FAQ","Call to Action","Meta Description","Rewrite with Keywords","Privacy Policy Draft","Terms & Conditions Draft"],["Languages","Translate","Grammar Check","List Synonyms","Learn New Words","Idiom Explainer"],["Fitness & Health","Create a Workout Plan","Create a Meal Plan","Wellness Tips"],["Writer","eBook Outline","Paragraph","Story Generator","Book Ideas","Content Improver","Storytelling","Viral Ideas","Brand Voice"],["Misc","Explain to a Child","Journalist Rewrite","Generate From RSS Feed","Undetectable Rewrite","Real Estate Listing","Prompt Generator","AI Voiceover","AI Video","Video Script","AI Voice Isolator","Voiceover Clone","AI Video to Video","AI YouTube","AI RSS"]];
+const templateCopyOverrides:Record<string,string>={
+ 'Product Description':'Write persuasive, benefit-led product descriptions with a clear reason to buy.',
+ 'Testimonial Review':'Draft illustrative testimonial-style examples for internal review; publish only authentic customer feedback.',
+ 'Reviews':'Create review-style sample copy for planning; never present invented reviews as genuine.',
+ 'AI Plagiarism Checker':'Explore originality-review workflows before publishing important work.',
+ 'AI Content Detector':'Explore AI-content analysis while recognizing that detection results are not definitive.',
+ 'Undetectable Rewrite':'Refine phrasing for clarity, originality and a natural editorial voice.',
+ 'Privacy Policy Draft':'Prepare a starting draft for legal review, tailored to your website and data practices.',
+ 'Terms & Conditions Draft':'Outline website terms for professional legal review.',
+ 'Create a Meal Plan':'Outline meal-planning ideas to review against individual dietary requirements.',
+ 'Create a Workout Plan':'Build a structured exercise-plan draft suited to your stated goals.',
+ 'AI Voiceover':'Explore voice narration concepts for campaigns, explainers and presentations.',
+ 'AI Video':'Develop creative video concepts and production-ready prompts.',
+ 'Voiceover Clone':'Explore authorized voice-replication workflows with clear consent.',
+ 'AI Video to Video':'Explore transforming existing footage into fresh visual treatments.',
+ 'AI YouTube':'Plan video ideas, scripts and publishing assets for YouTube.',
+ 'AI RSS':'Turn feed updates into structured content ideas and summaries.',
+ 'AI Vision':'Explore image understanding and detailed visual descriptions.',
+ 'File Analyzer':'Surface summaries and key information from uploaded documents.',
+ 'Realtime Voice Chat':'Explore natural spoken conversations with an AI assistant.',
+ 'AI Chat':'Explore conversational assistance for everyday questions and ideas.'
+};
+function templateDescription(group:string,name:string){
+ if(templateCopyOverrides[name])return templateCopyOverrides[name];
+ const g:Record<string,string>={
+ 'Ecommerce':'Develop polished, customer-focused commerce copy for stronger product communication.',
+ 'Blog':'Plan, structure and refine editorial content with a clear, engaging voice.',
+ 'Social Media':'Create platform-aware content with sharper messaging and a consistent brand tone.',
+ 'Advertising':'Develop focused campaign copy with compelling hooks and clear calls to action.',
+ 'Development':'Support technical planning, documentation and clearer development workflows.',
+ 'Email':'Draft professional, audience-aware messages with a clear purpose and next step.',
+ 'Academic':'Structure and refine academic or career-related writing for clarity and precision.',
+ 'Business':'Turn business ideas into structured, persuasive professional communication.',
+ 'Customer Service':'Prepare thoughtful, empathetic responses that address customer needs.',
+ 'Entertainment':'Explore imaginative concepts and engaging creative writing.',
+ 'Website':'Develop clear, user-focused website content and discoverability assets.',
+ 'Languages':'Improve expression, vocabulary and multilingual communication.',
+ 'Fitness & Health':'Organize general wellness and fitness ideas for informed review.',
+ 'Writer':'Shape stronger narratives with better structure, style and originality.',
+ 'Misc':'Explore specialized AI-assisted creative and productivity workflows.'
+ };
+ return name+': '+(g[group]||'Create a more polished first draft with a structured workflow.');
+}
+function TemplateLibrary(){
+ const [cat,setCat]=useState('All'),[search,setSearch]=useState(''),[expanded,setExpanded]=useState(false);
+ const rows=fullTemplateCatalog.flatMap(([group,...items])=>items.map(name=>({group,name}))).filter(t=>(cat==='All'||t.group===cat)&&t.name.toLowerCase().includes(search.trim().toLowerCase()));
+ const visible=expanded?rows:rows.slice(0,9);
+ return <section className="section extra-section template-universe" id="templates"><div className="shell">
+ <SectionEyebrow>CREATIVE STARTING POINTS</SectionEyebrow>
+ <h2>A template for <span className="gradient-text">almost anything.</span></h2>
+ <p className="extra-lead">Discover 168 writing, marketing, business and creative workflows across 15 categories. Explore the possibilities, find your starting point and shape a more professional first draft.</p>
+ <div className="template-controls"><input value={search} onChange={e=>{setSearch(e.target.value);setExpanded(false)}} placeholder="Search 168 templates..." aria-label="Search template catalog"/><div>{['All',...fullTemplateCatalog.map(t=>t[0])].map(c=><button type="button" className={cat===c?'active':''} onClick={()=>{setCat(c);setExpanded(false)}} key={c}>{c}</button>)}</div></div>
+ <div className="template-grid">{visible.map(t=><div className="template-card" key={t.group+t.name}><span>✳ &nbsp; {t.group.toUpperCase()}</span><h3>{t.name}</h3><p>{templateDescription(t.group,t.name)}</p><small>TEMPLATE PREVIEW</small></div>)}</div>
+ {rows.length===0&&<p style={{textAlign:'center',marginTop:25}}>No templates match your search. Try another keyword or category.</p>}
+ {rows.length>9&&<div style={{display:'flex',justifyContent:'center',marginTop:28}}><button type="button" onClick={()=>setExpanded(v=>!v)} aria-expanded={expanded} style={{padding:'12px 28px',borderRadius:12,border:'1px solid rgba(180,130,255,.35)',background:'rgba(135,75,215,.12)',color:'#f2eaff',cursor:'pointer',fontWeight:700}}>{expanded?'Show fewer templates':'View all '+rows.length+' templates'}</button></div>}
+ <p className="feature-disclaimer" style={{marginTop:22}}>Catalog adapted from the supplied Xnovah reference page. Templates and AI tools shown here are illustrative of planned experiences; availability depends on implementation and plan.</p>
+ </div></section>
+}
+
 function PlatformWalkthrough(){
  return <section className="section extra-section walkthrough xt-section" id="walkthrough"><div className="shell">
   <div className="xt-heading"><SectionEyebrow>SEE XNOVAH IN ACTION</SectionEyebrow><h2>Beyond the imaginable. <span className="gradient-text">Meet Xnovah.</span></h2><p className="extra-lead">A cinematic journey through the Xnovah universe—where a single spark becomes a world of creative possibilities.</p></div>
