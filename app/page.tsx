@@ -203,7 +203,33 @@ function IntegrationUniverse(){
   <p className="feature-disclaimer">Concept visualization only. Third-party integrations, automation, synchronization and account connections are not yet available or confirmed.</p>
  </div></section>
 }
-function CompareWays(){return <section className="section extra-section compare-universe" id="comparison"><div className="shell"><SectionEyebrow>WHY ONE WORKSPACE</SectionEyebrow><h2>Less switching. <span className="gradient-text">More creating.</span></h2><p className="extra-lead">A comparison of workflow approaches, not a claim about specific subscription prices or guaranteed capabilities.</p><div className="comparison-table"><div className="comparison-row heading"><span>WORKFLOW</span><b>Separate tools</b><b>Xnovah vision</b></div>{[['Finding the right workflow','Switch between different apps','Discover experiences in one place'],['Creative context','Move information between tools','Explore a connected creative journey'],['Learning new tools','Multiple interfaces to navigate','A more cohesive design language'],['Expanding possibilities','Piece together a personal stack','Discover new capabilities as they launch']].map(row=><div className="comparison-row" key={row[0]}><strong>{row[0]}</strong><span>{row[1]}</span><span>{row[2]}</span></div>)}</div></div></section>}
+function CompareWays(){
+ const benefits=[
+ ['From idea to finished content','Move between separate writing, image and video apps','Explore writing, image and video creation from one AI workspace'],
+ ['A consistent brand voice','Re-explain your brand with every new tool','Use brand voice and reusable prompts to keep content on-message'],
+ ['Faster content workflows','Copy, paste and reformat content repeatedly','Draft, rewrite, refine and export with an integrated AI editor'],
+ ['Documents that work harder','Read and summarize files manually','Ask questions of PDFs and supported documents to surface insights'],
+ ['Creative visuals on demand','Find different apps for each visual task','Generate images, explore photo tools and develop visual concepts'],
+ ['Video and voice creation','Coordinate separate tools for scripts, voice and motion','Explore AI video, voiceover and transcription in one ecosystem'],
+ ['Content for every channel','Start each social post, article or email from scratch','Use purpose-built templates for blogs, captions, ads and email'],
+ ['Ideas backed by research','Switch between search, notes and writing tools','Explore web-assisted research and turn findings into content'],
+ ['More ways to collaborate with AI','Manage different chat experiences separately','Discover AI chat, specialized assistants and customizable chatbots'],
+ ['An organized creative library','Scatter drafts, files and prompts across apps','Keep documents, generated assets and favorite prompts organized'],
+ ['A workspace that grows with you','Add another disconnected tool for every new need','Explore more capabilities and supported models as Xnovah evolves'],
+ ['Create wherever inspiration strikes','Rely on desktop-only or inconsistent interfaces','A responsive workspace vision designed for desktop and mobile']
+ ];
+ return <section className="section extra-section compare-universe" id="comparison"><div className="shell">
+  <SectionEyebrow>WHY ONE WORKSPACE</SectionEyebrow>
+  <h2>Less switching. <span className="gradient-text">More creating.</span></h2>
+  <p className="extra-lead">Your ideas shouldn't lose momentum between apps. From writing and visuals to video, voice, research and documents, discover the creative advantages behind Xnovah's all-in-one vision.</p>
+  <div className="comparison-table">
+   <div className="comparison-row heading"><span>THE BENEFIT</span><b>Across separate tools</b><b>With Xnovah's vision</b></div>
+   {benefits.map(row=><div className="comparison-row" key={row[0]}><strong>{row[0]}</strong><span>{row[1]}</span><span>{row[2]}</span></div>)}
+  </div>
+  <p className="feature-disclaimer" style={{marginTop:22}}>These are product-direction benefits inspired by capabilities documented for the MagicAI platform. Xnovah is in development; individual tools, extensions, integrations and availability depend on implementation and plan. This is not a claim that every feature is live today.</p>
+ </div></section>
+}
+
 function ConceptGallery(){return <section className="section extra-section gallery-universe" id="gallery"><div className="shell"><SectionEyebrow>WHAT PEOPLE COULD BUILD</SectionEyebrow><h2>One idea. <span className="gradient-text">A thousand directions.</span></h2><p className="extra-lead">Illustrative project concepts, not customer testimonials or examples of real outputs from a live product.</p><div className="gallery-grid">{[['Brand worlds','A distinctive visual identity for an ambitious new idea.','✦'],['Campaign stories','A creative launch concept told across formats.','◈'],['Product moments','Beautiful scenes that give products their own spotlight.','✳'],['Creative presentations','A pitch that turns information into a story.','▧']].map((g,i)=><article className={'gallery-card gallery-'+i} key={g[0]}><div className="gallery-art">{g[2]}</div><div><span>CONCEPT 0{i+1}</span><h3>{g[0]}</h3><p>{g[1]}</p></div></article>)}</div></div></section>}
 function MidCTA({title,subtitle}:{title:string,subtitle:string}){return <section className="section mid-cta"><div className="shell mid-cta-inner"><span>✳ &nbsp; YOUR NEXT IDEA STARTS HERE</span><h2>{title}</h2><p>{subtitle}</p><a href="#waitlist">Get early access <ArrowUpRight size={18}/></a></div></section>}
 function Newsletter(){return <section className="section extra-section newsletter-universe" id="newsletter"><div className="shell newsletter-layout"><div><SectionEyebrow>THE XNOVAH DISPATCH</SectionEyebrow><h2>Good things are <span className="gradient-text">taking shape.</span></h2><p>Product reveals, creative inspiration and launch updates, delivered when there's something worth sharing.</p></div><WaitlistForm compact/></div></section>}
