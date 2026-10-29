@@ -310,15 +310,23 @@ const buildIdeas=[
  ['Business workflows','Outline marketing plans, meeting materials, SOPs and repeatable AI-assisted work processes.','⚙']
 ] as const;
 function ConceptGallery(){
+ const [active,setActive]=useState(0);
  const [expanded,setExpanded]=useState(false);
- const shown=expanded?buildIdeas:buildIdeas.slice(0,6);
- return <section className="section extra-section gallery-universe" id="gallery"><div className="shell">
-  <SectionEyebrow>WHAT PEOPLE COULD BUILD</SectionEyebrow>
-  <h2>One idea. <span className="gradient-text">Endless possibilities.</span></h2>
-  <p className="extra-lead">From a brand's first identity to videos, websites, campaigns and intelligent assistants, discover what you could bring to life with Xnovah's creative vision.</p>
-  <div className="gallery-grid">{shown.map((g,i)=><article className={'gallery-card gallery-'+i%4} key={g[0]}><div className="gallery-art" aria-hidden="true">{g[2]}</div><div><span>CREATIVE POSSIBILITY {String(i+1).padStart(2,'0')}</span><h3>{g[0]}</h3><p>{g[1]}</p></div></article>)}</div>
-  <div style={{display:'flex',justifyContent:'center',marginTop:30}}><button type="button" aria-expanded={expanded} onClick={()=>setExpanded(v=>!v)} style={{padding:'13px 28px',border:'1px solid rgba(190,140,255,.36)',borderRadius:12,background:'rgba(145,80,220,.12)',color:'#f5eaff',fontWeight:700,cursor:'pointer'}}>{expanded?'Show fewer possibilities':'Explore all '+buildIdeas.length+' possibilities'}</button></div>
-  <p className="feature-disclaimer" style={{marginTop:24}}>Inspired by documented MagicAI capabilities, including optional modules and add-ons. These are illustrative project possibilities, not customer projects or a promise that every tool is available in Xnovah today.</p>
+ const selected=buildIdeas[active];
+ return <section className="section extra-section gallery-universe gallery-reimagined" id="gallery"><div className="shell">
+  <div className="gxr-intro"><div><SectionEyebrow>WHAT PEOPLE COULD BUILD</SectionEyebrow><h2>Ideas are just <span className="gradient-text">the beginning.</span></h2></div><p>From a first spark to an entire creative ecosystem. Explore 18 ways to shape your next project with the Xnovah vision.</p></div>
+  <div className="gxr-stage">
+   <div className="gxr-stage-main"><div className="gxr-overline"><span>THE POSSIBILITY INDEX</span><span>{String(active+1).padStart(2,'0')} / {buildIdeas.length}</span></div>
+    <div className="gxr-symbol" aria-hidden="true"><span>{selected[2]}</span><i/><i/><i/></div>
+    <div className="gxr-content" key={selected[0]}><span>CREATE / EXPLORE / IMAGINE</span><h3>{selected[0]}</h3><p>{selected[1]}</p></div>
+    <div className="gxr-bottom"><span>BUILT FOR WHAT'S NEXT</span><a href="#waitlist">Join the early-access list <ArrowUpRight size={17}/></a></div>
+   </div>
+   <div className="gxr-index"><div className="gxr-index-heading"><span>EXPLORE THE POSSIBILITIES</span><span>SELECT TO PREVIEW</span></div>
+    <div className="gxr-index-list">{buildIdeas.slice(0,expanded?buildIdeas.length:8).map((item,i)=><button type="button" key={item[0]} className={'gxr-index-item'+(active===i?' selected':'')} aria-pressed={active===i} onClick={()=>setActive(i)}><span className="gxr-num">{String(i+1).padStart(2,'0')}</span><span className="gxr-name">{item[0]}</span><span className="gxr-arrow">↗</span></button>)}</div>
+    <button type="button" className="gxr-more" onClick={()=>{setExpanded(v=>!v);if(expanded&&active>=8)setActive(0)}} aria-expanded={expanded}>{expanded?'Show fewer possibilities':'Explore all 18 possibilities'} <span>{expanded?'−':'+'}</span></button>
+   </div>
+  </div>
+  <p className="feature-disclaimer gxr-note">Illustrative project possibilities inspired by MagicAI capabilities, including optional add-ons. They are not customer projects or a claim that every feature is available in Xnovah today.</p>
  </div></section>
 }
 function MidCTA({title,subtitle}:{title:string,subtitle:string}){return <section className="section mid-cta"><div className="shell mid-cta-inner"><span>✳ &nbsp; YOUR NEXT IDEA STARTS HERE</span><h2>{title}</h2><p>{subtitle}</p><a href="#waitlist">Get early access <ArrowUpRight size={18}/></a></div></section>}
