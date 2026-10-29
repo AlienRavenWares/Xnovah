@@ -289,7 +289,38 @@ function CompareWays(){
  </div></section>
 }
 
-function ConceptGallery(){return <section className="section extra-section gallery-universe" id="gallery"><div className="shell"><SectionEyebrow>WHAT PEOPLE COULD BUILD</SectionEyebrow><h2>One idea. <span className="gradient-text">A thousand directions.</span></h2><p className="extra-lead">Illustrative project concepts, not customer testimonials or examples of real outputs from a live product.</p><div className="gallery-grid">{[['Brand worlds','A distinctive visual identity for an ambitious new idea.','✦'],['Campaign stories','A creative launch concept told across formats.','◈'],['Product moments','Beautiful scenes that give products their own spotlight.','✳'],['Creative presentations','A pitch that turns information into a story.','▧']].map((g,i)=><article className={'gallery-card gallery-'+i} key={g[0]}><div className="gallery-art">{g[2]}</div><div><span>CONCEPT 0{i+1}</span><h3>{g[0]}</h3><p>{g[1]}</p></div></article>)}</div></div></section>}
+const buildIdeas=[
+ ['Brand identities','Explore logo directions, campaign imagery and a consistent creative voice for a growing brand.','✦'],
+ ['Social media campaigns','Plan platform-specific posts, captions, hashtags and striking visuals for a cohesive campaign.','◈'],
+ ['Product launches','Shape product descriptions, promotional imagery, launch emails and advertising concepts.','✳'],
+ ['AI-powered videos','Turn a script or visual idea into video concepts, scenes, narration and social-ready stories.','▷'],
+ ['Explainer and onboarding videos','Develop scripts, visual sequences and voiceovers that make complex ideas easier to understand.','▶'],
+ ['Digital advertisements','Draft persuasive ad headlines, campaign variations, video scripts and creative directions.','✧'],
+ ['Websites and landing pages','Explore website copy, page structure, calls to action and AI-assisted code for digital experiences.','⌘'],
+ ['Online store content','Create product naming ideas, catalog descriptions, promotional copy and ecommerce visuals.','◇'],
+ ['Blogs and publications','Turn ideas, research, RSS feeds or video material into outlines, articles and editorial series.','▤'],
+ ['Podcasts and voice content','Draft episode scripts, explore AI narration and convert recorded speech into editable text.','◉'],
+ ['Presentations and pitches','Organize compelling pitch narratives, business proposals and supporting visual concepts.','▧'],
+ ['Customer support assistants','Explore helpful chatbot experiences, support responses and answers drawn from reference documents.','◎'],
+ ['Learning and training materials','Develop lesson outlines, explainers, study guides and summaries of reference material.','✺'],
+ ['Research and document insights','Explore asking questions of PDFs, analyzing files and distilling information into clear summaries.','⌕'],
+ ['Software prototypes','Explore AI-assisted code, bug explanations, documentation and early product prototypes.','{ }'],
+ ['Newsletters and email journeys','Plan welcome sequences, product announcements, follow-up messages and branded newsletters.','✉'],
+ ['Creative photo projects','Explore product photo concepts, image generation, visual enhancements and branded artwork.','◐'],
+ ['Business workflows','Outline marketing plans, meeting materials, SOPs and repeatable AI-assisted work processes.','⚙']
+] as const;
+function ConceptGallery(){
+ const [expanded,setExpanded]=useState(false);
+ const shown=expanded?buildIdeas:buildIdeas.slice(0,6);
+ return <section className="section extra-section gallery-universe" id="gallery"><div className="shell">
+  <SectionEyebrow>WHAT PEOPLE COULD BUILD</SectionEyebrow>
+  <h2>One idea. <span className="gradient-text">Endless possibilities.</span></h2>
+  <p className="extra-lead">From a brand's first identity to videos, websites, campaigns and intelligent assistants, discover what you could bring to life with Xnovah's creative vision.</p>
+  <div className="gallery-grid">{shown.map((g,i)=><article className={'gallery-card gallery-'+i%4} key={g[0]}><div className="gallery-art" aria-hidden="true">{g[2]}</div><div><span>CREATIVE POSSIBILITY {String(i+1).padStart(2,'0')}</span><h3>{g[0]}</h3><p>{g[1]}</p></div></article>)}</div>
+  <div style={{display:'flex',justifyContent:'center',marginTop:30}}><button type="button" aria-expanded={expanded} onClick={()=>setExpanded(v=>!v)} style={{padding:'13px 28px',border:'1px solid rgba(190,140,255,.36)',borderRadius:12,background:'rgba(145,80,220,.12)',color:'#f5eaff',fontWeight:700,cursor:'pointer'}}>{expanded?'Show fewer possibilities':'Explore all '+buildIdeas.length+' possibilities'}</button></div>
+  <p className="feature-disclaimer" style={{marginTop:24}}>Inspired by documented MagicAI capabilities, including optional modules and add-ons. These are illustrative project possibilities, not customer projects or a promise that every tool is available in Xnovah today.</p>
+ </div></section>
+}
 function MidCTA({title,subtitle}:{title:string,subtitle:string}){return <section className="section mid-cta"><div className="shell mid-cta-inner"><span>✳ &nbsp; YOUR NEXT IDEA STARTS HERE</span><h2>{title}</h2><p>{subtitle}</p><a href="#waitlist">Get early access <ArrowUpRight size={18}/></a></div></section>}
 function Newsletter(){return <section className="section extra-section newsletter-universe" id="newsletter"><div className="shell newsletter-layout"><div><SectionEyebrow>THE XNOVAH DISPATCH</SectionEyebrow><h2>Good things are <span className="gradient-text">taking shape.</span></h2><p>Product reveals, creative inspiration and launch updates, delivered when there's something worth sharing.</p></div><WaitlistForm compact/></div></section>}
 
