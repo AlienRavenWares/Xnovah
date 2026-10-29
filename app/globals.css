@@ -2006,3 +2006,13 @@ main{counter-reset:xnovah-section}main section{counter-increment:xnovah-section}
 .roadmap-close a{display:inline-flex;align-items:center;gap:9px;white-space:nowrap;text-decoration:none;color:#e4baff;border-bottom:1px solid rgba(190,145,240,.45);padding-bottom:8px;font-size:14px;font-weight:700}
 @media(max-width:1000px){.roadmap-line{grid-template-columns:repeat(2,minmax(0,1fr))}.roadmap-milestone{padding:26px 22px 32px!important}.roadmap-milestone:nth-child(2){border-right:0}.roadmap-milestone:nth-child(-n+2){border-bottom:1px solid rgba(181,139,230,.2)}.roadmap-milestone-body>p{min-height:0}.roadmap-step{margin-bottom:28px}}
 @media(max-width:640px){.roadmap-head{display:block;margin-bottom:30px}.roadmap-head>p{margin-top:20px}.roadmap-line{grid-template-columns:1fr}.roadmap-milestone{border-right:0!important;border-bottom:1px solid rgba(181,139,230,.2);padding:24px 0 28px!important}.roadmap-milestone:last-child{border-bottom:0}.roadmap-step{margin-bottom:18px}.roadmap-milestone h3{font-size:23px}.roadmap-milestone ul{grid-template-columns:1fr}.roadmap-close{display:block}.roadmap-close a{margin-top:22px;white-space:normal}}
+
+/* FAQ editorial milestones */
+.faq-quick-facts{margin:32px 0 28px;display:flex;flex-direction:column;border-top:1px solid rgba(194,152,240,.3)}
+.faq-quick-facts>div{position:relative;display:grid;grid-template-columns:46px minmax(0,1fr);gap:0 14px;align-items:start;padding:21px 4px 22px;border-bottom:1px solid rgba(194,152,240,.18);transition:background .2s ease,padding-left .2s ease}
+.faq-quick-facts>div:hover{background:linear-gradient(90deg,rgba(148,83,220,.09),transparent 85%);padding-left:12px}
+.faq-quick-facts>div>span{grid-row:1 / span 2;display:grid;place-items:center;width:35px;height:35px;border:1px solid rgba(193,141,248,.34);border-radius:50%;font-size:11px;font-weight:700;letter-spacing:.05em;color:#d6adff;background:radial-gradient(circle,rgba(167,98,244,.15),transparent)}
+.faq-quick-facts>div>strong{display:block;font-size:16px;line-height:1.4;letter-spacing:-.015em;color:#f7efff;font-weight:650;margin:0 0 5px}
+.faq-quick-facts>div>small{display:block;font-size:13px;line-height:1.65;color:#b8a9c8;max-width:350px}
+.faq-list-intro{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid rgba(194,152,240,.28);padding:0 0 19px;color:#b9a0d3;font-size:10px;font-weight:700;letter-spacing:.14em}
+@media(max-width:800px){.faq-quick-facts{margin:25px 0}.faq-quick-facts>div{grid-template-columns:43px minmax(0,1fr);padding:17px 2px}.faq-quick-facts>div>strong{font-size:15px}.faq-list-intro{margin-top:22px;font-size:9px}}
