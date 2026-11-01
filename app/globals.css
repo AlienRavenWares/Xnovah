@@ -2073,3 +2073,27 @@ main{counter-reset:xnovah-section}main section{counter-increment:xnovah-section}
 @media(max-width:800px){.xuc-heading,.xts-layout{grid-template-columns:1fr;gap:20px}.xuc-display{grid-template-columns:1fr}.xuc-side{border-left:0;border-top:1px solid rgba(255,255,255,.1)}.xuc-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.xuc-tabs button:nth-child(2){border-right:0}.xuc-tabs button:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.08)}.xts-foot{flex-direction:column;gap:14px}}
 @media(max-width:480px){.xuc-tabs button{font-size:11px;padding:16px 8px;gap:5px}.xuc-steps{flex-direction:column;gap:10px}.xuc-section,.xts-section{padding:70px 0}}
 @media(prefers-reduced-motion:reduce){.xuc-tabs button{transition:none}}
+
+/* Premium cinematic refinement — lightweight CSS, no external assets */
+@keyframes xnovah-ambient-drift{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(2%, -3%,0) scale(1.06)}}
+@keyframes xnovah-preview-reveal{from{opacity:.35;transform:scale(1.035)}to{opacity:1;transform:scale(1)}}
+@keyframes xnovah-sheen{from{transform:translateX(-160%) skewX(-20deg)}to{transform:translateX(260%) skewX(-20deg)}}
+.hero-section,.xh-hero,.xcmd-section,.xuc-section,.xts-section{isolation:isolate}
+.xcmd-section,.xuc-section,.xts-section{position:relative;overflow:hidden}
+.xcmd-section::before,.xuc-section::before,.xts-section::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse 50% 35% at 82% 14%,rgba(127,74,244,.095),transparent 75%),radial-gradient(ellipse 45% 40% at 10% 82%,rgba(35,122,225,.075),transparent 75%)}
+.xcmd-stage{position:relative;overflow:hidden}
+.xcmd-agent-image{position:absolute;inset:0;z-index:2;overflow:hidden}
+.xcmd-agent-image img{display:block;width:100%;height:100%;object-fit:cover;animation:xnovah-preview-reveal .55s ease-out both}
+.xcmd-stage-grid,.xcmd-stage-orbit,.xcmd-stage-core,.xcmd-stage-float{pointer-events:none}
+.xcmd-stage:has(.xcmd-agent-image img:not([style*="display: none"])) .xcmd-stage-core,.xcmd-stage:has(.xcmd-agent-image img:not([style*="display: none"])) .xcmd-stage-float{opacity:0}
+.xcmd-shell{box-shadow:0 28px 100px rgba(0,0,0,.28),0 0 65px rgba(107,65,230,.07)}
+.xuc-tabs button,.xcmd-scroll-list button{transition:background-color .22s ease,color .22s ease,border-color .22s ease,transform .22s ease}
+.xuc-tabs button:hover,.xcmd-scroll-list button:hover{transform:translateY(-1px)}
+.xuc-action,.xts-intro a{position:relative;overflow:hidden}
+.xuc-action::after{content:"";position:absolute;inset:0;width:40%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.09),transparent);transform:translateX(-160%) skewX(-20deg);pointer-events:none}
+.xuc-action:hover::after{animation:xnovah-sheen .8s ease-out}
+.xts-principle{transition:background-color .25s ease,padding-left .25s ease}
+.xts-principle:hover{background:rgba(133,90,240,.045);padding-left:8px}
+@media(min-width:901px){.xcmd-section::before,.xuc-section::before{animation:xnovah-ambient-drift 18s ease-in-out infinite alternate}}
+@media(max-width:800px){.xcmd-stage .xcmd-agent-image img{object-fit:contain}.xcmd-shell{box-shadow:0 15px 45px rgba(0,0,0,.2)}.xts-principle:hover{padding-left:0}}
+@media(prefers-reduced-motion:reduce){.xcmd-agent-image img,.xcmd-section::before,.xuc-section::before,.xuc-action:hover::after{animation:none!important}.xuc-tabs button,.xcmd-scroll-list button,.xts-principle{transition:none!important}}
