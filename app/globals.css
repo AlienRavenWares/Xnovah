@@ -2097,3 +2097,24 @@ main{counter-reset:xnovah-section}main section{counter-increment:xnovah-section}
 @media(min-width:901px){.xcmd-section::before,.xuc-section::before{animation:xnovah-ambient-drift 18s ease-in-out infinite alternate}}
 @media(max-width:800px){.xcmd-stage .xcmd-agent-image img{object-fit:contain}.xcmd-shell{box-shadow:0 15px 45px rgba(0,0,0,.2)}.xts-principle:hover{padding-left:0}}
 @media(prefers-reduced-motion:reduce){.xcmd-agent-image img,.xcmd-section::before,.xuc-section::before,.xuc-action:hover::after{animation:none!important}.xuc-tabs button,.xcmd-scroll-list button,.xts-principle{transition:none!important}}
+
+/* Command Center guided demos and reliable preview fallback */
+.xcmd-image-fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:13px;text-align:center;padding:24px;background:radial-gradient(ellipse at center,rgba(123,75,228,.27),transparent 65%),linear-gradient(140deg,#11101f,#1c1239 52%,#0b1024);color:#eee7ff}
+.xcmd-image-fallback>span{font-size:clamp(44px,7vw,86px);color:#b99bff;text-shadow:0 0 38px rgba(167,113,255,.6)}
+.xcmd-image-fallback strong{font-size:clamp(16px,2vw,26px);letter-spacing:-.03em}
+.xcmd-image-fallback small{font-size:10px;letter-spacing:.15em;color:#c2b2ed}
+.xcmd-demo{display:grid;gap:10px;margin:18px 0 20px;padding:19px;border:1px solid rgba(165,127,255,.2);border-radius:14px;background:linear-gradient(140deg,rgba(120,75,205,.1),rgba(12,11,25,.25))}
+.xcmd-demo-heading{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:5px}
+.xcmd-demo-heading strong{font-size:11px;letter-spacing:.07em;color:#d5c3ff}
+.xcmd-demo-heading span{font-size:9px;color:#9992b1}
+.xcmd-demo label{font-size:11px;color:#c4b9d7}
+.xcmd-demo textarea,.xcmd-demo select{width:100%;min-width:0;border:1px solid rgba(194,171,255,.22);border-radius:9px;background:#141221;color:#f2edff;padding:11px 12px;font:inherit;font-size:12px;line-height:1.6;resize:vertical}
+.xcmd-demo textarea:focus-visible,.xcmd-demo select:focus-visible,.xcmd-demo button:focus-visible{outline:2px solid #b899ff;outline-offset:2px}
+.xcmd-demo button{justify-self:start;display:inline-flex;align-items:center;gap:8px;padding:11px 15px;border:1px solid rgba(190,152,255,.4);border-radius:9px;background:linear-gradient(115deg,#7850d9,#5735a5);color:white;font-weight:600;font-size:12px;cursor:pointer}
+.xcmd-demo button:disabled{opacity:.5;cursor:not-allowed}
+.xcmd-demo-result{border-top:1px solid rgba(194,171,255,.2);margin-top:7px;padding-top:16px}
+.xcmd-demo-result small{font-size:10px;color:#bca4ff;letter-spacing:.08em}
+.xcmd-demo-result p{margin:9px 0!important;line-height:1.7!important;color:#f0eafa!important;white-space:pre-line}
+.xcmd-demo-result>span{font-size:10px;color:#a49bb5}
+.xcmd-demo-unavailable{margin:16px 0;color:#a69bb9;font-size:12px;line-height:1.6}
+@media(max-width:600px){.xcmd-demo{padding:13px}.xcmd-demo-heading{align-items:flex-start}.xcmd-image-fallback strong{font-size:17px}}
