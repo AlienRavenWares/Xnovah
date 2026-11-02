@@ -2178,3 +2178,29 @@ main{counter-reset:xnovah-section}main section{counter-increment:xnovah-section}
     animation:none!important;opacity:1!important;transform:none!important;
   }
 }
+
+/* Responsive cinematic polish and accessible interaction */
+html{scroll-padding-top:84px}
+body{overflow-x:clip}
+.xnovah-cinematic-hero,.xcmd-section,.xnovah-cinematic-cta{max-width:100%}
+.xcmd-scroll-list{overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:rgba(170,130,240,.48) transparent}
+.xcmd-scroll-list:focus-visible{outline:2px solid #c7aaff;outline-offset:-3px;border-radius:8px}
+.xcmd-scroll-list button{touch-action:manipulation}
+.xcmd-demo textarea,.xcmd-demo select{font-size:16px}
+.xcmd-agent-image img{max-width:100%;height:100%;object-fit:cover}
+.xnovah-glass-nav{isolation:isolate}
+@media(max-width:767px){
+  .xnovah-hero-aurora{animation:none!important;transform:none!important;opacity:.45}
+  .xnovah-cinematic-hero .hero-art{animation:none!important;transform:none!important}
+  .xnovah-cinematic-hero .hero-art:after{animation:none!important}
+  .xcmd-section:before{animation:none!important}
+  .xnovah-cta-halo{animation:none!important;opacity:.55}
+  .xcmd-stage{animation-duration:.28s}
+  .xcmd-workspace-detail{animation-duration:.25s}
+  .xcmd-scroll-list button:hover{transform:none}
+  .xnovah-glass-nav{backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+  .xcmd-demo{min-width:0}
+  .xcmd-demo textarea{max-width:100%}
+}
+@media(hover:none){.xcmd-stage:hover .xcmd-agent-image img{transform:none}.xnovah-cinematic-cta .waitlist-form button:hover,.xnovah-cinematic-hero .button-primary:hover{transform:none}}
+@media(prefers-reduced-data:reduce){.xnovah-hero-aurora,.xcmd-section:before,.xnovah-cta-halo{animation:none!important}.xnovah-cinematic-hero .hero-art{animation:none!important}}
