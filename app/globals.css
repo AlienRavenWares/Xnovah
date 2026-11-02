@@ -2120,3 +2120,38 @@ main{counter-reset:xnovah-section}main section{counter-increment:xnovah-section}
 @media(max-width:600px){.xcmd-demo{padding:13px}.xcmd-demo-heading{align-items:flex-start}.xcmd-image-fallback strong{font-size:17px}}
 
 .xguide{position:fixed;right:20px;bottom:20px;z-index:999}.xguide-trigger{border:1px solid #9974d9;background:#5934a3;color:white;border-radius:30px;padding:15px 22px;cursor:pointer;font-weight:700}.xguide-panel{position:absolute;bottom:65px;right:0;width:min(360px,calc(100vw - 40px));padding:22px;border-radius:18px;background:#151124;border:1px solid #564272;color:white;box-shadow:0 15px 50px #0009}.xguide-panel p{font-size:13px;line-height:1.6;color:#c9c0da}.xguide-panel form{display:grid;gap:10px}.xguide-panel textarea{width:100%;background:#211b31;border:1px solid #66527e;color:white;padding:10px;border-radius:9px}.xguide-panel form button{background:#7950ce;color:white;border:0;border-radius:9px;padding:11px;cursor:pointer}.xguide-panel a{color:#c8a9ff}.xguide button:focus-visible,.xguide textarea:focus-visible{outline:2px solid #d1b4ff;outline-offset:2px}
+
+/* Xnovah cinematic motion system — progressive enhancement */
+.xnovah-glass-nav{background:rgba(12,10,24,.68)!important;backdrop-filter:blur(22px) saturate(145%);-webkit-backdrop-filter:blur(22px) saturate(145%);border-bottom:1px solid rgba(202,170,255,.14);box-shadow:0 12px 36px rgba(6,4,20,.12);transition:background .35s ease,box-shadow .35s ease}
+.xnovah-glass-nav .nav-links a{position:relative;transition:color .25s ease}
+.xnovah-glass-nav .nav-links a:after{content:"";position:absolute;left:0;right:100%;bottom:-7px;height:1px;background:linear-gradient(90deg,#a77bff,#c6baff);transition:right .3s ease}
+.xnovah-glass-nav .nav-links a:hover:after,.xnovah-glass-nav .nav-links a:focus-visible:after{right:0}
+.xnovah-cinematic-hero{position:relative;isolation:isolate}
+.xnovah-hero-aurora{pointer-events:none;position:absolute;z-index:-1;inset:-16% -7% -10%;opacity:.62;background:radial-gradient(ellipse 35% 44% at 78% 36%,rgba(112,69,232,.24),transparent 80%),radial-gradient(ellipse 31% 45% at 30% 65%,rgba(44,94,209,.14),transparent 80%);filter:blur(35px);animation:xnovahAurora 15s ease-in-out infinite alternate}
+.xnovah-cinematic-hero .hero-pill{animation:xnovahReveal .75s both}
+.xnovah-cinematic-hero h1{animation:xnovahReveal .9s .12s both}
+.xnovah-cinematic-hero .hero-sub{animation:xnovahReveal .9s .22s both}
+.xnovah-cinematic-hero .hero-actions{animation:xnovahReveal .9s .33s both}
+.xnovah-cinematic-hero .hero-art{animation:xnovahHeroFloat 9s ease-in-out infinite}
+.xnovah-cinematic-hero .hero-art:after{content:"";position:absolute;inset:12%;border-radius:50%;pointer-events:none;box-shadow:0 0 100px 30px rgba(117,71,231,.11);animation:xnovahHalo 7s ease-in-out infinite alternate}
+.xcmd-section{position:relative;isolation:isolate}
+.xcmd-section:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse 50% 35% at 75% 35%,rgba(85,52,191,.12),transparent 80%);animation:xnovahAurora 18s ease-in-out infinite alternate}
+.xcmd-stage{animation:xnovahStageIn .48s cubic-bezier(.2,.8,.2,1) both}
+.xcmd-workspace-detail{animation:xnovahReveal .42s ease-out both}
+.xcmd-stage .xcmd-agent-image img{transition:transform .65s cubic-bezier(.2,.8,.2,1),filter .5s ease}
+.xcmd-stage:hover .xcmd-agent-image img{transform:scale(1.035)}
+.xcmd-scroll-list button{transition:background .2s ease,border-color .2s ease,transform .2s ease}
+.xcmd-scroll-list button:hover{transform:translateX(3px)}
+.xnovah-cinematic-cta{isolation:isolate;overflow:hidden}
+.xnovah-cta-halo{position:absolute;z-index:-1;pointer-events:none;width:min(72vw,780px);height:min(72vw,780px);left:50%;top:48%;transform:translate(-50%,-50%);border:1px solid rgba(169,128,255,.17);border-radius:50%;box-shadow:0 0 95px 18px rgba(105,58,221,.11),inset 0 0 100px rgba(105,58,221,.12);animation:xnovahHalo 9s ease-in-out infinite alternate}
+.xnovah-cinematic-cta .waitlist-content{position:relative;z-index:1}
+.xnovah-cinematic-cta .waitlist-form button,.xnovah-cinematic-hero .button-primary{transition:transform .25s ease,box-shadow .25s ease}
+.xnovah-cinematic-cta .waitlist-form button:hover,.xnovah-cinematic-hero .button-primary:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(124,79,223,.25)}
+@keyframes xnovahReveal{from{opacity:0;transform:translateY(22px);filter:blur(5px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+@keyframes xnovahStageIn{from{opacity:.4;transform:scale(.975);filter:brightness(.75)}to{opacity:1;transform:scale(1);filter:brightness(1)}}
+@keyframes xnovahAurora{from{transform:translate3d(-2%,0,0) scale(1)}to{transform:translate3d(2%,2%,0) scale(1.08)}}
+@keyframes xnovahHeroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-11px)}}
+@keyframes xnovahHalo{from{opacity:.48;filter:blur(0)}to{opacity:.9;filter:blur(3px)}}
+@supports(animation-timeline:view()){.xnovah-cinematic-cta .waitlist-content{animation:xnovahReveal linear both;animation-timeline:view();animation-range:entry 0% entry 55%}}
+@media(max-width:767px){.xnovah-hero-aurora{inset:-5% -3%;filter:blur(25px)}.xnovah-cinematic-hero .hero-art{animation-duration:12s}.xcmd-scroll-list button:hover{transform:none}.xnovah-cta-halo{width:95vw;height:95vw}}
+@media(prefers-reduced-motion:reduce){.xnovah-hero-aurora,.xnovah-cinematic-hero .hero-pill,.xnovah-cinematic-hero h1,.xnovah-cinematic-hero .hero-sub,.xnovah-cinematic-hero .hero-actions,.xnovah-cinematic-hero .hero-art,.xnovah-cinematic-hero .hero-art:after,.xcmd-section:before,.xcmd-stage,.xcmd-workspace-detail,.xnovah-cta-halo,.xnovah-cinematic-cta .waitlist-content{animation:none!important;opacity:1!important;filter:none!important;transform:none!important}.xcmd-stage .xcmd-agent-image img,.xcmd-scroll-list button,.xnovah-cinematic-cta .waitlist-form button,.xnovah-cinematic-hero .button-primary{transition:none!important}}
