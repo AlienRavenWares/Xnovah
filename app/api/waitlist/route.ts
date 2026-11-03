@@ -5,7 +5,10 @@ export async function POST(req:NextRequest){
  if(!(req.headers.get('content-type')||'').toLowerCase().includes('application/json'))return NextResponse.json({error:'Expected JSON request.'},{status:415});
  const origin=req.headers.get('origin');
  if(origin&&origin!==req.nextUrl.origin)return NextResponse.json({error:'Request origin not allowed.'},{status:403});
+ const length=Number(req.headers.get('content-length')||0);
+ if(length>4096)return NextResponse.json({error:'Request is too large.'},{status:413});
  const data=await req.json().catch(()=>null);
+ if(!data||typeof data!=='object'||Array.isArray(data))return NextResponse.json({error:'Invalid signup request.'},{status:400});
  // Honeypot for automated form submissions; the public form leaves this field empty.
  if(typeof data?.website==='string'&&data.website.trim())return NextResponse.json({success:true});
  const email=typeof data?.email==='string'?data.email.trim().toLowerCase():'';
@@ -18,6 +21,7 @@ export async function POST(req:NextRequest){
    method:'POST',headers:{Authorization:`Bearer ${key}`,'Content-Type':'application/json'},
    body:JSON.stringify({email,unsubscribed:false}),cache:'no-store',signal:AbortSignal.timeout(10000)
   });
+  if(response.status===409)return NextResponse.json({success:true,alreadySubscribed:true},{headers:{'Cache-Control':'no-store'}});
   if(!response.ok){
    console.error('Waitlist provider status:',response.status);
    return NextResponse.json({error:response.status===429?'Signup is busy. Please try again shortly.':'Could not join the waitlist. Please try again.'},{status:response.status===429?429:502});
