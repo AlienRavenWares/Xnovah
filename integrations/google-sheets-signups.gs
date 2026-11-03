@@ -18,7 +18,7 @@ function doPost(e) {
     const data = JSON.parse(raw);
     if (!data || typeof data !== 'object' || data.secret !== expected) return reply({success:false,error:'unauthorized'});
     const email = String(data.email || '').trim().toLowerCase();
-    if (email.length > 254 || !/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)) return reply({success:false,error:'invalid_email'});
+    if (email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return reply({success:false,error:'invalid_email'});
     const source = data.source === 'Newsletter' ? 'Newsletter' : 'Early-access waitlist';
     const lock = LockService.getScriptLock();
     if (!lock.tryLock(10000)) return reply({success:false,error:'busy'});
