@@ -1,17 +1,25 @@
-# Xnovah native subscriber collection
+# Xnovah signup email notifications
 
-Both website forms submit to `/api/waitlist`. The waitlist sends source `early-access` and the dispatch form sends `newsletter`. Records are stored in PostgreSQL with separate `Waitlist` and `Newsletter` source labels. An email may sign up for both lists.
+The website's **Waitlist** and **Xnovah Dispatch Newsletter** forms both send submissions to `/api/waitlist`. The server forwards signup notifications through FormSubmit and includes a clear source label.
 
-## Required Vercel environment variables
+## Activate the receiving inbox
 
-- `DATABASE_URL`: PostgreSQL connection string, including SSL support. Use a managed PostgreSQL database (e.g. Neon) or your own persistent Postgres server. Vercel serverless filesystem is not permanent.
-- `XNOVAH_ADMIN_USER`: private admin username.
-- `XNOVAH_ADMIN_PASSWORD`: strong random password of at least 16 characters.
+1. Open `app/api/waitlist/route.ts` in GitHub.
+2. Replace `const NOTIFICATION_EMAIL='demo@example.com';` with your actual receiving address, e.g. `const NOTIFICATION_EMAIL='youremail@gmail.com';`.
+3. Commit the change to `main` and wait for Vercel to finish deploying.
+4. Submit a test email using one of the Xnovah forms.
+5. **FormSubmit may send an activation/verification email** to your receiving inbox. Open it and confirm the form before expecting notifications.
+6. Test both Waitlist and Newsletter again and check inbox/spam.
 
-Add them to Production (and Preview if desired) in Vercel, then redeploy. Do not commit values to GitHub.
+The demo address is intentionally blocked: the form returns a configuration error until the address is replaced, rather than sending real users' emails to a placeholder.
 
-Admin: `https://xnovah-main.vercel.app/admin`. Your browser requests Basic Authentication credentials. The admin page and data endpoint are protected by middleware. Use HTTPS and do not share credentials.
+## Notification contents
 
-The API creates the `xnovah_subscribers` table automatically when it first receives a signup or admin query. No external email service or Google Sheets integration is used. No marketing emails are sent.
+- Subject: `Xnovah — New Waitlist signup` or `Xnovah — New Newsletter signup`
+- Subscriber email
+- Source
+- UTC submission time
 
-Features: per-source uniqueness, source labels, timestamp, search, source filter, CSV export. The CSV and dashboard currently show the most recent 10,000 records; production scaling should add pagination, rate limiting, unsubscribe/consent tracking, and admin SSO.
+## Important limitations
+
+This mode sends notifications **instead of storing subscribers in a database**. The previously created `/admin` dashboard remains in the repo but requires a PostgreSQL `DATABASE_URL` and admin credentials, and will not show email-only submissions. The FormSubmit service is an external delivery dependency. Consider spam/rate-limit protections, consent wording, and a durable subscriber list before scaling. Do not use a demo mailbox to collect real visitor data.
