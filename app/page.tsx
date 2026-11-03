@@ -117,12 +117,278 @@ function FeatureUniverse(){
 const audiences=['Content creators','Entrepreneurs','Marketing teams','Social media managers','Designers','Writers & bloggers','Developers','E-commerce sellers','Agencies','Educators','Students','Researchers','Podcasters','Video creators','Small businesses'];
 
 const useCasePaths=[
- {label:'Content & marketing',eyebrow:'CAMPAIGN STUDIO',headline:'Turn one idea into a campaign.',description:'Explore the tools behind a consistent message—from your first draft to the visuals and short-form clips that carry it.',tools:['AI Writer','AI Image','AI Social Media Suite','AI Viral Clips'],steps:['Define the message','Shape the creative','Prepare to publish'],icon:'✦'},
- {label:'Video & creators',eyebrow:'CREATOR STUDIO',headline:'Give every story a new dimension.',description:'Explore concept workflows for video, digital presenters, voiceovers and creator-style content.',tools:['AI Video','AI Avatar','AI Voice','UGC Creator'],steps:['Sketch the story','Build the scenes','Refine the delivery'],icon:'▶'},
- {label:'Customer experience',eyebrow:'BUSINESS STUDIO',headline:'Make every conversation count.',description:'Discover planned experiences for customer questions, appointment journeys and brand-aware assistants.',tools:['AI Chatbot','AI Booking Agent','Phone Call Agents','AI CRM'],steps:['Understand the question','Guide the next step','Keep context organized'],icon:'◉'},
- {label:'Ideas & productivity',eyebrow:'WORKFLOW STUDIO',headline:'Move from research to real momentum.',description:'Explore research, writing, presentations and custom agents in a more connected creative process.',tools:['Deep Research','AI Presentation Maker','AI Agent Builder','AI Canvas'],steps:['Explore the problem','Organize the thinking','Share the direction'],icon:'◇'}
+ {
+  "label": "Social media management",
+  "eyebrow": "SOCIAL STUDIO",
+  "headline": "Plan your next month of content.",
+  "description": "Develop captions, campaign themes, short clips and social workflows with a connected creative toolkit.",
+  "tools": [
+   "AI Social Media Suite",
+   "Social Media Agent",
+   "AI Captions",
+   "AI Viral Clips"
+  ],
+  "steps": [
+   "Plan content themes",
+   "Create posts and clips",
+   "Explore coordinated workflows"
+  ],
+  "icon": "✳"
+ },
+ {
+  "label": "Advertising & marketing",
+  "eyebrow": "CAMPAIGN STUDIO",
+  "headline": "Build a campaign around one bold idea.",
+  "description": "Shape audience-focused messaging, product visuals and campaign concepts from the same creative direction.",
+  "tools": [
+   "Marketing Bot",
+   "AI Creative Suite",
+   "AI Image Pro",
+   "AI Video Pro"
+  ],
+  "steps": [
+   "Define your audience",
+   "Develop the creative",
+   "Refine campaign concepts"
+  ],
+  "icon": "✦"
+ },
+ {
+  "label": "Video creation & editing",
+  "eyebrow": "MOTION STUDIO",
+  "headline": "Turn a story into moving pictures.",
+  "description": "Explore cinematic scenes, edit concepts, highlights and voiceover directions for short-form and brand videos.",
+  "tools": [
+   "AI Video",
+   "AI Video Editor",
+   "AI Video Pro",
+   "AI Viral Clips"
+  ],
+  "steps": [
+   "Outline the story",
+   "Develop motion concepts",
+   "Find the best moments"
+  ],
+  "icon": "▶"
+ },
+ {
+  "label": "E-commerce & products",
+  "eyebrow": "PRODUCT STUDIO",
+  "headline": "Make every product look its best.",
+  "description": "Explore polished product photography, commercial visual concepts, product copy and campaign ideas.",
+  "tools": [
+   "AI Product Photography",
+   "AI Photoshoot",
+   "AI Writer",
+   "Marketing Bot"
+  ],
+  "steps": [
+   "Set the product story",
+   "Shape product visuals",
+   "Prepare selling messages"
+  ],
+  "icon": "◈"
+ },
+ {
+  "label": "Customer support & chatbots",
+  "eyebrow": "CONVERSATION STUDIO",
+  "headline": "Design more helpful conversations.",
+  "description": "Explore assistants for common customer questions, consistent brand responses and relationship follow-ups.",
+  "tools": [
+   "AI Chatbot",
+   "Trainable AI Voice Chatbot",
+   "AI Chat Pro",
+   "AI CRM"
+  ],
+  "steps": [
+   "Map common questions",
+   "Shape helpful responses",
+   "Organize customer context"
+  ],
+  "icon": "◉"
+ },
+ {
+  "label": "Voice agents & calls",
+  "eyebrow": "VOICE STUDIO",
+  "headline": "Give customer conversations a voice.",
+  "description": "Explore phone inquiry agents, natural voice conversations and brand-aware spoken assistance.",
+  "tools": [
+   "Phone Call Agents",
+   "Realtime Voice Chat",
+   "Trainable AI Voice Chatbot",
+   "AI Voice"
+  ],
+  "steps": [
+   "Identify call needs",
+   "Design a conversation",
+   "Explore voice delivery"
+  ],
+  "icon": "◖"
+ },
+ {
+  "label": "Writing & content",
+  "eyebrow": "WRITING STUDIO",
+  "headline": "Find the words for every moment.",
+  "description": "Develop articles, editorial plans, social copy and research-led content without losing your creative direction.",
+  "tools": [
+   "AI Writer",
+   "AI Blogger Agent",
+   "AI Captions",
+   "Deep Research"
+  ],
+  "steps": [
+   "Explore the topic",
+   "Draft your message",
+   "Refine your voice"
+  ],
+  "icon": "✍"
+ },
+ {
+  "label": "Graphic design & branding",
+  "eyebrow": "DESIGN STUDIO",
+  "headline": "Make your brand impossible to ignore.",
+  "description": "Explore identity directions, image concepts, visual revisions and creative campaign compositions.",
+  "tools": [
+   "AI Creative Suite",
+   "AI Canvas",
+   "AI Image",
+   "AI Image Editor"
+  ],
+  "steps": [
+   "Choose a visual direction",
+   "Explore design concepts",
+   "Refine the artwork"
+  ],
+  "icon": "◇"
+ },
+ {
+  "label": "UGC & creator ads",
+  "eyebrow": "CREATOR STUDIO",
+  "headline": "Create stories that feel human.",
+  "description": "Explore creator-led product narratives, digital presenters and multiple short-form ad directions.",
+  "tools": [
+   "UGC Creator",
+   "UGC Factory",
+   "AI Influencer",
+   "AI Avatar"
+  ],
+  "steps": [
+   "Define the creator angle",
+   "Develop story concepts",
+   "Explore variations"
+  ],
+  "icon": "✺"
+ },
+ {
+  "label": "Messaging & follow-ups",
+  "eyebrow": "MESSAGING STUDIO",
+  "headline": "Keep conversations moving.",
+  "description": "Explore customer messaging concepts, brand-aware chatbot replies and coordinated lead follow-up journeys. Messaging platform integrations are planned, not live.",
+  "tools": [
+   "AI Chatbot",
+   "Marketing Bot",
+   "AI CRM",
+   "AI Agent Builder"
+  ],
+  "steps": [
+   "Plan customer journeys",
+   "Draft useful replies",
+   "Explore follow-up flows"
+  ],
+  "icon": "☷"
+ },
+ {
+  "label": "Email campaigns",
+  "eyebrow": "EMAIL STUDIO",
+  "headline": "Write emails worth opening.",
+  "description": "Develop newsletter ideas, launch announcements, campaign messages and audience-focused follow-up content.",
+  "tools": [
+   "AI Writer",
+   "Marketing Bot",
+   "AI Blogger Agent",
+   "AI Persona"
+  ],
+  "steps": [
+   "Choose a campaign goal",
+   "Shape the email content",
+   "Refine brand tone"
+  ],
+  "icon": "✉"
+ },
+ {
+  "label": "Booking & appointments",
+  "eyebrow": "BOOKING STUDIO",
+  "headline": "Make every booking conversation easier.",
+  "description": "Explore appointment inquiry assistants, phone conversations and customer relationship workflows.",
+  "tools": [
+   "AI Booking Agent",
+   "Phone Call Agents",
+   "AI Chatbot",
+   "AI CRM"
+  ],
+  "steps": [
+   "Understand the request",
+   "Explore appointment flows",
+   "Organize next steps"
+  ],
+  "icon": "▣"
+ },
+ {
+  "label": "Research & intelligence",
+  "eyebrow": "RESEARCH STUDIO",
+  "headline": "Make better decisions with deeper thinking.",
+  "description": "Explore organized research, multiple AI perspectives, strategy summaries and presentation-ready findings.",
+  "tools": [
+   "Deep Research",
+   "AI Council",
+   "AI Chat Pro",
+   "AI Presentation Maker"
+  ],
+  "steps": [
+   "Investigate the question",
+   "Compare perspectives",
+   "Present the findings"
+  ],
+  "icon": "⌕"
+ },
+ {
+  "label": "Education & courses",
+  "eyebrow": "LEARNING STUDIO",
+  "headline": "Turn expertise into experiences.",
+  "description": "Explore lesson structures, visual explainers, narrated concepts and compelling educational presentations.",
+  "tools": [
+   "AI Presentation Maker",
+   "AI Avatar",
+   "AI Voice",
+   "AI Writer"
+  ],
+  "steps": [
+   "Outline a lesson",
+   "Develop the material",
+   "Explore delivery formats"
+  ],
+  "icon": "✧"
+ },
+ {
+  "label": "Workflow automation",
+  "eyebrow": "AGENT STUDIO",
+  "headline": "Imagine less repetitive work.",
+  "description": "Explore custom assistants, specialized skills, customer workflows and coordinated agent concepts.",
+  "tools": [
+   "AI Agent Builder",
+   "AI Skills",
+   "AI CRM",
+   "Social Media Agent"
+  ],
+  "steps": [
+   "Define the workflow",
+   "Choose assistant skills",
+   "Explore repeatable steps"
+  ],
+  "icon": "⌘"
+ }
 ];
-function UseCaseExplorer(){const [selected,setSelected]=useState(0);const path=useCasePaths[selected];return <section className="section xuc-section" id="use-cases" aria-labelledby="xuc-title"><div className="shell"><div className="xuc-heading"><div><SectionEyebrow>EXPLORE WHAT'S POSSIBLE</SectionEyebrow><h2 id="xuc-title">Your ambition.<br/><span className="gradient-text">Your creative path.</span></h2></div><p>Don't start with a tool. Start with what you want to achieve. Choose a direction to discover a connected set of Xnovah experiences.</p></div><div className="xuc-frame"><div className="xuc-tabs" role="tablist" aria-label="Explore Xnovah use cases">{useCasePaths.map((item,i)=><button key={item.label} type="button" role="tab" id={'xuc-tab-'+i} aria-controls="xuc-panel" aria-selected={selected===i} tabIndex={selected===i?0:-1} className={selected===i?'active':''} onClick={()=>setSelected(i)} onKeyDown={e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();const next=(i+(e.key==='ArrowRight'?1:-1)+useCasePaths.length)%useCasePaths.length;setSelected(next);document.getElementById('xuc-tab-'+next)?.focus();}}}><span>{item.icon}</span>{item.label}</button>)}</div><div className="xuc-display" id="xuc-panel" role="tabpanel" aria-labelledby={'xuc-tab-'+selected}><div className="xuc-main"><span className="xuc-kicker">0{selected+1} / {path.eyebrow}</span><h3>{path.headline}</h3><p>{path.description}</p><div className="xuc-steps">{path.steps.map((step,i)=><div key={step}><span>0{i+1}</span><strong>{step}</strong></div>)}</div><a href="#feature-universe" className="xuc-action">Explore the AI Command Center <ArrowUpRight size={17}/></a></div><div className="xuc-side"><span className="xuc-side-label">YOUR CREATIVE TOOLKIT</span><div className="xuc-tools">{path.tools.map((tool,i)=><div key={tool}><span className="xuc-tool-no">0{i+1}</span><strong>{tool}</strong><span aria-hidden="true">✳</span></div>)}</div><span className="xuc-side-foot">FOUR TOOLS. ONE DIRECTION.</span></div></div></div><p className="xuc-disclaimer">These are illustrative journeys using planned Xnovah capabilities, not claims of live automations or integrations.</p></div></section>}
+function UseCaseExplorer(){const [selected,setSelected]=useState(0);const path=useCasePaths[selected];return <section className="section xuc-section" id="use-cases" aria-labelledby="xuc-title"><div className="shell"><div className="xuc-heading"><div><SectionEyebrow>15 REAL-WORLD DIRECTIONS / 39 AI TOOLS</SectionEyebrow><h2 id="xuc-title">One creative universe.<br/><span className="gradient-text">Made for your next move.</span></h2></div><p>Start with what you want to accomplish. Each use case brings together tools from Xnovah's 39-feature explorer, showing how creative and business workflows could connect.</p></div><div className="xuc-frame"><div className="xuc-tabs" role="tablist" aria-label="Explore 15 Xnovah use cases">{useCasePaths.map((item,i)=><button key={item.label} type="button" role="tab" id={'xuc-tab-'+i} aria-controls="xuc-panel" aria-selected={selected===i} tabIndex={selected===i?0:-1} className={selected===i?'active':''} onClick={()=>setSelected(i)} onKeyDown={e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();const next=(i+(e.key==='ArrowRight'?1:-1)+useCasePaths.length)%useCasePaths.length;setSelected(next);document.getElementById('xuc-tab-'+next)?.focus();}}}><span>{item.icon}</span>{item.label}</button>)}</div><div className="xuc-display" id="xuc-panel" role="tabpanel" aria-labelledby={'xuc-tab-'+selected}><div className="xuc-main"><span className="xuc-kicker">{String(selected+1).padStart(2,'0')} / 15 — {path.eyebrow}</span><h3>{path.headline}</h3><p>{path.description}</p><div className="xuc-steps">{path.steps.map((step,i)=><div key={step}><span>0{i+1}</span><strong>{step}</strong></div>)}</div><a href="#feature-universe" className="xuc-action">Explore all 39 AI tools <ArrowUpRight size={17}/></a></div><div className="xuc-side"><span className="xuc-side-label">MATCHED FROM THE 39 AI TOOLS</span><div className="xuc-tools">{path.tools.map((tool,i)=><div key={tool}><span className="xuc-tool-no">{String(allToolNames.indexOf(tool)+1).padStart(2,'0')}</span><strong>{tool}</strong><span aria-hidden="true">✳</span></div>)}</div><span className="xuc-side-foot">FOUR CONNECTED TOOLS. ONE USE CASE.</span></div></div></div><p className="xuc-disclaimer">Illustrative workflows based on Xnovah's 39 planned features. Automations, external platform connections and AI outputs shown here are concepts, not live integrations.</p></div></section>}
 function TrustSecuritySection(){const principles=[{n:'01',title:'Privacy by intention',desc:'We aim to collect only the information needed for each experience and communicate how it is used.'},{n:'02',title:'Control and transparency',desc:'Our goal is to make account choices, data practices and AI-assisted experiences clear and understandable.'},{n:'03',title:'Responsible AI experiences',desc:'We believe AI should support human creativity, with appropriate safeguards and clear expectations around generated outputs.'}];return <section className="section xts-section" id="trust-security" aria-labelledby="xts-title"><div className="shell"><div className="xts-layout"><div className="xts-intro"><SectionEyebrow>TRUST IS PART OF THE EXPERIENCE</SectionEyebrow><h2 id="xts-title">Build boldly.<br/><span className="gradient-text">Know where you stand.</span></h2><p>Great creative tools should also be clear about how they work. As Xnovah develops, we're putting privacy, transparency and responsible use at the center of the conversation.</p><a href="#faq">Read our frequently asked questions <ArrowUpRight size={16}/></a></div><div className="xts-principles">{principles.map(p=><div className="xts-principle" key={p.n}><span>{p.n}</span><div><h3>{p.title}</h3><p>{p.desc}</p></div><span aria-hidden="true">↗</span></div>)}</div></div><div className="xts-foot"><span>✳ XNOVAH / BUILT WITH INTENTION</span><p>Xnovah is in development. These are product principles, not a statement of completed security audits, certifications, encryption controls or regulatory compliance. Detailed policies will be published as the service is finalized.</p></div></div></section>}
 
 function AudienceUniverse(){const [active,setActive]=useState(0);return <section className="section extra-section audience-universe" id="audiences"><div className="shell"><SectionEyebrow>MADE FOR THE WAY YOU WORK</SectionEyebrow><h2>Fifteen ways to start.<br/><span className="gradient-text">Infinite ways to grow.</span></h2><p className="extra-lead">From independent creators to ambitious teams, there's room for every kind of imagination.</p><div className="audience-explorer"><div className="audience-options">{audiences.map((a,i)=><button key={a} onClick={()=>setActive(i)} className={i===active?'active':''}>{String(i+1).padStart(2,'0')} &nbsp; {a}</button>)}</div><div className="audience-feature"><span>YOUR CREATIVE WORLD / {String(active+1).padStart(2,'0')}</span><div className="audience-feature-art">✳</div><h3>Built for {audiences[active].toLowerCase()}.</h3><p>Explore creative workflows, fresh ideas and ways to move from inspiration to execution in one connected space.</p><a href="#waitlist">Join the early-access list ↗</a></div></div></div></section>}
