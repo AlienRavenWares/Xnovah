@@ -338,25 +338,25 @@ function IntegrationUniverse(){
 }
 function CompareWays(){
  const benefits=[
- ['From idea to finished content','Move between separate writing, image and video apps','Explore writing, image and video creation from one AI workspace'],
- ['A consistent brand voice','Re-explain your brand with every new tool','Use brand voice and reusable prompts to keep content on-message'],
- ['Faster content workflows','Copy, paste and reformat content repeatedly','Draft, rewrite, refine and export with an integrated AI editor'],
- ['Documents that work harder','Read and summarize files manually','Ask questions of PDFs and supported documents to surface insights'],
- ['Creative visuals on demand','Find different apps for each visual task','Generate images, explore photo tools and develop visual concepts'],
- ['Video and voice creation','Coordinate separate tools for scripts, voice and motion','Explore AI video, voiceover and transcription in one ecosystem'],
- ['Content for every channel','Start each social post, article or email from scratch','Use purpose-built templates for blogs, captions, ads and email'],
- ['Ideas backed by research','Switch between search, notes and writing tools','Explore web-assisted research and turn findings into content'],
- ['More ways to collaborate with AI','Manage different chat experiences separately','Discover AI chat, specialized assistants and customizable chatbots'],
- ['An organized creative library','Scatter drafts, files and prompts across apps','Keep documents, generated assets and favorite prompts organized'],
- ['A workspace that grows with you','Add another disconnected tool for every new need','Explore more capabilities and supported models as Xnovah evolves'],
- ['Create wherever inspiration strikes','Rely on desktop-only or inconsistent interfaces','A responsive workspace vision designed for desktop and mobile']
+ ['One idea, multiple formats','Move between different apps to produce copy, images, and video','Explore writing, visuals, and video concepts within one creative environment'],
+ ['A more consistent brand','Repeat brand instructions whenever you change tools','Bring brand guidelines and reusable prompts into a more cohesive workflow'],
+ ['Less repetitive work','Copy, paste, and reformat materials between separate services','Move more smoothly between drafting, refining, and preparing content'],
+ ['More value from documents','Switch between readers, note-taking apps, and summarizers','Explore document summaries, questions, and insights alongside your other work'],
+ ['Visual ideas with direction','Jump between tools for concepts, images, and refinements','Explore image generation and visual concepts alongside your campaign ideas'],
+ ['A broader production toolkit','Coordinate scripts, narration, and video across disconnected tools','Explore video concepts, voice, and transcription in one creative ecosystem'],
+ ['Content for every channel','Rebuild the same message for each new platform','Adapt ideas for blogs, social posts, advertising, and email with focused templates'],
+ ['Research that informs creation','Keep research notes separate from the content they support','Bring research exploration and content development closer together'],
+ ['AI support for different tasks','Maintain separate AI conversations and specialized assistants','Explore chat, task-focused assistants, and configurable AI experiences'],
+ ['A clearer creative process','Lose track of drafts, files, and prompts across different services','Work toward a more organized home for ideas, assets, and reusable prompts'],
+ ['Room to expand','Add another standalone service whenever your needs change','Discover a growing range of creative and productivity capabilities'],
+ ['Work across devices','Adjust to different interfaces as you move between devices','Explore a consistent workspace experience on desktop and mobile']
  ];
  return <section className="section extra-section compare-universe" id="comparison"><div className="shell">
   <SectionEyebrow>WHY ONE WORKSPACE</SectionEyebrow>
-  <h2>Less switching. <span className="gradient-text">More creating.</span></h2>
-  <p className="extra-lead">Xnovah aims to reduce the complexity of working across separate AI services. Explore how writing, visual production, documents, voice, research, and specialized assistants could fit within one product experience.</p>
+  <h2>Less friction. <span className="gradient-text">More forward momentum.</span></h2>
+  <p className="extra-lead">Your best work shouldn't depend on juggling a dozen disconnected tools. Xnovah is bringing creative and productivity capabilities into a more coherent experience—so ideas, assets, and workflows can stay closer together from the first spark to the final detail.</p>
   <div className="comparison-table">
-   <div className="comparison-row heading"><span>THE BENEFIT</span><b>Across separate tools</b><b>With Xnovah's vision</b></div>
+   <div className="comparison-row heading"><span>WHAT MATTERS</span><b>Across separate tools</b><b>THE XNOVAH APPROACH</b></div>
    {benefits.map(row=><div className="comparison-row" key={row[0]}><strong>{row[0]}</strong><span>{row[1]}</span><span>{row[2]}</span></div>)}
   </div>
   
