@@ -2352,29 +2352,30 @@ body{overflow-x:clip}
 @media(prefers-reduced-motion:reduce){.xfooter-cta-button,.xfooter-links a{transition:none}}
 
 
-/* XNOVAH COLOR EXPERIMENT 02 — MIDNIGHT BLACK / CRIMSON */
-:root{--bg:#09090b;--surface:#1c1c22;--ink:#fafafa;--muted:#b2a9ae;--purple:#dc2626;--border:rgba(251,113,133,.15)}
-body{background:#09090b;color:#fafafa}
-::selection{background:#dc2626;color:#fff}
-.announcement{background:#b91c1c;color:#fff}
-.announcement-pulse{background:#fecdd3;box-shadow:0 0 0 4px rgba(251,113,133,.24)}
-.nav-wrap{background:rgba(9,9,11,.9);border-bottom-color:rgba(251,113,133,.13)}
-.logo-mark{background:linear-gradient(135deg,#b91c1c,#ef4444);color:#fff}
-.logo-dot{color:#fb7185}
-.logo-ai{border-color:rgba(251,113,133,.34);color:#fda4af}
-.nav-cta{border-color:rgba(251,113,133,.4)}
-.nav-cta:hover{background:rgba(220,38,38,.14)}
-.button-primary,.nav-cta-primary{background:linear-gradient(115deg,#991b1b,#dc2626 58%,#ef4444);color:#fff;border-color:rgba(251,113,133,.35)}
-.button-primary:hover{box-shadow:0 15px 42px rgba(220,38,38,.3)}
-.xfooter{background:#09090b;border-top-color:rgba(251,113,133,.15)}
-.xfooter-cta{border-bottom-color:rgba(251,113,133,.16)}
-.xfooter-eyebrow,.xfooter-back,.xfooter-links h3,.xfooter-bottom a{color:#fda4af}
-.xfooter-pulse{background:#fb7185;box-shadow:0 0 18px rgba(251,113,133,.75)}
-.xfooter-cta h2 span{background:linear-gradient(100deg,#fff 0%,#fda4af 45%,#ef4444 100%);background-clip:text;-webkit-background-clip:text;color:transparent}
-.xfooter-cta-button{background:rgba(220,38,38,.09);border-color:rgba(251,113,133,.45)}
-.xfooter-cta-button:hover{background:rgba(220,38,38,.2);border-color:#fb7185}
-.xfooter-cta-orb{background:radial-gradient(circle,rgba(220,38,38,.21),rgba(190,24,93,.05) 45%,transparent 72%)}
-.xfooter-signature{color:rgba(251,113,133,.085)}
-.xfooter-signature span{color:rgba(251,113,133,.26)}
-.xfooter-bottom{border-top-color:rgba(251,113,133,.16)}
-.xfooter-links a:hover{color:#ffe4e6}
+
+/* XNOVAH COLOR EXPERIMENT 03 — GRAPHITE / EMERALD */
+:root{--bg:#090f0e;--surface:#172521;--ink:#f0fdf4;--muted:#a6b9b2;--purple:#059669;--border:rgba(52,211,153,.16)}
+body{background:#090f0e;color:#f0fdf4}
+::selection{background:#059669;color:#fff}
+.announcement{background:#047857;color:#fff}
+.announcement-pulse{background:#a7f3d0;box-shadow:0 0 0 4px rgba(52,211,153,.22)}
+.nav-wrap{background:rgba(9,15,14,.9);border-bottom-color:rgba(52,211,153,.14)}
+.logo-mark{background:linear-gradient(135deg,#047857,#34d399);color:#fff}
+.logo-dot{color:#34d399}
+.logo-ai{border-color:rgba(52,211,153,.35);color:#6ee7b7}
+.nav-cta{border-color:rgba(52,211,153,.4)}
+.nav-cta:hover{background:rgba(5,150,105,.14)}
+.button-primary,.nav-cta-primary{background:linear-gradient(115deg,#047857,#059669 60%,#10b981);color:#fff;border-color:rgba(52,211,153,.35)}
+.button-primary:hover{box-shadow:0 15px 42px rgba(5,150,105,.28)}
+.xfooter{background:#090f0e;border-top-color:rgba(52,211,153,.16)}
+.xfooter-cta{border-bottom-color:rgba(52,211,153,.17)}
+.xfooter-eyebrow,.xfooter-back,.xfooter-links h3,.xfooter-bottom a{color:#6ee7b7}
+.xfooter-pulse{background:#34d399;box-shadow:0 0 18px rgba(52,211,153,.7)}
+.xfooter-cta h2 span{background:linear-gradient(100deg,#fff 0%,#6ee7b7 48%,#10b981 100%);background-clip:text;-webkit-background-clip:text;color:transparent}
+.xfooter-cta-button{background:rgba(5,150,105,.1);border-color:rgba(52,211,153,.45)}
+.xfooter-cta-button:hover{background:rgba(5,150,105,.22);border-color:#34d399}
+.xfooter-cta-orb{background:radial-gradient(circle,rgba(5,150,105,.2),rgba(16,185,129,.06) 45%,transparent 72%)}
+.xfooter-signature{color:rgba(110,231,183,.085)}
+.xfooter-signature span{color:rgba(52,211,153,.25)}
+.xfooter-bottom{border-top-color:rgba(52,211,153,.16)}
+.xfooter-links a:hover{color:#d1fae5}
