@@ -222,8 +222,8 @@ function TemplateLibrary(){
  const visible=expanded?rows:rows.slice(0,9);
  return <section className="section extra-section template-universe" id="templates"><div className="shell">
  <SectionEyebrow>CREATIVE STARTING POINTS</SectionEyebrow>
- <h2>Start with a template.<span className="gradient-text"> Make it your own.</span></h2>
- <p className="extra-lead">Browse 168 template concepts across 15 categories, including marketing, business communication, social content, and writing. Use them to structure a brief, develop a first draft, and refine your message.</p>
+ <h2>A starting point for every idea.<span className="gradient-text"> A direction that’s yours.</span></h2>
+ <p className="extra-lead">Move from a blank page to a clearer creative direction. Explore ready-to-shape ideas for marketing, business communication, social content, writing, and more—then develop, personalize, and refine them around your goals.</p>
  <div className="template-controls"><input value={search} onChange={e=>{setSearch(e.target.value);setExpanded(false)}} placeholder="Search 168 templates..." aria-label="Search template catalog"/><div>{['All',...fullTemplateCatalog.map(t=>t[0])].map(c=><button type="button" className={cat===c?'active':''} onClick={()=>{setCat(c);setExpanded(false)}} key={c}>{c}</button>)}</div></div>
  <div className="template-grid">{visible.map(t=><div className="template-card" key={t.group+t.name}><span>✳ &nbsp; {t.group.toUpperCase()}</span><h3>{t.name}</h3><p>{templateDescription(t.group,t.name)}</p><small>TEMPLATE PREVIEW</small></div>)}</div>
  {rows.length===0&&<p style={{textAlign:'center',marginTop:25}}>No templates match your search. Try another keyword or category.</p>}
