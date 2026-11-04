@@ -371,40 +371,40 @@ function CompareWays(){
 }
 
 const buildIdeas=[
- ['Brand identities','Explore logo directions, campaign imagery and a consistent creative voice for a growing brand.','✦'],
- ['Social media campaigns','Plan platform-specific posts, captions, hashtags and striking visuals for a cohesive campaign.','◈'],
- ['Product launches','Shape product descriptions, promotional imagery, launch emails and advertising concepts.','✳'],
- ['AI-powered videos','Turn a script or visual idea into video concepts, scenes, narration and social-ready stories.','▷'],
- ['Explainer and onboarding videos','Develop scripts, visual sequences and voiceovers that make complex ideas easier to understand.','▶'],
- ['Digital advertisements','Draft persuasive ad headlines, campaign variations, video scripts and creative directions.','✧'],
- ['Websites and landing pages','Explore website copy, page structure, calls to action and AI-assisted code for digital experiences.','⌘'],
- ['Online store content','Create product naming ideas, catalog descriptions, promotional copy and ecommerce visuals.','◇'],
- ['Blogs and publications','Turn ideas, research, RSS feeds or video material into outlines, articles and editorial series.','▤'],
- ['Podcasts and voice content','Draft episode scripts, explore AI narration and convert recorded speech into editable text.','◉'],
- ['Presentations and pitches','Organize compelling pitch narratives, business proposals and supporting visual concepts.','▧'],
- ['Customer support assistants','Explore helpful chatbot experiences, support responses and answers drawn from reference documents.','◎'],
- ['Learning and training materials','Develop lesson outlines, explainers, study guides and summaries of reference material.','✺'],
- ['Research and document insights','Explore asking questions of PDFs, analyzing files and distilling information into clear summaries.','⌕'],
- ['Software prototypes','Explore AI-assisted code, bug explanations, documentation and early product prototypes.','{ }'],
- ['Newsletters and email journeys','Plan welcome sequences, product announcements, follow-up messages and branded newsletters.','✉'],
- ['Creative photo projects','Explore product photo concepts, image generation, visual enhancements and branded artwork.','◐'],
- ['Business workflows','Outline marketing plans, meeting materials, SOPs and repeatable AI-assisted work processes.','⚙']
+ ['Brand identities','Develop a distinctive brand world through visual directions, campaign concepts, and messaging that feels unmistakably yours.','✦'],
+ ['Social media campaigns','Bring your next campaign together with channel-ready captions, visual concepts, and a consistent creative direction.','◈'],
+ ['Product launches','Build anticipation around a new release with compelling product stories, launch messaging, and promotional ideas.','✳'],
+ ['AI-powered videos','Shape an early concept into a more complete video direction, from the opening hook and script to scenes and narration.','▷'],
+ ['Explainer and onboarding videos','Make complex products and ideas easier to understand with clear scripts, visual sequences, and guided storytelling.','▶'],
+ ['Digital advertisements','Explore stronger campaign angles through persuasive headlines, creative variations, and video advertising concepts.','✧'],
+ ['Websites and landing pages','Give a digital idea structure with compelling page copy, thoughtful content flow, and AI-assisted development concepts.','⌘'],
+ ['Online store content','Present products with clarity and personality through stronger descriptions, catalog messaging, and promotional visuals.','◇'],
+ ['Blogs and publications','Develop a recognizable editorial voice with article ideas, structured outlines, and content worth returning to.','▤'],
+ ['Podcasts and voice content','Turn conversations and ideas into engaging episodes with show concepts, interview prompts, narration, and promotional copy.','◉'],
+ ['Presentations and pitches','Give your next big idea a clearer story with pitch outlines, persuasive messaging, and supporting visual concepts.','▧'],
+ ['Customer support assistants','Explore helpful conversational experiences with structured answers, support content, and customer-friendly responses.','◎'],
+ ['Learning and training materials','Make knowledge easier to share through lesson structures, study materials, accessible explanations, and visual concepts.','✺'],
+ ['Research and document insights','Turn complex information into clearer takeaways through document exploration, focused summaries, and research questions.','⌕'],
+ ['Software prototypes','Move an early product idea forward with code assistance, technical explanations, documentation, and prototype concepts.','{ }'],
+ ['Newsletters and email journeys','Create more intentional communication with welcome messages, launch announcements, newsletters, and follow-up sequences.','✉'],
+ ['Creative photo projects','Explore distinctive image directions, product photography concepts, and visual treatments that elevate your creative work.','◐'],
+ ['Business workflows','Bring more structure to everyday operations with planning documents, process outlines, and repeatable work ideas.','⚙']
 ] as const;
 function ConceptGallery(){
  const [active,setActive]=useState(0);
  const [expanded,setExpanded]=useState(false);
  const selected=buildIdeas[active];
  return <section className="section extra-section gallery-universe gallery-reimagined" id="gallery"><div className="shell">
-  <div className="gxr-intro"><div><SectionEyebrow>WHAT PEOPLE COULD BUILD</SectionEyebrow><h2>Practical ideas.<span className="gradient-text"> Real-world applications.</span></h2></div><p>Explore 18 project concepts showing how AI-assisted writing, design, marketing, and productivity tools could support different business and creative goals.</p></div>
+  <div className="gxr-intro"><div><SectionEyebrow>WHAT PEOPLE COULD BUILD</SectionEyebrow><h2>Imagine what’s possible.<span className="gradient-text"> Make it meaningful.</span></h2></div><p>Every great project begins with a possibility. Discover inspiring ways to shape brands, tell stories, launch products, share knowledge, and bring ambitious ideas closer to reality with AI.</p></div>
   <div className="gxr-stage">
-   <div className="gxr-stage-main"><div className="gxr-overline"><span>THE POSSIBILITY INDEX</span><span>{String(active+1).padStart(2,'0')} / {buildIdeas.length}</span></div>
+   <div className="gxr-stage-main"><div className="gxr-overline"><span>THE CREATIVE POSSIBILITIES</span><span>{String(active+1).padStart(2,'0')} / {buildIdeas.length}</span></div>
     <div className="gxr-symbol" aria-hidden="true"><span>{selected[2]}</span><i/><i/><i/></div>
-    <div className="gxr-content" key={selected[0]}><span>CREATE / EXPLORE / IMAGINE</span><h3>{selected[0]}</h3><p>{selected[1]}</p></div>
-    <div className="gxr-bottom"><span>BUILT FOR WHAT'S NEXT</span><a href="#waitlist">Join the early-access list <ArrowUpRight size={17}/></a></div>
+    <div className="gxr-content" key={selected[0]}><span>IMAGINE / SHAPE / CREATE</span><h3>{selected[0]}</h3><p>{selected[1]}</p></div>
+    <div className="gxr-bottom"><span>IDEAS WORTH BRINGING TO LIFE</span><a href="#waitlist">Join the early-access list <ArrowUpRight size={17}/></a></div>
    </div>
-   <div className="gxr-index"><div className="gxr-index-heading"><span>EXPLORE THE POSSIBILITIES</span><span>SELECT TO PREVIEW</span></div>
+   <div className="gxr-index"><div className="gxr-index-heading"><span>CHOOSE YOUR CREATIVE DIRECTION</span><span>EXPLORE AN IDEA</span></div>
     <div className="gxr-index-list">{buildIdeas.slice(0,expanded?buildIdeas.length:8).map((item,i)=><button type="button" key={item[0]} className={'gxr-index-item'+(active===i?' selected':'')} aria-pressed={active===i} onClick={()=>setActive(i)}><span className="gxr-num">{String(i+1).padStart(2,'0')}</span><span className="gxr-name">{item[0]}</span><span className="gxr-arrow">↗</span></button>)}</div>
-    <button type="button" className="gxr-more" onClick={()=>{setExpanded(v=>!v);if(expanded&&active>=8)setActive(0)}} aria-expanded={expanded}>{expanded?'Show fewer possibilities':'Explore all 18 possibilities'} <span>{expanded?'−':'+'}</span></button>
+    <button type="button" className="gxr-more" onClick={()=>{setExpanded(v=>!v);if(expanded&&active>=8)setActive(0)}} aria-expanded={expanded}>{expanded?'Show fewer possibilities':'See more possibilities'} <span>{expanded?'−':'+'}</span></button>
    </div>
   </div>
   
