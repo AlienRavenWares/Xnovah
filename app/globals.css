@@ -2301,3 +2301,21 @@ body{overflow-x:clip}
 .audience-feature .audience-focus{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
 .audience-feature .audience-focus span{font-size:11px;line-height:1.35;font-weight:600;letter-spacing:.015em;color:#e7d5f7;border:1px solid rgba(222,186,255,.24);border-radius:999px;background:rgba(214,162,255,.075);padding:8px 12px}
 @media(max-width:600px){.audience-feature .audience-focus{gap:6px;margin-top:16px}.audience-feature .audience-focus span{font-size:10px;padding:7px 10px}}
+
+/* Refined Xnovah footer */
+.footer{padding:82px 0 26px;background:linear-gradient(180deg,#0b0a11 0%,#08080d 100%);border-top:1px solid rgba(190,157,221,.12)}
+.footer-top{align-items:flex-start;gap:clamp(30px,5vw,85px);padding-bottom:68px}
+.footer-brand{flex:0 1 330px;min-width:0}
+.footer-brand p{max-width:330px;margin-top:21px;font-size:13px;line-height:1.85;color:#a69cad}
+.footer-early-link{display:inline-flex;align-items:center;gap:9px;margin-top:23px;color:#e5c5ff;font-size:12px;font-weight:650;transition:color .2s ease,gap .2s ease}
+.footer-early-link:hover{color:#fff;gap:14px}
+.footer-nav{flex:1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,55px)}
+.footer-nav>div{gap:16px;min-width:0}
+.footer-nav span{margin-bottom:11px;white-space:nowrap}
+.footer-nav a{color:#a69dad;line-height:1.5;transition:color .2s ease,transform .2s ease}
+.footer-nav a:hover{color:#f0d9ff;transform:translateX(2px)}
+.footer-bottom{align-items:center;line-height:1.6}
+.footer-bottom a{transition:color .2s ease}
+.footer-bottom a:hover{color:#f0d9ff}
+@media(max-width:980px){.footer-top{flex-direction:column;gap:40px}.footer-brand{flex-basis:auto}.footer-nav{width:100%;gap:24px}}
+@media(max-width:600px){.footer{padding:60px 0 25px}.footer-top{padding-bottom:43px;gap:35px}.footer-nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 20px}.footer-nav>div{gap:13px}.footer-nav span{font-size:9px;white-space:normal}.footer-nav a{font-size:12px}.footer-bottom{flex-wrap:wrap;justify-content:space-between;gap:12px}.footer-bottom>span:nth-child(2){order:3;width:100%}.footer-brand p{font-size:12px}}
