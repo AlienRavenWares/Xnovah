@@ -2296,3 +2296,8 @@ body{overflow-x:clip}
 }
 @media(max-width:360px){.xuc-atlas .shell{padding-left:12px;padding-right:12px}.xuc-atlas-index{grid-template-columns:repeat(2,minmax(0,1fr))}.xuc-atlas-head h2{font-size:29px}}
 
+
+/* Audience-specific focus areas in the interactive role explorer */
+.audience-feature .audience-focus{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.audience-feature .audience-focus span{font-size:11px;line-height:1.35;font-weight:600;letter-spacing:.015em;color:#e7d5f7;border:1px solid rgba(222,186,255,.24);border-radius:999px;background:rgba(214,162,255,.075);padding:8px 12px}
+@media(max-width:600px){.audience-feature .audience-focus{gap:6px;margin-top:16px}.audience-feature .audience-focus span{font-size:10px;padding:7px 10px}}
