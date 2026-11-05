@@ -2415,3 +2415,21 @@ main{background:transparent}
  .creative-universe-section .cu-journey{gap:4px}
  .creative-universe-section .cu-journey-copy p{font-size:9px}
 }
+
+/* From Imagination to Creation: swipeable three-card mobile carousel only. */
+@media(max-width:650px){
+ .creative-universe-section .cu-journey-examples{min-width:0}
+ .creative-universe-section .cu-examples-grid{
+  display:flex;grid-template-columns:none;gap:14px;
+  overflow-x:auto;overscroll-behavior-x:contain;
+  scroll-snap-type:x mandatory;scroll-padding-inline:2px;
+  -webkit-overflow-scrolling:touch;
+  padding:4px 2px 16px;
+  scrollbar-width:thin;scrollbar-color:#8b69b2 transparent;
+ }
+ .creative-universe-section .cu-example-card{
+  flex:0 0 min(82vw,340px);width:min(82vw,340px);min-height:190px;
+  padding:20px;gap:12px;scroll-snap-align:start;scroll-snap-stop:always;
+ }
+ .creative-universe-section .cu-example-card strong{font-size:13px;line-height:1.65}
+}
