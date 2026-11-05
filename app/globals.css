@@ -2382,38 +2382,32 @@ main{background:transparent}
  .xnovah-cinematic-hero,.xnovah-hero-aurora,.hero-section,.xh-hero{background-image:radial-gradient(ellipse 100% 70% at 50% 60%,rgba(70,75,86,.055),transparent 78%),linear-gradient(180deg,#07080a,#0c0d10,#08090b)}
 }
 
-/* XNOVAH — REFINED CRIMSON ACCENTS | intentionally restrained, purple remains primary */
-:root{--xnovah-crimson:#e5484d;--xnovah-crimson-soft:rgba(229,72,77,.16)}
-/* Primary actions: a restrained crimson edge, not a wholesale palette replacement */
-.button-primary,.nav-cta,.xfooter-cta-button{
-  box-shadow:inset 0 0 0 1px rgba(229,72,77,.38),0 8px 30px rgba(229,72,77,.075);
-  transition:box-shadow .25s ease,filter .25s ease,transform .25s ease;
-}
-.button-primary:hover,.nav-cta:hover,.xfooter-cta-button:hover{
-  box-shadow:inset 0 0 0 1px rgba(229,72,77,.7),0 10px 32px rgba(229,72,77,.19);
-}
-/* Hero: tiny crimson glint beneath the existing purple gradient headline */
-.xnovah-cinematic-hero .hero-copy h1 .gradient-text{
-  text-decoration:underline;text-decoration-color:rgba(229,72,77,.52);
-  text-decoration-thickness:2px;text-underline-offset:.14em;
-}
-/* Editorial section numerals and small details */
+
+/* XNOVAH — BALANCED CRIMSON ACCENTS (video, UGC, micro-details, interactions) */
+:root{--xnovah-crimson:#e5484d;--xnovah-crimson-glow:rgba(229,72,77,.2)}
+/* Editorial numbering and fine details */
 .cu-journey-number,.xuc-atlas-index,.why-pipeline-index,.gxr-index,.dedicated-number,.toolkit-satellite-index{
-  text-shadow:0 0 14px rgba(229,72,77,.23);
+ color:#e5484d;
+ text-shadow:0 0 20px rgba(229,72,77,.18);
 }
 .xuc-atlas-overline,.why-journey-kicker,.xorbit-kicker,.gxr-overline,.xh-eyebrow,.xfooter-eyebrow{
-  border-color:rgba(229,72,77,.2);
+ border-color:rgba(229,72,77,.38);
 }
-/* Selective interaction details; retain existing purple base states */
-.toolkit-satellite-action:hover,.dedicated-preview-btn:hover,.button-ghost:hover{
-  border-color:rgba(229,72,77,.55);
-  box-shadow:0 0 0 1px rgba(229,72,77,.09),0 8px 26px rgba(229,72,77,.07);
+/* Video and UGC showcases only — purple continues to define the rest of the site */
+.xnovah-crimson-media .dedicated-number,.xnovah-crimson-media .dedicated-label,
+.xnovah-crimson-media .toolkit-satellite-index{color:#e5484d}
+.xnovah-crimson-media .dedicated-visual,.xnovah-crimson-media .toolkit-satellite-art{
+ box-shadow:0 0 0 1px rgba(229,72,77,.34),0 22px 70px rgba(229,72,77,.12);
 }
-/* Video/UGC tool visuals: restrained crimson ambient edge when supported */
-.toolkit-satellite-art:has(img[alt*="Video"]),.toolkit-satellite-art:has(img[alt*="UGC"]),
-.toolkit-satellite-art:has(video){
-  box-shadow:0 0 0 1px rgba(229,72,77,.12),0 22px 55px rgba(229,72,77,.055);
+.xnovah-crimson-media .dedicated-visual-orb,.xnovah-crimson-media .toolkit-satellite-glow{
+ filter:drop-shadow(0 0 20px rgba(229,72,77,.25));
 }
-@media(prefers-reduced-motion:reduce){
- .button-primary,.nav-cta,.xfooter-cta-button{transition:none}
+.xnovah-crimson-media .dedicated-link,.xnovah-crimson-media .toolkit-satellite-action{color:#f0787c}
+/* Visible but measured crimson on interactive hover/focus states */
+.button-primary:hover,.nav-cta:hover,.xfooter-cta-button:hover,
+.button-ghost:hover,.dedicated-preview-btn:hover,.toolkit-satellite-action:hover,
+.dedicated-link:hover{
+ box-shadow:0 0 0 1px rgba(229,72,77,.5),0 8px 30px rgba(229,72,77,.15);
 }
+a:focus-visible,button:focus-visible{outline:2px solid #e5484d;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.xnovah-crimson-media *{animation-duration:.01ms!important}}
