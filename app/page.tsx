@@ -5,7 +5,7 @@ import { brandIconsC } from "./brand-icons-c";
 import { correctedBrandIcons } from "./brand-icons-corrected";
 import { correctedBrandIcons2 } from "./brand-icons-corrected-2";
 import { correctedBrandIcons3 } from "./brand-icons-corrected-3";
-import {useState,useEffect} from 'react';
+import {useState,useEffect,useRef} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {ArrowUpRight, ArrowRight, Lightbulb, Rocket, Play, Menu, X, Sparkles, WandSparkles, Image as ImageIcon, Video, Mic2, MessageCircle, Code2, FileText, Globe2, Check, ChevronDown, ChevronRight, Zap, ShieldCheck, Layers3, PenLine, Headphones, Search, Workflow, MoveUpRight, Star, LockKeyhole, MousePointer2, Bot, Aperture, AudioLines, BookOpen, Clapperboard, Palette, Command, Users, ArrowDownToLine, Share2, Instagram, Linkedin, Twitter} from 'lucide-react';
 const features=[{icon:PenLine,name:'AI Writer',tag:'WORDS',desc:'Turn a thought into polished articles, campaigns, captions and content that sounds like you.',shade:'violet'},{icon:ImageIcon,name:'AI Image Studio',tag:'VISUALS',desc:'Go from a simple prompt to striking concepts, campaign imagery and creative directions.',shade:'pink'},{icon:Video,name:'AI Video',tag:'MOTION',desc:'Explore video-first storytelling and bring your creative concepts to life.',shade:'blue'},{icon:MessageCircle,name:'AI Chat',tag:'THINKING',desc:'Brainstorm, explore complex ideas and get help from an intelligent creative companion.',shade:'green'},{icon:Mic2,name:'Voice & Audio',tag:'SOUND',desc:'Give your ideas a voice with speech tools, narration and audio workflows.',shade:'orange'},{icon:Code2,name:'AI Code',tag:'BUILD',desc:'Get help writing, explaining and refining code so you can move from idea to execution.',shade:'violet'},{icon:FileText,name:'Document AI',tag:'INSIGHTS',desc:'Ask questions about documents, uncover insights and get to the point faster.',shade:'blue'},{icon:Globe2,name:'Research Tools',tag:'DISCOVER',desc:'Explore topics, organize knowledge and find new angles for your next big idea.',shade:'pink'}];
@@ -61,6 +61,24 @@ const toolDescriptions = ["Build task-specific AI assistants by defining their r
 function CreativeUniverseSection(){
  const worlds=[{name:'Writing',icon:'✍',focus:'Develop articles, campaign copy, brand messaging, and business content'},{name:'Images',icon:'◈',focus:'Generate visual concepts, product imagery, and branded creative assets'},{name:'Video',icon:'▶',focus:'Plan video content, develop promotional concepts, and explore AI-powered production'},{name:'Agents',icon:'✳',focus:'Explore AI assistants for customer engagement and repeatable business tasks'},{name:'Voice',icon:'◖',focus:'Develop narration, spoken content, and voice-enabled experiences'}];
  const [active,setActive]=useState<number|null>(null);
+ const examplesRef=useRef<HTMLDivElement|null>(null);
+ const [exampleSlide,setExampleSlide]=useState(0);
+ const [examplePaused,setExamplePaused]=useState(false);
+ const exampleGo=(index:number)=>{
+  const track=examplesRef.current;
+  if(!track)return;
+  const cards=track.querySelectorAll<HTMLElement>('.cu-example-card');
+  const next=(index+cards.length)%cards.length;
+  if(!cards[next])return;
+  track.scrollTo({left:cards[next].offsetLeft-cards[0].offsetLeft,behavior:'smooth'});
+  setExampleSlide(next);
+ };
+ useEffect(()=>{
+  if(examplePaused||typeof window==='undefined'||!window.matchMedia('(max-width:650px)').matches)return;
+  const timer=window.setInterval(()=>exampleGo(exampleSlide+1),4500);
+  return ()=>window.clearInterval(timer);
+ },[exampleSlide,examplePaused]);
+
  return <section id="creative-universe" className="section creative-universe-section" aria-labelledby="creative-universe-heading"><div className="shell">
   <SectionEyebrow>SECTION 02 / THE CREATIVE UNIVERSE</SectionEyebrow>
   <div className="cu-intro"><h2 id="creative-universe-heading">One platform.<br/><span>More ways</span><br/>to create.</h2><p>Bring your ideas and workflows together with AI-powered writing, image creation, video production, voice, and intelligent agents. Xnovah is being built to make advanced tools more accessible, connected, and useful for everyday creative and business work.</p></div>
@@ -74,7 +92,7 @@ function CreativeUniverseSection(){
 </div>
 
 
-  <div id="experience" className="cu-journey-examples" aria-label="From imagination to creation workflow"><div className="cu-examples-heading"><span>FROM IMAGINATION TO CREATION</span><h3>Turn a clear vision into work that delivers.</h3><p>Every successful project starts with a purpose. Xnovah's envisioned workflow brings your brief, AI-powered production, and thoughtful refinement into a more connected process—helping you develop content and creative assets with greater clarity, consistency, and control.</p></div><div className="cu-examples-grid">{[{step:'01 / IMAGINE',label:'DEFINE THE DIRECTION',example:'Set the objective, identify your audience, and describe the result you need. For example: “Develop a cohesive visual identity and launch campaign for a new product.”'},{step:'02 / CREATE',label:'PUT AI TO WORK',example:'Select the right capabilities for each deliverable—from campaign copy and product imagery to promotional video, narration, or supporting research.'},{step:'03 / BRING IT TO LIFE',label:'REFINE FOR REAL-WORLD USE',example:'Review accuracy, strengthen your brand voice, refine visuals, and prepare approved assets for publishing, presentation, or the next stage of your workflow.'}].map(item=><div className="cu-example-card" key={item.step}><span>{item.step}</span><small>{item.label}</small><strong>{item.example}</strong></div>)}</div></div>
+  <div id="experience" className="cu-journey-examples" aria-label="From imagination to creation workflow"><div className="cu-examples-heading"><span>FROM IMAGINATION TO CREATION</span><h3>Turn a clear vision into work that delivers.</h3><p>Every successful project starts with a purpose. Xnovah's envisioned workflow brings your brief, AI-powered production, and thoughtful refinement into a more connected process—helping you develop content and creative assets with greater clarity, consistency, and control.</p></div><div className="cu-examples-grid" ref={examplesRef} onTouchStart={()=>setExamplePaused(true)} onMouseEnter={()=>setExamplePaused(true)} onMouseLeave={()=>setExamplePaused(false)} onScroll={(e)=>{const track=e.currentTarget;const first=track.querySelector<HTMLElement>(".cu-example-card");if(first){const step=first.offsetWidth+14;setExampleSlide(Math.min(2,Math.max(0,Math.round(track.scrollLeft/step))))}}}>{[{step:'01 / IMAGINE',label:'DEFINE THE DIRECTION',example:'Set the objective, identify your audience, and describe the result you need. For example: “Develop a cohesive visual identity and launch campaign for a new product.”'},{step:'02 / CREATE',label:'PUT AI TO WORK',example:'Select the right capabilities for each deliverable—from campaign copy and product imagery to promotional video, narration, or supporting research.'},{step:'03 / BRING IT TO LIFE',label:'REFINE FOR REAL-WORLD USE',example:'Review accuracy, strengthen your brand voice, refine visuals, and prepare approved assets for publishing, presentation, or the next stage of your workflow.'}].map(item=><div className="cu-example-card" key={item.step}><span>{item.step}</span><small>{item.label}</small><strong>{item.example}</strong></div>)}</div><div className="cu-slider-controls" aria-label="Creative workflow slider controls"><button type="button" aria-label="Previous card" onClick={()=>{setExamplePaused(true);exampleGo(exampleSlide+2)}}>‹</button><div className="cu-slider-dots">{[0,1,2].map(i=><button type="button" key={i} aria-label={'Show card '+(i+1)} aria-current={exampleSlide===i?'true':undefined} className={exampleSlide===i?'active':''} onClick={()=>{setExamplePaused(true);exampleGo(i)}} />)}</div><button type="button" aria-label="Next card" onClick={()=>{setExamplePaused(true);exampleGo(exampleSlide+1)}}>›</button><span>SWIPE TO EXPLORE</span></div></div>
   <div className="cu-footer"><span>✳ XNOVAH AI — Creative tools and intelligent workflows, connected.</span><a href="#feature-universe">UP NEXT / SECTION 03 — 39 AI FEATURES ↗</a></div>
  </div></section>
 }
