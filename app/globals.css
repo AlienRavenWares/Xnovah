@@ -2350,3 +2350,44 @@ body{overflow-x:clip}
 @media(max-width:900px){.xfooter-cta{align-items:flex-start;flex-direction:column;padding:72px 0 64px}.xfooter-main{grid-template-columns:1fr;gap:44px;padding:55px 0}.xfooter-identity{max-width:480px}.xfooter-links{width:100%}}
 @media(max-width:600px){.xfooter-cta{padding:62px 0 54px;gap:26px}.xfooter-cta h2{font-size:clamp(44px,11vw,67px);letter-spacing:-.07em;margin:19px 0}.xfooter-cta p{font-size:13px}.xfooter-cta-button{width:100%;justify-content:space-between}.xfooter-main{padding:45px 0 48px;gap:37px}.xfooter-links{grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 18px}.xfooter-links>div{gap:14px}.xfooter-links h3{font-size:9px;margin-bottom:5px}.xfooter-links a{font-size:12px}.xfooter-signature{font-size:23vw;padding-bottom:23px}.xfooter-bottom{flex-wrap:wrap;gap:13px;line-height:1.5}.xfooter-bottom>span:nth-child(2){order:3;width:100%}}
 @media(prefers-reduced-motion:reduce){.xfooter-cta-button,.xfooter-links a{transition:none}}
+
+/* QORE-REFERENCE BACKGROUND — original CSS recreation for Xnovah.
+   Restrained black/navy cosmic atmosphere, faint blue illumination and micro-stars.
+   Backgrounds only: existing content, layouts and interactions remain unchanged. */
+:root{--bg:#05070b;--surface:#0b0f17}
+html{background:#05070b}
+body{background:#05070b;color:var(--ink)}
+main{background:transparent}
+.xnovah-cinematic-hero,.xnovah-hero-aurora,.hero-section,.xh-hero{
+ background-color:#05070b;
+ background-image:radial-gradient(ellipse 85% 68% at 50% 85%,rgba(34,76,146,.28),transparent 74%),radial-gradient(ellipse 62% 58% at 86% 12%,rgba(33,58,112,.12),transparent 76%),linear-gradient(180deg,#040609 0%,#080e19 66%,#05070b 100%);
+}
+.creative-universe-section,.toolkit-orbit-section,.feature-universe,.xcmd-section,.command-section,.command-v1,.magic-section,.magic-refined,.dedicated-section,.dedicated-theme-0,.dedicated-theme-1,.dedicated-theme-2,.dedicated-theme-3{
+ background-color:#06080d;
+ background-image:radial-gradient(ellipse 72% 65% at 50% 100%,rgba(30,60,115,.14),transparent 78%),linear-gradient(180deg,#05070b,#090d15 52%,#05070b);
+}
+.xuc-atlas,.showcase-section,.creative-playground,.gallery-universe,.gallery-reimagined,.template-universe,.walkthrough,.xt-section{
+ background-color:#060912;
+ background-image:radial-gradient(ellipse 82% 75% at 50% 38%,rgba(32,64,129,.20),transparent 76%),linear-gradient(180deg,#05070b,#0a101c 52%,#05070b);
+}
+.audience-section,.audience-cosmos,.audience-universe,.values-section,.why-journey,.xh-section,.ecosystem-section,.xorbit-section,.compare-universe,.xts-section,.faq-section,.roadmap-section,.roadmap-reimagined{
+ background-color:#05070b;
+ background-image:radial-gradient(ellipse 75% 68% at 50% 0%,rgba(28,56,110,.12),transparent 76%),linear-gradient(180deg,#05070b,#080b11 52%,#05070b);
+}
+.mid-cta,.newsletter-universe,.waitlist-section,.xnovah-cinematic-cta,.xfooter,.footer{
+ background-color:#05070b;
+ background-image:radial-gradient(ellipse 85% 80% at 50% 80%,rgba(34,73,145,.20),transparent 75%),linear-gradient(180deg,#05070b,#090d16 70%,#040609);
+}
+.nav-wrap,.xnovah-glass-nav{background:rgba(4,6,10,.88)}
+/* Faint constellation texture on open section surfaces; deliberately non-interactive. */
+.xnovah-cinematic-hero::after,.xuc-atlas::after{
+ content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+ background-image:radial-gradient(circle,rgba(165,192,242,.24) .65px,transparent 1px);
+ background-size:83px 89px;opacity:.20;
+ mask-image:linear-gradient(180deg,transparent 0%,#000 30%,#000 70%,transparent 100%);
+}
+.xnovah-cinematic-hero>*,.xuc-atlas>*{position:relative;z-index:1}
+@media(max-width:767px){
+ .xnovah-cinematic-hero,.xnovah-hero-aurora,.hero-section,.xh-hero{background-image:radial-gradient(ellipse 110% 70% at 50% 72%,rgba(34,76,146,.19),transparent 78%),linear-gradient(180deg,#040609,#090e18,#05070b)}
+ .xnovah-cinematic-hero::after,.xuc-atlas::after{opacity:.12;background-size:100px 110px}
+}
