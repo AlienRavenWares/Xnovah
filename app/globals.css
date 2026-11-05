@@ -2383,31 +2383,46 @@ main{background:transparent}
 }
 
 
-/* XNOVAH — BALANCED CRIMSON ACCENTS (video, UGC, micro-details, interactions) */
-:root{--xnovah-crimson:#e5484d;--xnovah-crimson-glow:rgba(229,72,77,.2)}
-/* Editorial numbering and fine details */
-.cu-journey-number,.xuc-atlas-index,.why-pipeline-index,.gxr-index,.dedicated-number,.toolkit-satellite-index{
- color:#e5484d;
- text-shadow:0 0 20px rgba(229,72,77,.18);
+/* XNOVAH — BOLD REFINED CRIMSON: media, editorial details, interactions.
+   Preserve Obsidian surfaces and existing lavender/purple brand accents. */
+:root{--xnovah-crimson:#e5484d;--xnovah-crimson-glow:rgba(229,72,77,.28)}
+/* Crisp editorial numbers and micro-details, without recoloring headlines. */
+.cu-journey-number,.xuc-atlas-index,.why-pipeline-index,.gxr-index,
+.dedicated-number,.toolkit-satellite-index{
+ color:var(--xnovah-crimson);
+ text-shadow:0 0 25px rgba(229,72,77,.33);
 }
-.xuc-atlas-overline,.why-journey-kicker,.xorbit-kicker,.gxr-overline,.xh-eyebrow,.xfooter-eyebrow{
- border-color:rgba(229,72,77,.38);
+.xuc-atlas-overline,.why-journey-kicker,.xorbit-kicker,
+.gxr-overline,.xh-eyebrow,.xfooter-eyebrow{
+ border-color:rgba(229,72,77,.68);
 }
-/* Video and UGC showcases only — purple continues to define the rest of the site */
-.xnovah-crimson-media .dedicated-number,.xnovah-crimson-media .dedicated-label,
-.xnovah-crimson-media .toolkit-satellite-index{color:#e5484d}
-.xnovah-crimson-media .dedicated-visual,.xnovah-crimson-media .toolkit-satellite-art{
- box-shadow:0 0 0 1px rgba(229,72,77,.34),0 22px 70px rgba(229,72,77,.12);
+.eyebrow-line{background:linear-gradient(90deg,#e5484d,#f47c80)}
+/* Video and UGC media only; scoped classes are assigned by tool name. */
+.xnovah-crimson-media .dedicated-number,
+.xnovah-crimson-media .dedicated-label,
+.xnovah-crimson-media .toolkit-satellite-index{color:#f36b70}
+.xnovah-crimson-media .dedicated-visual,
+.xnovah-crimson-media .toolkit-satellite-art{
+ border-color:rgba(229,72,77,.7);
+ box-shadow:0 0 0 1px rgba(229,72,77,.66),0 20px 85px rgba(229,72,77,.24),inset 0 0 48px rgba(229,72,77,.08);
 }
-.xnovah-crimson-media .dedicated-visual-orb,.xnovah-crimson-media .toolkit-satellite-glow{
- filter:drop-shadow(0 0 20px rgba(229,72,77,.25));
+.xnovah-crimson-media .dedicated-visual-orb,
+.xnovah-crimson-media .toolkit-satellite-glow{
+ filter:drop-shadow(0 0 28px rgba(229,72,77,.48));
 }
-.xnovah-crimson-media .dedicated-link,.xnovah-crimson-media .toolkit-satellite-action{color:#f0787c}
-/* Visible but measured crimson on interactive hover/focus states */
+.xnovah-crimson-media .dedicated-link,
+.xnovah-crimson-media .toolkit-satellite-action{color:#ff8589}
+.xnovah-crimson-media .dedicated-link:hover,
+.xnovah-crimson-media .toolkit-satellite-action:hover{
+ color:#ffb0b2;text-shadow:0 0 15px rgba(229,72,77,.55);
+}
+/* High-impact hover/focus states, never permanent CTA recoloring. */
 .button-primary:hover,.nav-cta:hover,.xfooter-cta-button:hover,
-.button-ghost:hover,.dedicated-preview-btn:hover,.toolkit-satellite-action:hover,
-.dedicated-link:hover{
- box-shadow:0 0 0 1px rgba(229,72,77,.5),0 8px 30px rgba(229,72,77,.15);
+.button-ghost:hover,.dedicated-preview-btn:hover,
+.toolkit-satellite-action:hover,.dedicated-link:hover{
+ border-color:rgba(229,72,77,.82);
+ box-shadow:0 0 0 1px rgba(229,72,77,.72),0 10px 38px rgba(229,72,77,.3);
 }
+.nav-links a:hover,.footer a:hover,.xfooter-links a:hover{color:#ff8589}
 a:focus-visible,button:focus-visible{outline:2px solid #e5484d;outline-offset:3px}
 @media(prefers-reduced-motion:reduce){.xnovah-crimson-media *{animation-duration:.01ms!important}}
