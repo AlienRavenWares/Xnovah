@@ -2381,3 +2381,37 @@ main{background:transparent}
 @media(max-width:767px){
  .xnovah-cinematic-hero,.xnovah-hero-aurora,.hero-section,.xh-hero{background-image:radial-gradient(ellipse 100% 70% at 50% 60%,rgba(70,75,86,.055),transparent 78%),linear-gradient(180deg,#07080a,#0c0d10,#08090b)}
 }
+
+/* Section 02 — desktop-faithful responsive Creative Universe.
+   Keep IMAGINE / CREATE / BUILD side by side without horizontal scrolling. */
+@media(max-width:767px){
+ .creative-universe-section{padding:clamp(48px,9vw,72px) 0}
+ .creative-universe-section>.shell{width:calc(100% - 28px);max-width:100%}
+ .creative-universe-section .cu-intro{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);align-items:end;gap:clamp(10px,3vw,24px);margin:20px 0 30px}
+ .creative-universe-section .cu-intro h2{font-size:clamp(27px,6.5vw,48px);letter-spacing:-.05em;line-height:1.08}
+ .creative-universe-section .cu-intro p{font-size:clamp(10px,2.35vw,13px);line-height:1.6;min-width:0}
+ .creative-universe-section .cu-journey{grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(5px,1.8vw,15px);width:100%;margin-top:25px}
+ .creative-universe-section .cu-journey-stage{min-width:0}
+ .creative-universe-section .cu-journey-scene{height:clamp(118px,31vw,210px);overflow:visible}
+ .creative-universe-section .cu-journey-illustration{width:min(78%,130px);height:clamp(72px,21vw,150px)}
+ .creative-universe-section .cu-journey-illustration>svg{width:40%;height:40%}
+ .creative-universe-section .cu-journey-orbit{width:88%;height:29%;transform:rotate(-12deg) translateY(24px)}
+ .creative-universe-section .cu-journey-orbit-b{width:72%;height:22%;transform:rotate(15deg) translateY(20px)}
+ .creative-universe-section .cu-journey-line{top:clamp(58px,15vw,105px);left:10%;right:10%}
+ .creative-universe-section .cu-journey-float{max-width:85%;white-space:normal;overflow-wrap:anywhere;font-size:clamp(6px,1.45vw,9px);padding:4px 5px;line-height:1.25}
+ .creative-universe-section .cu-journey-float-one{left:0;top:5%}
+ .creative-universe-section .cu-journey-float-two{right:0;bottom:5%}
+ .creative-universe-section .cu-journey-copy{min-width:0;padding:8px 1px 0}
+ .creative-universe-section .cu-journey-number{font-size:clamp(22px,5.4vw,37px);letter-spacing:-.04em}
+ .creative-universe-section .cu-journey-copy h3{font-size:clamp(15px,4.2vw,29px);letter-spacing:-.045em;line-height:1.12;overflow-wrap:anywhere}
+ .creative-universe-section .cu-journey-copy strong{font-size:clamp(9px,2.25vw,14px);line-height:1.35}
+ .creative-universe-section .cu-journey-copy p{font-size:clamp(9px,2.1vw,12px);line-height:1.55;overflow-wrap:anywhere}
+ .creative-universe-section .cu-journey-note{margin-top:24px}
+}
+@media(max-width:380px){
+ .creative-universe-section>.shell{width:calc(100% - 20px)}
+ .creative-universe-section .cu-intro{grid-template-columns:minmax(0,1fr);gap:12px}
+ .creative-universe-section .cu-intro p{font-size:12px;max-width:310px}
+ .creative-universe-section .cu-journey{gap:4px}
+ .creative-universe-section .cu-journey-copy p{font-size:9px}
+}
