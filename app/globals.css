@@ -2433,3 +2433,18 @@ main{background:transparent}
  }
  .creative-universe-section .cu-example-card strong{font-size:13px;line-height:1.65}
 }
+
+/* Mobile workflow carousel affordance; desktop remains a static three-card grid. */
+.cu-slider-controls{display:none}
+@media(max-width:650px){
+ .creative-universe-section .cu-slider-controls{display:flex;align-items:center;justify-content:center;gap:14px;margin:12px 0 4px;flex-wrap:wrap}
+ .creative-universe-section .cu-slider-controls>button{width:35px;height:35px;border-radius:50%;border:1px solid rgba(190,157,255,.5);background:#241735;color:#e8d8ff;font-size:24px;line-height:1;display:grid;place-items:center}
+ .creative-universe-section .cu-slider-dots{display:flex;align-items:center;gap:8px}
+ .creative-universe-section .cu-slider-dots button{width:8px;height:8px;border:0;border-radius:99px;background:#68517e;padding:0;transition:width .25s,background .25s}
+ .creative-universe-section .cu-slider-dots button.active{width:25px;background:#c5a0ff}
+ .creative-universe-section .cu-slider-controls>span{width:100%;text-align:center;font-size:9px;letter-spacing:1.8px;font-weight:800;color:#bca0e2}
+}
+@media(prefers-reduced-motion:reduce){
+ .creative-universe-section .cu-examples-grid{scroll-behavior:auto}
+ .creative-universe-section .cu-slider-dots button{transition:none}
+}
