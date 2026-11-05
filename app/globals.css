@@ -2350,3 +2350,34 @@ body{overflow-x:clip}
 @media(max-width:900px){.xfooter-cta{align-items:flex-start;flex-direction:column;padding:72px 0 64px}.xfooter-main{grid-template-columns:1fr;gap:44px;padding:55px 0}.xfooter-identity{max-width:480px}.xfooter-links{width:100%}}
 @media(max-width:600px){.xfooter-cta{padding:62px 0 54px;gap:26px}.xfooter-cta h2{font-size:clamp(44px,11vw,67px);letter-spacing:-.07em;margin:19px 0}.xfooter-cta p{font-size:13px}.xfooter-cta-button{width:100%;justify-content:space-between}.xfooter-main{padding:45px 0 48px;gap:37px}.xfooter-links{grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 18px}.xfooter-links>div{gap:14px}.xfooter-links h3{font-size:9px;margin-bottom:5px}.xfooter-links a{font-size:12px}.xfooter-signature{font-size:23vw;padding-bottom:23px}.xfooter-bottom{flex-wrap:wrap;gap:13px;line-height:1.5}.xfooter-bottom>span:nth-child(2){order:3;width:100%}}
 @media(prefers-reduced-motion:reduce){.xfooter-cta-button,.xfooter-links a{transition:none}}
+
+/* XNOVAH — DEEP OBSIDIAN BACKGROUND
+   Refined near-black layers with barely perceptible neutral illumination.
+   Background-only overrides; no structural or interactive changes. */
+:root{--bg:#07080a;--surface:#0d0e11}
+html,body{background:#07080a}
+main{background:transparent}
+.xnovah-cinematic-hero,.xnovah-hero-aurora,.hero-section,.xh-hero{
+ background-color:#08090b;
+ background-image:radial-gradient(ellipse 80% 72% at 50% 62%,rgba(70,75,86,.075),transparent 77%),linear-gradient(180deg,#07080a,#0c0d10 55%,#08090b);
+}
+.creative-universe-section,.toolkit-orbit-section,.feature-universe,.xcmd-section,.command-section,.command-v1,.magic-section,.magic-refined,.dedicated-section,.dedicated-theme-0,.dedicated-theme-1,.dedicated-theme-2,.dedicated-theme-3{
+ background-color:#090a0d;
+ background-image:radial-gradient(ellipse 70% 65% at 80% 22%,rgba(72,76,84,.055),transparent 77%),linear-gradient(180deg,#08090b,#101115 52%,#08090b);
+}
+.xuc-atlas,.showcase-section,.creative-playground,.gallery-universe,.gallery-reimagined,.template-universe,.walkthrough,.xt-section{
+ background-color:#090a0c;
+ background-image:radial-gradient(ellipse 85% 70% at 20% 55%,rgba(80,84,92,.065),transparent 76%),linear-gradient(180deg,#08090b,#101114 50%,#08090b);
+}
+.audience-section,.audience-cosmos,.audience-universe,.values-section,.why-journey,.xh-section,.ecosystem-section,.xorbit-section,.compare-universe,.xts-section,.faq-section,.roadmap-section,.roadmap-reimagined{
+ background-color:#08090b;
+ background-image:radial-gradient(ellipse 75% 60% at 70% 30%,rgba(65,69,76,.05),transparent 78%),linear-gradient(180deg,#08090b,#0e0f12 52%,#08090b);
+}
+.mid-cta,.newsletter-universe,.waitlist-section,.xnovah-cinematic-cta,.xfooter,.footer{
+ background-color:#08090b;
+ background-image:radial-gradient(ellipse 80% 70% at 50% 80%,rgba(80,84,90,.065),transparent 76%),linear-gradient(180deg,#08090b,#101115 60%,#07080a);
+}
+.nav-wrap,.xnovah-glass-nav{background:rgba(7,8,10,.91)}
+@media(max-width:767px){
+ .xnovah-cinematic-hero,.xnovah-hero-aurora,.hero-section,.xh-hero{background-image:radial-gradient(ellipse 100% 70% at 50% 60%,rgba(70,75,86,.055),transparent 78%),linear-gradient(180deg,#07080a,#0c0d10,#08090b)}
+}
