@@ -2350,37 +2350,3 @@ body{overflow-x:clip}
 @media(max-width:900px){.xfooter-cta{align-items:flex-start;flex-direction:column;padding:72px 0 64px}.xfooter-main{grid-template-columns:1fr;gap:44px;padding:55px 0}.xfooter-identity{max-width:480px}.xfooter-links{width:100%}}
 @media(max-width:600px){.xfooter-cta{padding:62px 0 54px;gap:26px}.xfooter-cta h2{font-size:clamp(44px,11vw,67px);letter-spacing:-.07em;margin:19px 0}.xfooter-cta p{font-size:13px}.xfooter-cta-button{width:100%;justify-content:space-between}.xfooter-main{padding:45px 0 48px;gap:37px}.xfooter-links{grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 18px}.xfooter-links>div{gap:14px}.xfooter-links h3{font-size:9px;margin-bottom:5px}.xfooter-links a{font-size:12px}.xfooter-signature{font-size:23vw;padding-bottom:23px}.xfooter-bottom{flex-wrap:wrap;gap:13px;line-height:1.5}.xfooter-bottom>span:nth-child(2){order:3;width:100%}}
 @media(prefers-reduced-motion:reduce){.xfooter-cta-button,.xfooter-links a{transition:none}}
-
-/* XNOVAH / OBSIDIAN AURORA — site-wide atmospheric background system.
-   Background-only overrides: preserves typography, content, imagery and interactions. */
-:root{--xoa-obsidian:#090a0e;--xoa-graphite:#111318;--xoa-crimson:rgba(161,38,55,.18);--xoa-amber:rgba(194,110,53,.09)}
-html{background:var(--xoa-obsidian)}
-body{background:linear-gradient(180deg,#090a0e 0%,#101116 24%,#090b10 52%,#100e13 78%,#08090d 100%);background-attachment:fixed}
-main{background:transparent}
-.xnovah-cinematic-hero,.xnovah-hero-aurora,.hero-section,.xh-hero{
- background-color:#0c0d12;
- background-image:radial-gradient(ellipse 75% 65% at 74% 28%,rgba(159,39,56,.24),transparent 75%),radial-gradient(ellipse 65% 58% at 15% 76%,rgba(181,105,60,.10),transparent 74%),linear-gradient(180deg,#0b0c11 0%,#111017 58%,#0c0d12 100%);
-}
-.creative-universe-section,.toolkit-orbit-section,.feature-universe,.xcmd-section,.command-section,.command-v1,.magic-section,.magic-refined,.dedicated-section,.dedicated-theme-0,.dedicated-theme-1,.dedicated-theme-2,.dedicated-theme-3{
- background-color:#101116;
- background-image:radial-gradient(ellipse 72% 75% at 92% 12%,rgba(119,51,66,.12),transparent 72%),radial-gradient(ellipse 70% 70% at 5% 96%,rgba(152,112,76,.06),transparent 75%),linear-gradient(180deg,#0c0d12,#15161b 55%,#0d0e13);
-}
-.xuc-atlas,.showcase-section,.creative-playground,.gallery-universe,.gallery-reimagined,.template-universe,.walkthrough,.xt-section{
- background-color:#100e12;
- background-image:radial-gradient(ellipse 68% 80% at 8% 30%,rgba(154,42,52,.20),transparent 73%),radial-gradient(ellipse 65% 65% at 88% 76%,rgba(193,109,59,.11),transparent 75%),linear-gradient(145deg,#100e12 0%,#191318 50%,#0d0f14 100%);
-}
-.audience-section,.audience-cosmos,.audience-universe,.values-section,.why-journey,.xh-section,.ecosystem-section,.xorbit-section,.compare-universe,.xts-section,.faq-section,.roadmap-section,.roadmap-reimagined{
- background-color:#0d0f14;
- background-image:radial-gradient(ellipse 65% 75% at 78% 18%,rgba(109,55,66,.10),transparent 72%),radial-gradient(ellipse 65% 60% at 10% 95%,rgba(165,110,70,.055),transparent 74%),linear-gradient(180deg,#0c0d12,#13151a 55%,#0c0d12);
-}
-.mid-cta,.newsletter-universe,.waitlist-section,.xnovah-cinematic-cta,.xfooter,.footer{
- background-color:#100d12;
- background-image:radial-gradient(ellipse 75% 70% at 50% 85%,rgba(173,43,58,.20),transparent 72%),radial-gradient(ellipse 50% 70% at 90% 20%,rgba(191,116,66,.09),transparent 75%),linear-gradient(180deg,#0d0e12,#181015 65%,#090a0e);
-}
-.nav-wrap,.xnovah-glass-nav{background:rgba(10,11,15,.86)}
-@media(max-width:767px){
- body{background-attachment:scroll}
- .xnovah-cinematic-hero,.xnovah-hero-aurora,.hero-section,.xh-hero{background-image:radial-gradient(ellipse 100% 60% at 65% 25%,rgba(159,39,56,.17),transparent 78%),linear-gradient(180deg,#0b0c11,#111017,#0c0d12)}
- .xuc-atlas,.showcase-section,.creative-playground,.gallery-universe,.gallery-reimagined,.template-universe,.walkthrough,.xt-section{background-image:radial-gradient(ellipse 100% 70% at 15% 30%,rgba(154,42,52,.14),transparent 76%),linear-gradient(180deg,#100e12,#191318,#0d0f14)}
-}
-@media(prefers-reduced-motion:reduce){body{background-attachment:scroll}}
