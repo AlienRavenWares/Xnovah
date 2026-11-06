@@ -2601,3 +2601,50 @@ main{background:transparent}
  .xuc-atlas-bottom>span{font-size:10px;line-height:1.5}
  .xuc-atlas-bottom button{width:44px;height:44px;font-size:20px}
 }
+
+/* Section 14: mobile-first Possibility Atlas, desktop remains unchanged */
+.xuc-mobile-explorer{display:none}
+@media(max-width:750px){
+ .xuc-atlas .xuc-atlas-index,.xuc-atlas .xuc-atlas-stage,.xuc-atlas .xuc-atlas-detail,.xuc-atlas .xuc-atlas-bottom,.xuc-atlas .xuc-atlas-mobile-picker{display:none!important}
+ .xuc-atlas .xuc-mobile-explorer{display:block;min-width:0;margin-top:24px;color:#f8f4ff}
+ .xuc-mobile-topline,.xuc-mobile-feature-top,.xuc-mobile-list-heading,.xuc-mobile-pager{display:flex;align-items:center;justify-content:space-between;gap:12px}
+ .xuc-mobile-topline{font-size:10px;font-weight:750;letter-spacing:.11em;color:#bcb0d1;margin-bottom:15px}
+ .xuc-mobile-spark{font-size:17px;color:#d3a4ff;margin-right:5px}
+ .xuc-mobile-tabs{display:flex;gap:9px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;scrollbar-width:thin;padding:3px 1px 15px;margin:0 -3px 7px;max-width:100%;-webkit-overflow-scrolling:touch}
+ .xuc-mobile-tabs button{flex:0 0 auto;scroll-snap-align:start;display:flex;align-items:center;gap:9px;min-height:48px;padding:10px 15px;border-radius:999px;border:1px solid #ffffff24;background:#ffffff08;color:#c9c1d6;font-size:13px;font-weight:650;white-space:nowrap;cursor:pointer}
+ .xuc-mobile-tabs button>span:first-child{font-size:17px}
+ .xuc-mobile-tabs button.is-active{background:#e0c2ff;color:#1b102b;border-color:#e0c2ff;box-shadow:0 4px 24px #b882ef35}
+ .xuc-mobile-feature{position:relative;overflow:hidden;padding:23px 20px 20px;border:1px solid #a27bd64a;border-radius:20px;background:radial-gradient(ellipse at 85% 10%,#68409260,transparent 60%),linear-gradient(140deg,#231834,#11111e 85%)}
+ .xuc-mobile-feature-top{font-size:10px;font-weight:750;letter-spacing:.13em;color:#d2b5f6}
+ .xuc-mobile-feature-title{display:flex;align-items:center;gap:12px;margin:21px 0 10px}
+ .xuc-mobile-feature-title>span{display:grid;place-items:center;width:49px;height:49px;flex-shrink:0;border-radius:15px;background:#e6bfff20;font-size:27px}
+ .xuc-mobile-feature-title h3{font-size:clamp(23px,7vw,31px);line-height:1.15;letter-spacing:-.03em;margin:0;overflow-wrap:anywhere}
+ .xuc-mobile-feature>p{font-size:14px;line-height:1.7;color:#cfc3dc;margin:0}
+ .xuc-mobile-feature-progress{height:3px;border-radius:9px;background:#ffffff24;margin-top:22px;overflow:hidden}
+ .xuc-mobile-feature-progress span{display:block;height:100%;border-radius:9px;background:#d8adff;transition:width .25s ease}
+ .xuc-mobile-list-heading{margin:29px 0 13px;align-items:end}
+ .xuc-mobile-list-heading>div>span{font-size:10px;font-weight:750;letter-spacing:.11em;color:#b7a3cf}
+ .xuc-mobile-list-heading h4{font-size:22px;line-height:1.2;letter-spacing:-.03em;margin:5px 0 0}
+ .xuc-mobile-list-heading>span{flex-shrink:0;font-size:10px;letter-spacing:.06em;color:#bca5d8}
+ .xuc-mobile-accordion{display:flex;flex-direction:column;gap:9px}
+ .xuc-mobile-case{border:1px solid #ffffff1f;border-radius:15px;background:#161321;overflow:hidden}
+ .xuc-mobile-case.is-open{border-color:#ad83d866;background:#1b152a}
+ .xuc-mobile-case>button{width:100%;min-height:60px;display:flex;align-items:center;gap:13px;padding:12px 14px;border:0;background:transparent;color:#f3ebfc;text-align:left;cursor:pointer}
+ .xuc-mobile-case-num{font-size:11px;font-weight:750;color:#aa89d1}
+ .xuc-mobile-case>button strong{flex:1;font-size:14px;line-height:1.4;font-weight:650;overflow-wrap:anywhere}
+ .xuc-mobile-case-toggle{display:grid;place-items:center;width:29px;height:29px;flex-shrink:0;border-radius:50%;background:#ffffff12;color:#e4c6ff;font-size:21px}
+ .xuc-mobile-case-content{padding:0 17px 19px}
+ .xuc-mobile-case-content[hidden]{display:none}
+ .xuc-mobile-case-content h5{font-size:18px;line-height:1.3;margin:4px 0 10px}
+ .xuc-mobile-case-content p{font-size:13px;line-height:1.75;color:#c8bbd6;margin:0 0 14px}
+ .xuc-mobile-case-tags,.xuc-mobile-tools{display:flex;flex-wrap:wrap;gap:7px}
+ .xuc-mobile-case-tags span{font-size:10px;line-height:1.4;padding:7px 9px;border-radius:8px;background:#cba2ff15;color:#ddc2ff}
+ .xuc-mobile-tools-title{font-size:10px;letter-spacing:.1em;font-weight:750;color:#bda3d9;margin:20px 0 10px}
+ .xuc-mobile-tools span{font-size:12px;padding:9px 11px;border:1px solid #ffffff20;border-radius:9px;color:#e4d6f3}
+ .xuc-mobile-case-content>a{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-top:14px;font-size:13px;color:#e3bdff;font-weight:700}
+ .xuc-mobile-pager{margin-top:22px;padding-top:18px;border-top:1px solid #ffffff24}
+ .xuc-mobile-pager button{display:flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:10px 13px;border:1px solid #a789ca60;border-radius:12px;background:#ffffff0b;color:#f2e4ff;font-size:13px;font-weight:650;cursor:pointer}
+ .xuc-mobile-pager>span{font-size:12px;color:#bda9d1;white-space:nowrap}
+ .xuc-mobile-explorer button:focus-visible,.xuc-mobile-explorer a:focus-visible{outline:3px solid #e0b8ff;outline-offset:3px}
+}
+@media(prefers-reduced-motion:reduce){.xuc-mobile-feature-progress span{transition:none}}
