@@ -117,7 +117,7 @@ function FeatureUniverse(){
  const chooseCategory=(cat:string)=>{setFilter(cat);const next=allToolNames.findIndex((name,i)=>(cat==='All'||toolTypes[i]===cat)&&name.toLowerCase().includes(search.trim().toLowerCase()));if(next>=0)setCurrent(next)};
  return <section className="section feature-universe xcmd-section" id="feature-universe"><div className="shell">
  <div className="feature-heading"><SectionEyebrow>DESIGN 02 / THE AI COMMAND CENTER</SectionEyebrow><h2>Your AI workspace. <span className="gradient-text">Built around your goals.</span></h2><p>Discover how Xnovah is bringing 39 specialized AI tool concepts into one organized workspace. Explore content creation, visual design, video and voice production, research, customer engagement, and automation—then find the capabilities that match the work you want to accomplish.</p></div>
- <div className="xcmd-zoom-controls"><span>COMMAND CENTER VIEW</span><button type="button" aria-pressed={zoomed} onClick={()=>setZoomed(v=>!v)}>{zoomed?<><span aria-hidden="true">−</span> Fit to screen</>:<><span aria-hidden="true">＋</span> Zoom in</>}</button></div>
+ <div className="xcmd-zoom-controls"><span>COMMAND CENTER VIEW</span><button type="button" aria-pressed={zoomed} onClick={()=>setZoomed(v=>!v)}>{zoomed?<><span aria-hidden="true">−</span> Zoom out / Fit</>:<><span aria-hidden="true">＋</span> Zoom in</>}</button></div>
  <div className={zoomed?"xcmd-shell xcmd-zoomed":"xcmd-shell"}>
  <div className="xcmd-topbar"><div className="xcmd-brand"><span className="xcmd-brandmark">✳</span><strong>XNOVAH</strong><small>AI OS / CONCEPT</small></div><div className="xcmd-topstatus"><span className="xcmd-statusdot"/> 39 AI TOOLS </div></div>
  <div className="xcmd-body">
