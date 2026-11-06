@@ -2724,3 +2724,62 @@ main{background:transparent}
 }
 @media(max-width:360px){.xuc-studio-grid{gap:8px}.xuc-studio-grid button{padding:12px;min-height:163px}.xuc-studio-grid button strong{font-size:13px}.xuc-studio-kicker{font-size:9px}}
 @media(prefers-reduced-motion:reduce){.xuc-studio-grid button,.xuc-studio-path>button svg{transition:none}}
+
+/* Section 14 — Mission Control. Phone/tablet only; existing desktop preserved. */
+@media(max-width:900px){
+ .xuc-atlas .xuc-mission{display:block!important;visibility:visible!important;opacity:1!important;min-width:0;max-width:100%;color:#f8f3ff}
+ .xuc-mission *{box-sizing:border-box}
+ .xuc-mission-bar,.xuc-mission-world-top,.xuc-mission-world-foot,.xuc-mission-paths-head,.xuc-mission-pager{display:flex;align-items:center;justify-content:space-between;gap:10px}
+ .xuc-mission-bar{font-size:9px;font-weight:800;letter-spacing:.12em;color:#d6c0ec;border-bottom:1px solid #ffffff24;padding:10px 0 17px}
+ .xuc-mission-signal{display:inline-block;width:7px;height:7px;border-radius:50%;background:#cb9cff;box-shadow:0 0 14px #cb9cff;margin-right:6px}
+ .xuc-mission-lead{padding:32px 0 25px}
+ .xuc-mission-lead>span,.xuc-mission-paths-head>div>span,.xuc-mission-focus-label{font-size:10px;letter-spacing:.14em;font-weight:750;color:#c6a2e7}
+ .xuc-mission-lead h3{font-size:clamp(34px,9vw,50px);line-height:1.07;letter-spacing:-.06em;margin:12px 0 15px;font-weight:650}
+ .xuc-mission-lead h3 em{font-style:normal;color:#d7aefb}
+ .xuc-mission-lead p{font-size:14px;line-height:1.7;color:#bfb3cb;margin:0}
+ .xuc-mission-switch{position:relative;z-index:2;margin-bottom:14px}
+ .xuc-mission-switch-button{display:flex;align-items:center;gap:12px;width:100%;min-height:76px;padding:12px 14px;background:#231b32;border:1px solid #b791df75;border-radius:14px;color:#fff;text-align:left;cursor:pointer}
+ .xuc-mission-switch-icon{display:grid;place-items:center;width:45px;height:45px;flex-shrink:0;border-radius:12px;background:#d7b1ff20;font-size:26px}
+ .xuc-mission-switch-copy{display:flex;flex:1;min-width:0;flex-direction:column;gap:5px}
+ .xuc-mission-switch-copy small{font-size:9px;letter-spacing:.1em;color:#c7a6e3}
+ .xuc-mission-switch-copy strong{font-size:16px;line-height:1.25;overflow-wrap:anywhere}
+ .xuc-mission-switch-button>svg{flex-shrink:0;color:#e2c7ff}
+ .xuc-mission-switch-worlds{display:block}
+ .xuc-mission-world-list{position:relative;display:grid;grid-template-columns:1fr;gap:2px;max-height:320px;overflow-y:auto;overscroll-behavior:contain;margin-top:6px;padding:6px;background:#21182d;border:1px solid #b28bd365;border-radius:12px;box-shadow:0 16px 36px #0007}
+ .xuc-mission-world-list button{display:flex;align-items:center;gap:11px;min-height:46px;padding:10px 11px;border:0;border-radius:8px;background:transparent;color:#ded2eb;text-align:left;cursor:pointer}
+ .xuc-mission-world-list button.selected{background:#cfa5fb24;color:#fff}
+ .xuc-mission-world-list button span:first-child{font-size:10px;color:#a88cbd}
+ .xuc-mission-world-list button span:nth-child(2){font-size:20px}
+ .xuc-mission-world-list button strong{flex:1;font-size:13px;font-weight:650}
+ .xuc-mission-world{position:relative;isolation:isolate;overflow:hidden;padding:21px 19px 0;border:1px solid #ffffff23;border-radius:17px;background:radial-gradient(ellipse at 70% 24%,#5b327b65,transparent 54%),linear-gradient(145deg,#20172c,#11111b 85%)}
+ .xuc-mission-world-top,.xuc-mission-world-foot{font-size:10px;font-weight:750;letter-spacing:.09em;color:#c7acd9}
+ .xuc-mission-orb{display:grid;place-items:center;width:98px;height:98px;margin:27px auto 22px;border-radius:50%;background:radial-gradient(circle at 32% 25%,#a77ac7,#4b296d 54%,#231334 77%);box-shadow:0 0 0 12px #b98ce80c,0 0 0 28px #b98ce807,0 10px 45px #ac69e14d}
+ .xuc-mission-orb span{font-size:47px;filter:drop-shadow(0 3px 8px #1a0e38)}
+ .xuc-mission-world h4{font-size:clamp(27px,8vw,38px);line-height:1.12;letter-spacing:-.045em;margin:0 0 11px;text-align:center;overflow-wrap:anywhere}
+ .xuc-mission-world>p{font-size:13px;line-height:1.75;color:#d0c3db;text-align:center;margin:0 auto 23px;max-width:410px}
+ .xuc-mission-world-foot{border-top:1px solid #ffffff26;padding:16px 0}
+ .xuc-mission-world-foot span:last-child{font-size:19px}
+ .xuc-mission-paths-head{margin:32px 0 14px;align-items:end}
+ .xuc-mission-paths-head h4{font-size:23px;line-height:1.2;letter-spacing:-.03em;margin:7px 0 0}
+ .xuc-mission-paths-head>span{font-size:10px;color:#bda7cf;white-space:nowrap}
+ .xuc-mission-paths{display:flex;flex-direction:column;gap:0;border-top:1px solid #ffffff26}
+ .xuc-mission-paths button{display:flex;align-items:center;gap:14px;width:100%;min-height:58px;padding:12px 8px;border:0;border-bottom:1px solid #ffffff26;background:transparent;color:#e8ddf2;text-align:left;cursor:pointer}
+ .xuc-mission-paths button.selected{color:#f3d8ff;background:linear-gradient(90deg,#b27de51c,transparent)}
+ .xuc-mission-paths button>span{font-size:11px;color:#a98abb}
+ .xuc-mission-paths button strong{flex:1;min-width:0;font-size:14px;line-height:1.4;font-weight:650;overflow-wrap:anywhere}
+ .xuc-mission-paths button svg{flex-shrink:0;color:#cba6e7}
+ .xuc-mission-focus{padding:27px 0 20px}
+ .xuc-mission-focus h4{font-size:clamp(24px,7vw,32px);line-height:1.18;letter-spacing:-.035em;margin:11px 0 13px}
+ .xuc-mission-focus>p{font-size:14px;line-height:1.75;color:#c6b9d2;margin:0 0 17px}
+ .xuc-mission-flags,.xuc-mission-tools{display:flex;flex-wrap:wrap;gap:8px}
+ .xuc-mission-flags span{font-size:10px;line-height:1.5;padding:7px 10px;border-radius:7px;background:#c19cdb1a;color:#d9bdf1}
+ .xuc-mission-tools-label{font-size:10px;font-weight:800;letter-spacing:.1em;color:#c4a8d8;margin:27px 0 12px}
+ .xuc-mission-tools span{font-size:12px;line-height:1.5;padding:9px 11px;border:1px solid #ffffff2a;border-radius:8px;color:#ebdef6}
+ .xuc-mission-cta{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:54px;padding:13px 16px;margin-top:26px;border-radius:12px;background:#dcc0fa;color:#20102c;font-size:14px;font-weight:800}
+ .xuc-mission-pager{padding:18px 0;border-top:1px solid #ffffff24;margin-top:12px}
+ .xuc-mission-pager button{display:flex;align-items:center;gap:8px;min-height:46px;padding:10px 12px;border:1px solid #ffffff3d;border-radius:10px;background:#ffffff09;color:#e9d7f6;font-size:12px;font-weight:700;cursor:pointer}
+ .xuc-mission-pager>span{font-size:11px;color:#baa5cc;white-space:nowrap}
+ .xuc-mission button:focus-visible,.xuc-mission a:focus-visible{outline:3px solid #e0b9ff;outline-offset:3px}
+}
+@media(max-width:360px){.xuc-mission-bar{font-size:8px}.xuc-mission-pager button{font-size:11px;padding:9px}.xuc-mission-world{padding-inline:15px}}
+@media(min-width:901px){.xuc-atlas .xuc-mission{display:none!important}}
