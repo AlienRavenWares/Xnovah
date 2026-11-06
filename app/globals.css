@@ -2604,7 +2604,7 @@ main{background:transparent}
 
 /* Section 14: mobile-first Possibility Atlas, desktop remains unchanged */
 .xuc-mobile-explorer{display:none}
-@media(max-width:750px){
+@media(max-width:900px){
  .xuc-atlas .xuc-atlas-index,.xuc-atlas .xuc-atlas-stage,.xuc-atlas .xuc-atlas-detail,.xuc-atlas .xuc-atlas-bottom,.xuc-atlas .xuc-atlas-mobile-picker{display:none!important}
  .xuc-atlas .xuc-mobile-explorer{display:block;min-width:0;margin-top:24px;color:#f8f4ff}
  .xuc-mobile-topline,.xuc-mobile-feature-top,.xuc-mobile-list-heading,.xuc-mobile-pager{display:flex;align-items:center;justify-content:space-between;gap:12px}
