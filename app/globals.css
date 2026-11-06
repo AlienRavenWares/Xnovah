@@ -2648,3 +2648,18 @@ main{background:transparent}
  .xuc-mobile-explorer button:focus-visible,.xuc-mobile-explorer a:focus-visible{outline:3px solid #e0b8ff;outline-offset:3px}
 }
 @media(prefers-reduced-motion:reduce){.xuc-mobile-feature-progress span{transition:none}}
+
+/* Section 14 visibility guard: mobile and tablet use the touch-first explorer. */
+@media (max-width: 900px){
+ .xuc-atlas .xuc-mobile-explorer{display:block!important;visibility:visible!important;opacity:1!important;position:relative!important;height:auto!important;overflow:visible!important}
+ .xuc-atlas .xuc-atlas-index,
+ .xuc-atlas .xuc-atlas-stage,
+ .xuc-atlas .xuc-atlas-detail,
+ .xuc-atlas .xuc-atlas-bottom,
+ .xuc-atlas .xuc-atlas-mobile-picker{display:none!important}
+ .xuc-atlas .xuc-mobile-tabs{display:flex!important;max-width:100%;overflow-x:auto}
+ .xuc-atlas .xuc-mobile-accordion{display:flex!important}
+}
+@media (min-width: 901px){
+ .xuc-atlas .xuc-mobile-explorer{display:none!important}
+}
