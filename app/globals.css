@@ -2448,3 +2448,68 @@ main{background:transparent}
  .creative-universe-section .cu-examples-grid{scroll-behavior:auto}
  .creative-universe-section .cu-slider-dots button{transition:none}
 }
+
+/* Command Center mobile fit: retain the entire interactive workspace within the viewport.
+   Zoom enlarges content vertically instead of forcing a 1030px-wide horizontal canvas. */
+@media (max-width:750px){
+ .xcmd-section .shell{min-width:0}
+ .xcmd-section .xcmd-zoom-controls{width:100%;max-width:100%;flex-wrap:wrap}
+ .xcmd-section .xcmd-zoom-controls button{min-height:44px}
+ .xcmd-section .xcmd-shell,
+ .xcmd-section .xcmd-shell.xcmd-zoomed{width:100%;max-width:100%;min-width:0;overflow:hidden;box-sizing:border-box}
+ .xcmd-section .xcmd-shell>.xcmd-topbar,
+ .xcmd-section .xcmd-shell>.xcmd-body,
+ .xcmd-section .xcmd-shell>.xcmd-bottom,
+ .xcmd-section .xcmd-shell.xcmd-zoomed>.xcmd-topbar,
+ .xcmd-section .xcmd-shell.xcmd-zoomed>.xcmd-body,
+ .xcmd-section .xcmd-shell.xcmd-zoomed>.xcmd-bottom{width:100%;min-width:0;max-width:100%;box-sizing:border-box}
+ .xcmd-section .xcmd-shell .xcmd-body,
+ .xcmd-section .xcmd-shell.xcmd-zoomed .xcmd-body{display:flex;flex-direction:column;min-height:0}
+ .xcmd-section .xcmd-shell .xcmd-sidebar,
+ .xcmd-section .xcmd-shell.xcmd-zoomed .xcmd-sidebar{display:flex;flex-direction:row;flex-wrap:nowrap;gap:7px;overflow-x:auto;overflow-y:hidden;width:100%;min-width:0;padding:11px 12px;border-right:0;border-bottom:1px solid #ffffff18;scrollbar-width:none}
+ .xcmd-section .xcmd-shell .xcmd-sidebar>button,
+ .xcmd-section .xcmd-shell.xcmd-zoomed .xcmd-sidebar>button{flex:0 0 auto;width:auto;min-height:39px;padding:9px 12px;white-space:nowrap;font-size:11px}
+ .xcmd-section .xcmd-shell .xcmd-side-label,
+ .xcmd-section .xcmd-shell .xcmd-side-footer,
+ .xcmd-section .xcmd-shell.xcmd-zoomed .xcmd-side-label,
+ .xcmd-section .xcmd-shell.xcmd-zoomed .xcmd-side-footer{display:none}
+ .xcmd-section .xcmd-shell .xcmd-main,
+ .xcmd-section .xcmd-shell.xcmd-zoomed .xcmd-main{width:100%;min-width:0;padding:16px 12px}
+ .xcmd-section .xcmd-shell .xcmd-content,
+ .xcmd-section .xcmd-shell.xcmd-zoomed .xcmd-content{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;min-height:0}
+ .xcmd-section .xcmd-shell .xcmd-tool-list,
+ .xcmd-section .xcmd-shell .xcmd-workspace{width:100%;min-width:0}
+ .xcmd-section .xcmd-shell .xcmd-scroll-list{max-height:195px}
+ .xcmd-section .xcmd-shell .xcmd-stage{height:clamp(170px,55vw,240px)}
+ .xcmd-section .xcmd-shell .xcmd-stage-orbit{width:min(46vw,170px);height:min(46vw,170px)}
+ .xcmd-section .xcmd-shell .xcmd-stage-core{font-size:clamp(45px,14vw,75px)}
+ .xcmd-section .xcmd-shell .xcmd-workspace-detail{padding:14px}
+ .xcmd-section .xcmd-shell .xcmd-workspace-detail h4{font-size:clamp(17px,5vw,23px);overflow-wrap:anywhere}
+ .xcmd-section .xcmd-shell .xcmd-insights,
+ .xcmd-section .xcmd-shell.xcmd-zoomed .xcmd-insights{width:100%;min-width:0;display:flex;flex-direction:column;border-left:0;border-top:1px solid #ffffff18}
+ .xcmd-section .xcmd-shell .xcmd-insights-body,
+ .xcmd-section .xcmd-shell.xcmd-zoomed .xcmd-insights-body{display:block;padding:12px}
+ .xcmd-section .xcmd-shell .xcmd-prompt,
+ .xcmd-section .xcmd-shell.xcmd-zoomed .xcmd-prompt{margin:16px 0}
+ .xcmd-section .xcmd-shell.xcmd-zoomed .xcmd-main{padding:21px 16px}
+ .xcmd-section .xcmd-shell.xcmd-zoomed .xcmd-content{gap:16px}
+ .xcmd-section .xcmd-shell.xcmd-zoomed .xcmd-scroll-list{max-height:300px;padding:10px}
+ .xcmd-section .xcmd-shell.xcmd-zoomed .xcmd-stage{height:clamp(220px,70vw,320px)}
+ .xcmd-section .xcmd-shell.xcmd-zoomed .xcmd-stage-orbit{width:min(55vw,205px);height:min(55vw,205px)}
+ .xcmd-section .xcmd-shell.xcmd-zoomed .xcmd-stage-core{font-size:clamp(65px,19vw,95px)}
+ .xcmd-section .xcmd-shell.xcmd-zoomed .xcmd-workspace-detail{padding:20px 16px}
+ .xcmd-section .xcmd-shell.xcmd-zoomed .xcmd-workspace-detail h4{font-size:clamp(21px,6vw,27px)}
+ .xcmd-section .xcmd-shell.xcmd-zoomed .xcmd-workspace-detail p{font-size:13px}
+ .xcmd-section .xcmd-shell.xcmd-zoomed .xcmd-bottom{padding:14px;flex-wrap:wrap}
+ .xcmd-section .xcmd-shell.xcmd-zoomed .xcmd-topbar{padding:12px}
+ .xcmd-section .xcmd-shell.xcmd-zoomed .xcmd-brand{font-size:12px;gap:7px;letter-spacing:1px}
+ .xcmd-section .xcmd-shell.xcmd-zoomed .xcmd-brand small{display:none}
+ .xcmd-section .xcmd-shell.xcmd-zoomed .xcmd-topstatus{font-size:8px;letter-spacing:0}
+ .xcmd-section .xcmd-shell .xcmd-mainhead{min-width:0}
+ .xcmd-section .xcmd-shell .xcmd-mainhead h3{overflow-wrap:anywhere}
+}
+@media(max-width:380px){
+ .xcmd-section .xcmd-zoom-controls>span{font-size:8px}
+ .xcmd-section .xcmd-shell .xcmd-stage-float{font-size:7px;max-width:46%}
+ .xcmd-section .xcmd-shell .xcmd-topstatus{font-size:7px}
+}
