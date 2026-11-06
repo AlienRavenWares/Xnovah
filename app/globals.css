@@ -2553,3 +2553,15 @@ main{background:transparent}
  .xcmd-section .xcmd-shell.xcmd-zoomed .xcmd-demo select{font-size:12px;padding:10px}
  .xcmd-section .xcmd-shell.xcmd-zoomed .xcmd-demo button{font-size:11px;min-height:39px}
 }
+
+/* Tap-to-enlarge AI Command Center imagery */
+.xcmd-image-open{position:relative;display:block;width:100%;height:100%;padding:0;margin:0;border:0;background:transparent;cursor:zoom-in;overflow:hidden}
+.xcmd-image-open>img{display:block;width:100%;height:100%;object-fit:contain}
+.xcmd-image-zoom-hint{position:absolute;right:9px;bottom:9px;padding:6px 9px;border:1px solid #ffffff55;border-radius:20px;background:#111426c9;color:#fff;font-size:10px;pointer-events:none}
+.xcmd-image-lightbox{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;padding:clamp(12px,3vw,38px);background:rgba(4,5,15,.94);backdrop-filter:blur(15px);cursor:zoom-out}
+.xcmd-image-lightbox-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;width:100%;max-width:1400px;max-height:100%;cursor:default}
+.xcmd-image-lightbox-inner img{display:block;width:auto;height:auto;max-width:100%;max-height:calc(100dvh - 115px);object-fit:contain;border-radius:10px}
+.xcmd-image-lightbox-inner>span{color:#d8cafa;font-size:12px;text-align:center}
+.xcmd-image-close{position:absolute;top:max(12px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right));z-index:1;display:grid;place-items:center;width:44px;height:44px;border:1px solid #ffffff77;border-radius:50%;background:#29213f;color:white;font-size:29px;cursor:pointer}
+.xcmd-image-open:focus-visible,.xcmd-image-close:focus-visible{outline:3px solid #d2aaff;outline-offset:3px}
+@media(max-width:750px){.xcmd-section .xcmd-shell:not(.xcmd-zoomed) .xcmd-image-zoom-hint{right:3px;bottom:3px;padding:2px 4px;font-size:6px}.xcmd-image-lightbox-inner>span{font-size:11px}}
