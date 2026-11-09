@@ -2859,3 +2859,57 @@ main{background:transparent}
 @media(max-width:560px){.xnovah-editorial-hero{min-height:350px;border-radius:18px}.xe-symbol{width:125px;height:125px}.xe-symbol-core{font-size:70px}.xe-wordmark{font-size:30px}.xe-coordinate{font-size:7px}.xe-coordinate-a{left:13px;top:17px}.xe-coordinate-b{right:13px;bottom:17px}.xe-composition p{font-size:9px}}
 @media(prefers-reduced-motion:reduce){.xnovah-editorial-hero *{animation:none!important}}
 
+
+/* Command Center / Workspace Explorer — premium true-black edition.
+   Scoped to existing xcmd explorer; no other studio or homepage styles changed. */
+.xcmd-section .xcmd-shell{background:#08090b;border:1px solid #34363c;border-radius:18px;box-shadow:0 24px 70px rgba(0,0,0,.56),0 1px 0 rgba(255,255,255,.055) inset;color:#f7f7f8}
+.xcmd-section .xcmd-topbar,.xcmd-section .xcmd-bottom{background:#0e0f11;border-color:#292b30}
+.xcmd-section .xcmd-brandmark{background:#f3f3f4;color:#101113;border-radius:8px;box-shadow:none}
+.xcmd-section .xcmd-brand small,.xcmd-section .xcmd-topstatus,.xcmd-section .xcmd-bottom{color:#92949c}
+.xcmd-section .xcmd-statusdot{background:#a3e2bd;box-shadow:0 0 0 3px #a3e2bd1a}
+.xcmd-section .xcmd-sidebar{background:#0d0e10;border-color:#292b30}
+.xcmd-section .xcmd-side-label,.xcmd-section .xcmd-side-footer{color:#777a83}
+.xcmd-section .xcmd-sidebar>button{color:#a7aab2;border-radius:8px;transition:background .18s,border-color .18s,color .18s}
+.xcmd-section .xcmd-sidebar>button:hover{background:#1b1d21;color:#fff;border-color:#363941}
+.xcmd-section .xcmd-sidebar>button.active{background:#222428;color:#fff;border-color:#464951;box-shadow:inset 3px 0 0 #e9eaee}
+.xcmd-section .xcmd-sidebar>button span:last-child{color:#878a93}
+.xcmd-section .xcmd-side-icon{color:#bfc1c9}
+.xcmd-section .xcmd-main{background:#090a0c}
+.xcmd-section .xcmd-mainhead>div>span,.xcmd-section .xcmd-detail-tag{color:#a7a9b0}
+.xcmd-section .xcmd-mainhead h3{color:#f5f5f6;letter-spacing:-.045em}
+.xcmd-section .xcmd-mainbadge{color:#d4d6dc;background:#1a1b1f;border-color:#35373d}
+.xcmd-section .xcmd-search{background:#141518;border:1px solid #36383f;color:#a4a6ad;box-shadow:0 1px 0 #ffffff08 inset}
+.xcmd-section .xcmd-search:focus-within{border-color:#9699a4;box-shadow:0 0 0 3px #ffffff0c}
+.xcmd-section .xcmd-search input::placeholder{color:#858891}
+.xcmd-section .xcmd-tool-list,.xcmd-section .xcmd-workspace{background:#101113;border-color:#303238;border-radius:12px}
+.xcmd-section .xcmd-listhead,.xcmd-section .xcmd-workspace-head{background:#151619;border-color:#2d2f34;color:#a9abb3}
+.xcmd-section .xcmd-scroll-list{scrollbar-color:#4c4f58 transparent}
+.xcmd-section .xcmd-scroll-list>button{color:#e3e4e8;border-radius:8px}
+.xcmd-section .xcmd-scroll-list>button:hover{background:#1c1e22;border-color:#36383e}
+.xcmd-section .xcmd-scroll-list>button.active{background:#24262b;border-color:#4b4e57;box-shadow:inset 2px 0 0 #eceef3}
+.xcmd-section .xcmd-tool-icon{background:#25272d;color:#f1f1f3;border:1px solid #343740}
+.xcmd-section .xcmd-tool-label small,.xcmd-section .xcmd-scroll-list>button>svg{color:#8d9099}
+.xcmd-section .xcmd-stage{background:radial-gradient(ellipse at 50% 55%,#25272d 0%,#15161a 42%,#0b0c0e 85%);border-bottom:1px solid #292b31}
+.xcmd-section .xcmd-stage-grid{opacity:.18;background-image:linear-gradient(#c1c3ca24 1px,transparent 1px),linear-gradient(90deg,#c1c3ca24 1px,transparent 1px)}
+.xcmd-section .xcmd-stage-orbit{border-color:#898d97;box-shadow:0 0 42px #ffffff0a,inset 0 0 35px #ffffff08;opacity:.55}
+.xcmd-section .xcmd-stage-orbit:before,.xcmd-section .xcmd-stage-orbit:after{border-color:#b4b6c04a}
+.xcmd-section .xcmd-stage-core{color:#f3f4f6;text-shadow:0 0 28px #ffffff30}
+.xcmd-section .xcmd-stage-float{background:#17191de8;border-color:#474a53;color:#c7c9d0}
+.xcmd-section .xcmd-workspace-detail{background:#101113}
+.xcmd-section .xcmd-workspace-detail h4{color:#f7f7f8}
+.xcmd-section .xcmd-workspace-detail p{color:#aeb0b8}
+.xcmd-section .xcmd-workspace-detail a{background:#e9eaed;color:#111216;border:1px solid #fff;box-shadow:none;font-weight:700;transition:background .2s,transform .2s}
+.xcmd-section .xcmd-workspace-detail a:hover{background:#fff;transform:translateY(-1px)}
+.xcmd-section .xcmd-insights{background:#0e0f12;border-color:#2b2d33}
+.xcmd-section .xcmd-insights-heading{color:#d7d8dd}
+.xcmd-section .xcmd-concept{color:#a9abb3;border-color:#41444c}
+.xcmd-section .xcmd-ai-orb{background:radial-gradient(circle at 35% 30%,#484b54,#202228 60%,#121316);border:1px solid #595c66;box-shadow:0 12px 36px #0008;color:#f4f4f6}
+.xcmd-section .xcmd-insights-body h4{color:#f3f3f5}
+.xcmd-section .xcmd-insights-body>p{color:#a2a5af}
+.xcmd-section .xcmd-prompt{background:#17191d;border-color:#393c44}
+.xcmd-section .xcmd-prompt span,.xcmd-section .xcmd-suggestions>span,.xcmd-section .xcmd-prompt small{color:#a1a4ad}
+.xcmd-section .xcmd-suggestions>button{background:#1a1c20;border-color:#373a42;color:#e0e1e6}
+.xcmd-section .xcmd-suggestions>button:hover{background:#25272d;border-color:#7d818c}
+.xcmd-section .xcmd-insights-foot{border-color:#2c2e34;color:#9699a2}
+.xcmd-section .xcmd-zoom-controls button{border-color:#454850;background:#151619;color:#f1f1f3}
+@media(max-width:750px){.xcmd-section .xcmd-sidebar{background:#111214;border-color:#2c2e34}.xcmd-section .xcmd-sidebar>button{background:#191a1e;border-color:#33363d}.xcmd-section .xcmd-sidebar>button.active{background:#303238;border-color:#777a84;box-shadow:inset 0 -2px 0 #f3f4f6}.xcmd-section .xcmd-main{background:#0b0c0e}}
