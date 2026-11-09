@@ -2783,3 +2783,54 @@ main{background:transparent}
 }
 @media(max-width:360px){.xuc-mission-bar{font-size:8px}.xuc-mission-pager button{font-size:11px;padding:9px}.xuc-mission-world{padding-inline:15px}}
 @media(min-width:901px){.xuc-atlas .xuc-mission{display:none!important}}
+
+/* Compact mobile use-case explorer: bottom anchored world picker */
+@media(max-width:900px){
+ .xuc-atlas .xuc-compact{display:flex!important;flex-direction:column;position:relative;isolation:isolate;height:min(680px,calc(100svh - 100px));min-height:430px;max-height:760px;overflow:hidden;border:1px solid #4b3b5a;border-radius:20px;background:#111018;color:#f9f5ff}
+ .xuc-compact *{box-sizing:border-box}
+ .xuc-compact-top{display:flex;justify-content:space-between;gap:8px;align-items:center;padding:17px 16px 8px;font-size:9px;font-weight:800;letter-spacing:.06em;color:#d8bff2}
+ .xuc-compact-top span:last-child{color:#92859f;font-weight:600}
+ .xuc-compact-intro{padding:16px 16px 17px}
+ .xuc-compact-intro h3{font-size:clamp(22px,6vw,29px);letter-spacing:-.045em;line-height:1.15;margin:0 0 6px;color:#fff}
+ .xuc-compact-intro p{font-size:12px;color:#b5a9c2;margin:0}
+ .xuc-compact-content{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:0 15px 12px;scrollbar-width:thin;scrollbar-color:#675277 transparent}
+ .xuc-compact-section-label{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:0 0 10px;font-size:10px;font-weight:750;letter-spacing:.06em;color:#d5b8ed}
+ .xuc-compact-section-label span:last-child{font-size:10px;letter-spacing:0;color:#a69ab2;text-align:right}
+ .xuc-compact-capabilities{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .xuc-compact-capabilities button{display:flex;align-items:center;justify-content:space-between;gap:6px;min-width:0;min-height:55px;padding:10px;border:1px solid #403748;border-radius:11px;background:#201d29;color:#c7bdcf;text-align:left;font-size:12px;line-height:1.3;cursor:pointer;overflow-wrap:anywhere}
+ .xuc-compact-capabilities button.active{border-color:#ac83d0;background:#3a2b4a;color:#fff;font-weight:700}
+ .xuc-compact-capabilities button svg{flex-shrink:0;color:#e4c5ff}
+ .xuc-compact-detail{margin-top:13px;padding:15px;border:1px solid #4a3959;border-radius:13px;background:#201927}
+ .xuc-compact-detail-top{display:flex;align-items:center;justify-content:space-between;color:#d8b5f5;font-size:10px;letter-spacing:.08em;font-weight:750}
+ .xuc-compact-detail h4{font-size:17px;line-height:1.25;letter-spacing:-.02em;color:#fff;margin:9px 0}
+ .xuc-compact-detail p{font-size:12px;line-height:1.55;color:#c7b9d0;margin:0 0 11px}
+ .xuc-compact-tool-list,.xuc-compact-notes{display:flex;flex-wrap:wrap;gap:6px}
+ .xuc-compact-tool-list span{font-size:10px;padding:6px 8px;border:1px solid #6b5379;border-radius:6px;color:#e4d3f1}
+ .xuc-compact-notes{margin-top:10px}
+ .xuc-compact-notes span{font-size:9px;color:#a99bb8}
+ .xuc-compact-detail a{display:flex;align-items:center;justify-content:space-between;min-height:38px;margin-top:9px;color:#e0bdf8;font-size:12px;font-weight:750}
+ .xuc-compact-bottom{flex-shrink:0;padding:11px 13px 14px;background:#1a1521;border-top:1px solid #4a3c56}
+ .xuc-compact-trigger{display:flex;align-items:center;gap:11px;width:100%;min-height:58px;padding:9px 12px;border:1px solid #8665a3;border-radius:12px;background:#30233d;color:#fff;text-align:left;cursor:pointer}
+ .xuc-compact-trigger-icon{display:grid;place-items:center;flex-shrink:0;width:38px;height:38px;border-radius:9px;background:#d3b1f120;font-size:22px}
+ .xuc-compact-trigger>span:nth-child(2){display:flex;flex:1;min-width:0;flex-direction:column;gap:4px}
+ .xuc-compact-trigger small{font-size:9px;letter-spacing:.06em;color:#c4a6d9}
+ .xuc-compact-trigger strong{font-size:14px;overflow-wrap:anywhere}
+ .xuc-compact-trigger>svg{transform:rotate(180deg);color:#e1c8f5}
+ .xuc-compact-overlay{position:absolute;inset:0;z-index:20;display:flex;align-items:flex-end;background:#05030abf}
+ .xuc-compact-sheet{display:flex;flex-direction:column;width:100%;max-height:83%;min-height:240px;padding:9px 13px 12px;border:1px solid #6b517d;border-bottom:0;border-radius:21px 21px 0 0;background:#211a2a;box-shadow:0 -15px 50px #0008}
+ .xuc-compact-sheet-handle{width:39px;height:4px;border-radius:9px;background:#73617f;margin:0 auto 14px}
+ .xuc-compact-sheet-head{display:flex;align-items:center;justify-content:space-between;padding:0 3px 14px}
+ .xuc-compact-sheet-head span{font-size:10px;letter-spacing:.1em;color:#c4a3e4}
+ .xuc-compact-sheet-head h4{font-size:20px;color:#fff;margin:4px 0 0}
+ .xuc-compact-sheet-head button{width:37px;height:37px;border:1px solid #665474;border-radius:50%;background:#36293f;color:#f2e6fb;cursor:pointer}
+ .xuc-compact-sheet-list{min-height:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
+ .xuc-compact-sheet-list button{display:flex;align-items:center;gap:10px;width:100%;min-height:49px;padding:9px 7px;border:0;border-bottom:1px solid #ffffff18;background:transparent;color:#dcd0e7;text-align:left;cursor:pointer}
+ .xuc-compact-sheet-list button.active{background:#b985e31a;color:#fff}
+ .xuc-compact-sheet-index{font-size:10px;color:#a28daf}
+ .xuc-compact-sheet-icon{font-size:19px}
+ .xuc-compact-sheet-list button strong{flex:1;font-size:13px;font-weight:650}
+ .xuc-compact-sheet-list button svg{color:#d6b3f2;flex-shrink:0}
+ .xuc-compact button:focus-visible,.xuc-compact a:focus-visible{outline:3px solid #e2baff;outline-offset:2px}
+}
+@media(max-width:370px){.xuc-compact-top{font-size:8px}.xuc-compact-capabilities button{font-size:11px;padding:8px}}
+@media(min-width:901px){.xuc-atlas .xuc-compact{display:none!important}}
