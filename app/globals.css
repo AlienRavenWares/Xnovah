@@ -2859,14 +2859,3 @@ main{background:transparent}
 @media(max-width:560px){.xnovah-editorial-hero{min-height:350px;border-radius:18px}.xe-symbol{width:125px;height:125px}.xe-symbol-core{font-size:70px}.xe-wordmark{font-size:30px}.xe-coordinate{font-size:7px}.xe-coordinate-a{left:13px;top:17px}.xe-coordinate-b{right:13px;bottom:17px}.xe-composition p{font-size:9px}}
 @media(prefers-reduced-motion:reduce){.xnovah-editorial-hero *{animation:none!important}}
 
-/* Section 02 — editorial capability navigation, no studio/dashboard framing */
-.creative-universe-section .cu-capability-band{margin:42px 0 18px;border-top:1px solid #ffffff30;border-bottom:1px solid #ffffff30}
-.creative-universe-section .cu-capability-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0;color:#a9a0b9;font-size:10px;font-weight:650;letter-spacing:.14em}
-.creative-universe-section .cu-capability-list{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0}
-.creative-universe-section .cu-capability-item{appearance:none;display:flex;align-items:center;flex-direction:column;justify-content:center;gap:15px;position:relative;min-width:0;min-height:170px;padding:23px 8px;background:transparent;border:0;border-right:1px solid #ffffff20;color:#f1ebfa;cursor:pointer;transition:background .2s ease,color .2s ease}
-.creative-universe-section .cu-capability-item:last-child{border-right:0}.creative-universe-section .cu-capability-item:hover,.creative-universe-section .cu-capability-item.is-active{background:#a78bfa14}
-.creative-universe-section .cu-capability-index{position:absolute;top:13px;left:14px;color:#9990ab;font-size:10px;letter-spacing:.12em}
-.creative-universe-section .cu-capability-icon{font-size:36px;line-height:1;color:#cbb5f1}.creative-universe-section .cu-capability-item strong{font-size:clamp(13px,1.4vw,19px);font-weight:650;letter-spacing:-.025em}.creative-universe-section .cu-capability-item>svg{position:absolute;top:13px;right:13px;color:#a69bb8;opacity:.6}
-.creative-universe-section .cu-capability-item:focus-visible{outline:2px solid #c8a8ff;outline-offset:-3px}
-.creative-universe-section .cu-focus{margin-top:14px}
-@media(max-width:650px){.creative-universe-section .cu-capability-band{margin:27px 0 15px}.creative-universe-section .cu-capability-heading{font-size:8px;letter-spacing:.07em}.creative-universe-section .cu-capability-heading span:last-child{display:none}.creative-universe-section .cu-capability-list{grid-template-columns:repeat(5,minmax(0,1fr))}.creative-universe-section .cu-capability-item{min-height:105px;gap:10px;padding:25px 2px 13px}.creative-universe-section .cu-capability-index{top:7px;left:6px;font-size:8px}.creative-universe-section .cu-capability-icon{font-size:25px}.creative-universe-section .cu-capability-item strong{font-size:clamp(9px,2.4vw,12px)}.creative-universe-section .cu-capability-item>svg{top:7px;right:5px;width:11px;height:11px}}
