@@ -15,6 +15,7 @@ export default function DashboardPreview(){
  const matches=toolCatalog.filter(t=>(category==='All'||t.category===category)&&t.name.toLowerCase().includes(search.toLowerCase())&&(showAll||search.trim()||category!=='All'||featuredNames.includes(t.name)));
  const openTools=()=>{setShowAll(true);setCategory('All');setTab('AI Tools');setSelected('');setMenu(false)};
  const choose=(name:string)=>{if(name==='AI Tools'){openTools();return;}setTab(name);setSelected(name);setMenu(false)};
+ const chooseSidebarTool=(name:string)=>{setShowAll(true);setCategory('All');setSearch('');setTab(name);setSelected(name);setMenu(false)};
  return <section className="section xdash-section" id="feature-universe" aria-label="Xnovah dashboard preview">
   <div className="shell"><div className="xdash-heading"><div className="eyebrow">DESIGN 02 / THE AI COMMAND CENTER</div><h2>Your AI command center.<br/><span className="gradient-text">One place to get things done.</span></h2><p>Explore a preview of the Xnovah workspace, designed to bring creative tools, projects, and intelligent workflows together.</p></div>
   <div className="xdash-frame">
@@ -23,6 +24,7 @@ export default function DashboardPreview(){
     <aside className={'xdash-sidebar '+(menu?'xdash-sidebar-open':'')}>
      <div className="xdash-brand"><span className="xdash-brand-mark">✳</span><span><strong>Xnovah</strong><small>AI Workspace</small></span><button className="xdash-close" onClick={()=>setMenu(false)} aria-label="Close navigation"><X size={18}/></button></div>
      <div className="xdash-nav">{nav.map(([name,Icon])=><button key={name} className={tab===name?'active':''} onClick={()=>choose(name)}><Icon size={17}/><span>{name}</span>{tab===name&&<span className="xdash-active-dot"/>}</button>)}</div>
+     <div className="xdash-side-label xdash-tool-list-heading">AI TOOL LIBRARY <span>39</span></div><nav className="xdash-sidebar-tools" aria-label="39 Xnovah AI tools">{toolCatalog.map(t=>{const Icon=iconFor(t.category);return <button key={t.name} title={t.name} className={selected===t.name?'active':''} onClick={()=>chooseSidebarTool(t.name)}><Icon size={15}/><span>{t.name}</span>{selected===t.name&&<span className="xdash-active-dot"/>}</button>})}</nav>
      <div className="xdash-side-label">MY SPACES</div><div className="xdash-spaces"><button onClick={()=>choose('Marketing')}><span className="xdash-folder violet"/>Marketing</button><button onClick={()=>choose('Content Studio')}><span className="xdash-folder blue"/>Content Studio</button><button onClick={()=>choose('Client Projects')}><span className="xdash-folder green"/>Client Projects</button></div>
      <div className="xdash-upgrade"><span>✦ WORKSPACE PREVIEW</span><strong>Imagine more with Xnovah.</strong><p>Explore the product vision before launch.</p><a href="#waitlist">Join early access <ArrowUpRight size={14}/></a></div>
     </aside>
