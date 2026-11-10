@@ -10,8 +10,8 @@ export default function DashboardPreview(){
  const [tab,setTab]=useState('Dashboard'),[search,setSearch]=useState(''),[selected,setSelected]=useState(''),[menu,setMenu]=useState(false);
  const matches=tools.filter(t=>t.name.toLowerCase().includes(search.toLowerCase()));
  const choose=(name:string)=>{setTab(name);setSelected(name);setMenu(false)};
- return <section className="section xdash-section" id="studio" aria-label="Xnovah dashboard preview">
-  <div className="shell"><div className="xdash-heading"><div className="eyebrow">SECTION 04 / THE AI COMMAND CENTER</div><h2>Your AI command center.<br/><span className="gradient-text">One place to get things done.</span></h2><p>Explore a preview of the Xnovah workspace, designed to bring creative tools, projects, and intelligent workflows together.</p></div>
+ return <section className="section xdash-section" id="feature-universe" aria-label="Xnovah dashboard preview">
+  <div className="shell"><div className="xdash-heading"><div className="eyebrow">DESIGN 02 / THE AI COMMAND CENTER</div><h2>Your AI command center.<br/><span className="gradient-text">One place to get things done.</span></h2><p>Explore a preview of the Xnovah workspace, designed to bring creative tools, projects, and intelligent workflows together.</p></div>
   <div className="xdash-frame">
    <div className="xdash-demo-label"><span className="xdash-live-dot"/> INTERACTIVE PRODUCT CONCEPT <span>Sample data · Not a live account</span></div>
    <div className="xdash-app">
