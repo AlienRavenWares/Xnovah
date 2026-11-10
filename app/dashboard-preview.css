@@ -25,3 +25,10 @@
 .xdash-sidebar-tools button.active svg{color:#fff}
 .xdash-tool-list-heading{margin-top:0}
 @media(max-width:700px){.xdash-sidebar-tools button{min-height:43px;padding:12px 13px;font-size:12px}}
+
+/* Tool-specific detail view under Your Creative Toolkit */
+.xdash-tool-detail{position:relative;display:flex;gap:18px;align-items:flex-start;padding:23px 25px;margin:16px 0 23px;border:1px solid #6e419e;border-radius:15px;background:radial-gradient(circle at 0 0,#54248755,transparent 55%),linear-gradient(110deg,#1d1836,#131528);box-shadow:0 10px 30px #08071630}
+.xdash-detail-icon{display:grid;place-items:center;flex-shrink:0;width:54px;height:54px;border:1px solid #8756bf;border-radius:14px;color:#dfb8ff;background:#4a247d88}
+.xdash-detail-copy{min-width:0;flex:1}.xdash-detail-copy .xdash-overline{color:#bb90f6}.xdash-detail-copy h4{margin:8px 0 10px;font-size:21px;color:#fff}.xdash-detail-copy p{font-size:13px;line-height:1.8;color:#c9c5dd;margin:0 0 13px;max-width:780px}.xdash-detail-note{font-size:10px;letter-spacing:.04em;color:#a99dc6}
+.xdash-detail-close{border:0;background:#ffffff0b;color:#cfc4e8;border-radius:8px;padding:8px;cursor:pointer}.xdash-detail-close:hover{background:#ffffff20;color:white}
+@media(max-width:700px){.xdash-tool-detail{padding:16px;gap:11px}.xdash-detail-icon{width:40px;height:40px}.xdash-detail-copy h4{font-size:17px}.xdash-detail-copy p{font-size:12px;line-height:1.65}.xdash-detail-close{padding:5px}}
