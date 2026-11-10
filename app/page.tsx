@@ -152,29 +152,22 @@ const previewSpecs:Record<string,{kind:string;heading:string;subtitle:string;ite
 "UGC Creator":{kind:"film",heading:"Made for real moments",subtitle:"Creator-style concept · Scene 01",items:["Authentic","Product story","Vertical video"]},
 "UGC Factory":{kind:"editor",heading:"Creative variations",subtitle:"UGC production · 04 concepts",items:["Version A","Version B","Version C","Version D"]}
 };
+const explorerPhotoIds:Record<string,string>={
+"AI Agent Builder":"photo-1551836022-d5d88e9218df","AI Avatar":"photo-1534528741775-53994a69daeb","AI Blogger Agent":"photo-1455390582262-044cdead277a","AI Booking Agent":"photo-1506784983877-45594efa4cbe","AI Canvas":"photo-1497366754035-f200968a6e72","AI Captions":"photo-1499750310107-5fef28a66643","AI Chat Pro":"photo-1521737711867-e3b97375f902","AI Chatbot":"photo-1556761175-b413da4baf72","AI Code":"photo-1461749280684-dccba630e2f6","AI Council":"photo-1522071820081-009f0129c71c","AI CRM":"photo-1556761175-5973dc0f32e7","AI Creative Suite":"photo-1545235617-9465d2a55698","AI Dubbing":"photo-1590602847861-f357a9332bbc","AI Fashion Studio":"photo-1539109136881-3be0616acf4b","AI Image":"photo-1500534623283-312aade485b7","AI Image Editor":"photo-1452587925148-ce544e77e70d","AI Image Pro":"photo-1519608487953-e999c86e7455","AI Influencer":"photo-1524504388940-b1c1722653e1","AI Music Pro":"photo-1516280440614-37939bbacd81","AI Persona":"photo-1534528741775-53994a69daeb","AI Photoshoot":"photo-1529139574466-a303027c1d8b","AI Presentation Maker":"photo-1552664730-d307ca884978","AI Product Photography":"photo-1542291026-7eec264c27ff","AI Skills":"photo-1516321318423-f06f85e504b3","AI Social Media Suite":"photo-1611162616475-46b635cb6868","AI Video":"photo-1485846234645-a62644f84728","AI Video Editor":"photo-1574717024653-61fd2cf4d44d","AI Video Pro":"photo-1440404653325-ab127d49abc1","AI Viral Clips":"photo-1492619375914-88005aa9e8fb","AI Voice":"photo-1590602847861-f357a9332bbc","AI Writer":"photo-1455390582262-044cdead277a","Deep Research":"photo-1532094349884-543bc11b234d","Marketing Bot":"photo-1460925895917-afdab827c52f","Phone Call Agents":"photo-1551836022-d5d88e9218df","Realtime Voice Chat":"photo-1590602847861-f357a9332bbc","Social Media Agent":"photo-1611162616305-c69b3fa7fbe0","Trainable AI Voice Chatbot":"photo-1551836022-d5d88e9218df","UGC Creator":"photo-1524504388940-b1c1722653e1","UGC Factory":"photo-1492619375914-88005aa9e8fb"
+};
 function OutputPreview({toolName,category}:{toolName:string,category:string}){
- const spec=previewSpecs[toolName]||{kind:"board",heading:toolName,subtitle:"Workspace concept",items:["Discover","Create","Review"]};
- const kind=spec.kind;
- const media=kind==="film"||kind==="editor";
- return <div className={"xcmd-product-preview xcmd-product-"+kind} aria-label={toolName+" illustrative product preview"}>
- <div className="xcmd-product-top"><span><i/> XNOVAH / {category.toUpperCase()}</span><span>ILLUSTRATIVE CONCEPT</span></div>
- <div className="xcmd-product-inner">
- <div className="xcmd-product-intro"><small>{spec.subtitle}</small><h4>{spec.heading}</h4></div>
- {kind==="film"&&<div className="xcmd-product-film"><div className="xcmd-product-film-shade"/><div className="xcmd-product-film-caption"><span>01 / CREATIVE FRAME</span><strong>{spec.heading}</strong></div><span className="xcmd-product-film-ratio">16:9</span></div>}
- {kind==="editor"&&<><div className="xcmd-product-monitor"><span>PREVIEW MONITOR</span><strong>{spec.heading}</strong><span>00:12:08 / 00:45:00</span></div><div className="xcmd-product-timeline"><div className="xcmd-product-ruler">00:00 <span>00:15</span><span>00:30</span><span>00:45</span></div><div className="xcmd-product-clips">{spec.items.map((x,i)=><span key={x} className={i===1?"selected":""}>{x}</span>)}</div><div className="xcmd-product-audiotrack">{Array.from({length:44},(_,i)=><i key={i} style={{height:(4+(i*13)%16)+"px"}}/>)}</div></div></>}
- {kind==="audio"&&<div className="xcmd-product-audio"><div className="xcmd-product-audiohead"><span>VOICE TRACK 01</span><span>00:32</span></div><div className="xcmd-product-wave">{Array.from({length:55},(_,i)=><i key={i} style={{height:(8+(i*19)%49)+"px"}}/>)}</div><div className="xcmd-product-audiofoot"><span>▶ &nbsp; 00:00</span><span>STEREO · SAMPLE</span></div></div>}
- {kind==="call"&&<div className="xcmd-product-call"><div className="xcmd-product-callring"><AudioLines size={28}/></div><strong>Voice session</strong><span>00:24 · Sample interaction</span><div className="xcmd-product-callsteps">{spec.items.map((x,i)=><div key={x}><b>{String(i+1).padStart(2,"0")}</b>{x}<span>✓</span></div>)}</div></div>}
- {kind==="document"&&<div className="xcmd-product-paper"><div className="xcmd-product-paperhead"><span>DOCUMENT / DRAFT</span><span>01</span></div><h5>{spec.heading}</h5><div className="xcmd-product-paperline"/>{spec.items.map((x,i)=><p key={i}>{x}</p>)}<div className="xcmd-product-fakelines"><i/><i/><i/></div></div>}
- {kind==="code"&&<div className="xcmd-product-codebox"><div><span>●</span> {spec.heading}<small>TS</small></div><pre>{spec.items.join("\n")}</pre></div>}
- {kind==="conversation"&&<div className="xcmd-product-conversation"><div className="xcmd-product-user">{spec.items[0]}</div><div className="xcmd-product-response"><b>AI ASSISTANT</b><p>{spec.items[1]}</p><p>{spec.items[2]}</p></div></div>}
- {kind==="schedule"&&<div className="xcmd-product-calendar"><div className="xcmd-product-calendarhead">NOVEMBER 2026 <span>WEEK VIEW</span></div><div className="xcmd-product-days">{spec.items.map((x,i)=><div key={x}><small>{x}</small><span>{["Planning","Draft ready","Review","Scheduled"][i]}</span></div>)}</div><div className="xcmd-product-calendarfoot">4 ITEMS · DEMONSTRATION</div></div>}
- {kind==="pipeline"&&<div className="xcmd-product-pipeline">{spec.items.map((x,i)=><div key={x}><small>{x}</small><strong>{[12,8,5,3][i]}</strong><span>{["Discovery","In progress","In review","Complete"][i]}</span></div>)}</div>}
- {kind==="flow"&&<div className="xcmd-product-flow">{spec.items.map((x,i)=><div key={x}><span>{String(i+1).padStart(2,"0")}</span><strong>{x}</strong><small>{i===0?"TRIGGER":i===spec.items.length-1?"OUTPUT":"STEP"}</small></div>)}</div>}
- {kind==="board"&&<div className="xcmd-product-board">{spec.items.map((x,i)=><div key={x}><small>0{i+1} / DIRECTION</small><strong>{x}</strong><span>{["Explore the brief","Develop a direction","Refine the concept","Ready for review"][i]}</span></div>)}</div>}
- {kind==="comparison"&&<div className="xcmd-product-comparison">{spec.items.map((x,i)=><div key={x}><span>0{i+1}</span><strong>{x}</strong><small>VIEWPOINT</small></div>)}</div>}
- {kind==="profile"&&<div className="xcmd-product-profile"><div className="xcmd-product-profilemark">XC</div><strong>{spec.heading}</strong>{spec.items.map(x=><div key={x}>{x}</div>)}</div>}
- {kind==="slides"&&<div className="xcmd-product-slides"><small>STRATEGY / 2027</small><strong>{spec.heading}</strong><div>{spec.items.map((x,i)=><span key={x}>0{i+1} &nbsp; {x}</span>)}</div></div>}
- </div><div className="xcmd-product-bottom"><span>{toolName.toUpperCase()}</span><span>PREVIEW ONLY · NOT A LIVE TOOL</span></div>
+ const spec=previewSpecs[toolName]||{kind:"board",heading:toolName,subtitle:"Creative work · Sample",items:["Discover","Create","Review"]};
+ const photo=explorerPhotoIds[toolName]||"photo-1497366811353-6870744d04b2";
+ const url="https://images.unsplash.com/"+photo+"?auto=format&fit=crop&w=1100&q=85";
+ return <div className="xcmd-photo-preview" aria-label={toolName+" photographic reference preview"}>
+ <div className="xcmd-photo-frame">
+ <img key={toolName} src={url} alt={toolName+" — editorial photographic reference"} loading="lazy" decoding="async"/>
+ <div className="xcmd-photo-gradient"/>
+ <div className="xcmd-photo-top"><span>XNOVAH <b>/</b> {category.toUpperCase()}</span><span>CREATIVE REFERENCE 01 / 01</span></div>
+ <div className="xcmd-photo-caption"><span>{spec.subtitle}</span><h4>{toolName}</h4><p>{spec.heading}</p></div>
+ <div className="xcmd-photo-corner">↗</div>
+ </div>
+ <div className="xcmd-photo-footer"><span>PHOTOGRAPHIC ART DIRECTION</span><span>REFERENCE IMAGE · NOT AI OUTPUT</span></div>
  </div>;
 }
 function FeatureUniverse(){
