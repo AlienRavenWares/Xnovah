@@ -15,3 +15,13 @@
 .xdash-sidebar-tools .xdash-active-dot{margin-left:auto;flex-shrink:0}
 .xdash-spaces{flex-shrink:0}.xdash-upgrade{flex-shrink:0;margin-top:16px}
 @media(max-width:700px){.xdash-sidebar{max-height:none;height:100%;overflow:hidden}.xdash-sidebar-tools{min-height:100px}.xdash-sidebar-tools button{min-height:38px}}
+
+/* Match the original dashboard's left navigation visual style for all 39 tools */
+.xdash-sidebar-tools{gap:5px;padding:2px 0 10px}
+.xdash-sidebar-tools button{gap:12px;min-height:43px;padding:12px 13px;border-radius:9px;color:#a6a8c0;font-size:12px;font-weight:500}
+.xdash-sidebar-tools button svg{color:currentColor;width:17px;height:17px}
+.xdash-sidebar-tools button:hover{background:#24203a;color:#fff}
+.xdash-sidebar-tools button.active{background:linear-gradient(100deg,#7025bb,#3b206b);color:#fff;box-shadow:inset 0 0 0 1px #a65bfa77}
+.xdash-sidebar-tools button.active svg{color:#fff}
+.xdash-tool-list-heading{margin-top:0}
+@media(max-width:700px){.xdash-sidebar-tools button{min-height:43px;padding:12px 13px;font-size:12px}}
