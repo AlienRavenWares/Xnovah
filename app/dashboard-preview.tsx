@@ -22,7 +22,7 @@ export default function DashboardPreview(){
    <div className="xdash-app">
     <aside className={'xdash-sidebar '+(menu?'xdash-sidebar-open':'')}>
      <div className="xdash-brand"><span className="xdash-brand-mark">✳</span><span><strong>Xnovah</strong><small>AI Workspace</small></span><button className="xdash-close" onClick={()=>setMenu(false)} aria-label="Close navigation"><X size={18}/></button></div>
-     <div className="xdash-side-label xdash-tool-list-heading">ALL AI TOOLS <span>39</span></div><nav className="xdash-sidebar-tools" aria-label="39 Xnovah AI tools">{toolCatalog.map(t=>{const Icon=iconFor(t.category);return <button key={t.name} title={t.name} className={selected===t.name?'active':''} onClick={()=>chooseSidebarTool(t.name)}><Icon size={15}/><span>{t.name}</span>{selected===t.name&&<span className="xdash-active-dot"/>}</button>})}</nav>
+     <div className="xdash-side-label xdash-tool-list-heading">ALL AI TOOLS <span>39</span></div><nav className="xdash-sidebar-tools" aria-label="39 Xnovah AI tools"><button className={selected===''?'active':''} onClick={openTools}><Layers size={15}/><span>All</span>{selected===''&&<span className="xdash-active-dot"/>}</button>{toolCatalog.map(t=>{const Icon=iconFor(t.category);return <button key={t.name} title={t.name} className={selected===t.name?'active':''} onClick={()=>chooseSidebarTool(t.name)}><Icon size={15}/><span>{t.name}</span>{selected===t.name&&<span className="xdash-active-dot"/>}</button>})}</nav>
      <div className="xdash-upgrade"><span>✦ WORKSPACE PREVIEW</span><strong>Imagine more with Xnovah.</strong><p>Explore the product vision before launch.</p><a href="#waitlist">Join early access <ArrowUpRight size={14}/></a></div>
     </aside>
     <div className="xdash-body">
