@@ -532,7 +532,7 @@ function CommandCenter(){
  'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1400&q=85',
  'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1400&q=85'
  ];
- const studioPhotos:{[key:string]:string[]}={writer:[cinematicImages[2],cinematicImages[0]],image:cinematicImages,video:[cinematicImages[1],cinematicImages[3],cinematicImages[0]],chat:[cinematicImages[0],cinematicImages[2]],code:[cinematicImages[3],cinematicImages[1]],agents:[cinematicImages[1],cinematicImages[2]],voice:[cinematicImages[2],cinematicImages[0]],research:[cinematicImages[3],cinematicImages[0]]};
+ const studioPhotos:{[key:string]:string[]}={writer:['https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1400&q=85','https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1400&q=85','https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1400&q=85'],image:cinematicImages,video:[cinematicImages[1],cinematicImages[3],cinematicImages[0]],chat:[cinematicImages[0],cinematicImages[2]],code:[cinematicImages[3],cinematicImages[1]],agents:[cinematicImages[1],cinematicImages[2]],voice:[cinematicImages[2],cinematicImages[0]],research:[cinematicImages[3],cinematicImages[0]]};
  const photos=studioPhotos[commandModes[mode].type]||cinematicImages;
  const m=commandModes[mode];
  const choose=(i:number)=>{const n=commandModes[i];setMode(i);setPrompt(n.prompt);setOption1(n.options1[0]);setOption2(n.options2[0]);setVariation(0);setFeedback('');setRealOutput(null);setPhotoIndex(0)};
