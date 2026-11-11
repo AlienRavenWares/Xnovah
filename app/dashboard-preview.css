@@ -118,18 +118,7 @@
 }
 @media(prefers-reduced-motion:reduce){.xdash-mobile-tool-chevron,.xdash-mobile-tool-options{transition:none}}
 
-/* Floating bottom tool selector on mobile, constrained to the interactive preview */
-@media(max-width:700px){
- .xdash-app{position:relative;isolation:isolate}
- .xdash-mobile-tool-picker{position:sticky;bottom:10px;z-index:30;float:none;margin:0 10px 10px;padding:0;background:transparent;border:0;filter:drop-shadow(0 10px 22px #000a)}
- .xdash-mobile-tool-trigger{border-radius:14px;background:linear-gradient(110deg,#5a288b,#24153d);box-shadow:0 0 0 1px #ae75f466,0 10px 25px #0009}
- .xdash-mobile-tool-options.open{position:absolute;bottom:calc(100% + 8px);left:0;right:0;margin:0;max-height:min(50vh,330px);box-shadow:0 -14px 32px #000a}
- .xdash-body{display:contents}
- .xdash-topbar,.xdash-content{min-width:0}
- .xdash-mobile-tool-picker{grid-row:auto}
-}
-
-/* Fix: actual viewport-bottom floating control while preview is visible */
+/* Mobile floating tool selector: anchored to the viewport while preview is visible */
 @media(max-width:700px){
  .xdash-body{display:block}
  .xdash-mobile-tool-picker{display:none;position:fixed;left:12px;right:12px;bottom:max(12px,env(safe-area-inset-bottom));z-index:1000;margin:0;padding:0;width:auto;filter:drop-shadow(0 12px 24px #000b)}
