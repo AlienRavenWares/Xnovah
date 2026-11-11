@@ -139,3 +139,19 @@
 .xdash-studio-content .xnovah-embedded-studio{padding:28px 0 0;background:transparent}
 .xdash-studio-content .xnovah-embedded-studio>.shell{max-width:none;width:100%;padding:0}
 @media(max-width:700px){.xdash-studio-bridge{margin-top:24px}.xdash-studio-toggle{width:100%}.xdash-studio-content .xnovah-embedded-studio{padding-top:16px}}
+
+/* Full-screen immersive creative studio modal */
+.xdash-studio-overlay{position:fixed;inset:0;z-index:2147483000;background:rgba(3,3,12,.92);backdrop-filter:blur(20px);display:flex;align-items:stretch;justify-content:center;padding:clamp(8px,1.6vw,22px);animation:xdash-modal-enter .22s ease-out}
+.xdash-studio-modal{width:100%;max-width:1720px;height:100%;min-height:0;display:flex;flex-direction:column;overflow:hidden;border:1px solid rgba(184,140,255,.34);border-radius:20px;background:radial-gradient(ellipse at 85% 0%,rgba(105,48,167,.22),transparent 46%),#080914;box-shadow:0 28px 100px #000d;color:#f7f4ff}
+.xdash-studio-modal-header{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-shrink:0;padding:18px clamp(18px,3vw,38px);border-bottom:1px solid #302642;background:#0c0b19}
+.xdash-studio-modal-header h2{font-size:clamp(19px,2.5vw,30px);letter-spacing:-.04em;margin:5px 0 0;line-height:1.2}
+.xdash-studio-modal-header h2 span{font-size:clamp(11px,1.3vw,15px);font-weight:400;color:#aaa1bf;letter-spacing:0}
+.xdash-studio-close{display:inline-flex;align-items:center;gap:9px;justify-content:center;flex-shrink:0;min-height:44px;padding:10px 16px;border:1px solid #665280;border-radius:11px;background:#251b38;color:#fff;font-weight:700;cursor:pointer}
+.xdash-studio-close:hover{background:#40265e}.xdash-studio-close:focus-visible{outline:3px solid #c99aff;outline-offset:3px}
+.xdash-studio-modal-body{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:0 clamp(12px,2.5vw,34px) 32px;scrollbar-color:#6b4594 #100d1b}
+.xdash-studio-modal-body .xnovah-embedded-studio{padding:28px 0 0;background:transparent}
+.xdash-studio-modal-body .xnovah-embedded-studio>.shell{width:100%;max-width:none;padding:0}
+.xdash-studio-modal-body .command-heading{margin-bottom:24px}
+@keyframes xdash-modal-enter{from{opacity:0}to{opacity:1}}
+@media(max-width:700px){.xdash-studio-overlay{padding:0}.xdash-studio-modal{border:0;border-radius:0}.xdash-studio-modal-header{padding:14px 16px}.xdash-studio-modal-header h2 span{display:block;margin-top:4px}.xdash-studio-close{padding:10px 12px}.xdash-studio-close span{display:none}.xdash-studio-modal-body{padding:0 12px 28px}.xdash-studio-modal-body .xnovah-embedded-studio{padding-top:20px}}
+@media(prefers-reduced-motion:reduce){.xdash-studio-overlay{animation:none}}
