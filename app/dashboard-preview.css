@@ -155,3 +155,76 @@
 @keyframes xdash-modal-enter{from{opacity:0}to{opacity:1}}
 @media(max-width:700px){.xdash-studio-overlay{padding:0}.xdash-studio-modal{border:0;border-radius:0}.xdash-studio-modal-header{padding:14px 16px}.xdash-studio-modal-header h2 span{display:block;margin-top:4px}.xdash-studio-close{padding:10px 12px}.xdash-studio-close span{display:none}.xdash-studio-modal-body{padding:0 12px 28px}.xdash-studio-modal-body .xnovah-embedded-studio{padding-top:20px}}
 @media(prefers-reduced-motion:reduce){.xdash-studio-overlay{animation:none}}
+
+/* Xnovah Studio 2.0 — immersive three-panel workspace */
+.xdash-studio-modal-body{padding:0;overflow:hidden}
+.xdash-studio-modal-body .xnovah-embedded-studio{padding:0;height:100%;min-height:0}
+.xstudio2,.xstudio2 *{box-sizing:border-box}
+.xstudio2{color:#f3efff;background:#0b0a14;font-family:inherit}
+.xstudio2-workspace{display:grid;grid-template-columns:minmax(190px,225px) minmax(0,1fr) minmax(245px,290px);height:100%;min-height:0}
+.xstudio2-rail{display:flex;flex-direction:column;min-width:0;padding:25px 12px 18px;background:#0f0e1b;border-right:1px solid #30243e;overflow-y:auto}
+.xstudio2-rail-brand{display:flex;align-items:center;gap:11px;padding:4px 12px 33px}
+.xstudio2-rail-brand>span{display:grid;place-items:center;width:37px;height:37px;border-radius:11px;background:linear-gradient(135deg,#9b5be6,#492274);font-size:23px}
+.xstudio2-rail-brand strong{display:block;font-size:13px;letter-spacing:.16em}
+.xstudio2-rail-brand small{display:block;font-size:10px;letter-spacing:.16em;color:#a795c2;margin-top:3px}
+.xstudio2-rail-caption,.xstudio2-kicker,.xstudio2-inspector-head>span,.xstudio2-history-heading>span{font-size:10px;font-weight:800;letter-spacing:.15em;color:#ac8dd7}
+.xstudio2-rail-caption{padding:0 12px 12px}
+.xstudio2-rail-nav{display:flex;flex-direction:column;gap:5px}
+.xstudio2-nav{display:flex;align-items:center;gap:11px;text-align:left;border:1px solid transparent;background:transparent;color:#b9b1ca;border-radius:11px;padding:12px 11px;cursor:pointer;font-size:13px;font-weight:600;min-height:45px;width:100%}
+.xstudio2-nav:hover{background:#21182e;color:#fff}
+.xstudio2-nav.is-active{color:#fff;border-color:#6b458b;background:linear-gradient(105deg,#43255d,#23172f)}
+.xstudio2-nav-symbol{font-size:19px;width:22px;text-align:center;color:#c59af4}
+.xstudio2-nav-dot{margin-left:auto;width:6px;height:6px;background:#d9a9ff;border-radius:50%}
+.xstudio2-rail-foot{margin-top:auto;padding:25px 12px 0;font-size:10px;letter-spacing:.08em;color:#bcb0cd}
+.xstudio2-rail-foot small{display:block;color:#877e9d;margin-top:6px;letter-spacing:0}
+.xstudio2-online-dot,.xstudio2-live-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#a986ff;margin-right:7px;box-shadow:0 0 12px #9d67e8}
+.xstudio2-center{min-width:0;overflow-y:auto;overscroll-behavior:contain;padding:28px clamp(18px,2.5vw,38px) 38px;background:radial-gradient(ellipse at 50% 8%,#261537 0,transparent 48%),#0b0a14}
+.xstudio2-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:23px}
+.xstudio2-heading h2{font-size:clamp(24px,2.6vw,38px);line-height:1.12;letter-spacing:-.045em;margin:8px 0}
+.xstudio2-heading p{font-size:13px;color:#aaa2bb;line-height:1.6;max-width:480px;margin:0}
+.xstudio2-preview-tag{white-space:nowrap;color:#c9a5f5;background:#2b1c3e;border:1px solid #5d397a;border-radius:30px;padding:9px 12px;font-size:10px;letter-spacing:.08em;font-weight:700}
+.xstudio2-canvas{background:#13111f;border:1px solid #3c2d50;border-radius:17px;overflow:hidden;box-shadow:0 20px 70px #0006}
+.xstudio2-canvas-top,.xstudio2-canvas-bottom{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 18px;color:#b8accb;font-size:10px;letter-spacing:.08em;font-weight:700}
+.xstudio2-canvas-top{border-bottom:1px solid #30253e}
+.xstudio2-canvas-bottom{border-top:1px solid #30253e;letter-spacing:0;font-weight:500}
+.xstudio2-canvas-bottom>div{display:flex;gap:7px}
+.xstudio2-canvas-bottom button{border:1px solid #56416e;border-radius:8px;padding:9px 11px;background:#21172e;color:#e9d9ff;cursor:pointer;font-size:11px}
+.xstudio2-artboard{display:flex;align-items:center;justify-content:center;min-height:clamp(280px,39vh,510px);padding:clamp(18px,3vw,42px);background:radial-gradient(ellipse at 50% 50%,#251b39,#100e1b 72%)}
+.xstudio2-artboard .command-v1-result{width:100%;max-width:700px;min-width:0}
+.xstudio2-artboard .command-v1-art{min-height:250px}
+.xstudio2-artboard .command-v1-paper{max-width:610px;margin:auto}
+.xstudio2-artboard .command-v1-code{max-width:100%;overflow-x:auto}
+.xstudio2-history{margin-top:28px}
+.xstudio2-history-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:13px}
+.xstudio2-history-heading small{color:#888096}
+.xstudio2-history-items{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:10px}
+.xstudio2-history-item,.xstudio2-history-empty{min-width:0;border:1px solid #30263e;border-radius:11px;padding:13px;background:#16121f;color:#9f96b1;font-size:12px}
+.xstudio2-history-item{display:flex;align-items:flex-start;gap:9px}
+.xstudio2-history-item>span:first-child{color:#b994e7}
+.xstudio2-history-item div{min-width:0;flex:1}
+.xstudio2-history-item strong{display:block;color:#eee5fa;font-size:12px}
+.xstudio2-history-item small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:5px;color:#91879f}
+.xstudio2-inspector{display:flex;flex-direction:column;min-width:0;overflow-y:auto;overscroll-behavior:contain;background:#11101e;border-left:1px solid #30243e;padding:25px 19px}
+.xstudio2-inspector-head{padding-bottom:22px;border-bottom:1px solid #30243e;margin-bottom:24px}
+.xstudio2-inspector-head p{font-size:17px;font-weight:700;letter-spacing:-.025em;margin:8px 0 0}
+.xstudio2-control{margin-bottom:21px}
+.xstudio2-control label{display:block;font-size:12px;font-weight:700;color:#e5dcee;margin-bottom:10px}
+.xstudio2-control textarea,.xstudio2-control select,.xstudio2-mobile-picker select{width:100%;min-width:0;border:1px solid #4a3b60;border-radius:11px;background:#1b1729;color:#f3eafa;font:inherit;font-size:12px;padding:13px;outline:none}
+.xstudio2-control textarea{resize:vertical;min-height:135px;line-height:1.65}
+.xstudio2-control textarea:focus,.xstudio2-control select:focus,.xstudio2-mobile-picker select:focus{border-color:#b48be9;box-shadow:0 0 0 3px #a16de42c}
+.xstudio2-hint{display:block;font-size:10px;color:#9288a6;margin-top:8px}
+.xstudio2-preset{border:1px dashed #60467a;background:#21182e;border-radius:12px;padding:13px;margin-bottom:23px}
+.xstudio2-preset span{display:block;font-size:10px;letter-spacing:.12em;color:#bca0e5;margin-bottom:9px}
+.xstudio2-preset button{border:0;background:none;padding:0;color:#eee1ff;font-size:12px;font-weight:700;cursor:pointer;text-align:left}
+.xstudio2-inspector-actions{margin-top:auto}
+.xstudio2-generate{display:flex;justify-content:space-between;align-items:center;width:100%;border:1px solid #a975e3;border-radius:11px;background:linear-gradient(115deg,#9250cf,#613095);color:#fff;font-weight:800;padding:15px;cursor:pointer}
+.xstudio2-reset{display:block;margin:12px auto;border:0;background:transparent;color:#b4a4c8;cursor:pointer;padding:7px}
+.xstudio2-feedback{min-height:18px;color:#cbaef0;font-size:11px;line-height:1.4}
+.xstudio2-inspector-foot{border-top:1px solid #30243e;padding-top:18px;margin-top:20px;font-size:10px;letter-spacing:.08em;color:#8c809e}
+.xstudio2-inspector-foot strong,.xstudio2-inspector-foot small{display:block;margin-top:6px;letter-spacing:0}
+.xstudio2-inspector-foot strong{color:#b9a1d8}
+.xstudio2-mobile-picker{display:none}
+.xstudio2 button:focus-visible{outline:2px solid #d7aaff;outline-offset:2px}
+@media(max-width:1050px){.xstudio2-workspace{grid-template-columns:175px minmax(0,1fr) 240px}.xstudio2-rail{padding-left:7px;padding-right:7px}.xstudio2-inspector{padding:20px 13px}.xstudio2-preview-tag{display:none}}
+@media(max-width:760px){.xdash-studio-modal-body{overflow-y:auto}.xdash-studio-modal-body .xnovah-embedded-studio{height:auto}.xstudio2-workspace{display:flex;flex-direction:column;height:auto;min-height:100%}.xstudio2-rail{display:none}.xstudio2-center{order:1;overflow:visible;padding:22px 16px}.xstudio2-mobile-picker{display:block;margin:0 0 18px}.xstudio2-mobile-picker label{display:block;font-size:12px;font-weight:700;color:#c6a9e8;margin-bottom:8px}.xstudio2-heading{margin-bottom:17px}.xstudio2-heading h2{font-size:26px}.xstudio2-artboard{min-height:280px;padding:18px 12px}.xstudio2-canvas-bottom{flex-direction:column;align-items:flex-start}.xstudio2-inspector{order:2;overflow:visible;border-left:0;border-top:1px solid #42304f;padding:22px 16px}.xstudio2-inspector-actions{margin-top:0}.xstudio2-control textarea{min-height:110px}.xstudio2-history{margin-top:20px}.xstudio2-canvas-top{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.xstudio2 *{scroll-behavior:auto}}
