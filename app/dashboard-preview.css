@@ -35,3 +35,63 @@
 
 /* Contextual workspace panel for the currently selected AI tool */
 .xdash-tool-overview{padding:12px 3px 5px}.xdash-tool-overview>p{margin:0 0 15px;color:#c4bdd9;font-size:11px;line-height:1.65}.xdash-tool-overview-steps{display:grid;gap:10px}.xdash-tool-overview-steps>div{display:flex;align-items:flex-start;gap:10px;padding:9px;border:1px solid #332b4c;border-radius:9px;background:#17152a}.xdash-tool-overview-steps>div>span{color:#c89bfa;font-size:11px;font-weight:700}.xdash-tool-overview-steps strong{display:block;font-size:11px;color:#f4eaff}.xdash-tool-overview-steps small{display:block;margin-top:4px;color:#8f8aa8;font-size:10px}.xdash-overview-disclaimer{display:block;margin-top:12px;color:#8e87a8;font-size:9px}
+
+/* Mobile desktop-parity layout: same three dashboard panels, no sideways scrolling */
+@media(max-width:700px){
+ .xdash-section .shell{width:calc(100% - 16px);max-width:100%}
+ .xdash-heading{margin-bottom:24px;padding:0 5px}
+ .xdash-heading h2{font-size:clamp(25px,7vw,35px)}
+ .xdash-heading p{font-size:12px}
+ .xdash-frame{width:100%;overflow:hidden}
+ .xdash-app{width:100%;min-width:0}
+ .xdash-body,.xdash-content{min-width:0}
+ .xdash-content{padding:9px}
+ .xdash-hero{min-height:185px;padding:15px}
+ .xdash-hero-copy{max-width:70%}
+ .xdash-hero h3{font-size:clamp(18px,5vw,25px);margin:12px 0 8px}
+ .xdash-hero p{font-size:10px;line-height:1.5}
+ .xdash-hero-art{opacity:.65;inset:0 0 0 53%;transform:scale(.68);transform-origin:center right}
+ .xdash-art-chip{display:block;transform:scale(.7)}
+ .xdash-hero-actions{margin-top:12px}
+ .xdash-hero-actions button,.xdash-hero-actions a{font-size:9px;padding:8px}
+ .xdash-section-title{gap:9px;align-items:center}
+ .xdash-section-title h4{font-size:15px}
+ .xdash-section-title button{font-size:10px;flex-shrink:0}
+ .xdash-tools{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .xdash-lower{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,.9fr);gap:5px;margin-top:12px}
+ .xdash-activity{grid-column:auto}
+ .xdash-middle{gap:5px;min-width:0}
+ .xdash-panel{padding:7px 5px;border-radius:8px}
+ .xdash-panel-heading{gap:2px;flex-wrap:wrap;margin-bottom:7px}
+ .xdash-panel-heading h4{font-size:clamp(8px,2.3vw,11px);overflow-wrap:anywhere}
+ .xdash-panel-heading>span{font-size:7px}
+ .xdash-project{gap:3px;padding:8px 0;min-width:0}
+ .xdash-project-thumb{width:21px;height:21px;border-radius:5px}
+ .xdash-project-thumb svg{width:12px;height:12px}
+ .xdash-project-name strong,.xdash-activity-row strong{font-size:8px;white-space:normal;overflow-wrap:anywhere;line-height:1.35}
+ .xdash-project-name small,.xdash-activity-row small{font-size:7px;line-height:1.3}
+ .xdash-project-status{display:none}
+ .xdash-project>svg{display:none}
+ .xdash-activity-row{gap:4px;padding:9px 0;align-items:flex-start;min-width:0}
+ .xdash-activity-row>span:last-child{min-width:0}
+ .xdash-activity-icon{width:19px;height:19px}
+ .xdash-activity-icon svg{width:11px;height:11px}
+ .xdash-tool-overview{padding:4px 0}
+ .xdash-tool-overview>p{font-size:8px;line-height:1.45;margin-bottom:8px;overflow-wrap:anywhere}
+ .xdash-tool-overview-steps{gap:5px}
+ .xdash-tool-overview-steps>div{padding:5px 3px;gap:4px;border-radius:5px}
+ .xdash-tool-overview-steps>div>span{font-size:8px}
+ .xdash-tool-overview-steps strong{font-size:8px;line-height:1.3;overflow-wrap:anywhere}
+ .xdash-tool-overview-steps small,.xdash-overview-disclaimer{font-size:7px;line-height:1.4}
+ .xdash-usage{flex-direction:column;gap:7px}
+ .xdash-donut{width:55px;height:55px}
+ .xdash-donut:before{inset:8px}
+ .xdash-donut strong{font-size:13px}
+ .xdash-donut span{font-size:7px}
+ .xdash-usage-lines{width:100%}
+ .xdash-usage-lines>span{font-size:8px;gap:3px;flex-wrap:wrap}
+ .xdash-usage-lines b{font-size:8px}
+ .xdash-connect-icons{gap:3px}
+ .xdash-connect-icons span,.xdash-connect-icons button{width:21px;height:21px;font-size:8px;border-radius:5px}
+ .xdash-tool-detail{margin:12px 0;padding:12px;gap:9px}
+}
