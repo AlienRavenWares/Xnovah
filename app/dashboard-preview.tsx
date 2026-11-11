@@ -1,5 +1,5 @@
 'use client';
-import {useState} from 'react';
+import {useRef,useState} from 'react';
 import {LayoutDashboard, WandSparkles, Bot, Workflow, FolderOpen, Image as ImageIcon, Video, Mic, PenLine, Search, ArrowUpRight, Plus, Layers, Activity, Plug, BarChart3, CheckCircle2, Menu, X, Command, ChevronRight, Sparkles, FileText} from 'lucide-react';
 import './dashboard-preview.css';
 
@@ -9,12 +9,14 @@ const iconFor=(c:string)=>c==='Video'?Video:c==='Audio'?Mic:c==='Writing'?PenLin
 const colors=['blue','pink','cyan','violet','orange','slate'];
 const projects=[{name:'Product launch film',type:'AI Video',status:'Concept ready',icon:Video},{name:'Campaign visuals',type:'AI Image',status:'Concept ready',icon:ImageIcon},{name:'Brand voiceover',type:'AI Voice',status:'In review',icon:Mic},{name:'Launch announcement',type:'AI Writer',status:'Concept ready',icon:FileText}];
 export default function DashboardPreview(){
+ const previewTop=useRef<HTMLDivElement>(null);
+ const [mobileToolsOpen,setMobileToolsOpen]=useState(false);
  const [tab,setTab]=useState('Dashboard'),[search,setSearch]=useState(''),[selected,setSelected]=useState(''),[menu,setMenu]=useState(false),[showAll,setShowAll]=useState(false),[category,setCategory]=useState('All');
  const categories=['All',...Array.from(new Set(toolCatalog.map(t=>t.category)))];
  const matches=toolCatalog.filter(t=>(category==='All'||t.category===category)&&t.name.toLowerCase().includes(search.toLowerCase())&&(showAll||search.trim()||category!=='All'||featuredNames.includes(t.name)));
- const openTools=()=>{setShowAll(true);setCategory('All');setTab('AI Tools');setSelected('');setMenu(false)};
+ const openTools=()=>{setShowAll(true);setCategory('All');setTab('AI Tools');setSelected('');setMenu(false);setMobileToolsOpen(false)};
  const choose=(name:string)=>{if(name==='AI Tools'){openTools();return;}if(toolCatalog.some(t=>t.name===name)){chooseSidebarTool(name);return;}setTab(name);setSelected(name);setMenu(false)};
- const chooseSidebarTool=(name:string)=>{setShowAll(true);setCategory('All');setSearch('');setTab(name);setSelected(name);setMenu(false)};
+ const chooseSidebarTool=(name:string)=>{setShowAll(true);setCategory('All');setSearch('');setTab(name);setSelected(name);setMenu(false);setMobileToolsOpen(false);previewTop.current?.scrollIntoView({behavior:'smooth',block:'start'})};
  const activeTool=toolCatalog.find(t=>t.name===selected);
  const activeIcon=activeTool?iconFor(activeTool.category):WandSparkles;
  const currentProjects=activeTool?['Starter concept','Creative brief','Review draft','Final direction'].map((name,i)=>({name:activeTool.name+' · '+name,type:activeTool.name,status:['Idea outlined','Concept ready','In review','Planned'][i],icon:activeIcon})):projects;
@@ -23,7 +25,7 @@ export default function DashboardPreview(){
 
  return <section className="section xdash-section" id="feature-universe" aria-label="Xnovah dashboard preview">
   <div className="shell"><div className="xdash-heading"><div className="eyebrow">DESIGN 02 / THE AI COMMAND CENTER</div><h2>Your AI command center.<br/><span className="gradient-text">One place to get things done.</span></h2><p>Explore a preview of the Xnovah workspace, designed to bring creative tools, projects, and intelligent workflows together.</p></div>
-  <div className="xdash-frame">
+  <div className="xdash-frame" ref={previewTop}>
    <div className="xdash-demo-label"><span className="xdash-live-dot"/> INTERACTIVE PRODUCT CONCEPT <span>Sample data · Not a live account</span></div>
    <div className="xdash-app">
     <aside className={'xdash-sidebar '+(menu?'xdash-sidebar-open':'')}>
@@ -32,6 +34,7 @@ export default function DashboardPreview(){
      <div className="xdash-upgrade"><span>✦ WORKSPACE PREVIEW</span><strong>Imagine more with Xnovah.</strong><p>Explore the product vision before launch.</p><a href="#waitlist">Join early access <ArrowUpRight size={14}/></a></div>
     </aside>
     <div className="xdash-body">
+     <div className="xdash-mobile-tool-picker"><button className={'xdash-mobile-tool-trigger '+(mobileToolsOpen?'expanded':'')} aria-expanded={mobileToolsOpen} aria-controls="xdash-mobile-tool-options" onClick={()=>setMobileToolsOpen(!mobileToolsOpen)}><span><Layers size={16}/><span><small>EXPLORE 39 AI TOOLS</small><strong>{activeTool?activeTool.name:'Select an AI tool'}</strong></span></span><ChevronRight size={18} className="xdash-mobile-tool-chevron"/></button><div id="xdash-mobile-tool-options" className={'xdash-mobile-tool-options '+(mobileToolsOpen?'open':'')} aria-hidden={!mobileToolsOpen}><button className={!activeTool?'active':''} tabIndex={mobileToolsOpen?0:-1} onClick={()=>{openTools();previewTop.current?.scrollIntoView({behavior:'smooth',block:'start'})}}><Layers size={15}/> All 39 tools</button>{toolCatalog.map(t=>{const Icon=iconFor(t.category);return <button key={t.name} tabIndex={mobileToolsOpen?0:-1} className={selected===t.name?'active':''} onClick={()=>chooseSidebarTool(t.name)}><Icon size={15}/><span>{t.name}</span>{selected===t.name&&<CheckCircle2 size={14}/>}</button>})}</div></div>
      <div className="xdash-topbar"><button className="xdash-menu" onClick={()=>setMenu(!menu)} aria-label="Toggle dashboard navigation"><Menu size={19}/></button><div className="xdash-search"><Search size={16}/><input aria-label="Search preview tools" placeholder="Search tools in this preview..." value={search} onChange={e=>setSearch(e.target.value)}/><span>⌘ K</span></div><span className="xdash-topright"><span className="xdash-online"/> DEMO WORKSPACE</span><span className="xdash-avatar">X</span></div>
      <div className="xdash-content">
       <div className="xdash-hero"><div className="xdash-hero-copy"><span className="xdash-kicker"><Sparkles size={13}/> YOUR CREATIVE WORKSPACE</span><h3>{tab==='Dashboard'?'Create, automate & grow':tab==='AI Tools'?'Explore your AI toolkit':tab==='Projects'?'Everything in progress':tab==='Analytics'?'Your workspace at a glance':tab==='Integrations'?'Keep your tools connected':tab==='AI Agents'?'Meet your AI teammates':tab==='Workflows'?'Turn ideas into workflows':tab}</h3><p>One connected space for ideas, content, and intelligent work. Discover what's possible with Xnovah.</p><div className="xdash-hero-actions"><button onClick={openTools}><Plus size={16}/> Explore AI tools</button><a href="#waitlist">Get early access <ArrowUpRight size={15}/></a></div></div><div className="xdash-hero-art" aria-hidden="true"><div className="xdash-art-halo"/><div className="xdash-art-window"><span>✳</span><strong>Xnovah</strong><small>IMAGINE · CREATE · BUILD</small></div><span className="xdash-art-chip chip1"><ImageIcon size={19}/></span><span className="xdash-art-chip chip2"><Video size={19}/></span><span className="xdash-art-chip chip3"><Bot size={19}/></span></div></div>
