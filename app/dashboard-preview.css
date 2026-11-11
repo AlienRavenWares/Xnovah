@@ -95,3 +95,25 @@
  .xdash-connect-icons span,.xdash-connect-icons button{width:21px;height:21px;font-size:8px;border-radius:5px}
  .xdash-tool-detail{margin:12px 0;padding:12px;gap:9px}
 }
+
+/* Dedicated mobile slide-down explorer, separate from the sidebar */
+.xdash-mobile-tool-picker{display:none}
+@media(max-width:700px){
+ .xdash-frame{scroll-margin-top:12px}
+ .xdash-mobile-tool-picker{display:block;position:relative;z-index:9;padding:9px;background:#100f24;border-bottom:1px solid #30284a}
+ .xdash-mobile-tool-trigger{display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%;border:1px solid #67439b;border-radius:11px;padding:11px 13px;background:linear-gradient(110deg,#32204f,#17172d);color:#fff;cursor:pointer;text-align:left}
+ .xdash-mobile-tool-trigger>span{display:flex;align-items:center;gap:12px;min-width:0}
+ .xdash-mobile-tool-trigger>span>svg{color:#d2a3ff;flex-shrink:0}
+ .xdash-mobile-tool-trigger small{display:block;font-size:9px;letter-spacing:.12em;color:#bba4df;margin-bottom:4px}
+ .xdash-mobile-tool-trigger strong{display:block;font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+ .xdash-mobile-tool-chevron{transition:transform .25s;flex-shrink:0}
+ .xdash-mobile-tool-trigger.expanded .xdash-mobile-tool-chevron{transform:rotate(90deg)}
+ .xdash-mobile-tool-options{display:grid;grid-template-rows:0fr;max-height:0;opacity:0;overflow:hidden;transition:max-height .3s ease,opacity .2s ease,margin .3s ease;margin:0 3px}
+ .xdash-mobile-tool-options.open{display:block;max-height:315px;overflow-y:auto;opacity:1;margin:9px 3px 3px;border:1px solid #40305d;border-radius:10px;background:#151328;scrollbar-width:thin;scrollbar-color:#6d459c #17152a}
+ .xdash-mobile-tool-options button{width:100%;display:flex;align-items:center;gap:11px;text-align:left;padding:11px 13px;border:0;border-bottom:1px solid #29233e;background:transparent;color:#c9c2df;font-size:12px;cursor:pointer}
+ .xdash-mobile-tool-options button svg{flex-shrink:0;color:#b68bf0}
+ .xdash-mobile-tool-options button span{min-width:0;flex:1}
+ .xdash-mobile-tool-options button.active{background:#45256d;color:white;font-weight:700}
+ .xdash-mobile-tool-options button:hover{background:#332049;color:white}
+}
+@media(prefers-reduced-motion:reduce){.xdash-mobile-tool-chevron,.xdash-mobile-tool-options{transition:none}}
