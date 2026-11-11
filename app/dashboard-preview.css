@@ -128,3 +128,13 @@
  .xdash-topbar,.xdash-content{min-width:0}
  .xdash-mobile-tool-picker{grid-row:auto}
 }
+
+/* Fix: actual viewport-bottom floating control while preview is visible */
+@media(max-width:700px){
+ .xdash-body{display:block}
+ .xdash-mobile-tool-picker{display:none;position:fixed;left:12px;right:12px;bottom:max(12px,env(safe-area-inset-bottom));z-index:1000;margin:0;padding:0;width:auto;filter:drop-shadow(0 12px 24px #000b)}
+ .xdash-mobile-tool-picker.xdash-picker-visible{display:block}
+ .xdash-mobile-tool-options.open{position:absolute;bottom:calc(100% + 10px);left:0;right:0;max-height:min(52dvh,360px);overflow-y:auto;margin:0}
+ .xdash-mobile-tool-trigger{min-height:58px}
+ .xdash-frame{overflow:hidden}
+}
