@@ -228,3 +228,19 @@
 @media(max-width:1050px){.xstudio2-workspace{grid-template-columns:175px minmax(0,1fr) 240px}.xstudio2-rail{padding-left:7px;padding-right:7px}.xstudio2-inspector{padding:20px 13px}.xstudio2-preview-tag{display:none}}
 @media(max-width:760px){.xdash-studio-modal-body{overflow-y:auto}.xdash-studio-modal-body .xnovah-embedded-studio{height:auto}.xstudio2-workspace{display:flex;flex-direction:column;height:auto;min-height:100%}.xstudio2-rail{display:none}.xstudio2-center{order:1;overflow:visible;padding:22px 16px}.xstudio2-mobile-picker{display:block;margin:0 0 18px}.xstudio2-mobile-picker label{display:block;font-size:12px;font-weight:700;color:#c6a9e8;margin-bottom:8px}.xstudio2-heading{margin-bottom:17px}.xstudio2-heading h2{font-size:26px}.xstudio2-artboard{min-height:280px;padding:18px 12px}.xstudio2-canvas-bottom{flex-direction:column;align-items:flex-start}.xstudio2-inspector{order:2;overflow:visible;border-left:0;border-top:1px solid #42304f;padding:22px 16px}.xstudio2-inspector-actions{margin-top:0}.xstudio2-control textarea{min-height:110px}.xstudio2-history{margin-top:20px}.xstudio2-canvas-top{font-size:9px}}
 @media(prefers-reduced-motion:reduce){.xstudio2 *{scroll-behavior:auto}}
+
+/* Optional guest BYOK controls */
+.xstudio2-byok{border:1px solid #65457d;background:linear-gradient(145deg,#261a38,#151222);border-radius:13px;padding:14px;margin-bottom:23px}
+.xstudio2-byok-head{display:flex;justify-content:space-between;align-items:center;gap:9px;flex-wrap:wrap}
+.xstudio2-byok-head>span{font-size:10px;letter-spacing:.1em;font-weight:800;color:#c9a8ed}
+.xstudio2-byok-head label{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:700;color:#f0e7ff;cursor:pointer}
+.xstudio2-byok-head input{accent-color:#a870e3;width:16px;height:16px}
+.xstudio2-byok-fields{display:flex;flex-direction:column;gap:9px;margin-top:17px}
+.xstudio2-byok-fields label{font-size:11px;font-weight:700;color:#d9c8ee}
+.xstudio2-byok-fields input,.xstudio2-byok-fields select{width:100%;min-width:0;padding:12px;border:1px solid #654b7e;background:#14101e;color:#fff;border-radius:9px;font-size:12px}
+.xstudio2-byok-fields p,.xstudio2-byok-note{color:#b8a8cb;font-size:10px;line-height:1.55;margin:4px 0}
+.xstudio2-disconnect{border:1px solid #76578d;background:transparent;color:#e4c9ff;border-radius:8px;padding:10px;cursor:pointer}
+.xstudio2-generate:disabled{opacity:.65;cursor:wait}
+.xstudio2-real-output{width:100%;max-width:100%;max-height:60vh;overflow:auto}
+.xstudio2-generated-text{font:inherit;font-size:14px;line-height:1.75;white-space:pre-wrap;overflow-wrap:anywhere;color:#f0e9fb;background:#171323;border:1px solid #423151;border-radius:12px;padding:clamp(18px,3vw,32px);max-height:55vh;overflow:auto}
+.xstudio2-generated-image{display:block;max-width:100%;max-height:55vh;object-fit:contain;margin:auto;border-radius:12px}
