@@ -244,3 +244,48 @@
 .xstudio2-real-output{width:100%;max-width:100%;max-height:60vh;overflow:auto}
 .xstudio2-generated-text{font:inherit;font-size:14px;line-height:1.75;white-space:pre-wrap;overflow-wrap:anywhere;color:#f0e9fb;background:#171323;border:1px solid #423151;border-radius:12px;padding:clamp(18px,3vw,32px);max-height:55vh;overflow:auto}
 .xstudio2-generated-image{display:block;max-width:100%;max-height:55vh;object-fit:contain;margin:auto;border-radius:12px}
+
+/* Cinematic Studio — reference-inspired visual system */
+.xdash-studio-modal{background:#090b13}
+.xdash-studio-modal-header{background:linear-gradient(100deg,#0b0b15,#141020)!important;border-bottom:1px solid #342b44!important}
+.xstudio2{background:#090b13}
+.xstudio2-workspace{grid-template-columns:minmax(225px,19%) minmax(0,1fr) minmax(270px,25%)}
+.xstudio2-rail{background:linear-gradient(180deg,#0b0b14,#14111f);border-right:1px solid #30283c;padding:29px 16px}
+.xstudio2-rail-brand>span{background:linear-gradient(145deg,#b959ff,#6731d6);font-weight:900;box-shadow:0 0 24px #9a45eb42}
+.xstudio2-rail-caption{font-size:12px;color:#e9e3f3;letter-spacing:.04em}
+.xstudio2-nav{border-radius:13px;padding:14px 12px;font-size:14px;min-height:51px}
+.xstudio2-nav.is-active{background:linear-gradient(110deg,#562184,#31214d);border-color:#a45bed;box-shadow:0 8px 30px #8f3ed52e}
+.xstudio2-center{background:#0a0c15;padding:25px clamp(15px,2vw,32px) 30px}
+.xstudio2-heading h2{font-size:clamp(24px,2.4vw,34px);margin:7px 0}
+.xstudio2-kicker{color:#ce87ff}
+.xstudio2-canvas{border:0;background:transparent;box-shadow:none;overflow:visible}
+.xstudio2-canvas-top{display:none}
+.xstudio2-artboard{display:block;min-height:0;padding:0;background:transparent}
+.xstudio2-artboard .command-v1-result{max-width:none;width:100%}
+.xstudio-cinema{position:relative;overflow:hidden;border-radius:17px;width:100%;aspect-ratio:1.88/1;background:#16131f;isolation:isolate}
+.xstudio-cinema-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.xstudio-cinema-shade{position:absolute;inset:0;background:linear-gradient(0deg,#07080fe0,transparent 50%)}
+.xstudio-cinema-caption{position:absolute;left:23px;bottom:24px;right:60px;display:flex;flex-direction:column;gap:7px;text-shadow:0 2px 16px #000}
+.xstudio-cinema-caption span{font-size:10px;font-weight:800;letter-spacing:.13em;color:#e0c2ff}
+.xstudio-cinema-caption strong{font-size:clamp(19px,2vw,28px);line-height:1.12;letter-spacing:-.025em;color:#fff}
+.xstudio-cinema-caption small{font-size:11px;color:#ded9e6}
+.xstudio-cinema-arrow{position:absolute;top:50%;transform:translateY(-50%);width:43px;height:43px;border-radius:50%;border:1px solid #ffffff4a;background:#0b0b1099;color:white;font-size:29px;cursor:pointer;display:grid;place-items:center}
+.xstudio-cinema-arrow.prev{left:15px}.xstudio-cinema-arrow.next{right:15px}
+.xstudio-cinema-arrow:hover{background:#7934bccc}
+.xstudio-cinema-counter{position:absolute;right:16px;bottom:14px;background:#10111bc7;border-radius:7px;padding:6px 9px;font-size:11px;color:white}
+.xstudio-cinema-thumbs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:12px 0 0}
+.xstudio-cinema-thumb{border:2px solid transparent;background:#17131e;padding:0;border-radius:11px;overflow:hidden;aspect-ratio:1.75/1;cursor:pointer}
+.xstudio-cinema-thumb.active{border-color:#ba65ff;box-shadow:0 0 0 1px #c76aff}
+.xstudio-cinema-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.xstudio2-canvas-bottom{padding:12px 0 3px;border:0}
+.xstudio2-history{margin-top:18px;border:1px solid #292936;border-radius:13px;background:#10121c;padding:15px}
+.xstudio2-inspector{background:#0b0d16;padding:25px 18px}
+.xstudio2-inspector-head{margin-bottom:18px;padding-bottom:12px}
+.xstudio2-inspector-head>span{color:#d9a5ff}
+.xstudio2-control textarea,.xstudio2-control select{background:#11131e;border-color:#454255}
+.xstudio2-generate{background:linear-gradient(105deg,#bc46ef,#7225d3);box-shadow:0 10px 25px #7620cb42;font-size:14px}
+.xstudio2-byok{background:#181323;border-color:#51366d}
+.xstudio2-real-output{max-height:none}
+.xstudio2-generated-image{max-height:55vh}
+@media(max-width:1100px){.xstudio2-workspace{grid-template-columns:175px minmax(0,1fr) 245px}}
+@media(max-width:760px){.xstudio2-workspace{display:flex}.xstudio2-center{padding:18px 13px}.xstudio-cinema{aspect-ratio:1.25/1}.xstudio-cinema-caption{left:17px;bottom:19px}.xstudio-cinema-arrow{width:34px;height:34px;font-size:24px}.xstudio-cinema-thumbs{gap:6px}.xstudio2-inspector{padding:20px 15px}.xstudio2-history{padding:11px}}
