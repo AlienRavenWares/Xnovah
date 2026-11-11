@@ -1,5 +1,6 @@
 'use client';
 import {useEffect,useRef,useState} from 'react';
+import type {ReactNode} from 'react';
 import {LayoutDashboard, WandSparkles, Bot, Workflow, FolderOpen, Image as ImageIcon, Video, Mic, PenLine, Search, ArrowUpRight, Plus, Layers, Activity, Plug, BarChart3, CheckCircle2, Menu, X, Command, ChevronRight, Sparkles, FileText} from 'lucide-react';
 import './dashboard-preview.css';
 
@@ -8,7 +9,8 @@ const featuredNames=['AI Image','AI Video','AI Voice','AI Writer','AI Agent Buil
 const iconFor=(c:string)=>c==='Video'?Video:c==='Audio'?Mic:c==='Writing'?PenLine:c==='Agents'?Bot:c==='Visual'?ImageIcon:c==='Business'?BarChart3:c==='Code'?Command:c==='Research'?Search:Layers;
 const colors=['blue','pink','cyan','violet','orange','slate'];
 const projects=[{name:'Product launch film',type:'AI Video',status:'Concept ready',icon:Video},{name:'Campaign visuals',type:'AI Image',status:'Concept ready',icon:ImageIcon},{name:'Brand voiceover',type:'AI Voice',status:'In review',icon:Mic},{name:'Launch announcement',type:'AI Writer',status:'Concept ready',icon:FileText}];
-export default function DashboardPreview(){
+export default function DashboardPreview({studio}:{studio?:ReactNode}){
+ const [studioOpen,setStudioOpen]=useState(false);
  const previewTop=useRef<HTMLDivElement>(null);
  const [mobileToolsOpen,setMobileToolsOpen]=useState(false);
  const [previewVisible,setPreviewVisible]=useState(false);
@@ -53,5 +55,6 @@ export default function DashboardPreview(){
    </div>
    <div className="xdash-footer"><span>✳ XNOVAH / INTERACTIVE SOFTWARE PREVIEW</span><a href="#waitlist">Be first to experience Xnovah <ArrowUpRight size={15}/></a></div>
   </div></div>
+  {studio&&<div className="shell xdash-studio-bridge"><div className="xdash-studio-intro"><span className="xdash-overline">NEXT / HANDS-ON CREATION</span><h3>Explore the tools. Then experience a studio.</h3><p>Browse all 39 capabilities above, or open a focused creative studio below to experiment with prompts, options, and illustrative outputs.</p><button type="button" className="xdash-studio-toggle" aria-expanded={studioOpen} aria-controls="xdash-studio-content" onClick={()=>setStudioOpen(v=>!v)}>{studioOpen?'Close creative studio':'Open interactive creative studio'} <ArrowUpRight size={17}/></button></div>{studioOpen&&<div id="xdash-studio-content" className="xdash-studio-content">{studio}</div>}</div>}
  </section>
 }
