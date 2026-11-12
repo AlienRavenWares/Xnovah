@@ -60,7 +60,7 @@ export async function POST(req:NextRequest){
    return NextResponse.json({kind:'text',text:output},{headers:{'Cache-Control':'no-store'}});
   }
   if(studio==='image')return failure('Image generation currently requires an OpenAI key.',400);
-  const upstream=await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent',{method:'POST',signal:controller.signal,headers:{'x-goog-api-key':key,'Content-Type':'application/json'},body:JSON.stringify({contents:[{parts:[{text:studio==='agents'?String(data.prompt):studio==='research'?'Write a research report and explicitly note that live web search is not enabled: '+prompt.trim():prompt.trim()}]}],generationConfig:{maxOutputTokens:1600,temperature}})});
+  const upstream=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${['gemini-2.5-flash','gemini-2.5-pro'].includes(model)?model:'gemini-2.5-flash'}:generateContent`,{method:'POST',signal:controller.signal,headers:{'x-goog-api-key':key,'Content-Type':'application/json'},body:JSON.stringify({contents:[{parts:[{text:studio==='agents'?String(data.prompt):studio==='research'?'Write a research report and explicitly note that live web search is not enabled: '+prompt.trim():prompt.trim()}]}],generationConfig:{maxOutputTokens:1600,temperature}})});
   const result=await upstream.json();if(!upstream.ok)return failure('Gemini request failed: '+String(result.error?.message||upstream.status).slice(0,220),upstream.status===429?429:400);
   const output=(result.candidates?.[0]?.content?.parts||[]).map((p:{text?:string})=>p.text||'').join('\n');if(!output)return failure('No text returned by provider.',502);
   return NextResponse.json({kind:'text',text:output},{headers:{'Cache-Control':'no-store'}});
