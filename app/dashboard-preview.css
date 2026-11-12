@@ -289,3 +289,36 @@
 .xstudio2-generated-image{max-height:55vh}
 @media(max-width:1100px){.xstudio2-workspace{grid-template-columns:175px minmax(0,1fr) 245px}}
 @media(max-width:760px){.xstudio2-workspace{display:flex}.xstudio2-center{padding:18px 13px}.xstudio-cinema{aspect-ratio:1.25/1}.xstudio-cinema-caption{left:17px;bottom:19px}.xstudio-cinema-arrow{width:34px;height:34px;font-size:24px}.xstudio-cinema-thumbs{gap:6px}.xstudio2-inspector{padding:20px 15px}.xstudio2-history{padding:11px}}
+
+/* Functional Studio workbench replaces photographic preview gallery */
+.xstudio-workbench{min-width:0;display:flex;flex-direction:column;gap:0}
+.xstudio-workbench-header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:5px 0 23px;border-bottom:1px solid #292637}
+.xstudio-workbench-header h2{margin:8px 0 5px;font-size:clamp(25px,2.3vw,35px);color:#f8f5ff}
+.xstudio-workbench-header p{margin:0;color:#9894aa;font-size:13px}
+.xstudio-workbench-status{display:flex;align-items:center;gap:8px;border:1px solid #343147;border-radius:999px;padding:9px 13px;color:#c7c0d5;font-size:11px;white-space:nowrap}
+.xstudio-workbench-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:20px 0 15px}
+.xstudio-workbench-toolbar>div:first-child{display:flex;flex-direction:column;gap:5px}
+.xstudio-workbench-toolbar strong{font-size:15px;color:#f5f0ff}
+.xstudio-workbench-toolbar span{font-size:11px;color:#88839b}
+.xstudio-workbench-toolbar-actions{display:flex;gap:8px}
+.xstudio-workbench-toolbar-actions button,.xstudio-workbench-result-actions button,.xstudio-workbench-result-actions a{border:1px solid #383146;background:#171522;border-radius:9px;color:#ddd5ef;padding:9px 12px;font-size:12px;cursor:pointer;text-decoration:none}
+.xstudio-workbench-toolbar-actions button:hover,.xstudio-workbench-result-actions button:hover{border-color:#9c60d5}
+.xstudio-workbench-output{border:1px solid #302b3d;border-radius:15px;background:linear-gradient(145deg,#11131f,#0c0e17);min-height:420px;display:flex;flex-direction:column;overflow:hidden}
+.xstudio-workbench-empty{margin:auto;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:35px 25px;max-width:460px;gap:13px}
+.xstudio-workbench-emblem{width:70px;height:70px;display:grid;place-items:center;background:radial-gradient(circle at 35% 20%,#6735a5,#261b3d);border:1px solid #794db0;border-radius:20px;color:#f5e6ff;font-size:34px;box-shadow:0 10px 45px #8c3fe32e}
+.xstudio-workbench-eyebrow{font-size:10px;letter-spacing:.15em;color:#b78cdd;font-weight:700;margin-top:10px}
+.xstudio-workbench-empty h3{font-size:clamp(22px,2vw,28px);color:#fff;margin:2px 0}
+.xstudio-workbench-empty p{font-size:13px;line-height:1.75;color:#a8a2b5;margin:0}
+.xstudio-workbench-steps{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:13px}
+.xstudio-workbench-steps span{font-size:10px;color:#a99cbe;border:1px solid #373045;border-radius:8px;padding:9px 11px;background:#1b1727}
+.xstudio-workbench-result{width:100%;padding:22px;min-width:0}
+.xstudio-workbench-result-head{display:flex;justify-content:space-between;gap:10px;padding-bottom:15px;margin-bottom:15px;border-bottom:1px solid #302a40;color:#c99df1;font-size:11px;letter-spacing:.08em}
+.xstudio-workbench-result .xstudio2-generated-text{white-space:pre-wrap;overflow-wrap:anywhere;max-height:55vh;overflow:auto;color:#e7e3ed;font-size:13px;line-height:1.8}
+.xstudio-workbench-result img,.xstudio-workbench-result video{width:100%;object-fit:contain;border-radius:10px}
+.xstudio-workbench-result audio{width:100%}
+.xstudio-workbench-result-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.xstudio-workbench-activity{border:1px solid #2b2838;border-radius:13px;background:#10121b;padding:17px;margin-top:18px}
+.xstudio-workbench-activity-empty{color:#817c91;font-size:12px;margin:16px 0 2px}
+.xstudio-workbench-activity-item{width:100%;text-align:left;cursor:pointer;background:#161623}
+.xstudio-workbench-activity-item:hover{border-color:#8b50bd}
+@media(max-width:760px){.xstudio-workbench-header{padding-top:10px}.xstudio-workbench-status{font-size:10px;padding:7px 9px}.xstudio-workbench-output{min-height:360px}.xstudio-workbench-toolbar{align-items:flex-start}.xstudio-workbench-toolbar-actions{flex-wrap:wrap;justify-content:flex-end}.xstudio-workbench-empty{padding:26px 14px}.xstudio-workbench-steps{gap:5px}.xstudio-workbench-steps span{font-size:9px;padding:7px}}
