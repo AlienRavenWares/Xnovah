@@ -3024,3 +3024,15 @@ main{background:transparent}
 @media(max-width:850px){.magic-section.magic-refined{padding-block:75px}.magic-refined .magic-copy h2{font-size:clamp(39px,8.5vw,57px)}.magic-refined .magic-refined-layout{gap:35px}.magic-refined .magic-image{border-radius:22px}.magic-refined .magic-points>div{padding:17px 0}}
 @media(max-width:420px){.magic-refined .magic-copy h2{font-size:clamp(36px,10vw,46px)}.magic-refined .magic-image{border-radius:18px}.magic-refined .magic-copy>p{font-size:13px}}
 @media(prefers-reduced-motion:reduce){.magic-refined .text-link,.magic-refined .magic-image{transition:none}}
+
+
+/* Xnovah sculptural monogram replacing only the sphere */
+.magic-refined .xnovah-monogram-art{position:absolute;left:50%;top:47%;width:min(79%,405px);aspect-ratio:1;transform:translate(-50%,-50%);z-index:3;display:flex;align-items:center;justify-content:center;filter:drop-shadow(0 20px 24px rgba(100,39,167,.25));animation:xmono-float 7s ease-in-out infinite}
+.magic-refined .xnovah-monogram-art svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 0 17px rgba(173,94,245,.22))}
+.magic-refined .xnovah-monogram-floor{position:absolute;bottom:4%;left:50%;transform:translateX(-50%);font-size:clamp(10px,1.2vw,14px);font-weight:750;letter-spacing:.38em;color:#e6c6ff;text-shadow:0 0 20px #b765e8,0 0 45px #9d45d7}
+.magic-refined .magic-image-ring{z-index:2;opacity:.56}
+.magic-refined .magic-image-caption{z-index:4}
+@keyframes xmono-float{0%,100%{transform:translate(-50%,-50%) rotate(-1deg)}50%{transform:translate(-50%,-53%) rotate(1deg)}}
+@media(max-width:850px){.magic-refined .xnovah-monogram-art{width:min(78%,380px)}}
+@media(max-width:420px){.magic-refined .xnovah-monogram-art{width:85%}.magic-refined .xnovah-monogram-floor{bottom:6%}}
+@media(prefers-reduced-motion:reduce){.magic-refined .xnovah-monogram-art{animation:none}}
