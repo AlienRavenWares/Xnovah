@@ -2999,3 +2999,28 @@ main{background:transparent}
 .xcmd-section .xcmd-showcase .xcmd-product-paper{background:#f1f0ec;color:#22252a}
 .xcmd-section .xcmd-showcase .xcmd-product-pipeline,.xcmd-section .xcmd-showcase .xcmd-product-flow,.xcmd-section .xcmd-showcase .xcmd-product-board{min-height:220px}
 @media(max-width:750px){.xcmd-section .xcmd-shell:not(.xcmd-zoomed) .xcmd-showcase{min-height:220px}.xcmd-section .xcmd-shell:not(.xcmd-zoomed) .xcmd-showcase .xcmd-product-inner{padding:8px;min-height:165px;gap:7px}.xcmd-section .xcmd-shell:not(.xcmd-zoomed) .xcmd-showcase-media{min-height:120px}.xcmd-section .xcmd-shell:not(.xcmd-zoomed) .xcmd-showcase-media-overlay{padding:22px 8px 8px}.xcmd-section .xcmd-shell:not(.xcmd-zoomed) .xcmd-showcase-media-overlay strong{font-size:11px}.xcmd-section .xcmd-shell:not(.xcmd-zoomed) .xcmd-showcase-media-overlay span{font-size:6px}}
+
+
+/* Section 07 — careful polish of the ORIGINAL Less Busywork design; no layout replacement */
+.magic-section.magic-refined{position:relative;isolation:isolate;overflow:hidden;background-image:radial-gradient(ellipse 54% 70% at 18% 52%,rgba(106,73,171,.11),transparent 78%),linear-gradient(180deg,#090a0d,#101015 52%,#090a0d);padding-block:clamp(85px,9vw,148px)}
+.magic-section.magic-refined:before{content:"";position:absolute;top:0;left:50%;width:min(1120px,calc(100% - 48px));height:1px;transform:translateX(-50%);background:linear-gradient(90deg,transparent,rgba(182,143,235,.25),transparent);pointer-events:none}
+.magic-section.magic-refined>.magic-refined-layout{gap:clamp(42px,6vw,92px);align-items:center}
+.magic-refined .magic-copy h2{font-size:clamp(43px,4.6vw,69px);line-height:1.065;letter-spacing:-.055em;margin:19px 0 24px;text-wrap:balance}
+.magic-refined .magic-copy h2 .serif-italic{font-family:Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-.045em;color:#d7b5f1}
+.magic-refined .magic-copy>p{font-size:14px;line-height:1.9;color:#b7b5c5;max-width:530px}
+.magic-refined .magic-points{margin:34px 0 29px}
+.magic-refined .magic-points>div{gap:17px;margin:0;padding:19px 0;border-top:1px solid rgba(218,196,244,.12)}
+.magic-refined .magic-points>div:last-child{border-bottom:1px solid rgba(218,196,244,.12)}
+.magic-refined .magic-points>div>span{width:44px;height:44px;flex:0 0 44px;border-radius:13px;background:linear-gradient(145deg,rgba(110,76,157,.24),rgba(43,31,63,.25));border:1px solid rgba(190,150,240,.24);color:#d3aff2;box-shadow:inset 0 1px 0 rgba(255,255,255,.05)}
+.magic-refined .magic-points h4{font-size:14px;line-height:1.4;letter-spacing:-.01em;color:#f5edfa;margin:1px 0 6px}
+.magic-refined .magic-points p{font-size:12px;line-height:1.8;color:#a9a6b9;max-width:430px}
+.magic-refined .text-link{border-radius:999px;padding:15px 22px;font-size:12px;font-weight:600;letter-spacing:.01em;border-color:rgba(191,149,241,.4);background:linear-gradient(110deg,rgba(119,73,166,.24),rgba(76,48,111,.19));box-shadow:0 8px 25px rgba(0,0,0,.12);transition:transform .25s,border-color .25s,box-shadow .25s}
+.magic-refined .text-link:hover{transform:translateY(-3px);border-color:rgba(215,178,250,.75);box-shadow:0 12px 30px rgba(125,75,184,.17)}
+.magic-refined .magic-image{border-radius:28px;border:1px solid rgba(197,158,244,.2);box-shadow:0 28px 95px rgba(0,0,0,.29),inset 0 1px 0 rgba(255,255,255,.05);transition:border-color .4s,box-shadow .4s}
+.magic-refined .magic-image:hover{border-color:rgba(198,151,246,.4);box-shadow:0 32px 100px rgba(0,0,0,.35),0 0 48px rgba(128,80,191,.09)}
+.magic-refined .magic-image-sphere{filter:drop-shadow(0 15px 30px rgba(127,74,193,.22))}
+.magic-refined .magic-image-ring{opacity:.72}
+.magic-refined .magic-image-caption{letter-spacing:.12em}
+@media(max-width:850px){.magic-section.magic-refined{padding-block:75px}.magic-refined .magic-copy h2{font-size:clamp(39px,8.5vw,57px)}.magic-refined .magic-refined-layout{gap:35px}.magic-refined .magic-image{border-radius:22px}.magic-refined .magic-points>div{padding:17px 0}}
+@media(max-width:420px){.magic-refined .magic-copy h2{font-size:clamp(36px,10vw,46px)}.magic-refined .magic-image{border-radius:18px}.magic-refined .magic-copy>p{font-size:13px}}
+@media(prefers-reduced-motion:reduce){.magic-refined .text-link,.magic-refined .magic-image{transition:none}}
