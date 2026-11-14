@@ -429,28 +429,21 @@ function IntegrationUniverse(){
 }
 function CompareWays(){
  const benefits=[
- ['One idea, multiple formats','Move between different apps to produce copy, images, and video','Explore writing, visuals, and video concepts within one creative environment'],
- ['A more consistent brand','Repeat brand instructions whenever you change tools','Bring brand guidelines and reusable prompts into a more cohesive workflow'],
- ['Less repetitive work','Copy, paste, and reformat materials between separate services','Move more smoothly between drafting, refining, and preparing content'],
- ['More value from documents','Switch between readers, note-taking apps, and summarizers','Explore document summaries, questions, and insights alongside your other work'],
- ['Visual ideas with direction','Jump between tools for concepts, images, and refinements','Explore image generation and visual concepts alongside your campaign ideas'],
- ['A broader production toolkit','Coordinate scripts, narration, and video across disconnected tools','Explore video concepts, voice, and transcription in one creative ecosystem'],
- ['Content for every channel','Rebuild the same message for each new platform','Adapt ideas for blogs, social posts, advertising, and email with focused templates'],
- ['Research that informs creation','Keep research notes separate from the content they support','Bring research exploration and content development closer together'],
- ['AI support for different tasks','Maintain separate AI conversations and specialized assistants','Explore chat, task-focused assistants, and configurable AI experiences'],
- ['A clearer creative process','Lose track of drafts, files, and prompts across different services','Work toward a more organized home for ideas, assets, and reusable prompts'],
- ['Room to expand','Add another standalone service whenever your needs change','Discover a growing range of creative and productivity capabilities'],
- ['Work across devices','Adjust to different interfaces as you move between devices','Explore a consistent workspace experience on desktop and mobile']
+ ['Create across formats','Switch between apps to write, design, and plan','Explore copy, visuals, video concepts, and ideas in one creative environment'],
+ ['Keep your direction','Repeat your brief and brand context across services','Develop work around clearer briefs, reusable prompts, and consistent creative direction'],
+ ['Move from draft to final','Transfer content between disconnected editors','Bring creation, iteration, and preparation closer together'],
+ ['Connect research and ideas','Keep insights apart from the content they inspire','Explore research and content development in a more cohesive workflow'],
+ ['Make space for every project','Add another tool whenever a new need appears','Discover a growing toolkit for creative and practical work'],
+ ['Work with more clarity','Navigate separate interfaces and scattered materials','Build toward a more organized workspace for your ideas and assets']
  ];
  return <section className="section extra-section compare-universe" id="comparison"><div className="shell">
-  <SectionEyebrow>WHY ONE WORKSPACE</SectionEyebrow>
-  <h2>Less friction. <span className="gradient-text">More forward momentum.</span></h2>
-  <p className="extra-lead">Your best work shouldn't depend on juggling a dozen disconnected tools. Xnovah is bringing creative and productivity capabilities into a more coherent experience—so ideas, assets, and workflows can stay closer together from the first spark to the final detail.</p>
+  <div className="comparison-intro"><div><SectionEyebrow>WHY ONE WORKSPACE</SectionEyebrow><h2>One place to think.<br/><span className="gradient-text">More room to create.</span></h2></div><div className="comparison-intro-side"><span className="comparison-overline">LESS SWITCHING / MORE CREATING</span><p>Great work needs momentum. Xnovah is being designed to bring your ideas, creative tools, and workflows closer together—so you can spend less energy navigating software and more energy moving your work forward.</p></div></div>
+  <div className="comparison-flow" aria-label="Connected creative workflow"><span><Lightbulb size={17}/> YOUR IDEA</span><i/><span><WandSparkles size={17}/> CREATE</span><i/><span><Layers3 size={17}/> REFINE</span><i/><span><Rocket size={17}/> MOVE FORWARD</span></div>
   <div className="comparison-table">
-   <div className="comparison-row heading"><span>WHAT MATTERS</span><b>Across separate tools</b><b>THE XNOVAH APPROACH</b></div>
-   {benefits.map(row=><div className="comparison-row" key={row[0]}><strong>{row[0]}</strong><span>{row[1]}</span><span>{row[2]}</span></div>)}
+   <div className="comparison-row heading"><span>THE DIFFERENCE</span><b>THE FRAGMENTED WAY</b><b><Sparkles size={14}/> THE XNOVAH VISION</b></div>
+   {benefits.map((row,i)=><div className="comparison-row" key={row[0]}><strong><span className="comparison-index">0{i+1}</span>{row[0]}</strong><span>{row[1]}</span><span>{row[2]}</span></div>)}
   </div>
-  
+  <div className="comparison-outro"><span><Sparkles size={16}/> ONE CONNECTED CREATIVE DIRECTION</span><a href="#waitlist">Explore early access <ArrowUpRight size={17}/></a></div>
  </div></section>
 }
 
