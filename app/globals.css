@@ -3211,3 +3211,6 @@ main{background:transparent}
 @media(prefers-reduced-motion:reduce){.comparison-refined .comparison-row{transition:none}}
 
 /* Show ten creative starting points before expansion on all screen sizes. */
+
+/* Creative Starting Points: twelve previews on desktop, ten on mobile. */
+@media(max-width:640px){.template-universe .template-grid-collapsed>.template-card:nth-child(n+11){display:none}}
