@@ -3214,3 +3214,34 @@ main{background:transparent}
 
 /* Creative Starting Points: twelve previews on desktop, ten on mobile. */
 @media(max-width:640px){.template-universe .template-grid-collapsed>.template-card:nth-child(n+11){display:none}}
+
+
+/* Simplified section hierarchy: hide decorative micro-headings, preserve the two requested labels. */
+.cu-intro .cu-overline,
+.cu-examples-heading>span,
+.xuc-atlas-head .eyebrow,
+.xuc-atlas-overline,
+.xuc-atlas-art-footer,
+.xuc-compact-top,
+.xuc-atlas-bottom>span,
+.xuc-atlas-child-title,
+.xorbit-kicker,
+.comparison-overline,
+.comparison-vision-top,
+.gxr-overline,
+.gxr-bottom>span,
+.roadmap-phase,
+.roadmap-step,
+.dedicated-number,
+.dedicated-label,
+.xh-eyebrow,
+.xh-step-number,
+.why-journey-kicker,
+.why-pipeline-top,
+.why-pipeline-index,
+.xfooter-cta-copy .xfooter-eyebrow:not(:has(.xfooter-pulse)),
+.showcase-footnote,
+.xuc-compact-section-label,
+.xt-topbar,
+.xt-after>div>span,
+.template-card>small {display:none!important}
