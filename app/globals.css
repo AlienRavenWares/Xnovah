@@ -3258,3 +3258,13 @@ main{background:transparent}
 .faq-item p{font-size:13px;line-height:1.8;max-width:64ch}
 @media(min-width:901px){.faq-heading{position:sticky;top:110px}}
 @media(max-width:900px){.faq-layout{grid-template-columns:minmax(0,1fr);gap:34px}.faq-heading{position:static}.faq-group-heading{padding-top:24px}}
+
+/* FAQ right column: cohesive editorial accordion rather than scattered groups */
+.faq-list{border-top:0;display:flex;flex-direction:column;align-self:start;width:100%}
+.faq-list-intro{margin:0;padding:0 0 18px;border-bottom:1px solid rgba(194,152,240,.35);justify-content:flex-start}
+.faq-list .faq-item{margin:0;padding:0;border-bottom:1px solid rgba(194,152,240,.19)}
+.faq-list .faq-item button{min-height:68px;padding:19px 0;display:grid;grid-template-columns:minmax(0,1fr) 28px;align-items:center;gap:22px;text-align:left;font-size:14px;line-height:1.5;font-weight:600}
+.faq-list .faq-item button>span:first-child{min-width:0;max-width:100%;text-wrap:pretty}
+.faq-list .faq-plus{justify-self:end}
+.faq-list .faq-item p{margin:0 48px 22px 0;max-width:58ch;font-size:13px;line-height:1.8}
+@media(max-width:600px){.faq-list .faq-item button{min-height:60px;gap:12px;padding:16px 0;font-size:13px}.faq-list .faq-item p{margin-right:22px}}
