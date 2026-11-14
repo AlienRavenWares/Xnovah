@@ -303,7 +303,7 @@ function templateDescription(group:string,name:string){
 function TemplateLibrary(){
  const [cat,setCat]=useState('All'),[search,setSearch]=useState(''),[expanded,setExpanded]=useState(false);
  const rows=fullTemplateCatalog.flatMap(([group,...items])=>items.map(name=>({group,name}))).filter(t=>(cat==='All'||t.group===cat)&&t.name.toLowerCase().includes(search.trim().toLowerCase()));
- const visible=expanded?rows:rows.slice(0,10);
+ const visible=expanded?rows:rows.slice(0,12);
  return <section className="section extra-section template-universe" id="templates"><div className="shell">
  <SectionEyebrow>CREATIVE STARTING POINTS</SectionEyebrow>
  <h2>A starting point for every idea.<span className="gradient-text"> A direction that’s yours.</span></h2>
