@@ -303,15 +303,15 @@ function templateDescription(group:string,name:string){
 function TemplateLibrary(){
  const [cat,setCat]=useState('All'),[search,setSearch]=useState(''),[expanded,setExpanded]=useState(false);
  const rows=fullTemplateCatalog.flatMap(([group,...items])=>items.map(name=>({group,name}))).filter(t=>(cat==='All'||t.group===cat)&&t.name.toLowerCase().includes(search.trim().toLowerCase()));
- const visible=expanded?rows:rows.slice(0,9);
+ const visible=expanded?rows:rows.slice(0,10);
  return <section className="section extra-section template-universe" id="templates"><div className="shell">
  <SectionEyebrow>CREATIVE STARTING POINTS</SectionEyebrow>
  <h2>A starting point for every idea.<span className="gradient-text"> A direction that’s yours.</span></h2>
  <p className="extra-lead">Move from a blank page to a clearer creative direction. Explore ready-to-shape ideas for marketing, business communication, social content, writing, and more—then develop, personalize, and refine them around your goals.</p>
  <div className="template-controls"><input value={search} onChange={e=>{setSearch(e.target.value);setExpanded(false)}} placeholder="Search 168 templates..." aria-label="Search template catalog"/><div>{['All',...fullTemplateCatalog.map(t=>t[0])].map(c=><button type="button" className={cat===c?'active':''} onClick={()=>{setCat(c);setExpanded(false)}} key={c}>{c}</button>)}</div></div>
- <div className="template-grid">{visible.map(t=><div className="template-card" key={t.group+t.name}><span>✳ &nbsp; {t.group.toUpperCase()}</span><h3>{t.name}</h3><p>{templateDescription(t.group,t.name)}</p><small>TEMPLATE PREVIEW</small></div>)}</div>
+ <div className={expanded?"template-grid template-grid-expanded":"template-grid template-grid-collapsed"}>{visible.map(t=><div className="template-card" key={t.group+t.name}><span>✳ &nbsp; {t.group.toUpperCase()}</span><h3>{t.name}</h3><p>{templateDescription(t.group,t.name)}</p><small>TEMPLATE PREVIEW</small></div>)}</div>
  {rows.length===0&&<p style={{textAlign:'center',marginTop:25}}>No templates match your search. Try another keyword or category.</p>}
- {rows.length>9&&<div style={{display:'flex',justifyContent:'center',marginTop:28}}><button type="button" onClick={()=>setExpanded(v=>!v)} aria-expanded={expanded} style={{padding:'12px 28px',borderRadius:12,border:'1px solid rgba(180,130,255,.35)',background:'rgba(135,75,215,.12)',color:'#f2eaff',cursor:'pointer',fontWeight:700}}>{expanded?'Show fewer templates':'View all '+rows.length+' templates'}</button></div>}
+ {rows.length>10&&<div style={{display:'flex',justifyContent:'center',marginTop:28}}><button type="button" onClick={()=>setExpanded(v=>!v)} aria-expanded={expanded} style={{padding:'12px 28px',borderRadius:12,border:'1px solid rgba(180,130,255,.35)',background:'rgba(135,75,215,.12)',color:'#f2eaff',cursor:'pointer',fontWeight:700}}>{expanded?'Show fewer templates':'View all '+rows.length+' templates'}</button></div>}
  
  </div></section>
 }
