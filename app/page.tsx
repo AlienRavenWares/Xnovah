@@ -429,21 +429,18 @@ function IntegrationUniverse(){
 }
 function CompareWays(){
  const benefits=[
- ['Create across formats','Switch between apps to write, design, and plan','Explore copy, visuals, video concepts, and ideas in one creative environment'],
- ['Keep your direction','Repeat your brief and brand context across services','Develop work around clearer briefs, reusable prompts, and consistent creative direction'],
- ['Move from draft to final','Transfer content between disconnected editors','Bring creation, iteration, and preparation closer together'],
- ['Connect research and ideas','Keep insights apart from the content they inspire','Explore research and content development in a more cohesive workflow'],
- ['Make space for every project','Add another tool whenever a new need appears','Discover a growing toolkit for creative and practical work'],
- ['Work with more clarity','Navigate separate interfaces and scattered materials','Build toward a more organized workspace for your ideas and assets']
+ ['Create across formats','Jump between separate apps for copy, visuals and planning','Explore writing, visuals, video concepts and ideas in one place'],
+ ['Keep your creative direction','Repeat your brief, tone and references in every tool','Carry a clearer creative direction from one task to the next'],
+ ['Go from first draft to final','Copy, export and reorganize work between editors','Keep creating, revising and preparing work in one flow'],
+ ['Connect research to creation','Leave valuable insights scattered across tabs','Bring ideas and research closer to the content they inspire'],
+ ['Grow without the clutter','Add another disconnected tool for each new task','Discover more capabilities within a growing workspace'],
+ ['Stay focused on the outcome','Spend time managing tools instead of making progress','Put more attention into the work that actually matters']
  ];
- return <section className="section extra-section compare-universe" id="comparison"><div className="shell">
-  <div className="comparison-intro"><div><SectionEyebrow>WHY ONE WORKSPACE</SectionEyebrow><h2>One place to think.<br/><span className="gradient-text">More room to create.</span></h2></div><div className="comparison-intro-side"><span className="comparison-overline">LESS SWITCHING / MORE CREATING</span><p>Great work needs momentum. Xnovah is being designed to bring your ideas, creative tools, and workflows closer together—so you can spend less energy navigating software and more energy moving your work forward.</p></div></div>
-  <div className="comparison-flow" aria-label="Connected creative workflow"><span><Lightbulb size={17}/> YOUR IDEA</span><i/><span><WandSparkles size={17}/> CREATE</span><i/><span><Layers3 size={17}/> REFINE</span><i/><span><Rocket size={17}/> MOVE FORWARD</span></div>
-  <div className="comparison-table">
-   <div className="comparison-row heading"><span>THE DIFFERENCE</span><b>THE FRAGMENTED WAY</b><b><Sparkles size={14}/> THE XNOVAH VISION</b></div>
-   {benefits.map((row,i)=><div className="comparison-row" key={row[0]}><strong><span className="comparison-index">0{i+1}</span>{row[0]}</strong><span>{row[1]}</span><span>{row[2]}</span></div>)}
-  </div>
-  <div className="comparison-outro"><span><Sparkles size={16}/> ONE CONNECTED CREATIVE DIRECTION</span><a href="#waitlist">Explore early access <ArrowUpRight size={17}/></a></div>
+ return <section className="section extra-section compare-universe comparison-refined" id="comparison"><div className="shell">
+  <div className="comparison-intro"><div><SectionEyebrow>WHY ONE WORKSPACE</SectionEyebrow><h2>Less switching.<br/><span className="gradient-text">More creating.</span></h2></div><div className="comparison-intro-side"><span className="comparison-overline">YOUR IDEAS DESERVE MOMENTUM</span><p>Great work rarely happens in just one step. Xnovah is being designed to connect the tools, context and creative stages that help you move from a first thought to a stronger finished result.</p></div></div>
+  <div className="comparison-vision" aria-label="One connected workflow"><div className="comparison-vision-top"><span><Sparkles size={15}/> THE CONNECTED WORKFLOW</span><span>ONE CREATIVE DIRECTION / FOUR STAGES</span></div><div className="comparison-flow"><span><Lightbulb size={19}/><b>01</b> IMAGINE</span><i/><span><WandSparkles size={19}/><b>02</b> CREATE</span><i/><span><Layers3 size={19}/><b>03</b> REFINE</span><i/><span><Rocket size={19}/><b>04</b> MOVE FORWARD</span></div><p>Keep your momentum as ideas become drafts, drafts become polished work, and polished work moves closer to delivery.</p></div>
+  <div className="comparison-table"><div className="comparison-row heading"><span>WHAT MATTERS</span><b>THE DISCONNECTED APPROACH</b><b><Sparkles size={14}/> THE XNOVAH VISION</b></div>{benefits.map((row,i)=><div className="comparison-row" key={row[0]}><strong><span className="comparison-index">0{i+1}</span>{row[0]}</strong><span>{row[1]}</span><span>{row[2]}</span></div>)}</div>
+  <div className="comparison-outro"><span><Sparkles size={16}/> A MORE CONNECTED WAY TO WORK</span><a href="#waitlist">Explore early access <ArrowUpRight size={17}/></a></div>
  </div></section>
 }
 
