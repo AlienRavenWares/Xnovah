@@ -3273,7 +3273,7 @@ main{background:transparent}
 
 /* Qore-inspired starfield BACKGROUND ONLY — no section dimensions or layouts changed.
    Tiny scattered neutral particles + understated dotted side rails.
-   Intentionally no animation, no images, and no pointer interception. */
+   Subtle continuous motion, no images, and no pointer interception. */
 html{background-color:#030304}
 body{background-color:#030304}
 body::before{
@@ -3295,3 +3295,25 @@ body::after{
  opacity:.4;
 }
 @media(max-width:700px){body::before{opacity:.32}body::after{opacity:.18}}
+
+
+/* Gentle Qore-style drifting particles — background only.
+   Long, staggered movement prevents a distracting repeating pattern. */
+@keyframes xnovah-star-drift{
+  0%{background-position:17px 31px,103px 77px,56px 149px}
+  100%{background-position:190px 222px,-136px 304px,363px -132px}
+}
+@keyframes xnovah-edge-drift{
+  from{background-position:0 0}
+  to{background-position:0 140px}
+}
+body::before{
+  will-change:background-position;
+  animation:xnovah-star-drift 90s linear infinite;
+}
+body::after{
+  animation:xnovah-edge-drift 65s linear infinite;
+}
+@media(prefers-reduced-motion:reduce){
+  body::before,body::after{animation:none!important;will-change:auto}
+}
