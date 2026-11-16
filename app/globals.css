@@ -3314,3 +3314,30 @@ main section .section-subtitle,main section .section-description{color:#b0b2ba}
 ::selection{background:#e4e5ea;color:#111}
 :focus-visible{outline-color:#e5e6eb!important}
 @media(prefers-reduced-motion:reduce){.button-primary,.faq-list .faq-item button{transition:none!important}}
+
+
+/* SECOND PASS — silver lighting, contrast and editorial hierarchy */
+:root{--x-obsidian:#090a0c;--x-charcoal:#14161b;--x-slate:#242730;--x-pearl:#f4f5f7;--x-silver:#bfc3cd}
+body{font-feature-settings:"kern" 1;text-rendering:optimizeLegibility}
+main h1,main h2,main h3{font-family:Manrope,"DM Sans",sans-serif;font-weight:800;text-wrap:balance}
+main h2{line-height:1.12}
+main p{line-height:1.75}
+main section{scroll-margin-top:92px}
+main section .shell{position:relative}
+.nav-wrap .logo{letter-spacing:-.055em}
+.nav-links a{transition:color .2s ease}
+.hero{isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 42% 46% at 74% 41%,rgba(215,218,227,.085),transparent 75%);z-index:-1}
+.hero h1{line-height:1.05;letter-spacing:-.065em}
+.hero-sub{font-size:clamp(14px,1.2vw,16px);line-height:1.9}
+.hero-actions{gap:22px}
+.button-primary{border-radius:10px!important;transition:transform .2s ease,box-shadow .2s ease,background .2s ease!important}
+.button-ghost{transition:opacity .2s ease}
+.button-ghost:hover{opacity:.75}
+.hero-pill{letter-spacing:.13em}
+.hero-foot{color:#b4b6be!important}
+.faq-list .faq-item button{font-weight:650;letter-spacing:-.01em}
+.faq-list .faq-item p{color:#b7b9c1}
+main section :is(input,textarea,select):focus-visible{outline:2px solid #f0f1f4;outline-offset:2px}
+@media(max-width:900px){.hero::before{background:radial-gradient(ellipse 70% 32% at 50% 38%,rgba(220,223,232,.07),transparent 75%)}}
+@media(prefers-reduced-motion:reduce){.nav-links a,.button-primary,.button-ghost{transition:none!important}}
