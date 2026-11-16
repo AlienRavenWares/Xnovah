@@ -3269,3 +3269,48 @@ main{background:transparent}
 .faq-list .faq-item p{margin:0 48px 22px 0;max-width:58ch;font-size:13px;line-height:1.8}
 @media(max-width:600px){.faq-list .faq-item button{min-height:60px;gap:12px;padding:16px 0;font-size:13px}.faq-list .faq-item p{margin-right:22px}}
 
+
+
+/* XNOVAH DESIGN 2026 — editorial obsidian / pearl redesign.
+   Reversible isolated layer; keeps the existing section structure and interactions. */
+:root{--bg:#08090b;--surface:#101216;--ink:#f7f7f8;--muted:#a7a9b0;--purple:#e8e9ee;--border:rgba(238,240,245,.14)}
+html{background:#08090b}
+body{background:#08090b;color:#f7f7f8}
+.nav-wrap,.xnovah-glass-nav{background:rgba(9,10,13,.88)!important;border-bottom:1px solid rgba(255,255,255,.13)!important;backdrop-filter:blur(24px)}
+.logo-mark{background:linear-gradient(145deg,#fff,#9b9da7)!important;color:#111217!important}
+.logo-dot,.logo-ai{color:#e5e6eb!important}
+.logo-ai{border-color:#777983!important}
+.nav-links{color:#d1d2d7!important}
+.nav-links a:hover,.footer a:hover,.xfooter a:hover{color:#fff!important}
+.nav-cta{border-color:#777b85!important;color:#f6f6f7!important;background:rgba(255,255,255,.045)!important}
+.nav-cta:hover{background:#fff!important;color:#0a0b0d!important}
+.announcement{background:#e9eaee!important;color:#111217!important}
+.announcement-pulse{background:#111217!important;box-shadow:0 0 0 4px #c4c6cb!important}
+.hero-pill{background:rgba(255,255,255,.055)!important;color:#e8e9ed!important;border:1px solid rgba(255,255,255,.22)!important}
+.hero-pill span{color:#aeb0b8!important}
+.gradient-text{background:linear-gradient(105deg,#fff 0%,#c8cbd3 47%,#858995 100%)!important;background-clip:text!important;-webkit-background-clip:text!important;color:transparent!important}
+.hero h1{letter-spacing:-.067em}
+.hero-sub{color:#b6b8c0!important}
+.hero-sub strong,.hero-foot b{color:#fff!important}
+.button-primary{background:linear-gradient(125deg,#fff,#d7d9df)!important;color:#101114!important;box-shadow:0 14px 36px #ffffff15!important;border:1px solid #fff!important}
+.button-primary:hover{background:#fff!important;box-shadow:0 17px 40px #ffffff2b!important}
+.button-ghost,.play-circle{color:#f3f4f6!important}
+.play-circle{border-color:#747782!important}
+.hero-art-grid{background-image:linear-gradient(#ffffff09 1px,transparent 1px),linear-gradient(90deg,#ffffff09 1px,transparent 1px)!important}
+.planet{background:radial-gradient(circle at 32% 24%,#fff 0%,#d5d8e0 15%,#9197a5 37%,#424753 59%,#171a21 80%,#08090b 95%)!important;box-shadow:inset -35px -36px 50px #050609b0,0 0 72px #c9cbd027,0 0 140px #fff0!important}
+.planet-halo{background:radial-gradient(circle,#aeb3c02d,transparent 66%)!important}
+.orbit{border-color:#c9cbd333!important}
+main section h2,main section h3{letter-spacing:-.045em}
+main section [class*="eyebrow"],main section [class*="kicker"],main section [class*="overline"]{color:#d0d2d9!important}
+main section .section-subtitle,main section .section-description{color:#b0b2ba}
+.faq-group-heading{color:#d5d7de!important}
+.faq-list-intro{border-bottom-color:#666a73!important}
+.faq-list .faq-item{border-bottom-color:#3b3d45!important}
+.faq-plus{color:#fff!important}
+.faq-list .faq-item button{transition:color .2s ease}
+.faq-list .faq-item button:hover{color:#fff!important}
+.footer,.xfooter{border-top-color:#33363e!important}
+.footer a,.xfooter a{transition:color .2s ease}
+::selection{background:#e4e5ea;color:#111}
+:focus-visible{outline-color:#e5e6eb!important}
+@media(prefers-reduced-motion:reduce){.button-primary,.faq-list .faq-item button{transition:none!important}}
