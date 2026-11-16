@@ -328,7 +328,7 @@ function PlatformWalkthrough(){
    <div style={{display:'none',position:'absolute',inset:0,alignItems:'center',justifyContent:'center',flexDirection:'column',gap:12,padding:24,textAlign:'center',background:'radial-gradient(circle at center,#24113d 0%,#030106 70%)',color:'#fff'}}>
     <strong style={{fontSize:'clamp(20px,3vw,34px)',letterSpacing:2}}>XNOVAH / THE VISION</strong>
     <p style={{color:'#c9b9de',maxWidth:470,lineHeight:1.7}}>This video is currently unavailable here. Explore the animated brand preview instead.</p>
-    <a href="/video-preview" style={{color:'#d9b7ff',textDecoration:'underline'}}>Watch the cinematic preview</a>
+    <a href="#features" style={{color:'#d9b7ff',textDecoration:'underline'}}>Explore Xnovah tools</a>
    </div>
   </div></div>
   <div className="xt-after"><div><span>EXPLORE XNOVAH</span><h3>From the first spark to the final reveal.</h3><p>Travel through light, motion, and imagination in our 24-second brand film. This is a cinematic introduction to the Xnovah brand and its creative possibilities, rather than a live product walkthrough.</p></div><a href="#features">Explore Xnovah <ArrowUpRight size={17}/></a></div>
