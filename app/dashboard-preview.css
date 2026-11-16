@@ -352,13 +352,3 @@
 @media(max-width:650px){.xdash-mobile-tool-picker{max-width:calc(100vw - 28px)}.xdash-mobile-tool-trigger{min-height:64px!important;padding:10px 13px!important}.xdash-mobile-tool-options.open{max-height:min(52dvh,380px)}}
 @media(prefers-reduced-motion:reduce){.xdash-mobile-tool-trigger,.xdash-mobile-tool-options button,.xdash-mobile-tool-chevron{transition:none!important}}
 
-
-/* XNOVAH WHITE / RED / BLACK — command center */
-.xdash-section{background:#fff!important;color:#111!important}
-.xdash-heading h2,.xdash-heading h3{color:#111!important}
-.xdash-heading p{color:#555!important}
-.xdash-frame{background:#fff!important;border-color:#e5d9dc!important;box-shadow:0 24px 80px #00000012!important}
-.xdash-demo-label{background:#fff5f6!important;color:#b30c2a!important}
-.xdash-live-dot,.xdash-online{background:#c8102e!important;box-shadow:0 0 12px #c8102e55!important}
-.xdash-section button,.xdash-section input{accent-color:#c8102e}
-.xdash-section input{background:#fff;color:#111;border-color:#eadde0}
