@@ -3344,3 +3344,24 @@ main section :is(input,textarea,select):focus-visible{outline:2px solid #f0f1f4;
 
 /* Monochrome brand: no purple accents; dark surfaces stay black/charcoal. */
 :root{--purple:#bfc3cc;--bg:#08090b;--surface:#101216;--ink:#f7f7f8}
+
+
+/* XNOVAH ACCENT SYSTEM — 95% monochrome, 5% restrained electric cyan.
+   Additive and reversible: no bulk replacement of component colors. */
+:root{--x-obsidian:#080b10;--x-charcoal:#1a2028;--x-silver:#aab5c3;--x-pearl:#f5f7fa;--x-accent:#36d9f5;--x-accent-soft:rgba(54,217,245,.12)}
+html,body{background-color:var(--x-obsidian)}
+.hero::before{background:radial-gradient(ellipse 43% 48% at 74% 41%,rgba(170,181,195,.11),transparent 75%),radial-gradient(ellipse 20% 22% at 78% 49%,rgba(54,217,245,.045),transparent 85%)}
+.hero-pill{border-color:rgba(54,217,245,.25)!important}
+.hero-pill span{color:#c4d0d9!important}
+.hero-pill::before{box-shadow:0 0 14px rgba(54,217,245,.3)}
+.logo-dot{color:var(--x-accent)!important}
+.hero-art-grid{opacity:.72}
+.planet-halo{background:radial-gradient(circle,rgba(184,197,213,.2),rgba(54,217,245,.045) 40%,transparent 68%)!important}
+main section :is(.showcase-kicker,.xh-eyebrow,.xgallery-eyebrow,.xorbit-kicker,.why-journey-kicker,.xuc-kicker,.xfooter-eyebrow,.xj-eyebrow){color:#b9cbd4!important;letter-spacing:.13em}
+main section :is(.workspace-status,.cu-status,.command-status,.xcmd-topstatus,.xa-team-status,.xa-demo-status){border-color:rgba(54,217,245,.22)}
+main section :is(.output-dot,.xcmd-statusdot,.why-journey-step-dot,.xh-dot){box-shadow:0 0 12px rgba(54,217,245,.18)}
+main section :is(.creator-badge,.model-pill,.steps-story-result-badge){border-color:rgba(170,181,195,.3)}
+:focus-visible{outline-color:var(--x-accent)!important}
+main section :is(input,textarea,select):focus-visible{outline-color:var(--x-accent)!important}
+::selection{background:rgba(54,217,245,.28);color:#fff}
+@media(max-width:900px){.hero::before{background:radial-gradient(ellipse 70% 32% at 50% 38%,rgba(170,181,195,.09),transparent 75%)}}
