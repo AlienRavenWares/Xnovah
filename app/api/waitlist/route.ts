@@ -19,8 +19,6 @@ export async function POST(req:NextRequest){
  const email=typeof data.email==='string'?data.email.trim().toLowerCase():'';
  if(!validEmail(email))return NextResponse.json({error:'Please enter a valid email.'},{status:400,headers});
  const source=data.source==='newsletter'?'Newsletter':'Waitlist';
- // Never send real visitors' addresses to a demo mailbox.
- if(NOTIFICATION_EMAIL==='demo@example.com')return NextResponse.json({error:'Email signup notifications are awaiting inbox setup. Please try again later.'},{status:503,headers});
  try{
   const response=await fetch('https://formsubmit.co/ajax/'+encodeURIComponent(NOTIFICATION_EMAIL),{
    method:'POST',
