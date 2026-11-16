@@ -3269,3 +3269,29 @@ main{background:transparent}
 .faq-list .faq-item p{margin:0 48px 22px 0;max-width:58ch;font-size:13px;line-height:1.8}
 @media(max-width:600px){.faq-list .faq-item button{min-height:60px;gap:12px;padding:16px 0;font-size:13px}.faq-list .faq-item p{margin-right:22px}}
 
+
+
+/* Qore-inspired starfield BACKGROUND ONLY — no section dimensions or layouts changed.
+   Tiny scattered neutral particles + understated dotted side rails.
+   Intentionally no animation, no images, and no pointer interception. */
+html{background-color:#030304}
+body{background-color:#030304}
+body::before{
+ content:"";position:fixed;inset:0;z-index:15;pointer-events:none;
+ background-image:
+ radial-gradient(circle,rgba(245,245,249,.46) .75px,transparent 1.3px),
+ radial-gradient(circle,rgba(235,237,245,.24) .7px,transparent 1.4px),
+ radial-gradient(circle,rgba(245,245,249,.20) .55px,transparent 1.3px);
+ background-size:173px 191px,239px 227px,307px 281px;
+ background-position:17px 31px,103px 77px,56px 149px;
+ opacity:.48;
+}
+body::after{
+ content:"";position:fixed;inset:0;z-index:14;pointer-events:none;
+ background-image:radial-gradient(circle,rgba(180,185,196,.17) .8px,transparent 1.3px);
+ background-size:7px 7px;
+ -webkit-mask-image:linear-gradient(90deg,#000 0%,transparent 10%,transparent 90%,#000 100%);
+ mask-image:linear-gradient(90deg,#000 0%,transparent 10%,transparent 90%,#000 100%);
+ opacity:.4;
+}
+@media(max-width:700px){body::before{opacity:.32}body::after{opacity:.18}}
