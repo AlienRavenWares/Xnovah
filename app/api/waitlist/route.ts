@@ -3,9 +3,8 @@ import {NextRequest,NextResponse} from 'next/server';
 export const runtime='nodejs';
 const headers={'Cache-Control':'no-store'};
 
-// REPLACE THIS DEMO ADDRESS WITH YOUR REAL INBOX LATER.
-// GitHub: app/api/waitlist/route.ts
-const NOTIFICATION_EMAIL='demo@example.com';
+// Signup notification destination; this address must be able to receive email.
+const NOTIFICATION_EMAIL='no-reply@xnovah.com';
 
 const validEmail=(email:string)=>email.length<=254&&/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
