@@ -3341,3 +3341,36 @@ section.compare-universe{
 }
 .nav-wrap{background-color:rgba(0,0,0,.91)!important}
 footer,.footer,.xfooter{background-color:#000!important}
+
+
+/* Requested charcoal-black feature surfaces; preserve the true-black page canvas. */
+.creative-universe-section .cu-universe,
+.creative-universe-section .cu-journey-examples,
+.creative-universe-section .cu-example-card,
+.xuc-atlas .xuc-atlas-stage,
+.xuc-atlas .xuc-compact,
+.why-journey .why-journey-shell,
+.comparison-refined .comparison-table,
+.creative-playground .cp-wrap,
+.creative-playground .cp-main,
+.audience-section .xa-feature,
+.xstudio3-view,
+.xstudio3-view-head,
+.xstudio-workbench,
+.xstudio-workbench-output{
+ background-color:#181a1e!important;
+}
+.creative-universe-section .cu-example-card,
+.xuc-atlas .xuc-atlas-stage,
+.why-journey .why-journey-shell,
+.comparison-refined .comparison-table,
+.creative-playground .cp-wrap,
+.audience-section .xa-feature{
+ border-color:rgba(255,255,255,.13)!important;
+}
+.creative-playground .cp-main,
+.audience-section .xa-feature,
+.xuc-atlas .xuc-atlas-stage,
+.why-journey .why-journey-shell{
+ background-image:none!important;
+}
