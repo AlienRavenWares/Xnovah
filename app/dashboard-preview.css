@@ -352,3 +352,11 @@
 @media(max-width:650px){.xdash-mobile-tool-picker{max-width:calc(100vw - 28px)}.xdash-mobile-tool-trigger{min-height:64px!important;padding:10px 13px!important}.xdash-mobile-tool-options.open{max-height:min(52dvh,380px)}}
 @media(prefers-reduced-motion:reduce){.xdash-mobile-tool-trigger,.xdash-mobile-tool-options button,.xdash-mobile-tool-chevron{transition:none!important}}
 
+
+
+/* Charcoal-black Interactive Product Concept and its workspace shell. */
+.xdash-frame,.xdash-app,.xdash-main,.xdash-content,.xdash-demo-label{
+ background-color:#181a1e!important;
+}
+.xdash-frame{border-color:rgba(255,255,255,.16)!important}
+.xdash-sidebar{background:#141619!important}
