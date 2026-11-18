@@ -3317,3 +3317,27 @@ body::after{
 @media(prefers-reduced-motion:reduce){
   body::before,body::after{animation:none!important;will-change:auto}
 }
+
+
+/* Deep-black canvas refresh — retains Qore-inspired moving stars and all layouts.
+   Section backdrops become nearly black; cards and product previews keep depth. */
+:root{--bg:#000000;--surface:#0a0a0d}
+html,body{background-color:#000!important}
+body{background:#000!important}
+main{background-color:#000}
+main > section,
+main > div > section,
+section.hero,
+section.section,
+section.extra-section,
+section.waitlist-section,
+section.xdash-section,
+section.xcmd-section,
+section.xa-section,
+section.xj-section,
+section.creative-playground,
+section.compare-universe{
+  background-color:#000!important;
+}
+.nav-wrap{background-color:rgba(0,0,0,.91)!important}
+footer,.footer,.xfooter{background-color:#000!important}
