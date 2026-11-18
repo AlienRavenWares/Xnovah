@@ -3374,3 +3374,64 @@ footer,.footer,.xfooter{background-color:#000!important}
 .why-journey .why-journey-shell{
  background-image:none!important;
 }
+
+
+/* Xnovah hero polish — editorial spacing, legible hierarchy, refined charcoal artwork. */
+.xnovah-cinematic-hero{
+  padding-top:clamp(86px,10vw,148px)!important;
+  padding-bottom:clamp(85px,9vw,132px)!important;
+  align-items:center;
+  gap:clamp(35px,5vw,80px);
+}
+.xnovah-cinematic-hero .hero-copy{max-width:640px}
+.xnovah-cinematic-hero .hero-pill{
+  width:max-content;max-width:100%;padding:11px 17px;
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(24,26,30,.9);color:#e6e2ef;
+  font-size:10px;letter-spacing:.14em;
+}
+.xnovah-cinematic-hero h1{
+  margin:25px 0 23px;
+  font-size:clamp(48px,5.5vw,86px);
+  letter-spacing:-.065em;line-height:1.065;
+  text-wrap:balance;
+}
+.xnovah-cinematic-hero .hero-sub{
+  max-width:560px;color:#b9bac3;
+  font-size:clamp(15px,1.28vw,18px);line-height:1.85;
+  text-wrap:pretty;
+}
+.xnovah-cinematic-hero .hero-sub strong{color:#f5f4f7}
+.xnovah-cinematic-hero .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:33px}
+.xnovah-cinematic-hero .hero-actions>a{min-height:52px;display:inline-flex;align-items:center;justify-content:center}
+.xnovah-hero-proof{
+  display:flex;align-items:center;gap:15px;margin-top:39px;padding-top:22px;
+  border-top:1px solid rgba(255,255,255,.13);
+}
+.xnovah-proof-mark{
+  flex:0 0 42px;width:42px;height:42px;display:grid;place-items:center;
+  border:1px solid rgba(255,255,255,.18);border-radius:50%;
+  color:#e2d5ff;background:#181a1e;font-size:24px;
+}
+.xnovah-hero-proof>div{display:flex;flex-direction:column;gap:5px}
+.xnovah-hero-proof strong{font-size:12px;color:#f4f2f7;letter-spacing:.015em}
+.xnovah-hero-proof>div>span{font-size:11px;color:#aaaab4;line-height:1.55}
+.xnovah-editorial-hero{
+  background-color:#141619!important;
+  border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 35px 100px rgba(0,0,0,.5),inset 0 1px rgba(255,255,255,.05);
+}
+.xnovah-editorial-hero .xe-composition{filter:drop-shadow(0 15px 30px rgba(0,0,0,.3))}
+.xnovah-editorial-hero .xe-coordinate{color:#a6a6b0;letter-spacing:.12em}
+@media(max-width:900px){
+  .xnovah-cinematic-hero{padding-top:82px!important;padding-bottom:90px!important}
+  .xnovah-cinematic-hero .hero-copy{max-width:100%}
+  .xnovah-cinematic-hero h1{font-size:clamp(46px,8vw,72px)}
+}
+@media(max-width:600px){
+  .xnovah-cinematic-hero{padding-top:62px!important;padding-bottom:72px!important;gap:35px}
+  .xnovah-cinematic-hero h1{font-size:clamp(42px,11vw,60px);letter-spacing:-.055em}
+  .xnovah-cinematic-hero .hero-sub{font-size:14px;line-height:1.8}
+  .xnovah-cinematic-hero .hero-actions>a{min-height:48px}
+  .xnovah-hero-proof{margin-top:27px}
+}
