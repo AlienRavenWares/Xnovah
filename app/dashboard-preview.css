@@ -360,3 +360,46 @@
 }
 .xdash-frame{border-color:rgba(255,255,255,.16)!important}
 .xdash-sidebar{background:#141619!important}
+
+/* Command center — platinum monochrome refinement, preserving all interactions. */
+#feature-universe.xdash-section{background:#000!important;color:#f5f5f7;padding-block:96px}
+#feature-universe .xdash-heading h2{font-size:clamp(36px,5.1vw,72px);line-height:1.06;font-weight:750;letter-spacing:-.055em}
+#feature-universe .xdash-heading .gradient-text{background:linear-gradient(110deg,#fafafa,#a2a5ae);background-clip:text;-webkit-background-clip:text;color:transparent}
+#feature-universe .xdash-heading p{color:#b5b7bf;line-height:1.75}
+#feature-universe .xdash-frame{border:1px solid #45474e!important;box-shadow:0 24px 80px #0009;border-radius:18px}
+#feature-universe .xdash-demo-label,#feature-universe .xdash-topbar,#feature-universe .xdash-footer{background:#141619!important;border-color:#35373d;color:#b5b7bf}
+#feature-universe .xdash-sidebar{background:#141619!important;border-color:#35373d}
+#feature-universe .xdash-body,#feature-universe .xdash-content{background:#181a1e!important}
+#feature-universe .xdash-brand-mark{color:#f5f5f7;text-shadow:none}
+#feature-universe .xdash-sidebar-tools button{color:#c4c6cd}
+#feature-universe .xdash-sidebar-tools button:hover{background:#292b30;color:#fff}
+#feature-universe .xdash-sidebar-tools button.active,#feature-universe .xdash-nav button.active{background:#e5e6ea!important;color:#111216!important;box-shadow:none}
+#feature-universe .xdash-sidebar-tools button.active svg{color:currentColor}
+#feature-universe .xdash-sidebar-tools button.active .xdash-active-dot{background:#35373d}
+#feature-universe .xdash-search,#feature-universe .xdash-upgrade{background:#22242a;border-color:#45474e;color:#c4c6cd}
+#feature-universe .xdash-search input::placeholder{color:#a5a8b0}
+#feature-universe .xdash-avatar{background:#e5e6ea;color:#111216}
+#feature-universe .xdash-hero{background:radial-gradient(ellipse at 85% 40%,#35373d,transparent 65%),#141619;border-color:#45474e}
+#feature-universe .xdash-hero p,#feature-universe .xdash-upgrade p{color:#b5b7bf}
+#feature-universe .xdash-art-window{background:linear-gradient(145deg,#35373d,#181a1e);border:1px solid #92949e;box-shadow:0 16px 35px #0009}
+#feature-universe .xdash-art-window>span{color:#f5f5f7;text-shadow:none}
+#feature-universe .xdash-art-halo{border-color:#92949e66;box-shadow:none}
+#feature-universe .xdash-art-chip{background:#25272d;border-color:#62656d;color:#e6e7eb;box-shadow:0 8px 20px #0008}
+#feature-universe .xdash-hero-actions button,#feature-universe .xdash-upgrade a,#feature-universe .xdash-studio-toggle,#feature-universe .xdash-catalog-filters button.active{background:linear-gradient(135deg,#f5f5f7,#bfc3cc)!important;color:#111216!important;box-shadow:none!important;text-shadow:none}
+#feature-universe .xdash-hero-actions a,#feature-universe .xdash-catalog-filters button{background:#22242a;border-color:#45474e;color:#e6e7eb}
+#feature-universe .xdash-tool,#feature-universe .xdash-panel,#feature-universe .xdash-tool-detail,#feature-universe .xdash-tool-overview-steps>div{background:#202226!important;border-color:#3c3e45;box-shadow:none}
+#feature-universe .xdash-tool:hover{border-color:#bfc3cc}
+#feature-universe .xdash-tool-icon,#feature-universe .xdash-detail-icon{background:#35373d;border-color:#62656d;color:#f5f5f7}
+#feature-universe .xdash-tool small,#feature-universe .xdash-project-name small,#feature-universe .xdash-activity-row small,#feature-universe .xdash-tool-overview-steps small,#feature-universe .xdash-overview-disclaimer{color:#b5b7bf}
+#feature-universe .xdash-project,#feature-universe .xdash-activity-row,#feature-universe .xdash-usage-lines>span{border-color:#35373d}
+#feature-universe .xdash-project-thumb{background:#d8dae0!important;color:#111216}
+#feature-universe .xdash-donut{background:conic-gradient(#e6e7eb 0 52%,#92949e 52% 72%,#45474e 72%)}
+#feature-universe .xdash-donut:before{background:#202226}
+#feature-universe .xdash-connect-icons span,#feature-universe .xdash-connect-icons button{background:#292b30;border-color:#45474e;color:#e6e7eb}
+#feature-universe .xdash-mobile-tool-trigger,#feature-universe .xdash-mobile-tool-options.open{background:#181a1efc!important;border-color:#62656d!important;box-shadow:0 12px 32px #0009!important}
+#feature-universe .xdash-mobile-tool-options button.active{background:#e5e6ea!important;color:#111216!important;box-shadow:none}
+#feature-universe .xdash-mobile-tool-options button.active svg{color:#111216}
+#feature-universe .xdash-studio-modal,#feature-universe .xstudio2,#feature-universe .xstudio2-center,#feature-universe .xstudio2-rail,#feature-universe .xstudio2-inspector{background:#141619!important}
+#feature-universe .xdash-studio-modal-header{background:#181a1e!important;border-color:#35373d!important}
+#feature-universe .xstudio2-generate,#feature-universe .xstudio3-inline .xstudio3-primary{background:linear-gradient(135deg,#f5f5f7,#bfc3cc)!important;color:#111216!important;box-shadow:none}
+@media(max-width:700px){#feature-universe.xdash-section{padding-block:60px}#feature-universe .xdash-heading h2{font-size:clamp(30px,7vw,42px)}#feature-universe .xdash-frame{border-radius:12px}}
