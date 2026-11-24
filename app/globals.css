@@ -3606,3 +3606,41 @@ footer,.footer,.xfooter{background-color:#000!important}
 .fu-studio-actions a svg,.xcmd-workspace-detail a svg,.xgal-detail-copy a svg,.xgallery-modal-copy a svg,.xorbit-detail-cta svg,.xw-generate svg,.xt-after a svg,.xcmd-demo button svg,.why-compare-footer a svg,.why-journey-footer a svg,.xgal-detail>a svg{color:inherit!important;stroke:currentColor;}
 .cp-editor,.command-v1-paper,.xcmd-output-document,.xcmd-product-paper{color:#202124!important;text-shadow:none!important;}
 .cp-editor :is(h1,h2,h3,h4,p,li),.command-v1-paper :is(h1,h2,h3,h4,p,li),.xcmd-output-document :is(h1,h2,h3,h4,p,li),.xcmd-product-paper :is(h1,h2,h3,h4,p,li){color:#202124!important;text-shadow:none!important;}
+
+/* How it works — platinum editorial refinement, scoped to this section. */
+#how-it-works.xh-section{background:#000!important;padding:100px 0 94px}
+#how-it-works:before{background:radial-gradient(ellipse at 50% 48%,#ffffff09,transparent 66%);inset:0}
+#how-it-works .xh-stars{opacity:.12}
+#how-it-works .xh-shell{max-width:1320px!important}
+#how-it-works .xh-intro{max-width:800px;margin-bottom:56px}
+#how-it-works .xh-intro h2{font-size:clamp(36px,5.1vw,72px);font-weight:750;line-height:1.06;letter-spacing:-.055em}
+#how-it-works .xh-intro h2 em{background:linear-gradient(110deg,#fafafa,#a2a5ae);background-clip:text;-webkit-background-clip:text;color:transparent}
+#how-it-works .xh-intro p{color:#b5b7bf;line-height:1.75;max-width:700px;margin:20px auto 0}
+#how-it-works .xh-showcase{gap:24px;grid-template-columns:repeat(3,minmax(0,1fr))}
+#how-it-works .xh-scene{height:clamp(230px,27vw,350px)}
+#how-it-works .xh-app{transform:none;margin-top:0;height:100%;background:#181a1e;border:1px solid #45474e;border-radius:16px;box-shadow:0 20px 48px #0009}
+#how-it-works .xh-app-top{background:#101114;border-bottom:1px solid #35373d}
+#how-it-works .xh-app-top span{color:#b8bac2}
+#how-it-works .xh-menu{border-color:#35373d}
+#how-it-works .xh-menu span{color:#c5c7ce}
+#how-it-works .xh-menu .xh-selected{background:#e6e7eb;color:#111216;box-shadow:none}
+#how-it-works .xh-prompt{background:#22242a;border-color:#45474e;color:#e8e9ed;padding-bottom:24px}
+#how-it-works .xh-prompt span{background:#e9eaed;color:#111216}
+#how-it-works .xh-pills i{background:#292b30;color:#c7c9d0}
+#how-it-works .xh-pills b{background:#e6e7eb;color:#111216}
+#how-it-works .xh-thumbnails div,#how-it-works .xh-photo,#how-it-works .xh-hero-photo,#how-it-works .xh-photo-strip div{border:1px solid #777a83;box-shadow:0 12px 30px #0009;filter:saturate(.72)}
+#how-it-works .xh-orbit{border:1px solid #8b8e9870;box-shadow:0 0 28px #ffffff0d}
+#how-it-works .xh-photo-main{border-color:#d0d2d8;box-shadow:0 16px 40px #000c}
+#how-it-works .xh-progress{background:#181a1ef5;border:1px solid #62656d;box-shadow:0 10px 24px #000a}
+#how-it-works .xh-progress i{background:linear-gradient(90deg,#777b86,#f5f5f7)}
+#how-it-works .xh-toolbar{background:#e5e6ea;color:#15161a;border:1px solid #fff;box-shadow:0 8px 24px #0008}
+#how-it-works .xh-toolbar svg{color:#15161a}
+#how-it-works .xh-timeline{height:66px;margin:10px 0 12px}
+#how-it-works .xh-timeline svg{filter:none;opacity:.45}
+#how-it-works .xh-timeline path{stroke:#8c8f98;stroke-width:1.5}
+#how-it-works .xh-dot{width:14px;height:14px;background:#e6e7eb;border:3px solid #42454d;box-shadow:0 0 0 5px #ffffff0b}
+#how-it-works .xh-descriptions{gap:24px;text-align:left}
+#how-it-works .xh-descriptions>div{border-top:1px solid #35373d;padding:20px 8px 0}
+#how-it-works .xh-descriptions h3{font-size:clamp(17px,1.7vw,24px);line-height:1.25;letter-spacing:-.035em}
+#how-it-works .xh-descriptions p{color:#b5b7bf;line-height:1.7;margin:0;max-width:none}
+@media(max-width:700px){#how-it-works.xh-section{padding:60px 0}#how-it-works .xh-intro{margin-bottom:30px}#how-it-works .xh-showcase,#how-it-works .xh-descriptions{gap:7px}#how-it-works .xh-scene{height:clamp(120px,36vw,220px)}#how-it-works .xh-app{border-radius:7px}#how-it-works .xh-prompt{padding-bottom:9px}#how-it-works .xh-timeline{height:30px;margin:5px 0}#how-it-works .xh-dot{width:9px;height:9px;border-width:2px}#how-it-works .xh-descriptions>div{padding:10px 2px 0}#how-it-works .xh-descriptions h3{font-size:clamp(11px,2.9vw,18px)}#how-it-works .xh-descriptions p{font-size:clamp(9px,2.25vw,13px);line-height:1.55}}
