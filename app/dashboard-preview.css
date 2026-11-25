@@ -434,3 +434,22 @@
 #feature-universe .xdash-catalog-filters button:hover:not(.active){background:#b91c2c!important;color:#fff!important;border-color:#b91c2c!important}
 #feature-universe .xdash-donut:before{background:#fff}
 #feature-universe .xdash-frame :is(button,a):focus-visible{outline-color:#b91c2c}
+
+/* Satin silver refinement — product preview only */
+#feature-universe .xdash-frame{background:linear-gradient(125deg,#dedfe3 0%,#cdd0d6 58%,#d9dbe0 100%)!important;border:1px solid #aeb1b9!important;box-shadow:0 24px 70px #0005}
+#feature-universe :is(.xdash-demo-label,.xdash-topbar,.xdash-footer,.xdash-sidebar){background:#e2e3e7!important;border-color:#c4c6ce!important}
+#feature-universe :is(.xdash-tool,.xdash-panel,.xdash-tool-detail,.xdash-upgrade,.xdash-hero){border-color:#d4d6dc!important;box-shadow:0 2px 8px #10111409;border-radius:12px}
+#feature-universe .xdash-tool{transition:transform .2s,border-color .2s,box-shadow .2s}
+#feature-universe .xdash-tool:hover{border-color:#b91c2c!important;box-shadow:0 4px 14px #b91c2c16!important;transform:translateY(-2px)}
+#feature-universe .xdash-tool.chosen{border-color:#b91c2c!important;box-shadow:inset 0 0 0 1px #b91c2c!important}
+#feature-universe .xdash-sidebar-tools button.active{background:#fff!important;color:#a31324!important;box-shadow:inset 3px 0 #b91c2c!important}
+#feature-universe .xdash-sidebar-tools button:hover:not(.active){background:#fcebed!important;color:#a31324!important}
+#feature-universe .xdash-tool-icon{border-radius:9px;background:#f2f3f5!important}
+#feature-universe .xdash-tools{scrollbar-color:#a0a3ab #e2e3e7}
+#feature-universe .xdash-sidebar-tools{scrollbar-color:#a0a3ab #e2e3e7}
+#feature-universe .xdash-frame .xdash-mobile-tool-trigger{background:#fff!important;color:#202124!important;border-color:#bfc2ca!important;box-shadow:0 4px 18px #0002!important}
+#feature-universe .xdash-frame .xdash-mobile-tool-options.open{background:#f5f5f7!important;border-color:#bfc2ca!important}
+#feature-universe .xdash-mobile-tool-options button{color:#303238!important}
+#feature-universe .xdash-mobile-tool-options button.active{background:#fcebed!important;color:#a31324!important}
+@media(max-width:700px){#feature-universe .xdash-frame{border-radius:12px}#feature-universe :is(.xdash-tool,.xdash-panel,.xdash-hero){border-radius:10px}#feature-universe .xdash-tool{box-shadow:0 1px 5px #10111408}}
+@media(prefers-reduced-motion:reduce){#feature-universe .xdash-tool:hover{transform:none}}
