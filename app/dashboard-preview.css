@@ -403,3 +403,12 @@
 #feature-universe .xdash-studio-modal-header{background:#181a1e!important;border-color:#35373d!important}
 #feature-universe .xstudio2-generate,#feature-universe .xstudio3-inline .xstudio3-primary{background:linear-gradient(135deg,#f5f5f7,#bfc3cc)!important;color:#111216!important;box-shadow:none}
 @media(max-width:700px){#feature-universe.xdash-section{padding-block:60px}#feature-universe .xdash-heading h2{font-size:clamp(30px,7vw,42px)}#feature-universe .xdash-frame{border-radius:12px}}
+
+/* Shared platinum action system — interactive command center */
+#feature-universe :is(.xdash-hero-actions button,.xdash-upgrade a,.xdash-studio-toggle,.xstudio2-generate,.xstudio3-primary){background:linear-gradient(145deg,#fff,#e5e6eb 60%,#bfc3cc)!important;color:#101114!important;border:1px solid #e5e6eb!important;border-radius:12px;box-shadow:0 6px 24px #ffffff12!important;text-shadow:none!important;font-weight:700;transition:transform .2s,box-shadow .2s}
+#feature-universe :is(.xdash-hero-actions a,.xdash-close,.xdash-detail-close,.xdash-studio-close,.xdash-menu,.xdash-mobile-tool-trigger){background:#181a1e!important;color:#f5f5f7!important;border:1px solid #45474e!important;text-shadow:none!important}
+#feature-universe .xdash-catalog-filters button{background:#181a1e!important;color:#c4c6cd!important;border:1px solid #45474e!important;box-shadow:none!important}
+#feature-universe :is(.xdash-catalog-filters,.xdash-sidebar-tools,.xdash-mobile-tool-options) button.active{background:#e5e6eb!important;color:#101114!important;box-shadow:none!important}
+#feature-universe :is(.xdash-hero-actions button,.xdash-upgrade a,.xdash-studio-toggle,.xstudio2-generate,.xstudio3-primary) svg,#feature-universe :is(.xdash-catalog-filters,.xdash-sidebar-tools,.xdash-mobile-tool-options) button.active svg{color:inherit!important;stroke:currentColor}
+#feature-universe :is(.xdash-hero-actions button,.xdash-upgrade a,.xdash-studio-toggle,.xstudio2-generate,.xstudio3-primary):hover:not(:disabled){transform:translateY(-2px);box-shadow:0 9px 26px #ffffff20!important}
+@media(prefers-reduced-motion:reduce){#feature-universe button,#feature-universe a{transition:none!important}}
