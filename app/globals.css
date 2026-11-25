@@ -3916,46 +3916,16 @@ button:disabled{cursor:not-allowed;opacity:.5}
 #why-xnovah .why-journey-footer a:hover{border-color:#b91c2c!important;background:#b91c2c!important;color:#fff!important}
 @media(max-width:700px){#why-xnovah .why-journey-footer{margin-top:14px;padding:22px;border-radius:18px;gap:20px}}
 
-/* AI capability atlas — jewel-tone multicolour cards, scoped to use cases */
-#use-cases .xuc-atlas-stage,#use-cases .xuc-compact{border-color:#45474e!important}
-#use-cases :is(.xuc-atlas-index,.xuc-atlas-children,.xuc-compact-capabilities,.xuc-compact-sheet-list) button{background:linear-gradient(135deg,var(--uc-dark),var(--uc-tone))!important;color:#fff!important;border:1px solid var(--uc-tone)!important;border-radius:10px;box-shadow:0 3px 10px #0002!important;transition:filter .2s,border-color .2s,box-shadow .2s}
-#use-cases .xuc-atlas-children button{padding:14px 12px;margin-bottom:7px}
-#use-cases :is(.xuc-atlas-index,.xuc-atlas-children,.xuc-compact-capabilities,.xuc-compact-sheet-list) button:is(:hover,.active,[aria-pressed="true"]){border-color:var(--uc-accent)!important;box-shadow:inset 0 0 0 1px var(--uc-accent)!important;filter:brightness(1.13)}
-#use-cases :is(.xuc-atlas-children,.xuc-compact-capabilities) button :is(strong,svg,span){color:inherit!important}
-#use-cases .xuc-atlas-index button small{color:#fff!important;background:#0003}
-#use-cases .xuc-atlas-detail-tools>div,#use-cases .xuc-compact-tool-list span{background:linear-gradient(135deg,var(--uc-dark),var(--uc-tone));border:1px solid var(--uc-tone);border-radius:9px;color:#fff;padding:10px 12px;margin-bottom:6px}
-#use-cases .xuc-atlas-detail-tools>div span{color:var(--uc-accent)}
-#use-cases .xuc-atlas-art{background:radial-gradient(ellipse at 30% 25%,#244b8055,transparent 60%),radial-gradient(ellipse at 80% 70%,#175b4955,transparent 65%),#15171d}
-#use-cases .xuc-atlas-art:after{background:radial-gradient(circle at 30% 25%,#d8e9ff,#7497c9 25%,#345a71 53%,#18242f 80%);box-shadow:0 0 90px #4786ad40,inset -30px -30px 60px #080c23}
 
-
-
-
-
-
-#use-cases :is(.xuc-atlas-index,.xuc-atlas-children,.xuc-compact-capabilities,.xuc-compact-sheet-list) button:nth-child(7n+1),#use-cases .xuc-atlas-detail-tools>div:nth-of-type(7n+1),#use-cases .xuc-compact-tool-list span:nth-child(7n+1){--uc-dark:#45131c;--uc-tone:#a51e30;--uc-accent:#ff9eaa}
-
-#use-cases :is(.xuc-atlas-index,.xuc-atlas-children,.xuc-compact-capabilities,.xuc-compact-sheet-list) button:nth-child(7n+2),#use-cases .xuc-atlas-detail-tools>div:nth-of-type(7n+2),#use-cases .xuc-compact-tool-list span:nth-child(7n+2){--uc-dark:#49230e;--uc-tone:#a94d16;--uc-accent:#ffc08a}
-
-#use-cases :is(.xuc-atlas-index,.xuc-atlas-children,.xuc-compact-capabilities,.xuc-compact-sheet-list) button:nth-child(7n+3),#use-cases .xuc-atlas-detail-tools>div:nth-of-type(7n+3),#use-cases .xuc-compact-tool-list span:nth-child(7n+3){--uc-dark:#46370c;--uc-tone:#80620c;--uc-accent:#ffe17a}
-
-#use-cases :is(.xuc-atlas-index,.xuc-atlas-children,.xuc-compact-capabilities,.xuc-compact-sheet-list) button:nth-child(7n+4),#use-cases .xuc-atlas-detail-tools>div:nth-of-type(7n+4),#use-cases .xuc-compact-tool-list span:nth-child(7n+4){--uc-dark:#123b25;--uc-tone:#207345;--uc-accent:#9af0b7}
-
-#use-cases :is(.xuc-atlas-index,.xuc-atlas-children,.xuc-compact-capabilities,.xuc-compact-sheet-list) button:nth-child(7n+5),#use-cases .xuc-atlas-detail-tools>div:nth-of-type(7n+5),#use-cases .xuc-compact-tool-list span:nth-child(7n+5){--uc-dark:#142b49;--uc-tone:#245ba0;--uc-accent:#9ec9ff}
-
-#use-cases :is(.xuc-atlas-index,.xuc-atlas-children,.xuc-compact-capabilities,.xuc-compact-sheet-list) button:nth-child(7n+6),#use-cases .xuc-atlas-detail-tools>div:nth-of-type(7n+6),#use-cases .xuc-compact-tool-list span:nth-child(7n+6){--uc-dark:#251b49;--uc-tone:#49399a;--uc-accent:#c2b5ff}
-
-#use-cases :is(.xuc-atlas-index,.xuc-atlas-children,.xuc-compact-capabilities,.xuc-compact-sheet-list) button:nth-child(7n+7),#use-cases .xuc-atlas-detail-tools>div:nth-of-type(7n+7),#use-cases .xuc-compact-tool-list span:nth-child(7n+7){--uc-dark:#391b49;--uc-tone:#793b99;--uc-accent:#e6b2ff}
-
-/* Full rainbow card surfaces */
-#use-cases :is(.xuc-atlas-index,.xuc-atlas-children,.xuc-compact-capabilities,.xuc-compact-sheet-list) button,#use-cases .xuc-atlas-detail-tools>div,#use-cases .xuc-compact-tool-list span{background:var(--rainbow-fill,#a92132)!important;color:var(--rainbow-ink,#fff)!important;border-color:var(--rainbow-fill,#a92132)!important;box-shadow:none!important}
-#use-cases :is(.xuc-atlas-index,.xuc-atlas-children,.xuc-compact-capabilities,.xuc-compact-sheet-list) button :is(strong,small,span,svg),#use-cases .xuc-atlas-detail-tools>div span{color:inherit!important}
-#use-cases :is(.xuc-atlas-index,.xuc-atlas-children,.xuc-compact-capabilities,.xuc-compact-sheet-list) button:is(:hover,.active,[aria-pressed="true"]){outline:2px solid var(--rainbow-ink,#fff);outline-offset:-3px;filter:brightness(1.06)}
-#use-cases :is(.xuc-atlas-index,.xuc-atlas-children,.xuc-compact-capabilities,.xuc-compact-sheet-list) button:nth-child(7n+1),#use-cases .xuc-atlas-detail-tools>div:nth-of-type(7n+1),#use-cases .xuc-compact-tool-list span:nth-child(7n+1){--rainbow-fill:#a92132;--rainbow-ink:#fff}
-#use-cases :is(.xuc-atlas-index,.xuc-atlas-children,.xuc-compact-capabilities,.xuc-compact-sheet-list) button:nth-child(7n+2),#use-cases .xuc-atlas-detail-tools>div:nth-of-type(7n+2),#use-cases .xuc-compact-tool-list span:nth-child(7n+2){--rainbow-fill:#b95018;--rainbow-ink:#fff}
-#use-cases :is(.xuc-atlas-index,.xuc-atlas-children,.xuc-compact-capabilities,.xuc-compact-sheet-list) button:nth-child(7n+3),#use-cases .xuc-atlas-detail-tools>div:nth-of-type(7n+3),#use-cases .xuc-compact-tool-list span:nth-child(7n+3){--rainbow-fill:#e4bc36;--rainbow-ink:#171717}
-#use-cases :is(.xuc-atlas-index,.xuc-atlas-children,.xuc-compact-capabilities,.xuc-compact-sheet-list) button:nth-child(7n+4),#use-cases .xuc-atlas-detail-tools>div:nth-of-type(7n+4),#use-cases .xuc-compact-tool-list span:nth-child(7n+4){--rainbow-fill:#23794a;--rainbow-ink:#fff}
-#use-cases :is(.xuc-atlas-index,.xuc-atlas-children,.xuc-compact-capabilities,.xuc-compact-sheet-list) button:nth-child(7n+5),#use-cases .xuc-atlas-detail-tools>div:nth-of-type(7n+5),#use-cases .xuc-compact-tool-list span:nth-child(7n+5){--rainbow-fill:#2458ad;--rainbow-ink:#fff}
-#use-cases :is(.xuc-atlas-index,.xuc-atlas-children,.xuc-compact-capabilities,.xuc-compact-sheet-list) button:nth-child(7n+6),#use-cases .xuc-atlas-detail-tools>div:nth-of-type(7n+6),#use-cases .xuc-compact-tool-list span:nth-child(7n+6){--rainbow-fill:#40378e;--rainbow-ink:#fff}
-#use-cases :is(.xuc-atlas-index,.xuc-atlas-children,.xuc-compact-capabilities,.xuc-compact-sheet-list) button:nth-child(7n+7),#use-cases .xuc-atlas-detail-tools>div:nth-of-type(7n+7),#use-cases .xuc-compact-tool-list span:nth-child(7n+7){--rainbow-fill:#793ca2;--rainbow-ink:#fff}
-
+/* Selected world artwork — spectral color, neutral content */
+#use-cases [data-world-color="0"]{--world-light:#e43d50}
+#use-cases [data-world-color="1"]{--world-light:#f28b35}
+#use-cases [data-world-color="2"]{--world-light:#eacb45}
+#use-cases [data-world-color="3"]{--world-light:#36bf76}
+#use-cases [data-world-color="4"]{--world-light:#4389ef}
+#use-cases [data-world-color="5"]{--world-light:#6658d9}
+#use-cases [data-world-color="6"]{--world-light:#b65ce5}
+#use-cases .xuc-atlas-art{background:radial-gradient(ellipse at 50% 45%,color-mix(in srgb,var(--world-light) 36%,transparent),transparent 65%),#111216;transition:background .45s ease}
+#use-cases .xuc-atlas-art:after{background:radial-gradient(circle at 30% 25%,#fff 0%,color-mix(in srgb,var(--world-light) 55%,white) 20%,var(--world-light) 48%,#101018 80%);box-shadow:0 0 90px color-mix(in srgb,var(--world-light) 48%,transparent),inset -30px -30px 60px #080c23;transition:background .45s ease,box-shadow .45s ease}
+#use-cases .xuc-atlas-orbit{border-color:color-mix(in srgb,var(--world-light) 65%,transparent);transition:border-color .45s ease}
+#use-cases .xuc-compact-intro{background:radial-gradient(ellipse at 80% 30%,color-mix(in srgb,var(--world-light) 30%,transparent),transparent 75%),#15161a;transition:background .45s ease}
