@@ -3862,3 +3862,38 @@ button:disabled{cursor:not-allowed;opacity:.5}
 #for-everyone .xa-cta{background:#fff!important;color:#101114!important;border:1px solid #bfc2ca!important;padding:13px 18px;box-shadow:0 3px 12px #0001!important}
 #for-everyone .xa-cta:hover{background:#b91c2c!important;color:#fff!important;border-color:#b91c2c!important;box-shadow:0 4px 14px #b91c2c26!important}
 #for-everyone :is(.xa-tab,.xa-cta):focus-visible{outline-color:#b91c2c;outline-offset:-3px}
+
+/* Creative journey — satin silver workspace and white workflow cards */
+#why-xnovah.why-journey .why-journey-shell{background:linear-gradient(125deg,#dedfe3,#cdd0d6 58%,#d9dbe0)!important;border-color:#aeb1b9!important;color:#101114;box-shadow:0 18px 55px #0003}
+#why-xnovah .why-journey-progress{background:#e2e3e7;border-color:#bfc2ca}
+#why-xnovah .why-journey-step{background:#fff;color:#202124;border-color:#c4c6ce}
+#why-xnovah .why-journey-step:hover{background:#fcebed;color:#a31324}
+#why-xnovah .why-journey-step.active{background:#fff;color:#a31324;box-shadow:inset 0 -3px #b91c2c}
+#why-xnovah .why-journey-step-dot{background:#a0a3ab}
+#why-xnovah .why-journey-step.active .why-journey-step-dot{background:#b91c2c;box-shadow:none}
+#why-xnovah .why-journey-copy{background:#fff;color:#101114}
+#why-xnovah .why-journey-copy h3{color:#101114!important}
+#why-xnovah :is(.why-journey-copy>p,.why-journey-kicker,.why-journey-footer p){color:#45474e!important}
+#why-xnovah .why-journey-icon{background:#f2f3f5;color:#303238;border-color:#d4d6dc}
+#why-xnovah .why-journey-canvas{background:linear-gradient(125deg,#dedfe3,#cdd0d6 58%,#d9dbe0);border-color:#bfc2ca}
+#why-xnovah .why-journey-grid{background-image:linear-gradient(#777a8326 1px,transparent 1px),linear-gradient(90deg,#777a8326 1px,transparent 1px)}
+#why-xnovah :is(.why-pipeline-top,.why-pipeline-preview-head,.why-pipeline-live){color:#45474e}
+#why-xnovah .why-pipeline-live span{background:#666971;box-shadow:none}
+#why-xnovah .why-pipeline-stage{background:#fff;color:#101114;border-color:#bfc2ca;box-shadow:0 2px 8px #0001}
+#why-xnovah .why-pipeline-stage small{color:#555860}
+#why-xnovah .why-pipeline-stage-icon{background:#f2f3f5;color:#303238}
+#why-xnovah .why-pipeline-stage:hover,#why-xnovah .why-pipeline-stage.active{background:#fff;border-color:#b91c2c;box-shadow:0 4px 14px #b91c2c18}
+#why-xnovah .why-pipeline-stage:is(:hover,.active) .why-pipeline-stage-icon{background:#fcebed;color:#b91c2c}
+#why-xnovah .why-pipeline-connector{color:#62656d}
+#why-xnovah .why-pipeline-connector:before{background:#92949e}
+#why-xnovah .why-pipeline-connector svg{background:#d5d7dc}
+#why-xnovah .why-pipeline-connector.passed{color:#b91c2c}
+#why-xnovah .why-pipeline-preview{background:#fff;border-color:#bfc2ca}
+#why-xnovah .why-pipeline-asset{background:#f5f5f7;border-color:#d4d6dc;color:#202124}
+#why-xnovah .why-pipeline-asset-icon{color:#45474e}
+#why-xnovah .why-pipeline-asset>svg:last-child{color:#23764e}
+#why-xnovah .why-journey-footer{background:#e2e3e7;color:#101114;border-color:#bfc2ca}
+#why-xnovah :is(.why-journey-controls button,.why-journey-footer a){background:#fff!important;color:#101114!important;border:1px solid #bfc2ca!important;box-shadow:0 2px 8px #0001!important}
+#why-xnovah :is(.why-journey-controls button,.why-journey-footer a):hover{background:#b91c2c!important;color:#fff!important;border-color:#b91c2c!important;box-shadow:0 4px 14px #b91c2c26!important}
+#why-xnovah :is(button,a):focus-visible{outline-color:#b91c2c}
+@media(prefers-reduced-motion:reduce){#why-xnovah .why-pipeline-stage{transition:none;transform:none}}
