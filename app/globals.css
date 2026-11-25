@@ -3728,3 +3728,24 @@ footer,.footer,.xfooter{background-color:#000!important}
 .xn-engine-status{left:8%;bottom:0;z-index:6;display:flex;align-items:center;gap:10px;padding:12px 16px;background:#181a1ef5;color:#f5f5f7;max-width:56%}.xn-engine-status strong,.xn-engine-status small{display:block}.xn-engine-status strong{font-size:clamp(11px,1.4vw,16px)}.xn-engine-status small{font-size:clamp(8px,1vw,11px);color:#b5b7bf;margin-top:4px}
 .xn-engine-tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin:22px 0 10px}.xn-engine-tabs button{display:flex;align-items:center;gap:7px;background:#181a1e;color:#c4c6cd;border:1px solid #45474e;border-radius:999px;padding:9px 16px;cursor:pointer;font:inherit;font-size:12px}.xn-engine-tabs button.active{background:#e6e7eb;color:#111216;border-color:#e6e7eb}.xn-engine-note{font-size:10px;color:#a5a8b0}
 @media(max-width:700px){.xn-engine-hero{padding:35px 0 20px}.xn-engine-copy h1{font-size:clamp(36px,9vw,58px)}.xn-engine-stage{height:clamp(220px,65vw,350px)}.xn-engine-paper,.xn-engine-video,.xn-engine-audio,.xn-engine-visual,.xn-engine-status{border-radius:8px}.xn-engine-paper{padding:9px;left:3%}.xn-engine-paper>strong{margin:8px 0}.xn-engine-paper p{line-height:1.3}.xn-engine-paper>i{height:2px;margin:4px 0}.xn-engine-video{padding:5px;right:3%}.xn-engine-video-image svg{width:13px;height:13px;padding:5px}.xn-engine-audio{padding:7px}.xn-engine-wave{height:32px;overflow:hidden}.xn-engine-status{padding:8px;gap:5px}.xn-engine-status>svg{width:15px;flex-shrink:0}.xn-engine-tabs{gap:5px}.xn-engine-tabs button{padding:7px 10px;font-size:11px}}
+
+/* Design 01 — Intelligence Canvas */
+.xn-canvas-hero{position:relative;isolation:isolate;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:clamp(620px,calc(100svh - 85px),950px);padding:48px 0 65px}
+.xn-canvas-light{position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,#ffffff0e,transparent 60%);animation:xnCanvasBreathe 9s ease-in-out infinite alternate}
+@keyframes xnCanvasBreathe{from{opacity:.45;transform:scale(.92)}to{opacity:1;transform:scale(1.05)}}
+.xn-canvas-hero .xn-ph-eyebrow{justify-content:center;color:#c4c6cd}
+.xn-canvas-hero h1{font-size:clamp(52px,8.4vw,116px);font-weight:750;letter-spacing:-.07em;line-height:.99;margin:22px 0;color:#f5f5f7}
+.xn-canvas-hero h1 span{background:linear-gradient(110deg,#fafafa,#92949e);background-clip:text;-webkit-background-clip:text;color:transparent}
+.xn-canvas-hero>p{max-width:580px;font-size:clamp(14px,1.5vw,18px);line-height:1.7;color:#b5b7bf;margin:0 0 34px}
+.xn-canvas-composer{width:min(100%,720px);padding:22px 22px 14px;border-radius:22px;background:#181a1e;border:1px solid #62656d;box-shadow:0 22px 70px #000a}
+.xn-canvas-composer textarea{font-size:17px;min-height:76px}
+.xn-canvas-composer .xn-hybrid-composer-foot button{width:42px;height:42px;border-radius:12px}
+.xn-canvas-caps{margin:18px 0 20px;gap:9px}
+.xn-canvas-caps button{padding:10px 17px}
+.xn-canvas-example{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:9px;color:#a5a8b0;font-size:12px}
+.xn-canvas-example button{display:flex;align-items:center;gap:6px;background:none;border:0;color:#e6e7eb;font:inherit;cursor:pointer;text-align:center}
+.xn-canvas-links{display:flex;justify-content:center;flex-wrap:wrap;gap:22px;margin:30px 0 15px}
+.xn-canvas-links a{display:flex;align-items:center;gap:7px;color:#e6e7eb;font-size:13px;text-decoration:none}
+.xn-canvas-links a:hover,.xn-canvas-example button:hover{color:#fff;text-decoration:underline}
+@media(max-width:700px){.xn-canvas-hero{min-height:calc(100svh - 75px);padding:35px 0 42px}.xn-canvas-hero h1{font-size:clamp(42px,10vw,66px);margin:18px 0}.xn-canvas-hero>p{max-width:95%;margin-bottom:24px}.xn-canvas-composer{padding:15px;border-radius:16px}.xn-canvas-composer textarea{font-size:14px}.xn-canvas-caps{gap:6px}.xn-canvas-caps button{padding:8px 10px;font-size:11px}.xn-canvas-links{gap:15px;margin-top:23px}}
+@media(prefers-reduced-motion:reduce){.xn-canvas-light{animation:none}}
