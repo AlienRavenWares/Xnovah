@@ -453,3 +453,13 @@
 #feature-universe .xdash-mobile-tool-options button.active{background:#fcebed!important;color:#a31324!important}
 @media(max-width:700px){#feature-universe .xdash-frame{border-radius:12px}#feature-universe :is(.xdash-tool,.xdash-panel,.xdash-hero){border-radius:10px}#feature-universe .xdash-tool{box-shadow:0 1px 5px #10111408}}
 @media(prefers-reduced-motion:reduce){#feature-universe .xdash-tool:hover{transform:none}}
+
+/* Studio entry — matching satin silver and crimson product concept */
+#feature-universe .xdash-studio-intro{background:linear-gradient(125deg,#dedfe3,#cdd0d6 58%,#d9dbe0)!important;border:1px solid #aeb1b9;color:#101114;box-shadow:0 12px 35px #0002}
+#feature-universe .xdash-studio-intro h3{color:#101114!important;text-shadow:none}
+#feature-universe .xdash-studio-intro p{color:#303238!important}
+#feature-universe .xdash-studio-intro .xdash-studio-toggle{background:#fff!important;color:#101114!important;border:1px solid #bfc2ca!important;box-shadow:0 3px 12px #1011140d!important;transition:background .2s,color .2s,border-color .2s,transform .2s,box-shadow .2s}
+#feature-universe .xdash-studio-intro .xdash-studio-toggle:hover:not(:disabled){background:#b91c2c!important;color:#fff!important;border-color:#b91c2c!important;box-shadow:0 5px 16px #b91c2c26!important}
+#feature-universe .xdash-studio-intro .xdash-studio-toggle:focus-visible{outline:2px solid #b91c2c;outline-offset:4px}
+@media(max-width:700px){#feature-universe .xdash-studio-intro{border-radius:12px}#feature-universe .xdash-studio-intro .xdash-studio-toggle{white-space:normal;min-height:48px}}
+@media(prefers-reduced-motion:reduce){#feature-universe .xdash-studio-intro .xdash-studio-toggle{transition:none!important;transform:none!important}}
