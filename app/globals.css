@@ -3906,3 +3906,12 @@ button:disabled{cursor:not-allowed;opacity:.5}
 #why-xnovah .why-journey-footer a{flex-shrink:0;min-height:48px;border-radius:11px;border:1px solid #aeb1b9!important;padding:14px 22px;box-shadow:0 3px 10px #0000000d!important}
 #why-xnovah .why-journey-footer a:hover{border-color:#b91c2c!important}
 @media(max-width:700px){#why-xnovah .why-journey-footer{margin-top:12px;border-radius:14px;padding:20px;gap:18px;flex-direction:column;align-items:stretch}#why-xnovah .why-journey-footer>div{padding-left:12px}#why-xnovah .why-journey-footer a{width:100%;box-sizing:border-box}}
+
+/* Closing CTA — clean continuous perimeter, no redundant accent borders */
+#why-xnovah .why-journey-footer{margin-top:20px;padding:clamp(22px,3vw,36px);border:1px solid #c4c6cc;border-radius:24px;background:linear-gradient(115deg,#f8f9fa 0%,#e4e6ea 100%)!important;box-shadow:0 12px 32px #0003,inset 0 1px 0 #fff;overflow:hidden}
+#why-xnovah .why-journey-footer>div{border:0;padding:0;flex:1}
+#why-xnovah .why-journey-footer strong{font-size:clamp(20px,2.4vw,28px);letter-spacing:-.04em}
+#why-xnovah .why-journey-footer p{max-width:660px;margin-top:9px}
+#why-xnovah .why-journey-footer a{border:1px solid #c4c6cc!important;border-radius:12px;min-height:50px;padding:14px 24px;box-shadow:0 3px 12px #0000000c!important}
+#why-xnovah .why-journey-footer a:hover{border-color:#b91c2c!important;background:#b91c2c!important;color:#fff!important}
+@media(max-width:700px){#why-xnovah .why-journey-footer{margin-top:14px;padding:22px;border-radius:18px;gap:20px}}
