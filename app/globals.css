@@ -3822,3 +3822,16 @@ footer,.footer,.xfooter{background-color:#000!important}
 button:focus-visible,a:focus-visible{outline:2px solid #e5e6eb;outline-offset:3px}
 button:disabled{cursor:not-allowed;opacity:.5}
 @media(prefers-reduced-motion:reduce){button,a{transition:none!important}}
+
+/* Light editorial workflow panel — scoped to experience only */
+.creative-universe-section #experience.cu-journey-examples{background:#fff!important;color:#101114;border:1px solid #e0e1e5;box-shadow:0 12px 40px #0002}
+#experience .cu-examples-heading h3{color:#101114!important;text-shadow:none;background:none;-webkit-text-fill-color:currentColor}
+#experience .cu-examples-heading>span{color:#45474e!important}
+#experience .cu-examples-heading p{color:#45474e!important}
+.creative-universe-section #experience .cu-example-card{background:#f5f5f7!important;border-color:#d9dbe0!important;color:#101114;box-shadow:none}
+#experience .cu-example-card>span{color:#202124!important}
+#experience .cu-example-card small{color:#555860!important}
+#experience .cu-example-card strong{color:#101114!important;text-shadow:none}
+.creative-universe-section #experience .cu-slider-dots button{background:#bfc3cc!important}
+.creative-universe-section #experience .cu-slider-dots button.active{background:#202124!important}
+#experience button:focus-visible{outline-color:#202124}
