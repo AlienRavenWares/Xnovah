@@ -412,3 +412,25 @@
 #feature-universe :is(.xdash-hero-actions button,.xdash-upgrade a,.xdash-studio-toggle,.xstudio2-generate,.xstudio3-primary) svg,#feature-universe :is(.xdash-catalog-filters,.xdash-sidebar-tools,.xdash-mobile-tool-options) button.active svg{color:inherit!important;stroke:currentColor}
 #feature-universe :is(.xdash-hero-actions button,.xdash-upgrade a,.xdash-studio-toggle,.xstudio2-generate,.xstudio3-primary):hover:not(:disabled){transform:translateY(-2px);box-shadow:0 9px 26px #ffffff20!important}
 @media(prefers-reduced-motion:reduce){#feature-universe button,#feature-universe a{transition:none!important}}
+
+/* Interactive product concept — silver canvas, white cards, crimson hover */
+#feature-universe .xdash-frame{background:linear-gradient(135deg,#e4e5e9,#bfc2ca 55%,#d7d9df)!important;border-color:#a5a8b0!important;color:#101114}
+#feature-universe :is(.xdash-app,.xdash-body,.xdash-content){background:transparent!important;color:#101114}
+#feature-universe :is(.xdash-demo-label,.xdash-topbar,.xdash-footer,.xdash-sidebar){background:#d9dbe0!important;color:#202124!important;border-color:#b0b3bc!important}
+#feature-universe :is(.xdash-brand,.xdash-brand-mark,.xdash-side-label,.xdash-topright,.xdash-footer a,.xdash-overline,.xdash-kicker,.xdash-section-title h4,.xdash-section-title button,.xdash-panel-heading h4,.xdash-panel-heading>span,.xdash-detail-copy h4,.xdash-detail-copy .xdash-overline,.xdash-detail-note){color:#202124!important;text-shadow:none}
+#feature-universe :is(.xdash-brand small,.xdash-demo-label>span,.xdash-project-name small,.xdash-activity-row small,.xdash-tool small,.xdash-overview-disclaimer,.xdash-tool-overview-steps small,.xdash-detail-copy p,.xdash-tool-overview>p,.xdash-hero p,.xdash-upgrade p){color:#45474e!important}
+#feature-universe :is(.xdash-tool,.xdash-panel,.xdash-tool-detail,.xdash-tool-overview-steps>div,.xdash-upgrade,.xdash-hero,.xdash-search){background:#fff!important;color:#101114!important;border-color:#bfc2ca!important;box-shadow:0 3px 12px #00000008}
+#feature-universe :is(.xdash-hero h3,.xdash-upgrade strong,.xdash-upgrade>span,.xdash-project,.xdash-tool-overview-steps strong,.xdash-tool-overview-steps>div>span,.xdash-tool-arrow,.xdash-search input,.xdash-search span,.xdash-activity-row,.xdash-usage-lines){color:#202124!important}
+#feature-universe .xdash-search input::placeholder{color:#62656d!important}
+#feature-universe :is(.xdash-tool-icon,.xdash-detail-icon){background:#f0f1f3!important;color:#202124!important;border-color:#d0d2d8!important}
+#feature-universe :is(.xdash-project,.xdash-activity-row,.xdash-usage-lines>span){border-color:#d9dbe0!important}
+#feature-universe .xdash-sidebar-tools button{color:#303238!important}
+#feature-universe .xdash-sidebar-tools button.active{background:#fff!important;color:#101114!important}
+#feature-universe .xdash-sidebar-tools button:hover:not(.active){background:#b91c2c!important;color:#fff!important}
+#feature-universe .xdash-tool:hover,#feature-universe .xdash-tool:focus-visible{background:#fff!important;border-color:#c91e32!important;box-shadow:0 5px 20px #c91e322b!important}
+#feature-universe .xdash-tool:hover :is(.xdash-tool-icon,.xdash-tool-arrow){color:#b91c2c!important}
+#feature-universe .xdash-project:hover{background:#fff0f1!important;color:#a31324!important}
+#feature-universe .xdash-tool.chosen{border-color:#b91c2c!important}
+#feature-universe .xdash-catalog-filters button:hover:not(.active){background:#b91c2c!important;color:#fff!important;border-color:#b91c2c!important}
+#feature-universe .xdash-donut:before{background:#fff}
+#feature-universe .xdash-frame :is(button,a):focus-visible{outline-color:#b91c2c}
