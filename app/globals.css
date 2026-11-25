@@ -3915,3 +3915,20 @@ button:disabled{cursor:not-allowed;opacity:.5}
 #why-xnovah .why-journey-footer a{border:1px solid #c4c6cc!important;border-radius:12px;min-height:50px;padding:14px 24px;box-shadow:0 3px 12px #0000000c!important}
 #why-xnovah .why-journey-footer a:hover{border-color:#b91c2c!important;background:#b91c2c!important;color:#fff!important}
 @media(max-width:700px){#why-xnovah .why-journey-footer{margin-top:14px;padding:22px;border-radius:18px;gap:20px}}
+
+/* AI capability atlas — jewel-tone multicolour cards, scoped to use cases */
+#use-cases .xuc-atlas-stage,#use-cases .xuc-compact{border-color:#45474e!important}
+#use-cases :is(.xuc-atlas-index,.xuc-atlas-children,.xuc-compact-capabilities,.xuc-compact-sheet-list) button{background:linear-gradient(135deg,var(--uc-dark),var(--uc-tone))!important;color:#fff!important;border:1px solid var(--uc-tone)!important;border-radius:10px;box-shadow:0 3px 10px #0002!important;transition:filter .2s,border-color .2s,box-shadow .2s}
+#use-cases .xuc-atlas-children button{padding:14px 12px;margin-bottom:7px}
+#use-cases :is(.xuc-atlas-index,.xuc-atlas-children,.xuc-compact-capabilities,.xuc-compact-sheet-list) button:is(:hover,.active,[aria-pressed="true"]){border-color:var(--uc-accent)!important;box-shadow:inset 0 0 0 1px var(--uc-accent)!important;filter:brightness(1.13)}
+#use-cases :is(.xuc-atlas-children,.xuc-compact-capabilities) button :is(strong,svg,span){color:inherit!important}
+#use-cases .xuc-atlas-index button small{color:#fff!important;background:#0003}
+#use-cases .xuc-atlas-detail-tools>div,#use-cases .xuc-compact-tool-list span{background:linear-gradient(135deg,var(--uc-dark),var(--uc-tone));border:1px solid var(--uc-tone);border-radius:9px;color:#fff;padding:10px 12px;margin-bottom:6px}
+#use-cases .xuc-atlas-detail-tools>div span{color:var(--uc-accent)}
+#use-cases .xuc-atlas-art{background:radial-gradient(ellipse at 30% 25%,#244b8055,transparent 60%),radial-gradient(ellipse at 80% 70%,#175b4955,transparent 65%),#15171d}
+#use-cases .xuc-atlas-art:after{background:radial-gradient(circle at 30% 25%,#d8e9ff,#7497c9 25%,#345a71 53%,#18242f 80%);box-shadow:0 0 90px #4786ad40,inset -30px -30px 60px #080c23}
+#use-cases :is(.xuc-atlas-index,.xuc-atlas-children,.xuc-compact-capabilities,.xuc-compact-sheet-list) button:nth-child(5n+1),#use-cases .xuc-atlas-detail-tools>div:nth-of-type(5n+1),#use-cases .xuc-compact-tool-list span:nth-child(5n+1){--uc-dark:#142b49;--uc-tone:#244b80;--uc-accent:#92bfff}
+#use-cases :is(.xuc-atlas-index,.xuc-atlas-children,.xuc-compact-capabilities,.xuc-compact-sheet-list) button:nth-child(5n+2),#use-cases .xuc-atlas-detail-tools>div:nth-of-type(5n+2),#use-cases .xuc-compact-tool-list span:nth-child(5n+2){--uc-dark:#13372e;--uc-tone:#175b49;--uc-accent:#8ee5bd}
+#use-cases :is(.xuc-atlas-index,.xuc-atlas-children,.xuc-compact-capabilities,.xuc-compact-sheet-list) button:nth-child(5n+3),#use-cases .xuc-atlas-detail-tools>div:nth-of-type(5n+3),#use-cases .xuc-compact-tool-list span:nth-child(5n+3){--uc-dark:#3b2a17;--uc-tone:#795020;--uc-accent:#ffcf88}
+#use-cases :is(.xuc-atlas-index,.xuc-atlas-children,.xuc-compact-capabilities,.xuc-compact-sheet-list) button:nth-child(5n+4),#use-cases .xuc-atlas-detail-tools>div:nth-of-type(5n+4),#use-cases .xuc-compact-tool-list span:nth-child(5n+4){--uc-dark:#391b28;--uc-tone:#792d40;--uc-accent:#ffabc0}
+#use-cases :is(.xuc-atlas-index,.xuc-atlas-children,.xuc-compact-capabilities,.xuc-compact-sheet-list) button:nth-child(5n+5),#use-cases .xuc-atlas-detail-tools>div:nth-of-type(5n+5),#use-cases .xuc-compact-tool-list span:nth-child(5n+5){--uc-dark:#12323b;--uc-tone:#195b69;--uc-accent:#8de2ed}
