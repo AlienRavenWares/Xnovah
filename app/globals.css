@@ -3958,3 +3958,9 @@ button:disabled{cursor:not-allowed;opacity:.5}
 #use-cases :is(.xuc-atlas-index,.xuc-atlas-children,.xuc-compact-capabilities,.xuc-compact-sheet-list) button:nth-child(7n+5),#use-cases .xuc-atlas-detail-tools>div:nth-of-type(7n+5),#use-cases .xuc-compact-tool-list span:nth-child(7n+5){--rainbow-fill:#2458ad;--rainbow-ink:#fff}
 #use-cases :is(.xuc-atlas-index,.xuc-atlas-children,.xuc-compact-capabilities,.xuc-compact-sheet-list) button:nth-child(7n+6),#use-cases .xuc-atlas-detail-tools>div:nth-of-type(7n+6),#use-cases .xuc-compact-tool-list span:nth-child(7n+6){--rainbow-fill:#40378e;--rainbow-ink:#fff}
 #use-cases :is(.xuc-atlas-index,.xuc-atlas-children,.xuc-compact-capabilities,.xuc-compact-sheet-list) button:nth-child(7n+7),#use-cases .xuc-atlas-detail-tools>div:nth-of-type(7n+7),#use-cases .xuc-compact-tool-list span:nth-child(7n+7){--rainbow-fill:#793ca2;--rainbow-ink:#fff}
+
+/* Rainbow main world panel: preserve readable foreground on the full colored surface */
+#use-cases .xuc-atlas-editorial,#use-cases .xuc-compact-detail{border-radius:16px;padding:clamp(20px,3vw,36px)}
+#use-cases .xuc-atlas-editorial :is(h3,p,.xuc-atlas-overline,.xuc-atlas-child-title),#use-cases .xuc-compact-detail :is(h4,p,.xuc-compact-detail-top){color:inherit!important;opacity:1!important}
+#use-cases .xuc-atlas-editorial .xuc-atlas-children button{background:#0002!important;color:inherit!important;border:1px solid currentColor!important}
+#use-cases .xuc-atlas-editorial .xuc-atlas-children button.active{box-shadow:inset 0 0 0 1px currentColor!important}
