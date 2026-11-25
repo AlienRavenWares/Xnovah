@@ -3835,3 +3835,8 @@ button:disabled{cursor:not-allowed;opacity:.5}
 .creative-universe-section #experience .cu-slider-dots button{background:#bfc3cc!important}
 .creative-universe-section #experience .cu-slider-dots button.active{background:#202124!important}
 #experience button:focus-visible{outline-color:#202124}
+
+/* Silver edition — workflow panel only */
+.creative-universe-section #experience.cu-journey-examples{background:linear-gradient(135deg,#e4e5e9 0%,#bfc2ca 55%,#d7d9df 100%)!important;border-color:#a5a8b0;color:#101114}
+.creative-universe-section #experience .cu-example-card{background:#f0f1f3!important;border-color:#aeb1ba!important}
+#experience .cu-examples-heading p{color:#303238!important}
